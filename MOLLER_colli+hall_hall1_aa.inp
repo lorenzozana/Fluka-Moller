@@ -1,0 +1,674 @@
+TITLE
+MOLLER_Test
+GLOBAL                                          1.        1.
+DEFAULTS                                                              NEW-DEFA
+BEAM            -11.       0.0       0.0      0.01      0.01          ELECTRON
+PHYSICS           1.                                                  COALESCE
+PHYSICS           3.                                                  EVAPORAT
+PHOTONUC          1.                      BLCKHOLE  @LASTMAT
+BEAMPOS          0.0       0.0    -2300.       0.0       0.0
+START       2000000.
+RANDOMIZ          1.       22.
+MATERIAL         19.   39.0983     0.862                           0.0POTASSIU
+MATERIAL         0.0       0.0      2.35                           0.0CONCRETE
+COMPOUND       -0.01  HYDROGEN    -0.001    CARBON -0.529107    OXYGENCONCRETE
+COMPOUND      -0.016    SODIUM    -0.002  MAGNESIU -0.033872  ALUMINUMCONCRETE
+COMPOUND   -0.337021   SILICON    -0.013  POTASSIU    -0.044   CALCIUMCONCRETE
+COMPOUND      -0.014      IRON                                        CONCRETE
+MATERIAL          1.   1.00794    0.0708                              LiquidHy
+COMPOUND          2.  HYDROGEN                                        LiquidHy
+MATERIAL                             18.                              CW95
+COMPOUND        0.95  TUNGSTEN     0.015    COPPER     0.035    NICKELCW95
+ASSIGNMA      VACUUM  logicMot
+ASSIGNMA         AIR      hall
+ASSIGNMA      VACUUM      pipe
+ASSIGNMA         AIR  hallhole
+ASSIGNMA    CONCRETE   topwall
+ASSIGNMA    CONCRETE   cylwall
+ASSIGNMA    LiquidHy    h2Targ
+ASSIGNMA      VACUUM   col1cut
+ASSIGNMA      VACUUM  fin_cut0
+ASSIGNMA      VACUUM  fin_cut1
+ASSIGNMA      VACUUM   col2cut
+ASSIGNMA      VACUUM  col4cut0
+ASSIGNMA      VACUUM  col4cut1
+ASSIGNMA      VACUUM  col4cut2
+ASSIGNMA      VACUUM  col4cut3
+ASSIGNMA      VACUUM  col5cut0
+ASSIGNMA      VACUUM  col5cut1
+ASSIGNMA      VACUUM  col5cut2
+ASSIGNMA      VACUUM  col5cut3
+ASSIGNMA      VACUUM  col5cut4
+ASSIGNMA      VACUUM  col5cut5
+ASSIGNMA      VACUUM  col5cut6
+ASSIGNMA      VACUUM  col5cut7
+ASSIGNMA        CW95     coll1
+ASSIGNMA        CW95   col1fin
+ASSIGNMA        CW95  col2rin1
+ASSIGNMA        CW95  col2rin2
+ASSIGNMA        CW95  col2con1
+ASSIGNMA        CW95  col4rin1
+ASSIGNMA        CW95  col4rin2
+ASSIGNMA        CW95  col4con1
+ASSIGNMA        CW95  col4con2
+ASSIGNMA        CW95  col4con3
+ASSIGNMA        CW95  col4con4
+ASSIGNMA        CW95  col4con4
+ASSIGNMA        CW95  col4con5
+ASSIGNMA        CW95  col4con6
+ASSIGNMA        CW95  col4con7
+ASSIGNMA        CW95  col5trd1
+ASSIGNMA        CW95  col5trd2
+ASSIGNMA        CW95  col5trd3
+ASSIGNMA        CW95  col5trd4
+ASSIGNMA        CW95  col5trd5
+ASSIGNMA        CW95  col5trd6
+ASSIGNMA        CW95  col5trd7
+ASSIGNMA    BLCKHOLE   BLKBODY
+RADDECAY          1.        1.                       1008000
+* 7days intensity     4days intensity     7days intensity
+IRRPROFI     604800. 5.3053E14   345600.       0.0   604800. 5.3053E14
+* 4days intensity     7days intensity
+IRRPROFI     345600.       0.0   604800. 5.3053E14
+*  Cooling:     1hour  1day  3days 1week 2weeks 1month
+DCYTIMES       3600.    86400.   259200.   604800.  1209600.  2592000.
+DCYSCORE          1.                       hall_1h   hall_1h          USRBIN
+AUXSCORE      USRBIN                       hall_1h   hall_1h          EWT74
+USRBIN           10.   DOSE-EQ      -50.    2694.7   1967.54    3094.7hall_1h
+USRBIN       -2694.7     -447.   -2294.7      216.       98.      216. &
+DCYSCORE          2.                       hall_1d   hall_1d          USRBIN
+AUXSCORE      USRBIN                       hall_1d   hall_1d          EWT74
+USRBIN           10.   DOSE-EQ      -50.    2694.7   1967.54    3094.7hall_1d
+USRBIN       -2694.7     -447.   -2294.7      216.       98.      216. &
+DCYSCORE          3.                       hall_3d   hall_3d          USRBIN
+AUXSCORE      USRBIN                       hall_3d   hall_3d          EWT74
+USRBIN           10.   DOSE-EQ      -50.    2694.7   1967.54    3094.7hall_3d
+USRBIN       -2694.7     -447.   -2294.7      216.       98.      216. &
+GEOBEGIN                                                              COMBNAME
+    0    0          
+* boxMother
+RPP boxMothe   -10000. 10000. -10000. 10000. -10000. 10000.
+* hall_top_out
+SPH hal_tout   0.0 -3435.26 400. 5472.780000000001
+* hall_top_in
+SPH hal_tin    0.0 -3435.26 400. 5402.780000000001
+* hall_top_sub
+RCC hal_tsub   0.0 -9615.560000000001 400. 0.0 10945.560000000001 0.0 5472.78
+* hall_cylinder_out
+RCC hal_cout   0.0 -447. 400. 0.0 1777. 0.0 2694.7000000000003
+* hall_cylinder_in
+RCC hal_cin    0.0 -298.30000000000007 400. 0.0 1628.3000000000002 0.0 2546.
+* hall_vacuum_pipe
+RCC hal_pipe   0.0 0.0 -2294.8 0.0 0.0 2219.8 1.
+* hall_wall_hole
+RPP hal_hole   -106.408 106.408 -193.46900000000025 106.40699999999978 2797.3
+              3243.4
+* tubeTarget
+RCC tubeTarg   0.0 0.0 -75. 0.0 0.0 150. 4.
+* col1_0
+RCC col1_0     0.0 0.0 517.5 0.0 0.0 10. 3.1703
+* col1_0
+RCC col1_1     0.0 0.0 527.5 0.0 0.0 10. 2.8703
+* col1_0
+RCC col1_2     0.0 0.0 537.5 0.0 0.0 30. 2.6703
+* col1_sub_0
+TRC col1_su1   0.0 0.0 517.5 0.0 0.0 40. 1.67997 1.5529
+* col1_sub_0
+TRC col1_su2   0.0 0.0 557.5 0.0 0.0 10. 1.5529 1.5808
+* col1_ring_1
+RCC col1_ri1   0.0 0.0 517.5 0.0 0.0 10. 2.4
+* col1_Ring2
+RCC col1_ri2   0.0 0.0 527.5 0.0 0.0 10. 2.0386
+* col1_Ring3
+RCC col1_ri3   0.0 0.0 537.5 0.0 0.0 10. 1.8696
+* col1_0
+RCC col1_ri4   0.0 0.0 527.5 0.0 0.0 10. 3.1803
+* col1_0
+RCC col1_ri6   0.0 0.0 537.5 0.0 0.0 30. 3.1803
+* col2_Rmax
+TRC col2_0     0.0 0.0 587.5 0.0 0.0 10. 30. 30.
+* col2_Rmin
+TRC col2_su0   0.0 0.0 587.5 0.0 0.0 10. 2.955 2.955
+* cons_Rmax
+TRC cons_0     0.0 0.0 587.5 0.0 0.0 10. 9.8 9.8
+* cons_Rmin
+TRC cons_1     0.0 0.0 587.5 0.0 0.0 10. 3.53 3.53
+* cons_pla10
+PLA cons_10    -0.22252093395631437 0.9749279121818235 0.0 0.0 0.0 0.0
+* cons_pla11
+PLA cons_11    -0.6234898018587335 0.7818314824680297 0.0 0.0 0.0 0.0
+* cons_pla20
+PLA cons_20    -0.900968867902419 0.4338837391175582 0.0 0.0 0.0 0.0
+* cons_pla21
+PLA cons_21    -1. 0.0 0.0 0.0 0.0 0.0
+* cons_pla30
+PLA cons_30    -0.900968867902419 -0.4338837391175584 0.0 0.0 0.0 0.0
+* cons_pla31
+PLA cons_31    -0.6234898018587332 -0.78183148246803 0.0 0.0 0.0 0.0
+* cons_pla40
+PLA cons_40    -0.2225209339563145 -0.9749279121818236 0.0 0.0 0.0 0.0
+* cons_pla41
+PLA cons_41    0.22252093395631428 -0.9749279121818236 0.0 0.0 0.0 0.0
+* cons_pla50
+PLA cons_50    0.6234898018587333 -0.7818314824680299 0.0 0.0 0.0 0.0
+* cons_pla51
+PLA cons_51    0.9009688679024189 -0.4338837391175583 0.0 0.0 0.0 0.0
+* cons_pla60
+YZP cons_60    0.0
+* cons_pla61
+PLA cons_61    0.9009688679024189 0.4338837391175588 0.0 0.0 0.0 0.0
+* cons_pla70
+PLA cons_70    0.6234898018587337 0.7818314824680297 0.0 0.0 0.0 0.0
+* cons_pla71
+PLA cons_71    0.22252093395631464 0.9749279121818235 0.0 0.0 0.0 0.0
+* col1fin_0
+RCC col1fin0   0.0 0.0 517.5 0.0 0.0 10. 5.6703
+* col1fin_1
+RCC col1fin1   0.0 0.0 517.5 0.0 0.0 10. 3.1703
+* fin_pla10
+PLA finpla10   -0.14793270700332983 0.9889974288129706 0.0 0.0 0.0 522.5
+* fin_pla11
+PLA finpla11   -0.6809947917479824 0.732288258551318 0.0 0.0 0.0 522.5
+* fin_cly_cut1
+RCC fin_cly1   5.670300000000001 0.0 517.5 0.0 0.0 10. 0.32000000000000006
+* in_pla20
+PLA finpla20   -0.8654638601038468 0.5009713633074739 0.0 0.0 0.0 522.5
+* in_pla21
+PLA finpla21   -0.997119322550888 -0.07584890635769392 0.0 0.0 0.0 522.5
+* fin_cly_cut2
+RCC fin_cly2   3.5353742234795775 4.43321905503847 517.5 0.0 0.0 10.
+              0.32000000000000006
+* in_pla30
+PLA finpla30   -0.9312830743007544 -0.3642963567220179 0.0 0.0 0.0 522.5
+* in_pla31
+PLA finpla31   -0.5623926659455528 -0.8268702977436388 0.0 0.0 0.0 522.5
+* fin_cly_cut3
+RCC fin_cly3   -1.2617604518124892 5.528133740444595 517.5 0.0 0.0 10.
+              0.32000000000000006
+* in_pla40
+PLA finpla40   -0.2958271388364925 -0.9552414898484125 0.0 0.0 0.0 522.5
+* in_pla41
+PLA finpla41   0.29582713883649225 -0.9552414898484125 0.0 0.0 0.0 522.5
+* fin_cly_cut4
+RCC fin_cly4   -5.108763771667088 2.460250965918291 517.5 0.0 0.0 10.
+              0.32000000000000006
+* in_pla50
+PLA finpla50   0.5623926659455529 -0.8268702977436387 0.0 0.0 0.0 522.5
+* in_pla51
+PLA finpla51   0.9312830743007543 -0.36429635672201777 0.0 0.0 0.0 522.5
+* fin_cly_cut5
+RCC fin_cly5   -5.108763771667088 -2.46025096591829 517.5 0.0 0.0 10.
+              0.32000000000000006
+* in_pla60
+PLA finpla60   0.9971193225508882 -0.07584890635769329 0.0 0.0 0.0 522.5
+* in_pla61
+PLA finpla61   0.8654638601038466 0.5009713633074746 0.0 0.0 0.0 522.5
+* fin_cly_cut6
+RCC fin_cly6   -1.2617604518124859 -5.528133740444596 517.5 0.0 0.0 10.
+              0.32000000000000006
+* in_pla70
+PLA finpla70   0.6809947917479826 0.732288258551318 0.0 0.0 0.0 522.5
+* in_pla71
+PLA finpla71   0.1479327070033301 0.9889974288129706 0.0 0.0 0.0 522.5
+* fin_cly_cut7
+RCC fin_cly7   3.5353742234795766 -4.433219055038471 517.5 0.0 0.0 10.
+              0.32000000000000006
+* fin_cons_cut1
+TRC fin_con1   0.0 0.0 517.5 0.0 0.0 3. 5.6703 5.6703
+* fin_cons_cut2
+TRC fin_con2   0.0 0.0 517.5 0.0 0.0 3. 3.1703 4.9003
+* coll4_0
+TRC col4_0     0.0 0.0 976.657 0.0 0.0 10. 30. 30.
+* coll4_1
+TRC col4_1     0.0 0.0 976.657 0.0 0.0 10. 22.1 22.1
+* coll4_2
+TRC col4_2     0.0 0.0 976.657 0.0 0.0 10. 6.4 6.4
+* coll4_3
+TRC col4_3     0.0 0.0 976.657 0.0 0.0 10. 3.8000000000000003 3.8000000000000003
+PLA pcons_10   -0.22252093395631437 0.9749279121818235 0.0 0.0 0.0 982.5
+PLA pcons_11   -0.6234898018587335 0.7818314824680297 0.0 0.0 0.0 982.5
+* col4_topcut_pla12
+PLA pcon_t12   -0.6074122314317948 0.7943867956525006 0.0 7.0065718885225
+              4.9835627538615395 982.5
+* col4_topcut_pla13
+PLA pcon_t13   4.70759639978788 -4.8780749973841315 0.0 8.770956596808421
+              6.332664801666599 988.
+* col4_topcut_pla14
+PLA pcon_t14   7.201810436639883 -8.314681379024986 0.0 12.673194066409541
+              10.098940992477033 977.
+* col4_botcut_pla15
+PLA pcon_b15   0.24236127427604146 -0.970186071190106 0.0 8.26483237430789
+              2.3707579326666735 982.5
+* col4_botcut_pla16
+PLA pcon_b16   -0.8786942602604336 6.721977085678392 0.0 10.419678700515743
+              2.90905807631659 977.
+* col4_botcut_pla17
+PLA pcon_b17   -2.0104243066476655 10.81472117565868 0.0 22.92838642934131
+              4.937367242065408 977.
+PLA pcons_20   -0.900968867902419 0.4338837391175582 0.0 0.0 0.0 982.5
+PLA pcons_21   -1. 0.0 0.0 0.0 0.0 982.5
+* col4_topcut_pla22
+PLA pcon_t22   -0.9997919379200033 0.02039806045103773 0.0 0.472219862659841
+              8.585159040578063 982.5
+* col4_topcut_pla23
+PLA pcon_t23   6.748970953329699 0.6391170585362435 0.0 0.517525280795525
+              10.805761921174355 988.
+* col4_topcut_pla24
+PLA pcon_t24   10.990935030977187 0.4464830846050999 0.0 0.005937249877488782
+              16.204888822928556 977.
+* col4_botcut_pla25
+PLA pcon_b25   0.9096317971849932 -0.415415446932344 0.0 3.299505510383246
+              7.939849541248268 982.5
+* col4_botcut_pla26
+PLA pcon_b26   -5.803310220236248 3.5040933251130038 0.0 4.222170220024033
+              9.960200888862955 977.
+* col4_botcut_pla27
+PLA pcon_b27   -9.708768541847354 5.171055346912775 0.0 10.435425961417401
+              21.00453247611093 977.
+PLA pcons_30   -0.900968867902419 -0.4338837391175584 0.0 0.0 0.0 0.0
+PLA pcons_31   -0.6234898018587332 -0.78183148246803 0.0 0.0 0.0 0.0
+* col4_topcut_pla32
+PLA pcon_t32   -0.6393079231156091 -0.768950830314661 0.0 -6.417723351315417
+              5.721955464409923 0.0
+* col4_topcut_pla33
+PLA pcon_t33   3.7082327250958818 5.6750409337667325 0.0 -8.12561312724825
+              7.141899916664694 5.5
+* col4_topcut_pla34
+PLA pcon_t34   6.503661372772472 8.87143667893241 0.0 -12.665790436910147
+              10.10822485022403 -5.5
+* col4_botcut_pla35
+PLA pcon_b35   0.8919310237065088 0.4521714817962975 0.0 -4.150416300506595
+              7.530072501855406 0.0
+* col4_botcut_pla36
+PLA pcon_b36   -6.357915218419289 -2.3524441797399596 0.0 -5.154718552722489
+              9.511109281024103 -5.5
+* col4_botcut_pla37
+PLA pcon_b37   -10.096212042249757 -4.366520628364303 0.0 -9.915623099350082
+              21.254856341266073 -5.5
+PLA pcons_40   -0.2225209339563145 -0.9749279121818236 0.0 0.0 0.0 0.0
+PLA pcons_41   0.22252093395631428 -0.9749279121818236 0.0 0.0 0.0 0.0
+* col4_topcut_pla42
+PLA pcon_t42   0.2025879972998638 -0.9792640621150306 0.0 -8.47498998405147
+              -1.4499972830791799 0.0
+* col4_topcut_pla43
+PLA pcon_t43   -2.1248803792974904 6.437543236132598 0.0 -10.649999118172992
+              -1.8999583933020021 5.5
+* col4_topcut_pla44
+PLA pcon_t44   -2.8810019496447676 10.616017509694634 0.0 -15.79991958966418
+              -3.60013860490914 -5.5
+* col4_botcut_pla45
+PLA pcon_b45   0.2025879972998639 0.9792640621150306 0.0 -8.47498998405147
+              1.449997283079182 0.0
+* col4_botcut_pla46
+PLA pcon_b46   -2.124880379297491 -6.437543236132598 0.0 -10.649999118172992
+              1.8999583933020046 -5.5
+* col4_botcut_pla47
+PLA pcon_b47   -2.88100194964477 -10.616017509694634 0.0 -22.800005724456717
+              5.499839861392728 -5.5
+PLA pcons_50   0.6234898018587333 -0.7818314824680299 0.0 0.0 0.0 0.0
+PLA pcons_51   0.9009688679024189 -0.4338837391175583 0.0 0.0 0.0 0.0
+* col4_topcut_pla52
+PLA pcon_t52   0.8919310237065088 -0.4521714817962973 0.0 -4.150416300506593
+              -7.530072501855405 0.0
+* col4_topcut_pla53
+PLA pcon_t53   -6.357915218419289 2.3524441797399582 0.0 -5.154718552722486
+              -9.511109281024103 5.5
+* col4_topcut_pla54
+PLA pcon_t54   -10.096212042249757 4.366520628364301 0.0 -7.036387031777145
+              -14.59752426110159 -5.5
+* col4_botcut_pla55
+PLA pcon_b55   -0.6393079231156092 0.7689508303146608 0.0 -6.4177233513154155
+              -5.721955464409924 0.0
+* col4_botcut_pla56
+PLA pcon_b56   3.708232725095883 -5.675040933766732 0.0 -8.125613127248249
+              -7.141899916664695 -5.5
+* col4_botcut_pla57
+PLA pcon_b57   6.503661372772472 -8.871436678932408 0.0 -18.51551900368895
+              -14.396668210397042 -5.5
+YZP pcons_60   0.0
+PLA pcons_61   0.9009688679024189 0.4338837391175588 0.0 0.0 0.0 0.0
+* col4_topcut_pla62
+PLA pcon_t62   0.9096317971849931 0.4154154469323448 0.0 3.299505510383252
+              -7.939849541248266 0.0
+* col4_topcut_pla63
+PLA pcon_t63   -5.803310220236246 -3.504093325113009 0.0 4.22217022002404
+              -9.960200888862953 5.5
+* col4_topcut_pla64
+PLA pcon_t64   -9.708768541847352 -5.171055346912782 0.0 7.025688477176006
+              -14.602676413455422 -5.5
+* col4_botcut_pla65
+PLA pcon_b65   -0.9997919379200034 -0.02039806045103848 0.0 0.47221986265984683
+              -8.585159040578064 0.0
+* col4_botcut_pla66
+PLA pcon_b66   6.7489709533296995 -0.6391170585362386 0.0 0.5175252807955326
+              -10.805761921174359 -5.5
+* col4_botcut_pla67
+PLA pcon_b67   10.99093503097719 -0.44648308460509256 0.0 -0.28846882538653973
+              -23.45219148124549 -5.5
+PLA pcons_70   0.6234898018587337 0.7818314824680297 0.0 0.0 0.0 0.0
+PLA pcons_71   0.22252093395631464 0.9749279121818235 0.0 0.0 0.0 0.0
+* col4_topcut_pla72
+PLA pcon_t72   0.0 0.0 -0.7766500000000001 6.109986048100035 -1.8324577890167588
+              -5.5
+* col4_topcut_pla73
+PLA pcon_t73   -0.8786942602604351 -6.721977085678392 0.0 10.419678700515743
+              -2.9090580763165916 5.5
+* col4_topcut_pla74
+PLA pcon_t74   -2.0104243066476686 -10.81472117565868 0.0 15.797277264888438
+              -3.6117153861634685 -5.5
+* col4_botcut_pla75
+PLA pcon_b75   -0.6074122314317949 -0.7943867956525006 0.0 7.006571888522498
+              -4.983562753861541 0.0
+* col4_botcut_pla76
+PLA pcon_b76   4.70759639978788 4.8780749973841315 0.0 8.77095659680842
+              -6.332664801666602 -5.5
+* col4_botcut_pla77
+PLA pcon_b77   7.201810436639886 8.314681379024984 0.0 18.155804262123574
+              -14.847736229192616 -5.5
+* col5_vacuum_cut
+RCC col5_cut   0.0 0.0 986.657 0.0 0.0 700. 42.
+* col5_trd1_plane1
+YZP col5t1p1   -7.199999999999999
+* col5 trd1_plane2
+YZP col5t1p2   -17.8
+* col5_trd1_plane3
+PLA col5t1p3   0.0 0.0 -10.600000000000001 -17.8 5.499999999999997 1280.
+* col5 trd1_plane4
+PLA col5t1p4   4.199999999999999 10.600000000000001 0.0 -17.8 5.499999999999997
+              1280.
+* col5 trd1_plane5
+XYP col5t1p5   1287.
+* col5 trd1_plane6
+PLA col5t1p6   4.200000000000001 -10.600000000000001 0.0 -17.8
+              -5.500000000000003 1287.
+* col5 trd1_plane7
+YZP col5t1p7   -10.549999999999999
+* col5 trd1_plane8
+PLA col5t1p8   2.149999999999999 7.251000000000001 0.0 -17.801000000000002
+              2.999999999999998 1279.995
+* col5 trd1_plane9
+PLA col5t1p9   2.150000000000001 -7.251000000000001 0.0 -17.801000000000002
+              -3.000000000000002 1287.005
+* col5_trd2_plane1
+PLA col5t2p1   0.6234898018587335 0.7818314824680299 0.0 -4.489126573382881
+              -5.629186673769814 1283.5
+* col5_trd2_plane2
+PLA col5t2p2   0.6234898018587335 0.7818314824680299 0.0 -11.098118473085457
+              -13.916600387930933 1283.5
+* col5_trd2_plane3
+PLA col5t2p3   0.0 0.0 -10.600000000000001 -15.39819162665962
+              -10.487406477707898 1280.
+* col5_trd2_plane4
+PLA col5t2p4   -5.668756546354437 9.892684126068302 0.0 -15.39819162665962
+              -10.487406477707898 1280.
+* col5_trd2_plane5
+XYP col5t2p5   1287.
+* col5_trd2_plane6
+PLA col5t2p6   10.9060708819678 -3.32529967333685 0.0 -6.798045319511292
+              -17.34579429815397 1287.
+* col5_trd2_plane7
+PLA col5t2p7   0.6234898018587335 0.7818314824680299 0.0 -6.577817409609638
+              -8.248322140037715 1283.5
+* col5_trd2_plane8
+PLA col5t2p8   -4.328557005379409 6.201862240583941 0.0 -13.444236410291404
+              -12.0469128138372 1279.995
+* col5_trd2_plane9
+PLA col5t2p9   7.009563153371962 -2.8399868659714125 0.0 -8.753247515483226
+              -15.787851624989601 1287.005
+* col5_trd3_plane1
+PLA col5t3p1   -0.22252093395631442 0.9749279121818235 0.0 1.6021507244854636
+              -7.0194809677091285 1283.5
+* col5_trd3_plane2
+PLA col5t3p2   -0.22252093395631442 0.9749279121818235 0.0 3.9608726244223966
+              -17.35371683683646 1283.5
+* col5_trd3_plane3
+PLA col5t3p3   0.0 0.0 -10.600000000000001 -1.4012308925776331
+              -18.57758197359619 1280.
+* col5_trd3_plane4
+PLA col5t3p4   -11.268823791743852 1.7359753312267254 0.0 -1.4012308925776331
+              -18.57758197359619 1280.
+* col5_trd3_plane5
+XYP col5t3p5   1287.
+* col5_trd3_plane6
+PLA col5t3p6   9.399647946510811 6.453419131100592 0.0 9.322976141422426
+              -16.129851700076728 1287.
+* col5_trd3_plane7
+PLA col5t3p7   -0.22252093395631442 0.9749279121818235 0.0 2.347595853239117
+              -10.285489473518236 1283.5
+* col5_trd3_plane8
+PLA col5t3p8   -7.54762229923648 0.48259571907368426 0.0 1.036311408810882
+              -18.022254566617583 1279.995
+* col5_trd3_plane9
+PLA col5t3p9   6.590782283224328 3.7095943033081573 0.0 6.885878881901824
+              -16.687128962879697 1287.005
+* col5_trd4_plane1
+PLA col5t4p1   -0.9009688679024191 0.4338837391175581 0.0 6.4869758488974165
+              -3.1239629216464184 1283.5
+* col5_trd4_plane2
+PLA col5t4p2   -0.9009688679024191 0.4338837391175581 0.0 16.037245848663062
+              -7.723130556292535 1283.5
+* col5_trd4_plane3
+PLA col5t4p3   0.0 0.0 -10.600000000000001 13.65088528351649 -12.678459329755839
+              1280.
+* col5_trd4_plane4
+PLA col5t4p4   -8.383236879836277 -7.727958295471899 0.0 13.65088528351649
+              -12.678459329755839 1280.
+* col5_trd4_plane5
+XYP col5t4p5   1287.
+* col5_trd4_plane6
+PLA col5t4p6   0.8150983894559558 11.372581704059387 0.0 18.42360641380963
+              -2.7678017828292303 1287.
+* col5_trd4_plane7
+PLA col5t4p7   -0.9009688679024191 0.4338837391175581 0.0 9.50522155637052
+              -4.577473447690238 1283.5
+* col5_trd4_plane8
+PLA col5t4p8   -5.083174058331616 -5.600075222057692 0.0 14.736495600178287
+              -10.426471043738909 1279.995
+* col5_trd4_plane9
+PLA col5t4p9   1.2090079263512132 7.465775300263191 0.0 17.339798034883636
+              -5.0206578363243946 1287.005
+* col5_trd5_plane1
+PLA col5t5p1   -0.9009688679024191 -0.43388373911755823 0.0 6.4869758488974165
+              3.123962921646419 1283.5
+* col5_trd5_plane2
+PLA col5t5p2   -0.9009688679024191 -0.43388373911755823 0.0 16.037245848663062
+              7.723130556292537 1283.5
+* col5_trd5_plane3
+PLA col5t5p3   0.0 0.0 -10.600000000000001 18.42360641380963 2.7678017828292307
+              1280.
+* col5_trd5_plane4
+PLA col5t5p4   0.8150983894559567 -11.372581704059389 0.0 18.42360641380963
+              2.7678017828292307 1280.
+* col5_trd5_plane5
+XYP col5t5p5   1287.
+* col5_trd5_plane6
+PLA col5t5p6   -8.383236879836279 7.7279582954719 0.0 13.65088528351649
+              12.678459329755842 1287.
+* col5_trd5_plane7
+PLA col5t5p7   -0.9009688679024191 -0.43388373911755823 0.0 9.50522155637052
+              4.577473447690239 1283.5
+* col5_trd5_plane8
+PLA col5t5p8   1.2090079263512137 -7.465775300263193 0.0 17.339798034883636
+              5.020657836324396 1279.995
+* col5_trd5_plane9
+PLA col5t5p9   -5.0831740583316165 5.6000752220576935 0.0 14.736495600178289
+              10.426471043738912 1287.005
+* col5_trd6_plane1
+PLA col5t6p1   -0.2225209339563136 -0.9749279121818237 0.0 1.6021507244854578
+              7.01948096770913 1283.5
+* col5_trd6_plane2
+PLA col5t6p2   -0.2225209339563136 -0.9749279121818237 0.0 3.960872624422382
+              17.353716836836462 1283.5
+* col5_trd6_plane3
+PLA col5t6p3   0.0 0.0 -10.600000000000001 9.322976141422412 16.12985170007674
+              1280.
+* col5_trd6_plane4
+PLA col5t6p4   9.399647946510816 -6.453419131100584 0.0 9.322976141422412
+              16.12985170007674 1280.
+* col5_trd6_plane5
+XYP col5t6p5   1287.
+* col5_trd6_plane6
+PLA col5t6p6   -11.26882379174385 -1.7359753312267356 0.0 -1.4012308925776487
+              18.57758197359619 1287.
+* col5_trd6_plane7
+PLA col5t6p7   -0.2225209339563136 -0.9749279121818237 0.0 2.3475958532391084
+              10.28548947351824 1283.5
+* col5_trd6_plane8
+PLA col5t6p8   6.590782283224331 -3.709594303308151 0.0 6.88587888190181
+              16.687128962879704 1279.995
+* col5_trd6_plane9
+PLA col5t6p9   -7.547622299236479 -0.4825957190736909 0.0 1.036311408810867
+              18.022254566617583 1287.005
+* col5_trd7_plane1
+PLA col5t7p1   0.6234898018587335 -0.7818314824680298 0.0 -4.489126573382881
+              5.629186673769815 1283.5
+* col5_trd7_plane2
+PLA col5t7p2   0.6234898018587335 -0.7818314824680298 0.0 -11.098118473085457
+              13.91660038793093 1283.5
+* col5_trd7_plane3
+PLA col5t7p3   0.0 0.0 -10.600000000000001 -6.798045319511292 17.345794298153965
+              1280.
+* col5_trd7_plane4
+PLA col5t7p4   10.906070881967798 3.325299673336851 0.0 -6.798045319511292
+              17.345794298153965 1280.
+* col5_trd7_plane5
+XYP col5t7p5   1287.
+* col5_trd7_plane6
+PLA col5t7p6   -5.668756546354436 -9.892684126068302 0.0 -15.39819162665962
+              10.487406477707898 1287.
+* col5_trd7_plane7
+PLA col5t7p7   0.6234898018587335 -0.7818314824680298 0.0 -6.577817409609638
+              8.248322140037715 1283.5
+* col5_trd7_plane8
+PLA col5t7p8   7.009563153371961 2.839986865971413 0.0 -8.753247515483226
+              15.7878516249896 1279.995
+* col5_trd7_plane9
+PLA col5t7p9   -4.328557005379408 -6.2018622405839405 0.0 -13.444236410291404
+              12.0469128138372 1287.005
+END
+* logicMother
+logicMot     5 +boxMothe -(+hal_tout -hal_tsub) -hal_cout -hal_pipe
+* hall_hole
+hallhole     5 (+hal_cout -hal_cin) +hal_hole
+* hall_air
+hall         5 (+hal_tin -hal_tsub) | hal_cin -hal_pipe -tubeTarg -(col1_0 | col1_1 | col1_2) -col2_0 -col1fin0
+               -col4_0 -col5_cut
+* hall_pipe
+pipe         5 +hal_pipe
+* topwall
+topwall      5 +hal_tout -hal_tin -hal_tsub
+* cylwall
+cylwall      5 +hal_cout -hal_cin -hal_hole -hal_pipe
+* h2Targ
+h2Targ       5 +tubeTarg
+* Collimator1_cut
+col1cut      5 col1_su1 |col1_su2 |col1_ri1 |col1_ri2 |col1_ri3
+* Collimator1_fin_cut0
+fin_cut0     5 +col1fin0 -col1fin1 -(+fin_con1 -fin_con2) +((+finpla11 -finpla10) | (+finpla21 -finpla20) | (
+               +finpla31 -finpla30) | (
+               +finpla41 -finpla40) | (+finpla51 -finpla50) | (+finpla61 -finpla60) | (+finpla71 -finpla70))
+* Collimator1_fin_cut1
+fin_cut1     5 (+col1fin0 + (fin_cly1 | fin_cly2 | fin_cly3 | fin_cly4 | fin_cly5 | fin_cly6 | fin_cly7)) | (
+               +fin_con1 -fin_con2)
+* Collimator2_cut
+col2cut      5 (+cons_0 -cons_1 +((+cons_11 -cons_10) | (+cons_21 -cons_20) | (+cons_31 -cons_30) | (+cons_41
+               -cons_40) | (+cons_51 -cons_50) | (+cons_61 -cons_60) | (+cons_71 -cons_70))) | col2_su0
+* Collimator4_cut_set_0
+col4cut0     5 +col4_1 -col4_2 +(+pcons_71 -pcons_70 -(+pcon_t73 -pcon_t72) -(+pcon_t74) -( +pcon_b76 -pcon_b75) -
+               ( +pcon_b77)) | col4_3
+* Collimator4_cut_set_1
+col4cut1     5 (+col4_1 -col4_2 +pcons_11 -pcons_10 -(+pcon_t13 -pcon_t12) -(+pcon_t14) -( +pcon_b16 -pcon_b15) -
+               ( +pcon_b17)) | (+col4_1 -col4_2 +pcons_21 -pcons_20 -(+pcon_b26 -pcon_b25) -(+pcon_b27) -
+               (+pcon_t23 -pcon_t22) -(+pcon_t24))
+* Collimator4_cut_set_2
+col4cut2     5 (+col4_1 -col4_2 +pcons_31 -pcons_30 -(+pcon_t33 -pcon_t32) -(+pcon_t34) -(+pcon_b36 -pcon_b35) -
+               (+pcon_b37)) | (+col4_1 -col4_2 +pcons_41 -pcons_40 -(+pcon_t43 -pcon_t42) -(+pcon_t44) -
+               (+pcon_b46 -pcon_b45) - ( +pcon_b47))
+* Collimator4_cut_set_2
+col4cut3     5 (+col4_1 -col4_2 +pcons_51 -pcons_50 -(+pcon_b56 -pcon_b55) -(+pcon_b57) -(+pcon_t53 -pcon_t52) -
+               (+pcon_t54)) | (+col4_1 -col4_2 +pcons_61 -pcons_60 -(+pcon_t63 -pcon_t62) -(+pcon_t64) -
+               (+pcon_b66 -pcon_b65) -(+pcon_b67))
+* Collimator5_and_DScoil_cut0
+col5cut0     5 +col5_cut -(+col5t1p4 +col5t1p6) -(+col5t2p4 +col5t2p6) -(+col5t3p4 +col5t3p6) -(+col5t4p4
+               +col5t4p6) -(+col5t5p4 +col5t5p6) -(+col5t6p4 +col5t6p6) -(+col5t7p4 +col5t7p6)
+* Collimator5_and_DScoil_cut1
+col5cut1     5 +col5_cut +col5t1p4 +col5t1p6 -(+col5t1p1 -col5t1p2 +col5t1p3 +col5t1p4 +col5t1p5 +col5t1p6 -(
+               +col5t1p7 +col5t1p8 +col5t1p9))
+* Collimator5_and_DScoil_cut2
+col5cut2     5 +col5_cut +col5t2p4 +col5t2p6 -(+col5t2p1 -col5t2p2 +col5t2p3 +col5t2p4 +col5t2p5 +col5t2p6 -(
+               +col5t2p7 +col5t2p8 +col5t2p9))
+* Collimator5_and_DScoil_cut3
+col5cut3     5 +col5_cut +col5t3p4 +col5t3p6 -(+col5t3p1 -col5t3p2 +col5t3p3 +col5t3p4 +col5t3p5 +col5t3p6 -(
+               +col5t3p7 +col5t3p8 +col5t3p9))
+* Collimator5_and_DScoil_cut4
+col5cut4     5 +col5_cut +col5t4p4 +col5t4p6 -(+col5t4p1 -col5t4p2 +col5t4p3 +col5t4p4 +col5t4p5 +col5t4p6 -(
+               +col5t4p7 +col5t4p8 +col5t4p9))
+* Collimator5_and_DScoil_cut5
+col5cut5     5 +col5_cut +col5t5p4 +col5t5p6 -(+col5t5p1 -col5t5p2 +col5t5p3 +col5t5p4 +col5t5p5 +col5t5p6 -(
+               +col5t5p7 +col5t5p8 +col5t5p9))
+* Collimator5_and_DScoil_cut6
+col5cut6     5 +col5_cut +col5t6p4 +col5t6p6 -(+col5t6p1 -col5t6p2 +col5t6p3 +col5t6p4 +col5t6p5 +col5t6p6 -(
+               +col5t6p7 +col5t6p8 +col5t6p9))
+* Collimator5_and_DScoil_cut7
+col5cut7     5 +col5_cut +col5t7p4 +col5t7p6 -(+col5t7p1 -col5t7p2 +col5t7p3 +col5t7p4 +col5t7p5 +col5t7p6 -(
+               +col5t7p7 +col5t7p8 +col5t7p9))
+* Collimator1
+coll1        5 +(col1_0 | col1_1 | col1_2) -col1_su1 -col1_su2 -col1_ri1 -col1_ri2
+               -col1_ri3
+* Collimator1_fin
+col1fin      5 +col1fin0 -col1fin1 -(+finpla11 -finpla10) -(+finpla21 -finpla20) -(+finpla31 -finpla30) -(
+               +finpla41 -finpla40) -(+finpla51 -finpla50) -(+finpla61 -finpla60) -(+finpla71 -finpla70)
+               -fin_cly1 -fin_cly2 -fin_cly3 -fin_cly4 -fin_cly5 -fin_cly6 -fin_cly7 -(+fin_con1 -fin_con2)
+* Collimator2_outer_ring
+col2rin1     5 +col2_0 -cons_0
+* Collimator2_inner_ring
+col2rin2     5 +cons_1 -col2_su0
+* Collimator2_middle_structure
+col2con1     5 +cons_0 -cons_1 -(+cons_11 -cons_10) -(+cons_21 -cons_20) - (+cons_31 -cons_30) - (+cons_41
+               -cons_40) -(+cons_51 -cons_50) -(+cons_61 -cons_60) -(+cons_71 -cons_70)
+* Collimator4_outer_ring
+col4rin1     5 +col4_0 -col4_1
+* Collimator4_inner_ring
+col4rin2     5 +col4_2 -col4_3
+* Collimator4_middle_structure1
+col4con1     5 +col4_1 -col4_2 -pcons_10 +pcons_21 -(+col4_1 -col4_2 +pcons_11 -pcons_10 -(+pcon_t13 -pcon_t12) -(
+               +pcon_t14)) -(+col4_1 -col4_2 +pcons_21 -pcons_20 -(+pcon_b26 -pcon_b25) -(+pcon_b27))
+* Collimator4_middle_structure2
+col4con2     5 +col4_1 -col4_2 -pcons_20 +pcons_31 -(+col4_1 -col4_2 +pcons_21 -pcons_20 -(+pcon_t23 -pcon_t22) -(
+               +pcon_t24)) -(+col4_1 -col4_2 +pcons_31 -pcons_30 -(+pcon_b36 -pcon_b35) -(+pcon_b37))
+* Collimator4_middle_structure3
+col4con3     5 +col4_1 -col4_2 -pcons_30 +pcons_41 -(+col4_1 -col4_2 +pcons_31 -pcons_30 -(+pcon_t33 -pcon_t32) -(
+               +pcon_t34)) -(+col4_1 -col4_2 +pcons_41 -pcons_40 -(+pcon_b46 -pcon_b45) -(+pcon_b47))
+* Collimator4_middle_structure4
+col4con4     5 +col4_1 -col4_2 -pcons_40 +pcons_51 -(+col4_1 -col4_2 +pcons_41 -pcons_40 -(+pcon_t43 -pcon_t42) -(
+               +pcon_t44)) -(+col4_1 -col4_2 +pcons_51 -pcons_50 -(+pcon_b56 -pcon_b55) -(+pcon_b57))
+* Collimator4_middle_structure5
+col4con5     5 +col4_1 -col4_2 -pcons_50 +pcons_61 -(+col4_1 -col4_2 +pcons_51 -pcons_50 -(+pcon_t53 -pcon_t52) -(
+               +pcon_t54)) -(+col4_1 -col4_2 +pcons_61 -pcons_60 -(+pcon_b66 -pcon_b65) -(+pcon_b67))
+* Collimator4_middle_structure6
+col4con6     5 +col4_1 -col4_2 -pcons_60 +pcons_71 -(+col4_1 -col4_2 +pcons_61 -pcons_60 -(+pcon_t63 -pcon_t62) -(
+               +pcon_t64)) -(+col4_1 -col4_2 +pcons_71 -pcons_70 -(+pcon_b76 -pcon_b75) -(+pcon_b77))
+* Collimator4_middle_structure7
+col4con7     5 +col4_1 -col4_2 -pcons_70 +pcons_11 -(+col4_1 -col4_2 +pcons_71 -pcons_70 -(+pcon_t73 -pcon_t72) -(
+               +pcon_t74)) -(+col4_1 -col4_2 +pcons_11 -pcons_10 -(+pcon_b16 -pcon_b15) -(+pcon_b17))
+* Collimator5_trapezoid1
+col5trd1     5 +col5t1p1 -col5t1p2 +col5t1p3 +col5t1p4 +col5t1p5 +col5t1p6 -( +col5t1p7 +col5t1p8 +col5t1p9)
+* Collimator5_trapezoid2
+col5trd2     5 +col5t2p1 -col5t2p2 +col5t2p3 +col5t2p4 +col5t2p5 +col5t2p6 -( +col5t2p7 +col5t2p8 +col5t2p9)
+* Collimator5_trapezoid3
+col5trd3     5 +col5t3p1 -col5t3p2 +col5t3p3 +col5t3p4 +col5t3p5 +col5t3p6 -( +col5t3p7 +col5t3p8 +col5t3p9)
+* Collimator5_trapezoid4
+col5trd4     5 +col5t4p1 -col5t4p2 +col5t4p3 +col5t4p4 +col5t4p5 +col5t4p6 -( +col5t4p7 +col5t4p8 +col5t4p9)
+* Collimator5_trapezoid5
+col5trd5     5 +col5t5p1 -col5t5p2 +col5t5p3 +col5t5p4 +col5t5p5 +col5t5p6 -( +col5t5p7 +col5t5p8 +col5t5p9)
+* Collimator5_trapezoid6
+col5trd6     5 +col5t6p1 -col5t6p2 +col5t6p3 +col5t6p4 +col5t6p5 +col5t6p6 -( +col5t6p7 +col5t6p8 +col5t6p9)
+* Collimator5_trapezoid7
+col5trd7     5 +col5t7p1 -col5t7p2 +col5t7p3 +col5t7p4 +col5t7p5 +col5t7p6 -( +col5t7p7 +col5t7p8 +col5t7p9)
+* Blackbody everything outside world: BLKBODY
+BLKBODY      5 -(+boxMothe)
+END
+GEOEND
+STOP
+LAM-BIAS                  0.02              PHOTON    PHOTON
+STOP
