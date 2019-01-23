@@ -29,6 +29,36 @@ MATERIAL          1.   1.00794    0.0708                              LiquidHy
 COMPOUND          2.  HYDROGEN                                        LiquidHy
 MATERIAL                             18.                              CW95
 COMPOUND        0.95  TUNGSTEN     0.015    COPPER     0.035    NICKELCW95
+MATERIAL         25.                7.44                              MANGANES
+MATERIAL         24.                7.18                              CHROMIUM
+MATERIAL         30.               7.133                              ZINC
+MATERIAL                             2.7                              AL-6061
+COMPOUND        .966  ALUMINUM      .006   SILICON      .007      IRONAL-6061
+COMPOUND        .003    COPPER    0.0015  MANGANES      0.01  MAGNESIUAL-6061
+COMPOUND       .0025  CHROMIUM    0.0015  TITANIUM     .0025      ZINCAL-6061
+* Concrete
+* Concrete has a wide variation in density and composition. The above
+* description is for poured structural concrete with 10% moisture
+* content. Concrete block will have a density of about 2.05 g/cm3.
+* Ranges of concrete composition are : C (8-25%), O (38-60%), Si (8-18%).
+* Concrete composition can be analyzed cheaply by commercial laboratories.
+MATERIAL                            2.34                              Concrete
+COMPOUND         23.    CARBON       40.    OXYGEN       12.   SILICONConcrete
+COMPOUND         12.   CALCIUM       10.  HYDROGEN        2.  MAGNESIUConcrete
+MATERIAL          1.               .0708                              H-LIQUID
+LOW-MAT     H-LIQUID        1.       -2.       87.                    HYDROGEN
+* Nitrogen atmosphere in the dump tunnel
+MATERIAL                       .00120484                              DMPATM
+COMPOUND   -1.248E-4    CARBON -.9800482  NITROGEN -0.012827     ARGONDMPATM
+COMPOUND       -.007    OXYGEN                                        DMPATM
+MATERIAL         15.                1.82                              PHOSPHO
+MATERIAL         16.                2.07                              SULFUR
+* Steel316LN
+* Stainless steel AISI316LN
+MATERIAL                             7.8                              SS316LN
+COMPOUND     -.67145      IRON    -0.185  CHROMIUM   -0.1125    NICKELSS316LN
+COMPOUND       -0.02  MANGANES     -0.01   SILICON   -4.5E-4   PHOSPHOSS316LN
+COMPOUND      -3.E-4    SULFUR    -3.E-4    CARBON                    SS316LN
 ASSIGNMA      VACUUM  logicMot
 ASSIGNMA         AIR      hall
 ASSIGNMA      VACUUM      pipe
@@ -76,6 +106,669 @@ ASSIGNMA        CW95  col5trd6
 ASSIGNMA        CW95  col5trd7
 ASSIGNMA    BLCKHOLE   BLKBODY
 ASSIGNMA      CARBON     Dirth
+ASSIGNMA     AL-6061   COROUT1
+ASSIGNMA     AL-6061   PLATE_N
+ASSIGNMA       WATER    THRU_N
+ASSIGNMA       WATER      GAP1
+ASSIGNMA     AL-6061        U1
+ASSIGNMA       WATER       U1W
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061       SP2
+ASSIGNMA       WATER        W2
+ASSIGNMA     AL-6061        F2
+ASSIGNMA       WATER       WF2
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061       SP3
+ASSIGNMA       WATER        W3
+ASSIGNMA     AL-6061        D3
+ASSIGNMA       WATER       WD3
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061       SP4
+ASSIGNMA       WATER        W4
+ASSIGNMA     AL-6061        F4
+ASSIGNMA       WATER       WF4
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061       SP5
+ASSIGNMA       WATER        W5
+ASSIGNMA     AL-6061        F5
+ASSIGNMA       WATER       WF5
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061       SP6
+ASSIGNMA       WATER        W6
+ASSIGNMA     AL-6061        U6
+ASSIGNMA       WATER       WU6
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061       SP7
+ASSIGNMA       WATER        W7
+ASSIGNMA     AL-6061        F7
+ASSIGNMA       WATER       WF7
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061       SP8
+ASSIGNMA       WATER        W8
+ASSIGNMA     AL-6061        F8
+ASSIGNMA       WATER       WF8
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061       SP9
+ASSIGNMA       WATER        W9
+ASSIGNMA     AL-6061        F9
+ASSIGNMA       WATER       WF9
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP10
+ASSIGNMA       WATER       W10
+ASSIGNMA     AL-6061       D10
+ASSIGNMA       WATER      WD10
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP11
+ASSIGNMA       WATER       W11
+ASSIGNMA     AL-6061       F11
+ASSIGNMA       WATER      WF11
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP12
+ASSIGNMA       WATER       W12
+ASSIGNMA     AL-6061       F12
+ASSIGNMA       WATER      WF12
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP13
+ASSIGNMA       WATER       W13
+ASSIGNMA     AL-6061       F13
+ASSIGNMA       WATER      WF13
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP14
+ASSIGNMA       WATER       W14
+ASSIGNMA     AL-6061       U14
+ASSIGNMA       WATER      WU14
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP15
+ASSIGNMA       WATER       W15
+ASSIGNMA     AL-6061       F15
+ASSIGNMA       WATER      WF15
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP16
+ASSIGNMA       WATER       W16
+ASSIGNMA     AL-6061       F16
+ASSIGNMA       WATER      WF16
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP17
+ASSIGNMA       WATER       W17
+ASSIGNMA     AL-6061       F17
+ASSIGNMA       WATER      WF17
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP18
+ASSIGNMA       WATER       W18
+ASSIGNMA     AL-6061       F18
+ASSIGNMA       WATER      WF18
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP19
+ASSIGNMA       WATER       W19
+ASSIGNMA     AL-6061       D19
+ASSIGNMA       WATER      WD19
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP20
+ASSIGNMA       WATER       W20
+ASSIGNMA     AL-6061       F20
+ASSIGNMA       WATER      WF20
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP21
+ASSIGNMA       WATER       W21
+ASSIGNMA     AL-6061       F21
+ASSIGNMA       WATER      WF21
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP22
+ASSIGNMA       WATER       W22
+ASSIGNMA     AL-6061       F22
+ASSIGNMA       WATER      WF22
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP23
+ASSIGNMA       WATER       W23
+ASSIGNMA     AL-6061       F23
+ASSIGNMA       WATER      WF23
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP24
+ASSIGNMA       WATER       W24
+ASSIGNMA     AL-6061       U24
+ASSIGNMA       WATER      WU24
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP25
+ASSIGNMA       WATER       W25
+ASSIGNMA     AL-6061       F25
+ASSIGNMA       WATER      WF25
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP26
+ASSIGNMA       WATER       W26
+ASSIGNMA     AL-6061       F26
+ASSIGNMA       WATER      WF26
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP27
+ASSIGNMA       WATER       W27
+ASSIGNMA     AL-6061       F27
+ASSIGNMA       WATER      WF27
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP28
+ASSIGNMA       WATER       W28
+ASSIGNMA     AL-6061       F28
+ASSIGNMA       WATER      WF28
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP29
+ASSIGNMA       WATER       W29
+ASSIGNMA     AL-6061       D29
+ASSIGNMA       WATER      WD29
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP30
+ASSIGNMA       WATER       W30
+ASSIGNMA     AL-6061       F30
+ASSIGNMA       WATER      WF30
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP31
+ASSIGNMA       WATER       W31
+ASSIGNMA     AL-6061       F31
+ASSIGNMA       WATER      WF31
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP32
+ASSIGNMA       WATER       W32
+ASSIGNMA     AL-6061       F32
+ASSIGNMA       WATER      WF32
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP33
+ASSIGNMA       WATER       W33
+ASSIGNMA     AL-6061       F33
+ASSIGNMA       WATER      WF33
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP34
+ASSIGNMA       WATER       W34
+ASSIGNMA     AL-6061       U34
+ASSIGNMA       WATER      WU34
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP35
+ASSIGNMA       WATER       W35
+ASSIGNMA     AL-6061       F35
+ASSIGNMA       WATER      WF35
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP36
+ASSIGNMA       WATER       W36
+ASSIGNMA     AL-6061       F36
+ASSIGNMA       WATER      WF36
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP37
+ASSIGNMA       WATER       W37
+ASSIGNMA     AL-6061       F37
+ASSIGNMA       WATER      WF37
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP38
+ASSIGNMA       WATER       W38
+ASSIGNMA     AL-6061       F38
+ASSIGNMA       WATER      WF38
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP39
+ASSIGNMA       WATER       W39
+ASSIGNMA     AL-6061       D39
+ASSIGNMA       WATER      WD39
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP40
+ASSIGNMA       WATER       W40
+ASSIGNMA     AL-6061       F40
+ASSIGNMA       WATER      WF40
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP41
+ASSIGNMA       WATER       W41
+ASSIGNMA     AL-6061       F41
+ASSIGNMA       WATER      WF41
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP42
+ASSIGNMA       WATER       W42
+ASSIGNMA     AL-6061       F42
+ASSIGNMA       WATER      WF42
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP43
+ASSIGNMA       WATER       W43
+ASSIGNMA     AL-6061       F43
+ASSIGNMA       WATER      WF43
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP44
+ASSIGNMA       WATER       W44
+ASSIGNMA     AL-6061       U44
+ASSIGNMA       WATER      WU44
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP45
+ASSIGNMA       WATER       W45
+ASSIGNMA     AL-6061       F45
+ASSIGNMA       WATER      WF45
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP46
+ASSIGNMA       WATER       W46
+ASSIGNMA     AL-6061       F46
+ASSIGNMA       WATER      WF46
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP47
+ASSIGNMA       WATER       W47
+ASSIGNMA     AL-6061       F47
+ASSIGNMA       WATER      WF47
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP48
+ASSIGNMA       WATER       W48
+ASSIGNMA     AL-6061       F48
+ASSIGNMA       WATER      WF48
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP49
+ASSIGNMA       WATER       W49
+ASSIGNMA     AL-6061       D49
+ASSIGNMA       WATER      WD49
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP50
+ASSIGNMA       WATER       W50
+ASSIGNMA     AL-6061       F50
+ASSIGNMA       WATER      WF50
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP51
+ASSIGNMA       WATER       W51
+ASSIGNMA     AL-6061       F51
+ASSIGNMA       WATER      WF51
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP52
+ASSIGNMA       WATER       W52
+ASSIGNMA     AL-6061       F52
+ASSIGNMA       WATER      WF52
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP53
+ASSIGNMA       WATER       W53
+ASSIGNMA     AL-6061       F53
+ASSIGNMA       WATER      WF53
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP54
+ASSIGNMA       WATER       W54
+ASSIGNMA     AL-6061       U54
+ASSIGNMA       WATER      WU54
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP55
+ASSIGNMA       WATER       W55
+ASSIGNMA     AL-6061       F55
+ASSIGNMA       WATER      WF55
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP56
+ASSIGNMA       WATER       W56
+ASSIGNMA     AL-6061       F56
+ASSIGNMA       WATER      WF56
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP57
+ASSIGNMA       WATER       W57
+ASSIGNMA     AL-6061       F57
+ASSIGNMA       WATER      WF57
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP58
+ASSIGNMA       WATER       W58
+ASSIGNMA     AL-6061       F58
+ASSIGNMA       WATER      WF58
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP59
+ASSIGNMA       WATER       W59
+ASSIGNMA     AL-6061       D59
+ASSIGNMA       WATER      WD59
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP60
+ASSIGNMA       WATER       W60
+ASSIGNMA     AL-6061       F60
+ASSIGNMA       WATER      WF60
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP61
+ASSIGNMA       WATER       W61
+ASSIGNMA     AL-6061       F61
+ASSIGNMA       WATER      WF61
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP62
+ASSIGNMA       WATER       W62
+ASSIGNMA     AL-6061       F62
+ASSIGNMA       WATER      WF62
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP63
+ASSIGNMA       WATER       W63
+ASSIGNMA     AL-6061       F63
+ASSIGNMA       WATER      WF63
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP64
+ASSIGNMA       WATER       W64
+ASSIGNMA     AL-6061       U64
+ASSIGNMA       WATER      WU64
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP65
+ASSIGNMA       WATER       W65
+ASSIGNMA     AL-6061       F65
+ASSIGNMA       WATER      WF65
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP66
+ASSIGNMA       WATER       W66
+ASSIGNMA     AL-6061       F66
+ASSIGNMA       WATER      WF66
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP67
+ASSIGNMA       WATER       W67
+ASSIGNMA     AL-6061       F67
+ASSIGNMA       WATER      WF67
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP68
+ASSIGNMA       WATER       W68
+ASSIGNMA     AL-6061       D68
+ASSIGNMA       WATER      WD68
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP69
+ASSIGNMA       WATER       W69
+ASSIGNMA     AL-6061       F69
+ASSIGNMA       WATER      WF69
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP70
+ASSIGNMA       WATER       W70
+ASSIGNMA     AL-6061       F70
+ASSIGNMA       WATER      WF70
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP71
+ASSIGNMA       WATER       W71
+ASSIGNMA     AL-6061       F71
+ASSIGNMA       WATER      WF71
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP72
+ASSIGNMA       WATER       W72
+ASSIGNMA     AL-6061       U72
+ASSIGNMA       WATER      WU72
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP73
+ASSIGNMA       WATER       W73
+ASSIGNMA     AL-6061       F73
+ASSIGNMA       WATER      WF73
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP74
+ASSIGNMA       WATER       W74
+ASSIGNMA     AL-6061       F74
+ASSIGNMA       WATER      WF74
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP75
+ASSIGNMA       WATER       W75
+ASSIGNMA     AL-6061       F75
+ASSIGNMA       WATER      WF75
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP76
+ASSIGNMA       WATER       W76
+ASSIGNMA     AL-6061       D76
+ASSIGNMA       WATER      WD76
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP77
+ASSIGNMA       WATER       W77
+ASSIGNMA     AL-6061       F77
+ASSIGNMA       WATER      WF77
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP78
+ASSIGNMA       WATER       W78
+ASSIGNMA     AL-6061       F78
+ASSIGNMA       WATER      WF78
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP79
+ASSIGNMA       WATER       W79
+ASSIGNMA     AL-6061       F79
+ASSIGNMA       WATER      WF79
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP80
+ASSIGNMA       WATER       W80
+ASSIGNMA     AL-6061       U80
+ASSIGNMA       WATER      WU80
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP81
+ASSIGNMA       WATER       W81
+ASSIGNMA     AL-6061       F81
+ASSIGNMA       WATER      WF81
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP82
+ASSIGNMA       WATER       W82
+ASSIGNMA     AL-6061       F82
+ASSIGNMA       WATER      WF82
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP83
+ASSIGNMA       WATER       W83
+ASSIGNMA     AL-6061       D83
+ASSIGNMA       WATER      WD83
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP84
+ASSIGNMA       WATER       W84
+ASSIGNMA     AL-6061       F84
+ASSIGNMA       WATER      WF84
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP85
+ASSIGNMA       WATER       W85
+ASSIGNMA     AL-6061       F85
+ASSIGNMA       WATER      WF85
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP86
+ASSIGNMA       WATER       W86
+ASSIGNMA     AL-6061       U86
+ASSIGNMA       WATER      WU86
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP87
+ASSIGNMA       WATER       W87
+ASSIGNMA     AL-6061       F87
+ASSIGNMA       WATER      WF87
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP88
+ASSIGNMA       WATER       W88
+ASSIGNMA     AL-6061       F88
+ASSIGNMA       WATER      WF88
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP89
+ASSIGNMA       WATER       W89
+ASSIGNMA     AL-6061       D89
+ASSIGNMA       WATER      WD89
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP90
+ASSIGNMA       WATER       W90
+ASSIGNMA     AL-6061       F90
+ASSIGNMA       WATER      WF90
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP91
+ASSIGNMA       WATER       W91
+ASSIGNMA     AL-6061       U91
+ASSIGNMA       WATER      WU91
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP92
+ASSIGNMA       WATER       W92
+ASSIGNMA     AL-6061       F92
+ASSIGNMA       WATER      WF92
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP93
+ASSIGNMA       WATER       W93
+ASSIGNMA     AL-6061       D93
+ASSIGNMA       WATER      WD93
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP94
+ASSIGNMA       WATER       W94
+ASSIGNMA     AL-6061       F94
+ASSIGNMA       WATER      WF94
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP95
+ASSIGNMA       WATER       W95
+ASSIGNMA     AL-6061       U95
+ASSIGNMA       WATER      WU95
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP96
+ASSIGNMA       WATER       W96
+ASSIGNMA     AL-6061       F96
+ASSIGNMA       WATER      WF96
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP97
+ASSIGNMA       WATER       W97
+ASSIGNMA     AL-6061       F97
+ASSIGNMA       WATER      WF97
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP98
+ASSIGNMA       WATER       W98
+ASSIGNMA     AL-6061       D98
+ASSIGNMA       WATER      WD98
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061      SP99
+ASSIGNMA       WATER       W99
+ASSIGNMA     AL-6061       F99
+ASSIGNMA       WATER      WF99
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061     SP100
+ASSIGNMA       WATER      W100
+ASSIGNMA     AL-6061      F100
+ASSIGNMA       WATER     WF100
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061     SP101
+ASSIGNMA       WATER      W101
+ASSIGNMA     AL-6061      U101
+ASSIGNMA       WATER     WU101
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061     SP102
+ASSIGNMA       WATER      W102
+ASSIGNMA     AL-6061      F102
+ASSIGNMA       WATER     WF102
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061     SP103
+ASSIGNMA       WATER      W103
+ASSIGNMA     AL-6061      F103
+ASSIGNMA       WATER     WF103
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061     SP104
+ASSIGNMA       WATER      W104
+ASSIGNMA     AL-6061      D104
+ASSIGNMA       WATER     WD104
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061     SP105
+ASSIGNMA       WATER      W105
+ASSIGNMA     AL-6061      F105
+ASSIGNMA       WATER     WF105
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061     SP106
+ASSIGNMA       WATER      W106
+ASSIGNMA     AL-6061      F106
+ASSIGNMA       WATER     WF106
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061     SP107
+ASSIGNMA       WATER      W107
+ASSIGNMA     AL-6061      U107
+ASSIGNMA       WATER     WU107
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061     SP108
+ASSIGNMA       WATER      W108
+ASSIGNMA     AL-6061      F108
+ASSIGNMA       WATER     WF108
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061     SP109
+ASSIGNMA       WATER      W109
+ASSIGNMA     AL-6061      F109
+ASSIGNMA       WATER     WF109
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061     SP110
+ASSIGNMA       WATER      W110
+ASSIGNMA     AL-6061      D110
+ASSIGNMA       WATER     WD110
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061     SP111
+ASSIGNMA       WATER      W111
+ASSIGNMA     AL-6061      F111
+ASSIGNMA       WATER     WF111
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061     SP112
+ASSIGNMA       WATER      W112
+ASSIGNMA     AL-6061      F112
+ASSIGNMA       WATER     WF112
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061     SP113
+ASSIGNMA       WATER      W113
+ASSIGNMA     AL-6061      U113
+ASSIGNMA       WATER     WU113
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061     SP114
+ASSIGNMA       WATER      W114
+ASSIGNMA     AL-6061      F114
+ASSIGNMA       WATER     WF114
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061     SP115
+ASSIGNMA       WATER      W115
+ASSIGNMA     AL-6061      F115
+ASSIGNMA       WATER     WF115
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061     SP116
+ASSIGNMA       WATER      W116
+ASSIGNMA     AL-6061      D116
+ASSIGNMA       WATER     WD116
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061     SP117
+ASSIGNMA       WATER      W117
+ASSIGNMA     AL-6061      F117
+ASSIGNMA       WATER     WF117
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061     SP118
+ASSIGNMA       WATER      W118
+ASSIGNMA     AL-6061      F118
+ASSIGNMA       WATER     WF118
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA     AL-6061     SP119
+ASSIGNMA       WATER      W119
+ASSIGNMA     AL-6061      U119
+ASSIGNMA       WATER     WU119
+ASSIGNMA       WATER    GAP120
+ASSIGNMA     AL-6061      P120
+ASSIGNMA       WATER     WP120
+ASSIGNMA       WATER    GAP121
+ASSIGNMA     AL-6061    P121_1    P121_0
+ASSIGNMA       WATER  TANKW_12
+ASSIGNMA       WATER  TANKW_11
+ASSIGNMA       WATER  TANKW_10
+ASSIGNMA       WATER   TANKW_9
+ASSIGNMA       WATER  WP121_11
+ASSIGNMA       WATER  WP121_10
+ASSIGNMA       WATER  WP121_12
+ASSIGNMA       WATER   WP121_9
+ASSIGNMA       WATER    GAP122
+ASSIGNMA     AL-6061  P_CLOSUR
+ASSIGNMA       WATER  W_CLOSUR
+ASSIGNMA     AL-6061   MTANK_1
+ASSIGNMA       WATER   TANKW_1
+ASSIGNMA       WATER   W_INLET
+ASSIGNMA     AL-6061  TANKTAIL
+ASSIGNMA      DMPATM  ATM_TAIL
+ASSIGNMA     AL-6061  TIP_TANK
+ASSIGNMA     AL-6061    WINDOW
+ASSIGNMA       WATER        W0
+ASSIGNMA     AL-6061   COROUT2
+ASSIGNMA       WATER   TANKW_2
+ASSIGNMA     AL-6061   MTANK_2
+ASSIGNMA     AL-6061   COROUT3
+ASSIGNMA       WATER   TANKW_3
+ASSIGNMA     AL-6061   MTANK_3
+ASSIGNMA       WATER   TANKW_4
+ASSIGNMA     AL-6061   COROUT4
+ASSIGNMA     AL-6061   MTANK_4
+ASSIGNMA     AL-6061   COROUT5
+ASSIGNMA       WATER   TANKW_5
+ASSIGNMA     AL-6061   MTANK_5
+ASSIGNMA       WATER   TANKW_6
+ASSIGNMA       WATER   TANKW_7
+ASSIGNMA       WATER   TANKW_8
+ASSIGNMA       WATER  TANKW_13
+ASSIGNMA     AL-6061   MTANK_6
+ASSIGNMA     AL-6061   MTANK_7
+ASSIGNMA     AL-6061   MTANK_8
+ASSIGNMA     AL-6061   COROUT6
+ASSIGNMA     AL-6061   COROUT7
+ASSIGNMA     AL-6061   COROUT8
+ASSIGNMA     AL-6061  COROUT13
+ASSIGNMA       WATER  WP121_13
+ASSIGNMA     AL-6061  COROUT14
+ASSIGNMA     AL-6061  MTANK_13
+ASSIGNMA       WATER  TANKW_14
+ASSIGNMA     AL-6061  MTANK_14
+ASSIGNMA    Concrete     WALL1
+ASSIGNMA    Concrete     WALL2
+ASSIGNMA    Concrete     WALL3
+ASSIGNMA      VACUUM    BLVAC_
+ASSIGNMA     AL-6061    APTPLT
+ASSIGNMA     AL-6061   DMPWALL
+ASSIGNMA         AIR     DTAIR
+ASSIGNMA      DMPATM      NATM
+ASSIGNMA     AL-6061    VIEWER
+ASSIGNMA     AL-6061   HEBLWIN
+ASSIGNMA     AL-6061      HEBL
+ASSIGNMA      HELIUM    HEBLIN
+ASSIGNMA     AL-6061  DIFFUSER
+ASSIGNMA     AL-6061  VAC_WIND
 RADDECAY          1.        1.                       1008000
 * 7days intensity     4days intensity     7days intensity
 IRRPROFI     604800. 5.3053E14   345600.       0.0   604800. 5.3053E14
@@ -565,7 +1258,7 @@ PLA col5t7p8   7.009563153371961 2.839986865971413 0.0 -8.753247515483226
 PLA col5t7p9   -4.328557005379408 -6.2018622405839405 0.0 -13.444236410291404
               12.0469128138372 1287.005
 XZP hallcut    -900.
-$start_translat 0 0 2652.9
+$start_translat 0 0 3052.9
 RPP dmptun2    -137. 137. -137. 137. -25. 2788.1
 RPP dmptun3    -167. 167. -167. 167. -25. 2818.1
 RPP dmptun4    -197. 197. -198. 197. -25. 3112.8
@@ -641,7 +1334,7 @@ ZCC difout     0.0 0.0 25.
 PLA viewer1    1. 0.0 -1. 0.0 22. 570.
 PLA viewer2    1. 0.0 -1. 0.0 22. 570.035921
 $end_translat 
-$start_translat 0 0 4728.54
+$start_translat 0 0 5128.54
 * Beam dump tunnel 7ftx7ft
 !@what.1=-42*inch
 !@what.2=42*inch
@@ -1248,8 +1941,10 @@ pipe         5 +hal_pipe
 * topwall
 topwall      5 +hal_tout -hal_tin -hal_tsub -hallcut
 Dirth        5 +dirtou1 -hal_tout -dirtou2 -hallcut -hal_tsub
-               | +dirtou2 -( +hal_tout -hal_tsub ) -hal_cout +dirtou3 -hallcut
-               | +dirtou4 -hal_cout
+               | +dirtou2 -(+hal_tout -hal_tsub) -hal_cout +dirtou3 -hallcut -tun5
+               | +dirtou4 -hal_cout -tun5
+               | +tun5 -pl60 -tun4
+               | +tun4 +tun5 -dmptun4 -ppl1920
 * cylwall
 cylwall      5 +hal_cout -hal_cin -hal_hole -hal_pipe
 * h2Targ
@@ -1360,6 +2055,1335 @@ col5trd6     5 +col5t6p1 -col5t6p2 +col5t6p3 +col5t6p4 +col5t6p5 +col5t6p6 -( +c
 col5trd7     5 +col5t7p1 -col5t7p2 +col5t7p3 +col5t7p4 +col5t7p5 +col5t7p6 -( +col5t7p7 +col5t7p8 +col5t7p9)
 * Blackbody everything outside world: BLKBODY
 BLKBODY      5 -(+boxMothe)
+BLVAC_       5 +heblin +aptpl1 -pl20
+               | +heblin +pl520 -aptpl4
+               | +aptpl4  -aptpl1 +aptr1
+               | +heblin +aptpl2 -aptpl1 -aptr2
+               | +heblin +aptpl4 -aptpl3 -aptr2
+APTPLT       5 +aptpl4 +aptr2 -aptpl1 -aptr1
+               | +heblin +aptpl3 -aptpl2 -aptr2
+DMPWALL      5 +pl552 +tun1 -pl551 -heblout
+WALL1        5 +dmptun2 -dmp_tunl -pl1830 -ha_out
+               | +pl1830 +tun2 -tun1 -ha_out
+               | +pl1860 +tun2 -dmptun2 -pl1830
+               | +pl30 +ypl305 -ypl330 +tun5 -ha_out
+               | +pl30 -pl0 -tun2 -ypl305 +tun5 -ha_out
+               | +pl0 +tun5 -ha_out -tun1
+WALL2        5 +dmptun3 -dmptun2 -pl1860
+               | +pl1860 +tun3 -tun2 -pl30
+               | +pl1890 +tun3 -dmptun3 -pl1860
+               | +pl60 +tun5 +ypl330 -pl0
+               | +pl60 +tun5 -pl30 -tun3 -ypl330
+WALL3        5 +dmptun4 -dmptun3 -pl1890 +tun5
+               | +pl1890 +tun4 -tun3 -pl60
+               | +pl1920 +tun4 -dmptun4 -pl1890
+WINDOW       5 +window +winpl2 -winpl1
+               | +pl_0 +tnktip3 -tnktip4 -window
+TIP_TANK     5 +tnktip1 +tankpl1 -tnktipc1 -tnktip2
+               | +tnktipc1 +tankpl1 -tnktipc2 -pl_0 -tnktip2 -coreout
+COROUT1      5 +coreout -core +f77
+TANKW_1      5 +tankin -coreout -tankpl1 +f77 -thru_cls
+               | +tnktip2 +tankpl1 -tnktipc1
+               | +tnktipc1 +tnktip2 +tankpl1 -coreout
+               | +tnktipc2 +tankpl1 -pl_0 -tnktip2 -coreout
+MTANK_1      5 +tankout -tankin -tankpl1 +f77
+PLATE_N      5 +core +n_plate -thru
+THRU_N       5 +core +thru +n_plate
+W0           5 +pl_0 +tnktip4 -window
+               | +pl_0 +window -winpl2
+GAP1         5 +core -n_plate +g1
+U1           5 +core -pltup +u1 -g1
+U1W          5 +core +pltup +u1 -g1
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP2          5 +core -center +spcr1 +spcr3 +g2 -u1
+               | +core -center +spcr2 +spcr4 +g2 -u1
+W2           5 +center +g2 -u1
+               | +core -center -spcr1 -spcr2 +g2 -u1
+               | +core -center -spcr3 -spcr4 +g2 -u1
+F2           5 +core -center +fin1 +fin3 +f2 -g2
+               | +core -center +fin2 +fin4 +f2 -g2
+               | +center +f2 -g2
+WF2          5 +core -center -fin1 -fin2 +f2 -g2
+               | +core -center -fin3 -fin4 +f2 -g2
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP3          5 +core -center +spcr1 +spcr3 +g3 -f2
+               | +core -center +spcr2 +spcr4 +g3 -f2
+W3           5 +center +g3 -f2
+               | +core -center -spcr1 -spcr2 +g3 -f2
+               | +core -center -spcr3 -spcr4 +g3 -f2
+D3           5 +core +pltdown +d3 -g3
+WD3          5 +core -pltdown +d3 -g3
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP4          5 +core -center +spcr1 +spcr3 +g4 -d3
+               | +core -center +spcr2 +spcr4 +g4 -d3
+W4           5 +center +g4 -d3
+               | +core -center -spcr1 -spcr2 +g4 -d3
+               | +core -center -spcr3 -spcr4 +g4 -d3
+F4           5 +core -center +fin1 +fin3 +f4 -g4
+               | +core -center +fin2 +fin4 +f4 -g4
+               | +center +f4 -g4
+WF4          5 +core -center -fin1 -fin2 +f4 -g4
+               | +core -center -fin3 -fin4 +f4 -g4
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP5          5 +core -center +spcr1 +spcr3 +g5 -f4
+               | +core -center +spcr2 +spcr4 +g5 -f4
+W5           5 +center +g5 -f4
+               | +core -center -spcr1 -spcr2 +g5 -f4
+               | +core -center -spcr3 -spcr4 +g5 -f4
+F5           5 +core -center +fin1 +fin3 +f5 -g5
+               | +core -center +fin2 +fin4 +f5 -g5
+               | +center +f5 -g5
+WF5          5 +core -center -fin1 -fin2 +f5 -g5
+               | +core -center -fin3 -fin4 +f5 -g5
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP6          5 +core -center +spcr1 +spcr3 +g6 -f5
+               | +core -center +spcr2 +spcr4 +g6 -f5
+W6           5 +center +g6 -f5
+               | +core -center -spcr1 -spcr2 +g6 -f5
+               | +core -center -spcr3 -spcr4 +g6 -f5
+U6           5 +core +pltdown +u6 -g6
+WU6          5 +core -pltdown +u6 -g6
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP7          5 +core -center +spcr1 +spcr3 +g7 -u6
+               | +core -center +spcr2 +spcr4 +g7 -u6
+W7           5 +center +g7 -u6
+               | +core -center -spcr1 -spcr2 +g7 -u6
+               | +core -center -spcr3 -spcr4 +g7 -u6
+F7           5 +core -center +fin1 +fin3 +f7 -g7
+               | +core -center +fin2 +fin4 +f7 -g7
+               | +center +f7 -g7
+WF7          5 +core -center -fin1 -fin2 +f7 -g7
+               | +core -center -fin3 -fin4 +f7 -g7
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP8          5 +core -center +spcr1 +spcr3 +g8 -f7
+               | +core -center +spcr2 +spcr4 +g8 -f7
+W8           5 +center +g8 -f7
+               | +core -center -spcr1 -spcr2 +g8 -f7
+               | +core -center -spcr3 -spcr4 +g8 -f7
+F8           5 +core -center +fin1 +fin3 +f8 -g8
+               | +core -center +fin2 +fin4 +f8 -g8
+               | +center +f8 -g8
+WF8          5 +core -center -fin1 -fin2 +f8 -g8
+               | +core -center -fin3 -fin4 +f8 -g8
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP9          5 +core -center +spcr1 +spcr3 +g9 -f8
+               | +core -center +spcr2 +spcr4 +g9 -f8
+W9           5 +center +g9 -f8
+               | +core -center -spcr1 -spcr2 +g9 -f8
+               | +core -center -spcr3 -spcr4 +g9 -f8
+F9           5 +core -center +fin1 +fin3 +f9 -g9
+               | +core -center +fin2 +fin4 +f9 -g9
+               | +center +f9 -g9
+WF9          5 +core -center -fin1 -fin2 +f9 -g9
+               | +core -center -fin3 -fin4 +f9 -g9
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP10         5 +core -center +spcr1 +spcr3 +g10 -f9
+               | +core -center +spcr2 +spcr4 +g10 -f9
+W10          5 +center +g10 -f9
+               | +core -center -spcr1 -spcr2 +g10 -f9
+               | +core -center -spcr3 -spcr4 +g10 -f9
+D10          5 +core +pltdown +d10 -g10
+WD10         5 +core -pltdown +d10 -g10
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP11         5 +core -center +spcr1 +spcr3 +g11 -d10
+               | +core -center +spcr2 +spcr4 +g11 -d10
+W11          5 +center +g11 -d10
+               | +core -center -spcr1 -spcr2 +g11 -d10
+               | +core -center -spcr3 -spcr4 +g11 -d10
+F11          5 +core -center +fin1 +fin3 +f11 -g11
+               | +core -center +fin2 +fin4 +f11 -g11
+               | +center +f11 -g11
+WF11         5 +core -center -fin1 -fin2 +f11 -g11
+               | +core -center -fin3 -fin4 +f11 -g11
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP12         5 +core -center +spcr1 +spcr3 +g12 -f11
+               | +core -center +spcr2 +spcr4 +g12 -f11
+W12          5 +center +g12 -f11
+               | +core -center -spcr1 -spcr2 +g12 -f11
+               | +core -center -spcr3 -spcr4 +g12 -f11
+F12          5 +core -center +fin1 +fin3 +f12 -g12
+               | +core -center +fin2 +fin4 +f12 -g12
+               | +center +f12 -g12
+WF12         5 +core -center -fin1 -fin2 +f12 -g12
+               | +core -center -fin3 -fin4 +f12 -g12
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP13         5 +core -center +spcr1 +spcr3 +g13 -f12
+               | +core -center +spcr2 +spcr4 +g13 -f12
+W13          5 +center +g13 -f12
+               | +core -center -spcr1 -spcr2 +g13 -f12
+               | +core -center -spcr3 -spcr4 +g13 -f12
+F13          5 +core -center +fin1 +fin3 +f13 -g13
+               | +core -center +fin2 +fin4 +f13 -g13
+               | +center +f13 -g13
+WF13         5 +core -center -fin1 -fin2 +f13 -g13
+               | +core -center -fin3 -fin4 +f13 -g13
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP14         5 +core -center +spcr1 +spcr3 +g14 -f13
+               | +core -center +spcr2 +spcr4 +g14 -f13
+W14          5 +center +g14 -f13
+               | +core -center -spcr1 -spcr2 +g14 -f13
+               | +core -center -spcr3 -spcr4 +g14 -f13
+U14          5 +core +pltdown +u14 -g14
+WU14         5 +core -pltdown +u14 -g14
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP15         5 +core -center +spcr1 +spcr3 +g15 -u14
+               | +core -center +spcr2 +spcr4 +g15 -u14
+W15          5 +center +g15 -u14
+               | +core -center -spcr1 -spcr2 +g15 -u14
+               | +core -center -spcr3 -spcr4 +g15 -u14
+F15          5 +core -center +fin1 +fin3 +f15 -g15
+               | +core -center +fin2 +fin4 +f15 -g15
+               | +center +f15 -g15
+WF15         5 +core -center -fin1 -fin2 +f15 -g15
+               | +core -center -fin3 -fin4 +f15 -g15
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP16         5 +core -center +spcr1 +spcr3 +g16 -f15
+               | +core -center +spcr2 +spcr4 +g16 -f15
+W16          5 +center +g16 -f15
+               | +core -center -spcr1 -spcr2 +g16 -f15
+               | +core -center -spcr3 -spcr4 +g16 -f15
+F16          5 +core -center +fin1 +fin3 +f16 -g16
+               | +core -center +fin2 +fin4 +f16 -g16
+               | +center +f16 -g16
+WF16         5 +core -center -fin1 -fin2 +f16 -g16
+               | +core -center -fin3 -fin4 +f16 -g16
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP17         5 +core -center +spcr1 +spcr3 +g17 -f16
+               | +core -center +spcr2 +spcr4 +g17 -f16
+W17          5 +center +g17 -f16
+               | +core -center -spcr1 -spcr2 +g17 -f16
+               | +core -center -spcr3 -spcr4 +g17 -f16
+F17          5 +core -center +fin1 +fin3 +f17 -g17
+               | +core -center +fin2 +fin4 +f17 -g17
+               | +center +f17 -g17
+WF17         5 +core -center -fin1 -fin2 +f17 -g17
+               | +core -center -fin3 -fin4 +f17 -g17
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP18         5 +core -center +spcr1 +spcr3 +g18 -f17
+               | +core -center +spcr2 +spcr4 +g18 -f17
+W18          5 +center +g18 -f17
+               | +core -center -spcr1 -spcr2 +g18 -f17
+               | +core -center -spcr3 -spcr4 +g18 -f17
+F18          5 +core -center +fin1 +fin3 +f18 -g18
+               | +core -center +fin2 +fin4 +f18 -g18
+               | +center +f18 -g18
+WF18         5 +core -center -fin1 -fin2 +f18 -g18
+               | +core -center -fin3 -fin4 +f18 -g18
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP19         5 +core -center +spcr1 +spcr3 +g19 -f18
+               | +core -center +spcr2 +spcr4 +g19 -f18
+W19          5 +center +g19 -f18
+               | +core -center -spcr1 -spcr2 +g19 -f18
+               | +core -center -spcr3 -spcr4 +g19 -f18
+D19          5 +core +pltdown +d19 -g19
+WD19         5 +core -pltdown +d19 -g19
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP20         5 +core -center +spcr1 +spcr3 +g20 -d19
+               | +core -center +spcr2 +spcr4 +g20 -d19
+W20          5 +center +g20 -d19
+               | +core -center -spcr1 -spcr2 +g20 -d19
+               | +core -center -spcr3 -spcr4 +g20 -d19
+F20          5 +core -center +fin1 +fin3 +f20 -g20
+               | +core -center +fin2 +fin4 +f20 -g20
+               | +center +f20 -g20
+WF20         5 +core -center -fin1 -fin2 +f20 -g20
+               | +core -center -fin3 -fin4 +f20 -g20
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP21         5 +core -center +spcr1 +spcr3 +g21 -f20
+               | +core -center +spcr2 +spcr4 +g21 -f20
+W21          5 +center +g21 -f20
+               | +core -center -spcr1 -spcr2 +g21 -f20
+               | +core -center -spcr3 -spcr4 +g21 -f20
+F21          5 +core -center +fin1 +fin3 +f21 -g21
+               | +core -center +fin2 +fin4 +f21 -g21
+               | +center +f21 -g21
+WF21         5 +core -center -fin1 -fin2 +f21 -g21
+               | +core -center -fin3 -fin4 +f21 -g21
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP22         5 +core -center +spcr1 +spcr3 +g22 -f21
+               | +core -center +spcr2 +spcr4 +g22 -f21
+W22          5 +center +g22 -f21
+               | +core -center -spcr1 -spcr2 +g22 -f21
+               | +core -center -spcr3 -spcr4 +g22 -f21
+F22          5 +core -center +fin1 +fin3 +f22 -g22
+               | +core -center +fin2 +fin4 +f22 -g22
+               | +center +f22 -g22
+WF22         5 +core -center -fin1 -fin2 +f22 -g22
+               | +core -center -fin3 -fin4 +f22 -g22
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP23         5 +core -center +spcr1 +spcr3 +g23 -f22
+               | +core -center +spcr2 +spcr4 +g23 -f22
+W23          5 +center +g23 -f22
+               | +core -center -spcr1 -spcr2 +g23 -f22
+               | +core -center -spcr3 -spcr4 +g23 -f22
+F23          5 +core -center +fin1 +fin3 +f23 -g23
+               | +core -center +fin2 +fin4 +f23 -g23
+               | +center +f23 -g23
+WF23         5 +core -center -fin1 -fin2 +f23 -g23
+               | +core -center -fin3 -fin4 +f23 -g23
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP24         5 +core -center +spcr1 +spcr3 +g24 -f23
+               | +core -center +spcr2 +spcr4 +g24 -f23
+W24          5 +center +g24 -f23
+               | +core -center -spcr1 -spcr2 +g24 -f23
+               | +core -center -spcr3 -spcr4 +g24 -f23
+U24          5 +core +pltdown +u24 -g24
+WU24         5 +core -pltdown +u24 -g24
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP25         5 +core -center +spcr1 +spcr3 +g25 -u24
+               | +core -center +spcr2 +spcr4 +g25 -u24
+W25          5 +center +g25 -u24
+               | +core -center -spcr1 -spcr2 +g25 -u24
+               | +core -center -spcr3 -spcr4 +g25 -u24
+F25          5 +core -center +fin1 +fin3 +f25 -g25
+               | +core -center +fin2 +fin4 +f25 -g25
+               | +center +f25 -g25
+WF25         5 +core -center -fin1 -fin2 +f25 -g25
+               | +core -center -fin3 -fin4 +f25 -g25
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP26         5 +core -center +spcr1 +spcr3 +g26 -f25
+               | +core -center +spcr2 +spcr4 +g26 -f25
+W26          5 +center +g26 -f25
+               | +core -center -spcr1 -spcr2 +g26 -f25
+               | +core -center -spcr3 -spcr4 +g26 -f25
+F26          5 +core -center +fin1 +fin3 +f26 -g26
+               | +core -center +fin2 +fin4 +f26 -g26
+               | +center +f26 -g26
+WF26         5 +core -center -fin1 -fin2 +f26 -g26
+               | +core -center -fin3 -fin4 +f26 -g26
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP27         5 +core -center +spcr1 +spcr3 +g27 -f26
+               | +core -center +spcr2 +spcr4 +g27 -f26
+W27          5 +center +g27 -f26
+               | +core -center -spcr1 -spcr2 +g27 -f26
+               | +core -center -spcr3 -spcr4 +g27 -f26
+F27          5 +core -center +fin1 +fin3 +f27 -g27
+               | +core -center +fin2 +fin4 +f27 -g27
+               | +center +f27 -g27
+WF27         5 +core -center -fin1 -fin2 +f27 -g27
+               | +core -center -fin3 -fin4 +f27 -g27
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP28         5 +core -center +spcr1 +spcr3 +g28 -f27
+               | +core -center +spcr2 +spcr4 +g28 -f27
+W28          5 +center +g28 -f27
+               | +core -center -spcr1 -spcr2 +g28 -f27
+               | +core -center -spcr3 -spcr4 +g28 -f27
+F28          5 +core -center +fin1 +fin3 +f28 -g28
+               | +core -center +fin2 +fin4 +f28 -g28
+               | +center +f28 -g28
+WF28         5 +core -center -fin1 -fin2 +f28 -g28
+               | +core -center -fin3 -fin4 +f28 -g28
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP29         5 +core -center +spcr1 +spcr3 +g29 -f28
+               | +core -center +spcr2 +spcr4 +g29 -f28
+W29          5 +center +g29 -f28
+               | +core -center -spcr1 -spcr2 +g29 -f28
+               | +core -center -spcr3 -spcr4 +g29 -f28
+D29          5 +core +pltdown +d29 -g29
+WD29         5 +core -pltdown +d29 -g29
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP30         5 +core -center +spcr1 +spcr3 +g30 -d29
+               | +core -center +spcr2 +spcr4 +g30 -d29
+W30          5 +center +g30 -d29
+               | +core -center -spcr1 -spcr2 +g30 -d29
+               | +core -center -spcr3 -spcr4 +g30 -d29
+F30          5 +core -center +fin1 +fin3 +f30 -g30
+               | +core -center +fin2 +fin4 +f30 -g30
+               | +center +f30 -g30
+WF30         5 +core -center -fin1 -fin2 +f30 -g30
+               | +core -center -fin3 -fin4 +f30 -g30
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP31         5 +core -center +spcr1 +spcr3 +g31 -f30
+               | +core -center +spcr2 +spcr4 +g31 -f30
+W31          5 +center +g31 -f30
+               | +core -center -spcr1 -spcr2 +g31 -f30
+               | +core -center -spcr3 -spcr4 +g31 -f30
+F31          5 +core -center +fin1 +fin3 +f31 -g31
+               | +core -center +fin2 +fin4 +f31 -g31
+               | +center +f31 -g31
+WF31         5 +core -center -fin1 -fin2 +f31 -g31
+               | +core -center -fin3 -fin4 +f31 -g31
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP32         5 +core -center +spcr1 +spcr3 +g32 -f31
+               | +core -center +spcr2 +spcr4 +g32 -f31
+W32          5 +center +g32 -f31
+               | +core -center -spcr1 -spcr2 +g32 -f31
+               | +core -center -spcr3 -spcr4 +g32 -f31
+F32          5 +core -center +fin1 +fin3 +f32 -g32
+               | +core -center +fin2 +fin4 +f32 -g32
+               | +center +f32 -g32
+WF32         5 +core -center -fin1 -fin2 +f32 -g32
+               | +core -center -fin3 -fin4 +f32 -g32
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP33         5 +core -center +spcr1 +spcr3 +g33 -f32
+               | +core -center +spcr2 +spcr4 +g33 -f32
+W33          5 +center +g33 -f32
+               | +core -center -spcr1 -spcr2 +g33 -f32
+               | +core -center -spcr3 -spcr4 +g33 -f32
+F33          5 +core -center +fin1 +fin3 +f33 -g33
+               | +core -center +fin2 +fin4 +f33 -g33
+               | +center +f33 -g33
+WF33         5 +core -center -fin1 -fin2 +f33 -g33
+               | +core -center -fin3 -fin4 +f33 -g33
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP34         5 +core -center +spcr1 +spcr3 +g34 -f33
+               | +core -center +spcr2 +spcr4 +g34 -f33
+W34          5 +center +g34 -f33
+               | +core -center -spcr1 -spcr2 +g34 -f33
+               | +core -center -spcr3 -spcr4 +g34 -f33
+U34          5 +core +pltdown +u34 -g34
+WU34         5 +core -pltdown +u34 -g34
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP35         5 +core -center +spcr1 +spcr3 +g35 -u34
+               | +core -center +spcr2 +spcr4 +g35 -u34
+W35          5 +center +g35 -u34
+               | +core -center -spcr1 -spcr2 +g35 -u34
+               | +core -center -spcr3 -spcr4 +g35 -u34
+F35          5 +core -center +fin1 +fin3 +f35 -g35
+               | +core -center +fin2 +fin4 +f35 -g35
+               | +center +f35 -g35
+WF35         5 +core -center -fin1 -fin2 +f35 -g35
+               | +core -center -fin3 -fin4 +f35 -g35
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP36         5 +core -center +spcr1 +spcr3 +g36 -f35
+               | +core -center +spcr2 +spcr4 +g36 -f35
+W36          5 +center +g36 -f35
+               | +core -center -spcr1 -spcr2 +g36 -f35
+               | +core -center -spcr3 -spcr4 +g36 -f35
+F36          5 +core -center +fin1 +fin3 +f36 -g36
+               | +core -center +fin2 +fin4 +f36 -g36
+               | +center +f36 -g36
+WF36         5 +core -center -fin1 -fin2 +f36 -g36
+               | +core -center -fin3 -fin4 +f36 -g36
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP37         5 +core -center +spcr1 +spcr3 +g37 -f36
+               | +core -center +spcr2 +spcr4 +g37 -f36
+W37          5 +center +g37 -f36
+               | +core -center -spcr1 -spcr2 +g37 -f36
+               | +core -center -spcr3 -spcr4 +g37 -f36
+F37          5 +core -center +fin1 +fin3 +f37 -g37
+               | +core -center +fin2 +fin4 +f37 -g37
+               | +center +f37 -g37
+WF37         5 +core -center -fin1 -fin2 +f37 -g37
+               | +core -center -fin3 -fin4 +f37 -g37
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP38         5 +core -center +spcr1 +spcr3 +g38 -f37
+               | +core -center +spcr2 +spcr4 +g38 -f37
+W38          5 +center +g38 -f37
+               | +core -center -spcr1 -spcr2 +g38 -f37
+               | +core -center -spcr3 -spcr4 +g38 -f37
+F38          5 +core -center +fin1 +fin3 +f38 -g38
+               | +core -center +fin2 +fin4 +f38 -g38
+               | +center +f38 -g38
+WF38         5 +core -center -fin1 -fin2 +f38 -g38
+               | +core -center -fin3 -fin4 +f38 -g38
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP39         5 +core -center +spcr1 +spcr3 +g39 -f38
+               | +core -center +spcr2 +spcr4 +g39 -f38
+W39          5 +center +g39 -f38
+               | +core -center -spcr1 -spcr2 +g39 -f38
+               | +core -center -spcr3 -spcr4 +g39 -f38
+D39          5 +core +pltdown +d39 -g39
+WD39         5 +core -pltdown +d39 -g39
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP40         5 +core -center +spcr1 +spcr3 +g40 -d39
+               | +core -center +spcr2 +spcr4 +g40 -d39
+W40          5 +center +g40 -d39
+               | +core -center -spcr1 -spcr2 +g40 -d39
+               | +core -center -spcr3 -spcr4 +g40 -d39
+F40          5 +core -center +fin1 +fin3 +f40 -g40
+               | +core -center +fin2 +fin4 +f40 -g40
+               | +center +f40 -g40
+WF40         5 +core -center -fin1 -fin2 +f40 -g40
+               | +core -center -fin3 -fin4 +f40 -g40
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP41         5 +core -center +spcr1 +spcr3 +g41 -f40
+               | +core -center +spcr2 +spcr4 +g41 -f40
+W41          5 +center +g41 -f40
+               | +core -center -spcr1 -spcr2 +g41 -f40
+               | +core -center -spcr3 -spcr4 +g41 -f40
+F41          5 +core -center +fin1 +fin3 +f41 -g41
+               | +core -center +fin2 +fin4 +f41 -g41
+               | +center +f41 -g41
+WF41         5 +core -center -fin1 -fin2 +f41 -g41
+               | +core -center -fin3 -fin4 +f41 -g41
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP42         5 +core -center +spcr1 +spcr3 +g42 -f41
+               | +core -center +spcr2 +spcr4 +g42 -f41
+W42          5 +center +g42 -f41
+               | +core -center -spcr1 -spcr2 +g42 -f41
+               | +core -center -spcr3 -spcr4 +g42 -f41
+F42          5 +core -center +fin1 +fin3 +f42 -g42
+               | +core -center +fin2 +fin4 +f42 -g42
+               | +center +f42 -g42
+WF42         5 +core -center -fin1 -fin2 +f42 -g42
+               | +core -center -fin3 -fin4 +f42 -g42
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP43         5 +core -center +spcr1 +spcr3 +g43 -f42
+               | +core -center +spcr2 +spcr4 +g43 -f42
+W43          5 +center +g43 -f42
+               | +core -center -spcr1 -spcr2 +g43 -f42
+               | +core -center -spcr3 -spcr4 +g43 -f42
+F43          5 +core -center +fin1 +fin3 +f43 -g43
+               | +core -center +fin2 +fin4 +f43 -g43
+               | +center +f43 -g43
+WF43         5 +core -center -fin1 -fin2 +f43 -g43
+               | +core -center -fin3 -fin4 +f43 -g43
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP44         5 +core -center +spcr1 +spcr3 +g44 -f43
+               | +core -center +spcr2 +spcr4 +g44 -f43
+W44          5 +center +g44 -f43
+               | +core -center -spcr1 -spcr2 +g44 -f43
+               | +core -center -spcr3 -spcr4 +g44 -f43
+U44          5 +core +pltdown +u44 -g44
+WU44         5 +core -pltdown +u44 -g44
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP45         5 +core -center +spcr1 +spcr3 +g45 -u44
+               | +core -center +spcr2 +spcr4 +g45 -u44
+W45          5 +center +g45 -u44
+               | +core -center -spcr1 -spcr2 +g45 -u44
+               | +core -center -spcr3 -spcr4 +g45 -u44
+F45          5 +core -center +fin1 +fin3 +f45 -g45
+               | +core -center +fin2 +fin4 +f45 -g45
+               | +center +f45 -g45
+WF45         5 +core -center -fin1 -fin2 +f45 -g45
+               | +core -center -fin3 -fin4 +f45 -g45
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP46         5 +core -center +spcr1 +spcr3 +g46 -f45
+               | +core -center +spcr2 +spcr4 +g46 -f45
+W46          5 +center +g46 -f45
+               | +core -center -spcr1 -spcr2 +g46 -f45
+               | +core -center -spcr3 -spcr4 +g46 -f45
+F46          5 +core -center +fin1 +fin3 +f46 -g46
+               | +core -center +fin2 +fin4 +f46 -g46
+               | +center +f46 -g46
+WF46         5 +core -center -fin1 -fin2 +f46 -g46
+               | +core -center -fin3 -fin4 +f46 -g46
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP47         5 +core -center +spcr1 +spcr3 +g47 -f46
+               | +core -center +spcr2 +spcr4 +g47 -f46
+W47          5 +center +g47 -f46
+               | +core -center -spcr1 -spcr2 +g47 -f46
+               | +core -center -spcr3 -spcr4 +g47 -f46
+F47          5 +core -center +fin1 +fin3 +f47 -g47
+               | +core -center +fin2 +fin4 +f47 -g47
+               | +center +f47 -g47
+WF47         5 +core -center -fin1 -fin2 +f47 -g47
+               | +core -center -fin3 -fin4 +f47 -g47
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP48         5 +core -center +spcr1 +spcr3 +g48 -f47
+               | +core -center +spcr2 +spcr4 +g48 -f47
+W48          5 +center +g48 -f47
+               | +core -center -spcr1 -spcr2 +g48 -f47
+               | +core -center -spcr3 -spcr4 +g48 -f47
+F48          5 +core -center +fin1 +fin3 +f48 -g48
+               | +core -center +fin2 +fin4 +f48 -g48
+               | +center +f48 -g48
+WF48         5 +core -center -fin1 -fin2 +f48 -g48
+               | +core -center -fin3 -fin4 +f48 -g48
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP49         5 +core -center +spcr1 +spcr3 +g49 -f48
+               | +core -center +spcr2 +spcr4 +g49 -f48
+W49          5 +center +g49 -f48
+               | +core -center -spcr1 -spcr2 +g49 -f48
+               | +core -center -spcr3 -spcr4 +g49 -f48
+D49          5 +core +pltdown +d49 -g49
+WD49         5 +core -pltdown +d49 -g49
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP50         5 +core -center +spcr1 +spcr3 +g50 -d49
+               | +core -center +spcr2 +spcr4 +g50 -d49
+W50          5 +center +g50 -d49
+               | +core -center -spcr1 -spcr2 +g50 -d49
+               | +core -center -spcr3 -spcr4 +g50 -d49
+F50          5 +core -center +fin1 +fin3 +f50 -g50
+               | +core -center +fin2 +fin4 +f50 -g50
+               | +center +f50 -g50
+WF50         5 +core -center -fin1 -fin2 +f50 -g50
+               | +core -center -fin3 -fin4 +f50 -g50
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP51         5 +core -center +spcr1 +spcr3 +g51 -f50
+               | +core -center +spcr2 +spcr4 +g51 -f50
+W51          5 +center +g51 -f50
+               | +core -center -spcr1 -spcr2 +g51 -f50
+               | +core -center -spcr3 -spcr4 +g51 -f50
+F51          5 +core -center +fin1 +fin3 +f51 -g51
+               | +core -center +fin2 +fin4 +f51 -g51
+               | +center +f51 -g51
+WF51         5 +core -center -fin1 -fin2 +f51 -g51
+               | +core -center -fin3 -fin4 +f51 -g51
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP52         5 +core -center +spcr1 +spcr3 +g52 -f51
+               | +core -center +spcr2 +spcr4 +g52 -f51
+W52          5 +center +g52 -f51
+               | +core -center -spcr1 -spcr2 +g52 -f51
+               | +core -center -spcr3 -spcr4 +g52 -f51
+F52          5 +core -center +fin1 +fin3 +f52 -g52
+               | +core -center +fin2 +fin4 +f52 -g52
+               | +center +f52 -g52
+WF52         5 +core -center -fin1 -fin2 +f52 -g52
+               | +core -center -fin3 -fin4 +f52 -g52
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP53         5 +core -center +spcr1 +spcr3 +g53 -f52
+               | +core -center +spcr2 +spcr4 +g53 -f52
+W53          5 +center +g53 -f52
+               | +core -center -spcr1 -spcr2 +g53 -f52
+               | +core -center -spcr3 -spcr4 +g53 -f52
+F53          5 +core -center +fin1 +fin3 +f53 -g53
+               | +core -center +fin2 +fin4 +f53 -g53
+               | +center +f53 -g53
+WF53         5 +core -center -fin1 -fin2 +f53 -g53
+               | +core -center -fin3 -fin4 +f53 -g53
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP54         5 +core -center +spcr1 +spcr3 +g54 -f53
+               | +core -center +spcr2 +spcr4 +g54 -f53
+W54          5 +center +g54 -f53
+               | +core -center -spcr1 -spcr2 +g54 -f53
+               | +core -center -spcr3 -spcr4 +g54 -f53
+U54          5 +core +pltdown +u54 -g54
+WU54         5 +core -pltdown +u54 -g54
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP55         5 +core -center +spcr1 +spcr3 +g55 -u54
+               | +core -center +spcr2 +spcr4 +g55 -u54
+W55          5 +center +g55 -u54
+               | +core -center -spcr1 -spcr2 +g55 -u54
+               | +core -center -spcr3 -spcr4 +g55 -u54
+F55          5 +core -center +fin1 +fin3 +f55 -g55
+               | +core -center +fin2 +fin4 +f55 -g55
+               | +center +f55 -g55
+WF55         5 +core -center -fin1 -fin2 +f55 -g55
+               | +core -center -fin3 -fin4 +f55 -g55
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP56         5 +core -center +spcr1 +spcr3 +g56 -f55
+               | +core -center +spcr2 +spcr4 +g56 -f55
+W56          5 +center +g56 -f55
+               | +core -center -spcr1 -spcr2 +g56 -f55
+               | +core -center -spcr3 -spcr4 +g56 -f55
+F56          5 +core -center +fin1 +fin3 +f56 -g56
+               | +core -center +fin2 +fin4 +f56 -g56
+               | +center +f56 -g56
+WF56         5 +core -center -fin1 -fin2 +f56 -g56
+               | +core -center -fin3 -fin4 +f56 -g56
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP57         5 +core -center +spcr1 +spcr3 +g57 -f56
+               | +core -center +spcr2 +spcr4 +g57 -f56
+W57          5 +center +g57 -f56
+               | +core -center -spcr1 -spcr2 +g57 -f56
+               | +core -center -spcr3 -spcr4 +g57 -f56
+F57          5 +core -center +fin1 +fin3 +f57 -g57
+               | +core -center +fin2 +fin4 +f57 -g57
+               | +center +f57 -g57
+WF57         5 +core -center -fin1 -fin2 +f57 -g57
+               | +core -center -fin3 -fin4 +f57 -g57
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP58         5 +core -center +spcr1 +spcr3 +g58 -f57
+               | +core -center +spcr2 +spcr4 +g58 -f57
+W58          5 +center +g58 -f57
+               | +core -center -spcr1 -spcr2 +g58 -f57
+               | +core -center -spcr3 -spcr4 +g58 -f57
+F58          5 +core -center +fin1 +fin3 +f58 -g58
+               | +core -center +fin2 +fin4 +f58 -g58
+               | +center +f58 -g58
+WF58         5 +core -center -fin1 -fin2 +f58 -g58
+               | +core -center -fin3 -fin4 +f58 -g58
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP59         5 +core -center +spcr1 +spcr3 +g59 -f58
+               | +core -center +spcr2 +spcr4 +g59 -f58
+W59          5 +center +g59 -f58
+               | +core -center -spcr1 -spcr2 +g59 -f58
+               | +core -center -spcr3 -spcr4 +g59 -f58
+D59          5 +core +pltdown +d59 -g59
+WD59         5 +core -pltdown +d59 -g59
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP60         5 +core -center +spcr1 +spcr3 +g60 -d59
+               | +core -center +spcr2 +spcr4 +g60 -d59
+W60          5 +center +g60 -d59
+               | +core -center -spcr1 -spcr2 +g60 -d59
+               | +core -center -spcr3 -spcr4 +g60 -d59
+F60          5 +core -center +fin1 +fin3 +f60 -g60
+               | +core -center +fin2 +fin4 +f60 -g60
+               | +center +f60 -g60
+WF60         5 +core -center -fin1 -fin2 +f60 -g60
+               | +core -center -fin3 -fin4 +f60 -g60
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP61         5 +core -center +spcr1 +spcr3 +g61 -f60
+               | +core -center +spcr2 +spcr4 +g61 -f60
+W61          5 +center +g61 -f60
+               | +core -center -spcr1 -spcr2 +g61 -f60
+               | +core -center -spcr3 -spcr4 +g61 -f60
+F61          5 +core -center +fin1 +fin3 +f61 -g61
+               | +core -center +fin2 +fin4 +f61 -g61
+               | +center +f61 -g61
+WF61         5 +core -center -fin1 -fin2 +f61 -g61
+               | +core -center -fin3 -fin4 +f61 -g61
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP62         5 +core -center +spcr1 +spcr3 +g62 -f61
+               | +core -center +spcr2 +spcr4 +g62 -f61
+W62          5 +center +g62 -f61
+               | +core -center -spcr1 -spcr2 +g62 -f61
+               | +core -center -spcr3 -spcr4 +g62 -f61
+F62          5 +core -center +fin1 +fin3 +f62 -g62
+               | +core -center +fin2 +fin4 +f62 -g62
+               | +center +f62 -g62
+WF62         5 +core -center -fin1 -fin2 +f62 -g62
+               | +core -center -fin3 -fin4 +f62 -g62
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP63         5 +core -center +spcr1 +spcr3 +g63 -f62
+               | +core -center +spcr2 +spcr4 +g63 -f62
+W63          5 +center +g63 -f62
+               | +core -center -spcr1 -spcr2 +g63 -f62
+               | +core -center -spcr3 -spcr4 +g63 -f62
+F63          5 +core -center +fin1 +fin3 +f63 -g63
+               | +core -center +fin2 +fin4 +f63 -g63
+               | +center +f63 -g63
+WF63         5 +core -center -fin1 -fin2 +f63 -g63
+               | +core -center -fin3 -fin4 +f63 -g63
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP64         5 +core -center +spcr1 +spcr3 +g64 -f63
+               | +core -center +spcr2 +spcr4 +g64 -f63
+W64          5 +center +g64 -f63
+               | +core -center -spcr1 -spcr2 +g64 -f63
+               | +core -center -spcr3 -spcr4 +g64 -f63
+U64          5 +core +pltdown +u64 -g64
+WU64         5 +core -pltdown +u64 -g64
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP65         5 +core -center +spcr1 +spcr3 +g65 -u64
+               | +core -center +spcr2 +spcr4 +g65 -u64
+W65          5 +center +g65 -u64
+               | +core -center -spcr1 -spcr2 +g65 -u64
+               | +core -center -spcr3 -spcr4 +g65 -u64
+F65          5 +core -center +fin1 +fin3 +f65 -g65
+               | +core -center +fin2 +fin4 +f65 -g65
+               | +center +f65 -g65
+WF65         5 +core -center -fin1 -fin2 +f65 -g65
+               | +core -center -fin3 -fin4 +f65 -g65
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP66         5 +core -center +spcr1 +spcr3 +g66 -f65
+               | +core -center +spcr2 +spcr4 +g66 -f65
+W66          5 +center +g66 -f65
+               | +core -center -spcr1 -spcr2 +g66 -f65
+               | +core -center -spcr3 -spcr4 +g66 -f65
+F66          5 +core -center +fin1 +fin3 +f66 -g66
+               | +core -center +fin2 +fin4 +f66 -g66
+               | +center +f66 -g66
+WF66         5 +core -center -fin1 -fin2 +f66 -g66
+               | +core -center -fin3 -fin4 +f66 -g66
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP67         5 +core -center +spcr1 +spcr3 +g67 -f66
+               | +core -center +spcr2 +spcr4 +g67 -f66
+W67          5 +center +g67 -f66
+               | +core -center -spcr1 -spcr2 +g67 -f66
+               | +core -center -spcr3 -spcr4 +g67 -f66
+F67          5 +core -center +fin1 +fin3 +f67 -g67
+               | +core -center +fin2 +fin4 +f67 -g67
+               | +center +f67 -g67
+WF67         5 +core -center -fin1 -fin2 +f67 -g67
+               | +core -center -fin3 -fin4 +f67 -g67
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP68         5 +core -center +spcr1 +spcr3 +g68 -f67
+               | +core -center +spcr2 +spcr4 +g68 -f67
+W68          5 +center +g68 -f67
+               | +core -center -spcr1 -spcr2 +g68 -f67
+               | +core -center -spcr3 -spcr4 +g68 -f67
+D68          5 +core +pltdown +d68 -g68
+WD68         5 +core -pltdown +d68 -g68
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP69         5 +core -center +spcr1 +spcr3 +g69 -d68
+               | +core -center +spcr2 +spcr4 +g69 -d68
+W69          5 +center +g69 -d68
+               | +core -center -spcr1 -spcr2 +g69 -d68
+               | +core -center -spcr3 -spcr4 +g69 -d68
+F69          5 +core -center +fin1 +fin3 +f69 -g69
+               | +core -center +fin2 +fin4 +f69 -g69
+               | +center +f69 -g69
+WF69         5 +core -center -fin1 -fin2 +f69 -g69
+               | +core -center -fin3 -fin4 +f69 -g69
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP70         5 +core -center +spcr1 +spcr3 +g70 -f69
+               | +core -center +spcr2 +spcr4 +g70 -f69
+W70          5 +center +g70 -f69
+               | +core -center -spcr1 -spcr2 +g70 -f69
+               | +core -center -spcr3 -spcr4 +g70 -f69
+F70          5 +core -center +fin1 +fin3 +f70 -g70
+               | +core -center +fin2 +fin4 +f70 -g70
+               | +center +f70 -g70
+WF70         5 +core -center -fin1 -fin2 +f70 -g70
+               | +core -center -fin3 -fin4 +f70 -g70
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP71         5 +core -center +spcr1 +spcr3 +g71 -f70
+               | +core -center +spcr2 +spcr4 +g71 -f70
+W71          5 +center +g71 -f70
+               | +core -center -spcr1 -spcr2 +g71 -f70
+               | +core -center -spcr3 -spcr4 +g71 -f70
+F71          5 +core -center +fin1 +fin3 +f71 -g71
+               | +core -center +fin2 +fin4 +f71 -g71
+               | +center +f71 -g71
+WF71         5 +core -center -fin1 -fin2 +f71 -g71
+               | +core -center -fin3 -fin4 +f71 -g71
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP72         5 +core -center +spcr1 +spcr3 +g72 -f71
+               | +core -center +spcr2 +spcr4 +g72 -f71
+W72          5 +center +g72 -f71
+               | +core -center -spcr1 -spcr2 +g72 -f71
+               | +core -center -spcr3 -spcr4 +g72 -f71
+U72          5 +core +pltdown +u72 -g72
+WU72         5 +core -pltdown +u72 -g72
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP73         5 +core -center +spcr1 +spcr3 +g73 -u72
+               | +core -center +spcr2 +spcr4 +g73 -u72
+W73          5 +center +g73 -u72
+               | +core -center -spcr1 -spcr2 +g73 -u72
+               | +core -center -spcr3 -spcr4 +g73 -u72
+F73          5 +core -center +fin1 +fin3 +f73 -g73
+               | +core -center +fin2 +fin4 +f73 -g73
+               | +center +f73 -g73
+WF73         5 +core -center -fin1 -fin2 +f73 -g73
+               | +core -center -fin3 -fin4 +f73 -g73
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP74         5 +core -center +spcr1 +spcr3 +g74 -f73
+               | +core -center +spcr2 +spcr4 +g74 -f73
+W74          5 +center +g74 -f73
+               | +core -center -spcr1 -spcr2 +g74 -f73
+               | +core -center -spcr3 -spcr4 +g74 -f73
+F74          5 +core -center +fin1 +fin3 +f74 -g74
+               | +core -center +fin2 +fin4 +f74 -g74
+               | +center +f74 -g74
+WF74         5 +core -center -fin1 -fin2 +f74 -g74
+               | +core -center -fin3 -fin4 +f74 -g74
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP75         5 +core -center +spcr1 +spcr3 +g75 -f74
+               | +core -center +spcr2 +spcr4 +g75 -f74
+W75          5 +center +g75 -f74
+               | +core -center -spcr1 -spcr2 +g75 -f74
+               | +core -center -spcr3 -spcr4 +g75 -f74
+F75          5 +core -center +fin1 +fin3 +f75 -g75
+               | +core -center +fin2 +fin4 +f75 -g75
+               | +center +f75 -g75
+WF75         5 +core -center -fin1 -fin2 +f75 -g75
+               | +core -center -fin3 -fin4 +f75 -g75
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP76         5 +core -center +spcr1 +spcr3 +g76 -f75
+               | +core -center +spcr2 +spcr4 +g76 -f75
+W76          5 +center +g76 -f75
+               | +core -center -spcr1 -spcr2 +g76 -f75
+               | +core -center -spcr3 -spcr4 +g76 -f75
+D76          5 +core +pltdown +d76 -g76
+WD76         5 +core -pltdown +d76 -g76
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP77         5 +core -center +spcr1 +spcr3 +g77 -d76
+               | +core -center +spcr2 +spcr4 +g77 -d76
+W77          5 +center +g77 -d76
+               | +core -center -spcr1 -spcr2 +g77 -d76
+               | +core -center -spcr3 -spcr4 +g77 -d76
+F77          5 +core -center +fin1 +fin3 +f77 -g77
+               | +core -center +fin2 +fin4 +f77 -g77
+               | +center +f77 -g77
+WF77         5 +core -center -fin1 -fin2 +f77 -g77
+               | +core -center -fin3 -fin4 +f77 -g77
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP78         5 +core -center +spcr1 +spcr3 +g78 -f77
+               | +core -center +spcr2 +spcr4 +g78 -f77
+W78          5 +center +g78 -f77
+               | +core -center -spcr1 -spcr2 +g78 -f77
+               | +core -center -spcr3 -spcr4 +g78 -f77
+F78          5 +core -center +fin1 +fin3 +f78 -g78
+               | +core -center +fin2 +fin4 +f78 -g78
+               | +center +f78 -g78
+WF78         5 +core -center -fin1 -fin2 +f78 -g78
+               | +core -center -fin3 -fin4 +f78 -g78
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP79         5 +core -center +spcr1 +spcr3 +g79 -f78
+               | +core -center +spcr2 +spcr4 +g79 -f78
+W79          5 +center +g79 -f78
+               | +core -center -spcr1 -spcr2 +g79 -f78
+               | +core -center -spcr3 -spcr4 +g79 -f78
+F79          5 +core -center +fin1 +fin3 +f79 -g79
+               | +core -center +fin2 +fin4 +f79 -g79
+               | +center +f79 -g79
+WF79         5 +core -center -fin1 -fin2 +f79 -g79
+               | +core -center -fin3 -fin4 +f79 -g79
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP80         5 +core -center +spcr1 +spcr3 +g80 -f79
+               | +core -center +spcr2 +spcr4 +g80 -f79
+W80          5 +center +g80 -f79
+               | +core -center -spcr1 -spcr2 +g80 -f79
+               | +core -center -spcr3 -spcr4 +g80 -f79
+U80          5 +core +pltdown +u80 -g80
+WU80         5 +core -pltdown +u80 -g80
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP81         5 +core -center +spcr1 +spcr3 +g81 -u80
+               | +core -center +spcr2 +spcr4 +g81 -u80
+W81          5 +center +g81 -u80
+               | +core -center -spcr1 -spcr2 +g81 -u80
+               | +core -center -spcr3 -spcr4 +g81 -u80
+F81          5 +core -center +fin1 +fin3 +f81 -g81
+               | +core -center +fin2 +fin4 +f81 -g81
+               | +center +f81 -g81
+WF81         5 +core -center -fin1 -fin2 +f81 -g81
+               | +core -center -fin3 -fin4 +f81 -g81
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP82         5 +core -center +spcr1 +spcr3 +g82 -f81
+               | +core -center +spcr2 +spcr4 +g82 -f81
+W82          5 +center +g82 -f81
+               | +core -center -spcr1 -spcr2 +g82 -f81
+               | +core -center -spcr3 -spcr4 +g82 -f81
+F82          5 +core -center +fin1 +fin3 +f82 -g82
+               | +core -center +fin2 +fin4 +f82 -g82
+               | +center +f82 -g82
+WF82         5 +core -center -fin1 -fin2 +f82 -g82
+               | +core -center -fin3 -fin4 +f82 -g82
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP83         5 +core -center +spcr1 +spcr3 +g83 -f82
+               | +core -center +spcr2 +spcr4 +g83 -f82
+W83          5 +center +g83 -f82
+               | +core -center -spcr1 -spcr2 +g83 -f82
+               | +core -center -spcr3 -spcr4 +g83 -f82
+D83          5 +core +pltdown +d83 -g83
+WD83         5 +core -pltdown +d83 -g83
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP84         5 +core -center +spcr1 +spcr3 +g84 -d83
+               | +core -center +spcr2 +spcr4 +g84 -d83
+W84          5 +center +g84 -d83
+               | +core -center -spcr1 -spcr2 +g84 -d83
+               | +core -center -spcr3 -spcr4 +g84 -d83
+F84          5 +core -center +fin1 +fin3 +f84 -g84
+               | +core -center +fin2 +fin4 +f84 -g84
+               | +center +f84 -g84
+WF84         5 +core -center -fin1 -fin2 +f84 -g84
+               | +core -center -fin3 -fin4 +f84 -g84
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP85         5 +core -center +spcr1 +spcr3 +g85 -f84
+               | +core -center +spcr2 +spcr4 +g85 -f84
+W85          5 +center +g85 -f84
+               | +core -center -spcr1 -spcr2 +g85 -f84
+               | +core -center -spcr3 -spcr4 +g85 -f84
+F85          5 +core -center +fin1 +fin3 +f85 -g85
+               | +core -center +fin2 +fin4 +f85 -g85
+               | +center +f85 -g85
+WF85         5 +core -center -fin1 -fin2 +f85 -g85
+               | +core -center -fin3 -fin4 +f85 -g85
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP86         5 +core -center +spcr1 +spcr3 +g86 -f85
+               | +core -center +spcr2 +spcr4 +g86 -f85
+W86          5 +center +g86 -f85
+               | +core -center -spcr1 -spcr2 +g86 -f85
+               | +core -center -spcr3 -spcr4 +g86 -f85
+U86          5 +core +pltdown +u86 -g86
+WU86         5 +core -pltdown +u86 -g86
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP87         5 +core -center +spcr1 +spcr3 +g87 -u86
+               | +core -center +spcr2 +spcr4 +g87 -u86
+W87          5 +center +g87 -u86
+               | +core -center -spcr1 -spcr2 +g87 -u86
+               | +core -center -spcr3 -spcr4 +g87 -u86
+F87          5 +core -center +fin1 +fin3 +f87 -g87
+               | +core -center +fin2 +fin4 +f87 -g87
+               | +center +f87 -g87
+WF87         5 +core -center -fin1 -fin2 +f87 -g87
+               | +core -center -fin3 -fin4 +f87 -g87
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP88         5 +core -center +spcr1 +spcr3 +g88 -f87
+               | +core -center +spcr2 +spcr4 +g88 -f87
+W88          5 +center +g88 -f87
+               | +core -center -spcr1 -spcr2 +g88 -f87
+               | +core -center -spcr3 -spcr4 +g88 -f87
+COROUT2      5 +coreout -core -f77 +g88
+TANKW_2      5 +tankin -coreout -f77+g88
+MTANK_2      5 +tankout -tankin -f77 +g88
+F88          5 +core -center +fin1 +fin3 +f88 -g88
+               | +core -center +fin2 +fin4 +f88 -g88
+               | +center +f88 -g88
+WF88         5 +core -center -fin1 -fin2 +f88 -g88
+               | +core -center -fin3 -fin4 +f88 -g88
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP89         5 +core -center +spcr1 +spcr3 +g89 -f88
+               | +core -center +spcr2 +spcr4 +g89 -f88
+W89          5 +center +g89 -f88
+               | +core -center -spcr1 -spcr2 +g89 -f88
+               | +core -center -spcr3 -spcr4 +g89 -f88
+D89          5 +core +pltdown +d89 -g89
+WD89         5 +core -pltdown +d89 -g89
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP90         5 +core -center +spcr1 +spcr3 +g90 -d89
+               | +core -center +spcr2 +spcr4 +g90 -d89
+W90          5 +center +g90 -d89
+               | +core -center -spcr1 -spcr2 +g90 -d89
+               | +core -center -spcr3 -spcr4 +g90 -d89
+F90          5 +core -center +fin1 +fin3 +f90 -g90
+               | +core -center +fin2 +fin4 +f90 -g90
+               | +center +f90 -g90
+WF90         5 +core -center -fin1 -fin2 +f90 -g90
+               | +core -center -fin3 -fin4 +f90 -g90
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP91         5 +core -center +spcr1 +spcr3 +g91 -f90
+               | +core -center +spcr2 +spcr4 +g91 -f90
+W91          5 +center +g91 -f90
+               | +core -center -spcr1 -spcr2 +g91 -f90
+               | +core -center -spcr3 -spcr4 +g91 -f90
+U91          5 +core +pltdown +u91 -g91
+WU91         5 +core -pltdown +u91 -g91
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP92         5 +core -center +spcr1 +spcr3 +g92 -u91
+               | +core -center +spcr2 +spcr4 +g92 -u91
+W92          5 +center +g92 -u91
+               | +core -center -spcr1 -spcr2 +g92 -u91
+               | +core -center -spcr3 -spcr4 +g92 -u91
+F92          5 +core -center +fin1 +fin3 +f92 -g92
+               | +core -center +fin2 +fin4 +f92 -g92
+               | +center +f92 -g92
+WF92         5 +core -center -fin1 -fin2 +f92 -g92
+               | +core -center -fin3 -fin4 +f92 -g92
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP93         5 +core -center +spcr1 +spcr3 +g93 -f92
+               | +core -center +spcr2 +spcr4 +g93 -f92
+W93          5 +center +g93 -f92
+               | +core -center -spcr1 -spcr2 +g93 -f92
+               | +core -center -spcr3 -spcr4 +g93 -f92
+D93          5 +core +pltdown +d93 -g93
+WD93         5 +core -pltdown +d93 -g93
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP94         5 +core -center +spcr1 +spcr3 +g94 -d93
+               | +core -center +spcr2 +spcr4 +g94 -d93
+W94          5 +center +g94 -d93
+               | +core -center -spcr1 -spcr2 +g94 -d93
+               | +core -center -spcr3 -spcr4 +g94 -d93
+F94          5 +core -center +fin1 +fin3 +f94 -g94
+               | +core -center +fin2 +fin4 +f94 -g94
+               | +center +f94 -g94
+WF94         5 +core -center -fin1 -fin2 +f94 -g94
+               | +core -center -fin3 -fin4 +f94 -g94
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP95         5 +core -center +spcr1 +spcr3 +g95 -f94
+               | +core -center +spcr2 +spcr4 +g95 -f94
+W95          5 +center +g95 -f94
+               | +core -center -spcr1 -spcr2 +g95 -f94
+               | +core -center -spcr3 -spcr4 +g95 -f94
+U95          5 +core +pltdown +u95 -g95
+WU95         5 +core -pltdown +u95 -g95
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP96         5 +core -center +spcr1 +spcr3 +g96 -u95
+               | +core -center +spcr2 +spcr4 +g96 -u95
+W96          5 +center +g96 -u95
+               | +core -center -spcr1 -spcr2 +g96 -u95
+               | +core -center -spcr3 -spcr4 +g96 -u95
+F96          5 +core -center +fin1 +fin3 +f96 -g96
+               | +core -center +fin2 +fin4 +f96 -g96
+               | +center +f96 -g96
+WF96         5 +core -center -fin1 -fin2 +f96 -g96
+               | +core -center -fin3 -fin4 +f96 -g96
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP97         5 +core -center +spcr1 +spcr3 +g97 -f96
+               | +core -center +spcr2 +spcr4 +g97 -f96
+W97          5 +center +g97 -f96
+               | +core -center -spcr1 -spcr2 +g97 -f96
+               | +core -center -spcr3 -spcr4 +g97 -f96
+COROUT3      5 +coreout -core -g88 +g97
+TANKW_3      5 +tankin -coreout -g88 +g97
+MTANK_3      5 +tankout -tankin -g88 +g97
+F97          5 +core -center +fin1 +fin3 +f97 -g97
+               | +core -center +fin2 +fin4 +f97 -g97
+               | +center +f97 -g97
+WF97         5 +core -center -fin1 -fin2 +f97 -g97
+               | +core -center -fin3 -fin4 +f97 -g97
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP98         5 +core -center +spcr1 +spcr3 +g98 -f97
+               | +core -center +spcr2 +spcr4 +g98 -f97
+W98          5 +center +g98 -f97
+               | +core -center -spcr1 -spcr2 +g98 -f97
+               | +core -center -spcr3 -spcr4 +g98 -f97
+D98          5 +core +pltdown +d98 -g98
+WD98         5 +core -pltdown +d98 -g98
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP99         5 +core -center +spcr1 +spcr3 +g99 -d98
+               | +core -center +spcr2 +spcr4 +g99 -d98
+W99          5 +center +g99 -d98
+               | +core -center -spcr1 -spcr2 +g99 -d98
+               | +core -center -spcr3 -spcr4 +g99 -d98
+F99          5 +core -center +fin1 +fin3 +f99 -g99
+               | +core -center +fin2 +fin4 +f99 -g99
+               | +center +f99 -g99
+WF99         5 +core -center -fin1 -fin2 +f99 -g99
+               | +core -center -fin3 -fin4 +f99 -g99
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP100        5 +core -center +spcr1 +spcr3 +g100 -f99
+               | +core -center +spcr2 +spcr4 +g100 -f99
+W100         5 +center +g100 -f99
+               | +core -center -spcr1 -spcr2 +g100 -f99
+               | +core -center -spcr3 -spcr4 +g100 -f99
+F100         5 +core -center +fin1 +fin3 +f100 -g100
+               | +core -center +fin2 +fin4 +f100 -g100
+               | +center +f100 -g100
+WF100        5 +core -center -fin1 -fin2 +f100 -g100
+               | +core -center -fin3 -fin4 +f100 -g100
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP101        5 +core -center +spcr1 +spcr3 +g101 -f100
+               | +core -center +spcr2 +spcr4 +g101 -f100
+W101         5 +center +g101 -f100
+               | +core -center -spcr1 -spcr2 +g101 -f100
+               | +core -center -spcr3 -spcr4 +g101 -f100
+U101         5 +core +pltdown +u101 -g101
+WU101        5 +core -pltdown +u101 -g101
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP102        5 +core -center +spcr1 +spcr3 +g102 -u101
+               | +core -center +spcr2 +spcr4 +g102 -u101
+W102         5 +center +g102 -u101
+               | +core -center -spcr1 -spcr2 +g102 -u101
+               | +core -center -spcr3 -spcr4 +g102 -u101
+F102         5 +core -center +fin1 +fin3 +f102 -g102
+               | +core -center +fin2 +fin4 +f102 -g102
+               | +center +f102 -g102
+WF102        5 +core -center -fin1 -fin2 +f102 -g102
+               | +core -center -fin3 -fin4 +f102 -g102
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP103        5 +core -center +spcr1 +spcr3 +g103 -f102
+               | +core -center +spcr2 +spcr4 +g103 -f102
+W103         5 +center +g103 -f102
+               | +core -center -spcr1 -spcr2 +g103 -f102
+               | +core -center -spcr3 -spcr4 +g103 -f102
+F103         5 +core -center +fin1 +fin3 +f103 -g103
+               | +core -center +fin2 +fin4 +f103 -g103
+               | +center +f103 -g103
+WF103        5 +core -center -fin1 -fin2 +f103 -g103
+               | +core -center -fin3 -fin4 +f103 -g103
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP104        5 +core -center +spcr1 +spcr3 +g104 -f103
+               | +core -center +spcr2 +spcr4 +g104 -f103
+W104         5 +center +g104 -f103
+               | +core -center -spcr1 -spcr2 +g104 -f103
+               | +core -center -spcr3 -spcr4 +g104 -f103
+COROUT4      5 +coreout -core -g97 +g104
+TANKW_4      5 +tankin -coreout -g97 +g104
+MTANK_4      5 +tankout -tankin -g97 +g104
+D104         5 +core +pltdown +d104 -g104
+WD104        5 +core -pltdown +d104 -g104
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP105        5 +core -center +spcr1 +spcr3 +g105 -d104
+               | +core -center +spcr2 +spcr4 +g105 -d104
+W105         5 +center +g105 -d104
+               | +core -center -spcr1 -spcr2 +g105 -d104
+               | +core -center -spcr3 -spcr4 +g105 -d104
+F105         5 +core -center +fin1 +fin3 +f105 -g105
+               | +core -center +fin2 +fin4 +f105 -g105
+               | +center +f105 -g105
+WF105        5 +core -center -fin1 -fin2 +f105 -g105
+               | +core -center -fin3 -fin4 +f105 -g105
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP106        5 +core -center +spcr1 +spcr3 +g106 -f105
+               | +core -center +spcr2 +spcr4 +g106 -f105
+W106         5 +center +g106 -f105
+               | +core -center -spcr1 -spcr2 +g106 -f105
+               | +core -center -spcr3 -spcr4 +g106 -f105
+F106         5 +core -center +fin1 +fin3 +f106 -g106
+               | +core -center +fin2 +fin4 +f106 -g106
+               | +center +f106 -g106
+WF106        5 +core -center -fin1 -fin2 +f106 -g106
+               | +core -center -fin3 -fin4 +f106 -g106
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP107        5 +core -center +spcr1 +spcr3 +g107 -f106
+               | +core -center +spcr2 +spcr4 +g107 -f106
+W107         5 +center +g107 -f106
+               | +core -center -spcr1 -spcr2 +g107 -f106
+               | +core -center -spcr3 -spcr4 +g107 -f106
+U107         5 +core +pltdown +u107 -g107
+WU107        5 +core -pltdown +u107 -g107
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP108        5 +core -center +spcr1 +spcr3 +g108 -u107
+               | +core -center +spcr2 +spcr4 +g108 -u107
+W108         5 +center +g108 -u107
+               | +core -center -spcr1 -spcr2 +g108 -u107
+               | +core -center -spcr3 -spcr4 +g108 -u107
+F108         5 +core -center +fin1 +fin3 +f108 -g108
+               | +core -center +fin2 +fin4 +f108 -g108
+               | +center +f108 -g108
+WF108        5 +core -center -fin1 -fin2 +f108 -g108
+               | +core -center -fin3 -fin4 +f108 -g108
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP109        5 +core -center +spcr1 +spcr3 +g109 -f108
+               | +core -center +spcr2 +spcr4 +g109 -f108
+W109         5 +center +g109 -f108
+               | +core -center -spcr1 -spcr2 +g109 -f108
+               | +core -center -spcr3 -spcr4 +g109 -f108
+COROUT5      5 +coreout -core -g104 +g109
+TANKW_5      5 +tankin -coreout -g104 +g109
+MTANK_5      5 +tankout -tankin -g104 +g109
+F109         5 +core -center +fin1 +fin3 +f109 -g109
+               | +core -center +fin2 +fin4 +f109 -g109
+               | +center +f109 -g109
+WF109        5 +core -center -fin1 -fin2 +f109 -g109
+               | +core -center -fin3 -fin4 +f109 -g109
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP110        5 +core -center +spcr1 +spcr3 +g110 -f109
+               | +core -center +spcr2 +spcr4 +g110 -f109
+W110         5 +center +g110 -f109
+               | +core -center -spcr1 -spcr2 +g110 -f109
+               | +core -center -spcr3 -spcr4 +g110 -f109
+D110         5 +core +pltdown +d110 -g110
+WD110        5 +core -pltdown +d110 -g110
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP111        5 +core -center +spcr1 +spcr3 +g111 -d110
+               | +core -center +spcr2 +spcr4 +g111 -d110
+W111         5 +center +g111 -d110
+               | +core -center -spcr1 -spcr2 +g111 -d110
+               | +core -center -spcr3 -spcr4 +g111 -d110
+F111         5 +core -center +fin1 +fin3 +f111 -g111
+               | +core -center +fin2 +fin4 +f111 -g111
+               | +center +f111 -g111
+WF111        5 +core -center -fin1 -fin2 +f111 -g111
+               | +core -center -fin3 -fin4 +f111 -g111
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP112        5 +core -center +spcr1 +spcr3 +g112 -f111
+               | +core -center +spcr2 +spcr4 +g112 -f111
+W112         5 +center +g112 -f111
+               | +core -center -spcr1 -spcr2 +g112 -f111
+               | +core -center -spcr3 -spcr4 +g112 -f111
+F112         5 +core -center +fin1 +fin3 +f112 -g112
+               | +core -center +fin2 +fin4 +f112 -g112
+               | +center +f112 -g112
+WF112        5 +core -center -fin1 -fin2 +f112 -g112
+               | +core -center -fin3 -fin4 +f112 -g112
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP113        5 +core -center +spcr1 +spcr3 +g113 -f112
+               | +core -center +spcr2 +spcr4 +g113 -f112
+W113         5 +center +g113 -f112
+               | +core -center -spcr1 -spcr2 +g113 -f112
+               | +core -center -spcr3 -spcr4 +g113 -f112
+U113         5 +core +pltdown +u113 -g113
+WU113        5 +core -pltdown +u113 -g113
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP114        5 +core -center +spcr1 +spcr3 +g114 -u113
+               | +core -center +spcr2 +spcr4 +g114 -u113
+W114         5 +center +g114 -u113
+               | +core -center -spcr1 -spcr2 +g114 -u113
+               | +core -center -spcr3 -spcr4 +g114 -u113
+COROUT6      5 +coreout -core -g109 +g114
+TANKW_6      5 +tankin -coreout -g109 +g114
+MTANK_6      5 +tankout -tankin -g109 +g114
+F114         5 +core -center +fin1 +fin3 +f114 -g114
+               | +core -center +fin2 +fin4 +f114 -g114
+               | +center +f114 -g114
+WF114        5 +core -center -fin1 -fin2 +f114 -g114
+               | +core -center -fin3 -fin4 +f114 -g114
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP115        5 +core -center +spcr1 +spcr3 +g115 -f114
+               | +core -center +spcr2 +spcr4 +g115 -f114
+W115         5 +center +g115 -f114
+               | +core -center -spcr1 -spcr2 +g115 -f114
+               | +core -center -spcr3 -spcr4 +g115 -f114
+F115         5 +core -center +fin1 +fin3 +f115 -g115
+               | +core -center +fin2 +fin4 +f115 -g115
+               | +center +f115 -g115
+WF115        5 +core -center -fin1 -fin2 +f115 -g115
+               | +core -center -fin3 -fin4 +f115 -g115
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP116        5 +core -center +spcr1 +spcr3 +g116 -f115
+               | +core -center +spcr2 +spcr4 +g116 -f115
+W116         5 +center +g116 -f115
+               | +core -center -spcr1 -spcr2 +g116 -f115
+               | +core -center -spcr3 -spcr4 +g116 -f115
+D116         5 +core +pltdown +d116 -g116
+WD116        5 +core -pltdown +d116 -g116
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP117        5 +core -center +spcr1 +spcr3 +g117 -d116
+               | +core -center +spcr2 +spcr4 +g117 -d116
+W117         5 +center +g117 -d116
+               | +core -center -spcr1 -spcr2 +g117 -d116
+               | +core -center -spcr3 -spcr4 +g117 -d116
+F117         5 +core -center +fin1 +fin3 +f117 -g117
+               | +core -center +fin2 +fin4 +f117 -g117
+               | +center +f117 -g117
+WF117        5 +core -center -fin1 -fin2 +f117 -g117
+               | +core -center -fin3 -fin4 +f117 -g117
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP118        5 +core -center +spcr1 +spcr3 +g118 -f117
+               | +core -center +spcr2 +spcr4 +g118 -f117
+W118         5 +center +g118 -f117
+               | +core -center -spcr1 -spcr2 +g118 -f117
+               | +core -center -spcr3 -spcr4 +g118 -f117
+COROUT7      5 +coreout -core -g114 +g118
+TANKW_7      5 +tankin -coreout -g114 +g118
+MTANK_7      5 +tankout -tankin -g114 +g118
+F118         5 +core -center +fin1 +fin3 +f118 -g118
+               | +core -center +fin2 +fin4 +f118 -g118
+               | +center +f118 -g118
+WF118        5 +core -center -fin1 -fin2 +f118 -g118
+               | +core -center -fin3 -fin4 +f118 -g118
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+SP119        5 +core -center +spcr1 +spcr3 +g119 -f118
+               | +core -center +spcr2 +spcr4 +g119 -f118
+W119         5 +center +g119 -f118
+               | +core -center -spcr1 -spcr2 +g119 -f118
+               | +core -center -spcr3 -spcr4 +g119 -f118
+U119         5 +core +pltdown +u119 -g119
+WU119        5 +core -pltdown +u119 -g119
+GAP120       5 +core +g120 -u119
+P120         5 +core +p120 -thru -g120
+WP120        5 +thru +p120 -g120
+GAP121       5 +core +g121 -p120
+COROUT8      5 +coreout -core -g118 +g121
+TANKW_8      5 +tankin -coreout -g118 +g121
+MTANK_8      5 +tankout -tankin -g118 +g121
+P121_1       5 +plts121 +p121_1 -g121
+P121_2       5 +plts121 +p121_2 -p121_1
+WP121_9      5 +core +p121_2 -plts121 -g121
+COROUT9      5 +coreout -core -g121+p121_2
+TANKW_9      5 +tankin -coreout -g121 +p121_2
+MTANK_9      5 +tankout -tankin -g121 +p121_2
+P121_3       5 +plts121 +p121_3 -p121_2
+P121_4       5 +plts121 +p121_4 -p121_3
+WP121_10     5 +core +p121_4 -plts121 -p121_2
+COROUT10     5 +coreout -core -p121_2 +p121_4
+TANKW_10     5 +tankin -coreout -p121_2 +p121_4
+MTANK_10     5 +tankout -tankin -p121_2 +p121_4
+P121_5       5 +plts121 +p121_5 -p121_4
+P121_6       5 +plts121 +p121_6 -p121_5
+WP121_11     5 +core +p121_6 -plts121 -p121_4
+COROUT11     5 +coreout -core -p121_4 +p121_6
+TANKW_11     5 +tankin -coreout -p121_4 +p121_6
+MTANK_11     5 +tankout -tankin -p121_4 +p121_6
+P121_7       5 +plts121 +p121_7 -p121_6
+P121_8       5 +plts121 +p121_8 -p121_7
+WP121_12     5 +core +p121_8 -plts121 -p121_6
+COROUT12     5 +coreout -core -p121_6 +p121_8
+TANKW_12     5 +tankin -coreout -p121_6 +p121_8
+MTANK_12     5 +tankout -tankin -p121_6 +p121_8
+P121_9       5 +plts121 +p121_9 -p121_8
+P121_0       5 +plts121 +p121_0 -p121_9
+WP121_13     5 +core +p121_0 -plts121 -p121_8
+COROUT13     5 +coreout -core -p121_8 +p121_0
+TANKW_13     5 +tankin -coreout -p121_8 +p121_0
+MTANK_13     5 +tankout -tankin -p121_8 +p121_0
+GAP122       5 +core +g122 -p121_0
+COROUT14     5 +coreout -core -p121_0
+TANKW_14     5 +tankin -coreout +tankpl2 -p121_0 -thru_cls
+               | +tnktail2 -tankpl2 -thru_cls
+MTANK_14     5 +tankout -tankin +tankpl2 -p121_0
+P_CLOSUR     5 +core -thru_cls -g122
+W_CLOSUR     5 +coreout +thru_cls -g122
+W_INLET      5 +inletpl +thru_cls -coreout -p121_0
+TANKTAIL     5 +tnktail1 +tankpl3 -tnktail2 -tankpl2 -thru_cls
+ATM_TAIL     5 +dmp_tunl +thru_cls -inletpl
+DTAIR        5 +pl551 +tun1 -pl21 -heblout
+               | +pl21 +tun1 -ha_out -blout
+NATM         5 +tun1 +hewin1 -pl552 -heblin
+               | +pl1830 +tun1 -heblout -hewin1
+               | +heblin +diffpl1 -pl521 -viewrout
+               | +heblin +hewin1 -diffpl2
+               | +viewrout -pl521 -viewer1
+               | +viewrout +viewer2 +diffpl1
+               | +dmp_tunl +tankpl1 -tnktip3 -window +pl_0 -pl1830 -heblin
+               | +dmp_tunl -tankpl1 -tankout +tankpl2
+               | +dmp_tunl +tankpl3 -tnktail1 -tankpl2
+               | +dmp_tunl +inletpl -tankpl3 -thru_cls
+               | +dmp_tunl -inletpl -thru_cls
+               | +tnktip3 +tankpl1 -tnktipc1 -tnktip1
+               | +dmp_tunl +tankpl1 -tnktipc1 -pl_0 -tnktip3
+VIEWER       5 +viewrout +viewer1 -viewer2
+DIFFUSER     5 +heblin -diffpl1 +diffpl2
+HEBLWIN      5 +heblin +hewin2 -hewin1
+VAC_WIND     5 +pl521 -pl520 +heblin
+HEBL         5 +heblout +dmppl1 -heblin -hewin1 +pl1830
+HEBLIN       5 +heblin +dmppl1 -hewin2 +pl1830
+               | +dmp_tunl +window +winpl1 -pl1830
+               | +heblin -pl1830 -tnktip3 -window +pl_0
 END
 GEOEND
 STOP
