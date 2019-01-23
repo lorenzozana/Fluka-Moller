@@ -62,7 +62,7 @@ COMPOUND      -3.E-4    SULFUR    -3.E-4    CARBON                    SS316LN
 ASSIGNMA      VACUUM  logicMot
 ASSIGNMA         AIR      hall
 ASSIGNMA      VACUUM      pipe
-ASSIGNMA         AIR  hallhole
+ASSIGNMA     AL-6061  BL_DMPTN
 ASSIGNMA    CONCRETE   topwall
 ASSIGNMA    CONCRETE   cylwall
 ASSIGNMA    LiquidHy    h2Targ
@@ -801,13 +801,13 @@ SPH dirtou3    0.0 -6205.26 400. 7975.3164242931
 * Dirth out
 RCC dirtou2    0.0 -647. 400. 0.0 1857. 0.0 3807.7
 * Dirth out
-RCC dirtou4    0.0 -2847. 400. 0.0 3631. 0.0 10807.7
+RCC dirtou4    0.0 -2847. 400. 0.0 3631. 0.0 8807.7
 * hall_top_in
 SPH hal_tin    0.0 -5535.26 400. 7090.553794222
 * hall_top_sub
 RCC hal_tsub   0.0 -9615.560000000001 400. 0.0 10653.3 0.0 6472.78
 * hall_cylinder_out
-RCC hal_cout   0.0 -447. 400. 0.0 1484.74 0.0 2807.7000000000003
+RCC hal_cout   0.0 -447. 400. 0.0 1484.74 0.0 2807.7
 * hall_cylinder_in
 RCC hal_cin    0.0 -298.3 400. 0.0 1336.04 0.0 2651.76
 * hall_vacuum_pipe
@@ -1258,6 +1258,7 @@ PLA col5t7p8   7.009563153371961 2.839986865971413 0.0 -8.753247515483226
 PLA col5t7p9   -4.328557005379408 -6.2018622405839405 0.0 -13.444236410291404
               12.0469128138372 1287.005
 XZP hallcut    -900.
+RCC ha_out     0.0 -355. 400. 0.0 1600. 0.0 2651.76
 $start_translat 0 0 3052.9
 RPP dmptun2    -137. 137. -137. 137. -25. 2788.1
 RPP dmptun3    -167. 167. -167. 167. -25. 2818.1
@@ -1278,7 +1279,7 @@ XYP pl1920     1920.
 RPP tun1       -107. 107. -198. 107. -25. 2900.
 RPP tun2       -137. 137. -230. 137. 0.0 2900.
 RPP tun3       -167. 167. -265. 167. 0.0 2900.
-RPP tun4       -197. 197. -305. 197. 0.0 2900.
+RPP tun4       -197. 197. -305. 197. -100. 3000.
 RPP tun5       -197. 197. -355. 197. -2700. 2847.1
 XZP ypl305     -305.
 XZP ypl330     -330.
@@ -1931,8 +1932,6 @@ $end_translat
 END
 * logicMother
 logicMot     5 +boxMothe -(+dirtou1 -dirtou2 -hallcut ) -(+dirtou2 +dirtou3) -dirtou4
-* hall_hole
-hallhole     5 (+hal_cout -hal_cin) +hal_hole
 * hall_air
 hall         5 (+hal_tin -hal_tsub -hallcut )
                | hal_cin -hal_pipe -tubeTarg -(col1_0 | col1_1 | col1_2) -col2_0 -col1fin0 -col4_0 -col5_cut
@@ -1943,10 +1942,10 @@ topwall      5 +hal_tout -hal_tin -hal_tsub -hallcut
 Dirth        5 +dirtou1 -hal_tout -dirtou2 -hallcut -hal_tsub
                | +dirtou2 -(+hal_tout -hal_tsub) -hal_cout +dirtou3 -hallcut -tun5
                | +dirtou4 -hal_cout -tun5
-               | +tun5 -pl60 -tun4
-               | +tun4 +tun5 -dmptun4 -ppl1920
+               | +tun5 -pl60 -tun4 -hal_cout
+               | +tun4 +tun5 -dmptun4 -pl1920
 * cylwall
-cylwall      5 +hal_cout -hal_cin -hal_hole -hal_pipe
+cylwall      5 +hal_cout -hal_cin -hal_hole -hal_pipe -(+tun4 -ha_out) -(+tun5 -ha_out +pl60 )
 * h2Targ
 h2Targ       5 +tubeTarg
 * Collimator1_cut
@@ -2055,11 +2054,15 @@ col5trd6     5 +col5t6p1 -col5t6p2 +col5t6p3 +col5t6p4 +col5t6p5 +col5t6p6 -( +c
 col5trd7     5 +col5t7p1 -col5t7p2 +col5t7p3 +col5t7p4 +col5t7p5 +col5t7p6 -( +col5t7p7 +col5t7p8 +col5t7p9)
 * Blackbody everything outside world: BLKBODY
 BLKBODY      5 -(+boxMothe)
+BL_DMPTN     5 +pl20 +blout -blin -hal_cin -hal_cin
+               | +pl21 +blout -pl20 -heblout
+               | +pl552 +heblout -pl20 -heblin
 BLVAC_       5 +heblin +aptpl1 -pl20
                | +heblin +pl520 -aptpl4
                | +aptpl4  -aptpl1 +aptr1
                | +heblin +aptpl2 -aptpl1 -aptr2
                | +heblin +aptpl4 -aptpl3 -aptr2
+               | +pl20 +blin -ha_out
 APTPLT       5 +aptpl4 +aptr2 -aptpl1 -aptr1
                | +heblin +aptpl3 -aptpl2 -aptr2
 DMPWALL      5 +pl552 +tun1 -pl551 -heblout

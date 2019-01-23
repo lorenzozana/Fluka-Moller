@@ -106,9 +106,9 @@ Run: MOLLER_colli+hall_hall1_ad
 End
 
 # Material
-Material: CW95
+Material: AL-6061
 	alpha: 0
-	color: #5090D0
+	color: #309030
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -126,6 +126,16 @@ Material: LiquidHy
 End
 
 # Material
+Material: H-LIQUID
+	alpha: 0
+	color: #A070B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
 Material: POTASSIU
 	alpha: 0
 	color: #70B0B0
@@ -135,11 +145,61 @@ Material: POTASSIU
 	specular: 0.0
 End
 
+# Material
+Material: ZINC
+	alpha: 0
+	color: #1070B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: CW95
+	alpha: 0
+	color: #5090D0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: SS316LN
+	alpha: 0
+	color: #401010
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: MANGANES
+	alpha: 0
+	color: #B050D0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: DMPATM
+	alpha: 0
+	color: #40B090
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
 # Geometry Information
 Geometry:
 	Frame.bsplit: 0.5
-	Frame.tsplit: 0.99
-	Frame.vsplit: 0.99
+	Frame.tsplit: 0.5
+	Frame.vsplit: 0.5
 
 	# Layer
 	Layer: Media
@@ -187,12 +247,12 @@ Plot: Red
 	cbtics: 0
 	coord: Z-Y
 	cpd: 0
-	extends: 4600.51 3353.8
+	extends: 6624.74 4697.54
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 0 1013.58 2271.61
+	origin: 0 3254.71 2013.28
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: False
@@ -213,7 +273,7 @@ Plot: Green
 	basisv: 0 0 -1
 	boundaries: 1
 	coord: Y-Z
-	extends: 2176.31 187344
+	extends: 2176.31 1545.36
 	labels: 1
 	layer: Media
 	origin: -245.002 0 2857.63
@@ -229,7 +289,7 @@ Plot: Blue
 	basisv: 0.199196 0.975118 0.097295
 	boundaries: 1
 	coord: U-V
-	extends: 1283.92 1.79569
+	extends: 1283.92 910.416
 	labels: 1
 	layer: 3D
 	origin: -667.317 153.821 52.8632
@@ -241,14 +301,14 @@ End
 Plot: Magenta
 	Format: .eps
 	Type:   Geometry
-	basisu: 0 -1 0
-	basisv: 0 0 -1
+	basisu: 0 0 1
+	basisv: 1 0 0
 	boundaries: 1
-	coord: Y-Z
-	extends: 3833.76 5.36942
+	coord: Z-X
+	extends: 16484.5 11151.3
 	labels: 1
 	layer: Media
-	origin: 944.692 523.398 0
+	origin: 839.031 0 1313.32
 	subtype: Material
 	title: GeoViewer Magenta plot
 End
