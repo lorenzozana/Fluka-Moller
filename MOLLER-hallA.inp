@@ -799,9 +799,11 @@ SPH dirtou1    0.0 -6305.26 400. 7975.3164242931
 * Dirth out
 SPH dirtou3    0.0 -6205.26 400. 7975.3164242931
 * Dirth out
-RCC dirtou2    0.0 -647. 400. 0.0 1857. 0.0 3807.7
+RCC dirtou2    0.0 -647. 400. 0.0 1857. 0.0 4607.7
 * Dirth out
-RCC dirtou4    0.0 -2847. 400. 0.0 3631. 0.0 8807.7
+RCC dirtou4    0.0 -2847. 400. 0.0 3205. 0.0 8807.7
+RPP dirtou5    -857.2 857.2 300. 780. 4200. 7000.
+PLA dirtou6    0.0 -1. -1. 0.0 780. 6600.
 * hall_top_in
 SPH hal_tin    0.0 -5535.26 400. 7090.553794222
 * hall_top_sub
@@ -1931,7 +1933,7 @@ XYP g122       318.89699999999999
 $end_translat 
 END
 * logicMother
-logicMot     5 +boxMothe -(+dirtou1 -dirtou2 -hallcut ) -(+dirtou2 +dirtou3) -dirtou4
+logicMot     5 +boxMothe -(+dirtou1 -dirtou2 -hallcut ) -(+dirtou2 +dirtou3) -dirtou4 -( +dirtou5 -dirtou6 )
 * hall_air
 hall         5 (+hal_tin -hal_tsub -hallcut )
                | hal_cin -hal_pipe -tubeTarg -(col1_0 | col1_1 | col1_2) -col2_0 -col1fin0 -col4_0 -col5_cut
@@ -1944,6 +1946,7 @@ Dirth        5 +dirtou1 -hal_tout -dirtou2 -hallcut -hal_tsub
                | +dirtou4 -hal_cout -tun5
                | +tun5 -pl60 -tun4 -hal_cout
                | +tun4 +tun5 -dmptun4 -pl1920
+               | +dirtou5 -dirtou6
 * cylwall
 cylwall      5 +hal_cout -hal_cin -hal_hole -hal_pipe -(+tun4 -ha_out) -(+tun5 -ha_out +pl60 )
 * h2Targ
