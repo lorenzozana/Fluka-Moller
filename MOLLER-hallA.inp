@@ -769,6 +769,7 @@ ASSIGNMA     AL-6061      HEBL
 ASSIGNMA      HELIUM    HEBLIN
 ASSIGNMA     AL-6061  DIFFUSER
 ASSIGNMA     AL-6061  VAC_WIND
+ASSIGNMA    Concrete   Dumpcov
 RADDECAY          1.        1.                       1008000
 * 7days intensity     4days intensity     7days intensity
 IRRPROFI     604800. 5.3053E14   345600.       0.0   604800. 5.3053E14
@@ -804,6 +805,13 @@ RCC dirtou2    0.0 -647. 400. 0.0 1857. 0.0 4607.7
 RCC dirtou4    0.0 -2847. 400. 0.0 3205. 0.0 8807.7
 RPP dirtou5    -857.2 857.2 300. 780. 4200. 7000.
 PLA dirtou6    0.0 -1. -1. 0.0 780. 6600.
+PLA dirtou7    -1. -1. 0.0 197. 780. 6600.
+PLA dirtou8    1. -1. 0.0 -197. 780. 6600.
+RPP dirtou9    -563.88 563.88 -489. 432. 4892. 6604.
+PLA dirtou10   0.0 -1.25 -1. 0.0 432. 6255.
+PLA dirtou11   0.0 1.1 -1. 0.0 -489. 6255.
+PLA dirtou12   0.0 -1.25 1. 0.0 432. 5172.
+PLA dirtou13   0.0 1.6 1. 0.0 -489. 5172.
 * hall_top_in
 SPH hal_tin    0.0 -5535.26 400. 7090.553794222
 * hall_top_sub
@@ -1933,7 +1941,8 @@ XYP g122       318.89699999999999
 $end_translat 
 END
 * logicMother
-logicMot     5 +boxMothe -(+dirtou1 -dirtou2 -hallcut ) -(+dirtou2 +dirtou3) -dirtou4 -( +dirtou5 -dirtou6 )
+logicMot     5 +boxMothe -(+dirtou1 -dirtou2 -hallcut ) -(+dirtou2 +dirtou3) -dirtou4 -( +dirtou5 -dirtou6
+               -dirtou7 -dirtou8 )
 * hall_air
 hall         5 (+hal_tin -hal_tsub -hallcut )
                | hal_cin -hal_pipe -tubeTarg -(col1_0 | col1_1 | col1_2) -col2_0 -col1fin0 -col4_0 -col5_cut
@@ -1942,11 +1951,17 @@ pipe         5 +hal_pipe
 * topwall
 topwall      5 +hal_tout -hal_tin -hal_tsub -hallcut
 Dirth        5 +dirtou1 -hal_tout -dirtou2 -hallcut -hal_tsub
-               | +dirtou2 -(+hal_tout -hal_tsub) -hal_cout +dirtou3 -hallcut -tun5
-               | +dirtou4 -hal_cout -tun5
-               | +tun5 -pl60 -tun4 -hal_cout
+               | +dirtou2 -(+hal_tout -hal_tsub) -hal_cout +dirtou3 -hallcut -tun5 -dirtou9
+               | +dirtou4 -hal_cout -tun5 -dirtou9
+               | +tun5 -pl60 -tun4 -hal_cout -dirtou9
+               | +dirtou5 -dirtou6 -dirtou7 -dirtou8 -dirtou9
+               | +dirtou10 +dirtou9
+               | +dirtou11 +dirtou9
+               | +dirtou12 +dirtou9
+               | +dirtou13 +dirtou9
+Dumpcov      5 +dirtou9 -tun4 -dirtou10 -dirtou11 -dirtou12 -dirtou13
                | +tun4 +tun5 -dmptun4 -pl1920
-               | +dirtou5 -dirtou6
+               | +dirtou9 -tun5 -dirtou10 -dirtou11 -dirtou12 -dirtou13
 * cylwall
 cylwall      5 +hal_cout -hal_cin -hal_hole -hal_pipe -(+tun4 -ha_out) -(+tun5 -ha_out +pl60 )
 * h2Targ
