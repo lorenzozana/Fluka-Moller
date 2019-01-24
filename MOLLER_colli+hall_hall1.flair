@@ -106,6 +106,16 @@ Run: MOLLER_colli+hall_hall1_ad
 End
 
 # Material
+Material: 
+	alpha: 0
+	color: #101010
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
 Material: AL-6061
 	alpha: 0
 	color: #309030
@@ -119,6 +129,16 @@ End
 Material: LiquidHy
 	alpha: 0
 	color: #C09030
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: SiO2
+	alpha: 0
+	color: #60D0B0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -149,6 +169,16 @@ End
 Material: ZINC
 	alpha: 0
 	color: #1070B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: Soil
+	alpha: 0
+	color: #6010D0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -203,18 +233,37 @@ Geometry:
 
 	# Layer
 	Layer: Media
+		: True
+		._visible: True
 		Image: True
 		Image._visible: True
 		Image.file: HallA.png
-		Image.marker: 5
-		Image.marker.0: 166.142857143 616.714285714 0.0 -298.3 -2251.76
-		Image.marker.1: 1154.66666667 616.666666667 0.0 -298.3 3051.76
-		Image.marker.2: 655.5 617.833333333 0.0 -298.3 400.0
-		Image.marker.3: 167.0 309.5 0.0 1037.74 -2251.76
+		Image.marker: 4
+		Image.marker.0: 1311.0 1080.5 0.0 0.0 3051.76
+		Image.marker.1: 2655.0 2126.0 0.0 0.0 -2251.76
+		Image.marker.2: 2499.0 931.0 2651.76 0.0 0.0
+		Image.marker.3: 1474.0 2283.0 -2651.76 0.0 0.0
 		Image.marker.4: 1156.0 307.5 0.0 1037.74 3051.76
 		Options.shortcut: F3
 		Show._visible: True
 		layer: Media
+	End
+
+	# Layer
+	Layer: Lattice
+		Image: True
+		Image._visible: True
+		Image.alpha: 183
+		Image.file: HallA_topview_new.jpg
+		Image.marker: 4
+		Image.marker.0: 1311.0 1080.5 0.0 0.0 3051.76
+		Image.marker.1: 2655.0 2126.0 0.0 0.0 -2251.76
+		Image.marker.2: 2499.0 931.0 2651.76 0.0 0.0
+		Image.marker.3: 1474.0 2283.0 -2651.76 0.0 0.0
+		Show._visible: True
+		Show.lattice: 1
+		Show.voxel: 1
+		layer: Lattice
 	End
 
 	# Layer
@@ -247,12 +296,12 @@ Plot: Red
 	cbtics: 0
 	coord: Z-Y
 	cpd: 0
-	extends: 3833.76 5538.84
+	extends: 4600.51 3262.18
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 0 577.739 5962.25
+	origin: 0 -341.546 2307.26
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: False
@@ -269,14 +318,14 @@ End
 Plot: Green
 	Format: .eps
 	Type:   Geometry
-	basisu: 0 -1 0
+	basisu: 1 0 0
 	basisv: 0 0 -1
 	boundaries: 1
-	coord: Y-Z
-	extends: 3760.67 323731
+	coord: X-Z
+	extends: 13475.2 9568.5
 	labels: 1
 	layer: Media
-	origin: 66.7864 -1027.97 3664.36
+	origin: -2737.21 -1470.4 -1255.37
 	subtype: Material
 	title: GeoViewer Green plot
 End
@@ -289,10 +338,10 @@ Plot: Blue
 	basisv: 0.199196 0.975118 0.097295
 	boundaries: 1
 	coord: U-V
-	extends: 3833.77 2718.49
+	extends: 2218.62 1573.2
 	labels: 1
 	layer: 3D
-	origin: -2020.97 1413.58 3652.58
+	origin: -1035.13 469 1016.33
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -301,14 +350,14 @@ End
 Plot: Magenta
 	Format: .eps
 	Type:   Geometry
-	basisu: 0 -1 0
-	basisv: 0 0 -1
+	basisu: 1 0 0
+	basisv: 0 0 1
 	boundaries: 1
-	coord: Y-Z
-	extends: 16484.5 11705.4
+	coord: X-Z
+	extends: 3833.77 2722.3
 	labels: 1
-	layer: Media
-	origin: 382.849 -4446.62 4837.53
+	layer: Lattice
+	origin: -190.989 300 2434.95
 	subtype: Material
 	title: GeoViewer Magenta plot
 End

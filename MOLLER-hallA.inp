@@ -15,6 +15,12 @@ PHYSICS           3.                                                  EVAPORAT
 !point           0.0    -298.3      400.                              marker8
 !point           0.0   1037.74  -2251.76                              marker9
 !point           0.0   1037.74   3051.76                              marker10
+!point           0.0       0.0   2651.76                              marker11
+!point           0.0       0.0  -2651.76                              marker12
+!point       2651.76       0.0       0.0                              marker13
+!point      -2651.76       0.0       0.0                              marker14
+!point           0.0       0.0   3051.76                              marker15
+!point           0.0       0.0  -2251.76                              marker16
 PHOTONUC          1.                      BLCKHOLE  @LASTMAT
 BEAMPOS          0.0       0.0    -2300.       0.0       0.0
 START       2000000.
@@ -59,6 +65,20 @@ MATERIAL                             7.8                              SS316LN
 COMPOUND     -.67145      IRON    -0.185  CHROMIUM   -0.1125    NICKELSS316LN
 COMPOUND       -0.02  MANGANES     -0.01   SILICON   -4.5E-4   PHOSPHOSS316LN
 COMPOUND      -3.E-4    SULFUR    -3.E-4    CARBON                    SS316LN
+MATERIAL                          2.0023                              Soil
+COMPOUND       -.175     WATER     -.825      SiO2                    Soil
+* 276 Water liquid H2O
+* Chemical Formula:  H -- O -- H
+MATERIAL                             1.0                              WATER
+COMPOUND         2.0  HYDROGEN       1.0    OXYGEN                    WATER
+* Silicon dioxide Si_O2
+*
+MATERIAL                            2.32                              SiO2
+COMPOUND    -.532565    OXYGEN  -.467435   SILICON                    SiO2
+MAT-PROP                           139.2      SiO2
+STERNHEI      4.0029     .1385    3.0025    .08408    3.5064          SiO2
+MAT-PROP                            75.0     WATER
+STERNHEI      3.5017       .24    2.8004    .09116    3.4773          WATER
 ASSIGNMA      VACUUM  logicMot
 ASSIGNMA         AIR      hall
 ASSIGNMA      VACUUM      pipe
@@ -105,7 +125,7 @@ ASSIGNMA        CW95  col5trd5
 ASSIGNMA        CW95  col5trd6
 ASSIGNMA        CW95  col5trd7
 ASSIGNMA    BLCKHOLE   BLKBODY
-ASSIGNMA      CARBON     Dirth
+ASSIGNMA        Soil     Dirth
 ASSIGNMA     AL-6061   COROUT1
 ASSIGNMA     AL-6061   PLATE_N
 ASSIGNMA       WATER    THRU_N
@@ -806,12 +826,18 @@ RCC dirtou4    0.0 -2847. 400. 0.0 3205. 0.0 8807.7
 RPP dirtou5    -857.2 857.2 300. 780. 4200. 7000.
 PLA dirtou6    0.0 -1. -1. 0.0 780. 6600.
 PLA dirtou7    -1. -1. 0.0 197. 780. 6600.
+PLA dirtou19   -1. -1. 0.0 197. 432. 6600.
 PLA dirtou8    1. -1. 0.0 -197. 780. 6600.
+PLA dirtou18   1. -1. 0.0 -197. 432. 6600.
 RPP dirtou9    -563.88 563.88 -489. 432. 4892. 6604.
 PLA dirtou10   0.0 -1.25 -1. 0.0 432. 6255.
 PLA dirtou11   0.0 1.1 -1. 0.0 -489. 6255.
 PLA dirtou12   0.0 -1.25 1. 0.0 432. 5172.
 PLA dirtou13   0.0 1.6 1. 0.0 -489. 5172.
+PLA dirtou14   -1.0 0.0 -1. 563.88 0.0 6250.
+PLA dirtou15   1.0 0.0 -1. -563.88 0.0 6250.
+PLA dirtou16   -1.0 0.0 1. 563.88 0.0 5250.
+PLA dirtou17   1.0 0.0 1. -563.88 0.0 5250.
 * hall_top_in
 SPH hal_tin    0.0 -5535.26 400. 7090.553794222
 * hall_top_sub
@@ -1959,9 +1985,17 @@ Dirth        5 +dirtou1 -hal_tout -dirtou2 -hallcut -hal_tsub
                | +dirtou11 +dirtou9
                | +dirtou12 +dirtou9
                | +dirtou13 +dirtou9
-Dumpcov      5 +dirtou9 -tun4 -dirtou10 -dirtou11 -dirtou12 -dirtou13
+               | +dirtou14 +dirtou9
+               | +dirtou15 +dirtou9
+               | +dirtou16 +dirtou9
+               | +dirtou17 +dirtou9
+               | +dirtou18 +dirtou9
+               | +dirtou19 +dirtou9
+Dumpcov      5 +dirtou9 -tun4 -dirtou10 -dirtou11 -dirtou12 -dirtou13 -dirtou14 -dirtou15
+               -dirtou16 -dirtou17 -dirtou18 -dirtou19
                | +tun4 +tun5 -dmptun4 -pl1920
-               | +dirtou9 -tun5 -dirtou10 -dirtou11 -dirtou12 -dirtou13
+               | +dirtou9 -tun5 -dirtou10 -dirtou11 -dirtou12 -dirtou13 -dirtou14 -dirtou15
+               -dirtou16 -dirtou17 -dirtou18 -dirtou19
 * cylwall
 cylwall      5 +hal_cout -hal_cin -hal_hole -hal_pipe -(+tun4 -ha_out) -(+tun5 -ha_out +pl60 )
 * h2Targ
