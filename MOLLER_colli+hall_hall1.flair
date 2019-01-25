@@ -178,7 +178,7 @@ End
 # Material
 Material: Soil
 	alpha: 0
-	color: #6010D0
+	color: #93ff6c
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -286,22 +286,22 @@ End
 Plot: Red
 	Format: .eps
 	Type:   Geometry
-	basisu: 0 0 1
-	basisv: 0 1 0
+	basisu: 1 0 0
+	basisv: 0 0 -1
 	boundaries: 1
 	cbcolors: 0
 	cblog: False
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 0
-	coord: Z-Y
+	coord: X-Z
 	cpd: 0
-	extends: 4600.51 3262.18
+	extends: 891.61 632.233
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 0 -341.546 2307.26
+	origin: -0.988274 -152.703 4982.91
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: False
@@ -338,10 +338,10 @@ Plot: Blue
 	basisv: 0.199196 0.975118 0.097295
 	boundaries: 1
 	coord: U-V
-	extends: 2218.62 1573.2
+	extends: 13737.1 9740.85
 	labels: 1
 	layer: 3D
-	origin: -1035.13 469 1016.33
+	origin: 602.632 -399.448 -2984.62
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -354,10 +354,10 @@ Plot: Magenta
 	basisv: 0 0 1
 	boundaries: 1
 	coord: X-Z
-	extends: 3833.77 2722.3
+	extends: 2734.58 1941.78
 	labels: 1
 	layer: Lattice
-	origin: -190.989 300 2434.95
+	origin: -271.711 420 5432.83
 	subtype: Material
 	title: GeoViewer Magenta plot
 End

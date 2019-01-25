@@ -1981,16 +1981,16 @@ Dirth        5 +dirtou1 -hal_tout -dirtou2 -hallcut -hal_tsub
                | +dirtou4 -hal_cout -tun5 -dirtou9
                | +tun5 -pl60 -tun4 -hal_cout -dirtou9
                | +dirtou5 -dirtou6 -dirtou7 -dirtou8 -dirtou9
-               | +dirtou10 +dirtou9
-               | +dirtou11 +dirtou9
-               | +dirtou12 +dirtou9
-               | +dirtou13 +dirtou9
-               | +dirtou14 +dirtou9
-               | +dirtou15 +dirtou9
-               | +dirtou16 +dirtou9
-               | +dirtou17 +dirtou9
-               | +dirtou18 +dirtou9
-               | +dirtou19 +dirtou9
+               | +dirtou10 +dirtou9 -dirtou7 -dirtou8
+               | +dirtou11 +dirtou9 -dirtou7 -dirtou8
+               | +dirtou12 +dirtou9 -dirtou7 -dirtou8
+               | +dirtou13 +dirtou9 -dirtou7 -dirtou8
+               | +dirtou14 +dirtou9 -dirtou7 -dirtou8
+               | +dirtou15 +dirtou9 -dirtou7 -dirtou8
+               | +dirtou16 +dirtou9 -dirtou7 -dirtou8
+               | +dirtou17 +dirtou9 -dirtou7 -dirtou8
+               | +dirtou18 +dirtou9 -dirtou7 -dirtou8
+               | +dirtou19 +dirtou9 -dirtou7 -dirtou8
 Dumpcov      5 +dirtou9 -tun4 -dirtou10 -dirtou11 -dirtou12 -dirtou13 -dirtou14 -dirtou15
                -dirtou16 -dirtou17 -dirtou18 -dirtou19
                | +tun4 +tun5 -dmptun4 -pl1920
