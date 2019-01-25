@@ -227,9 +227,9 @@ End
 
 # Geometry Information
 Geometry:
-	Frame.bsplit: 0.5
+	Frame.bsplit: 0.99
 	Frame.tsplit: 0.5
-	Frame.vsplit: 0.5
+	Frame.vsplit: 0.01
 
 	# Layer
 	Layer: Media
@@ -286,22 +286,22 @@ End
 Plot: Red
 	Format: .eps
 	Type:   Geometry
-	basisu: 1 0 0
-	basisv: 0 0 -1
+	basisu: 0 0 1
+	basisv: 0 1 0
 	boundaries: 1
 	cbcolors: 0
 	cblog: False
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 0
-	coord: X-Z
+	coord: Z-Y
 	cpd: 0
-	extends: 891.61 632.233
+	extends: 7949.68 11485.3
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: -0.988274 -152.703 4982.91
+	origin: 0 2042.24 2215.31
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: False
@@ -322,7 +322,7 @@ Plot: Green
 	basisv: 0 0 -1
 	boundaries: 1
 	coord: X-Z
-	extends: 13475.2 9568.5
+	extends: 13475.2 569326
 	labels: 1
 	layer: Media
 	origin: -2737.21 -1470.4 -1255.37
@@ -334,14 +334,14 @@ End
 Plot: Blue
 	Format: .eps
 	Type:   Geometry
-	basisu: -0.421588 -0.00435462 0.906777
-	basisv: 0.199196 0.975118 0.097295
+	basisu: -0.0039902 0.00750779 0.999964
+	basisv: 0.240864 0.970538 -0.00632573
 	boundaries: 1
 	coord: U-V
-	extends: 13737.1 9740.85
+	extends: 5520.63 4024.57
 	labels: 1
 	layer: 3D
-	origin: 602.632 -399.448 -2984.62
+	origin: -259.288 -659.981 2932.82
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -354,10 +354,10 @@ Plot: Magenta
 	basisv: 0 0 1
 	boundaries: 1
 	coord: X-Z
-	extends: 2734.58 1941.78
+	extends: 3281.5 138643
 	labels: 1
 	layer: Lattice
-	origin: -271.711 420 5432.83
+	origin: -668.636 0 4845.74
 	subtype: Material
 	title: GeoViewer Magenta plot
 End
