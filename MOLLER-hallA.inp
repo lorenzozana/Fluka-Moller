@@ -21,6 +21,11 @@ PHYSICS           3.                                                  EVAPORAT
 !point      -2651.76       0.0       0.0                              marker14
 !point           0.0       0.0   3051.76                              marker15
 !point           0.0       0.0  -2251.76                              marker16
+!point           0.0       0.0  -3051.76                              marker17
+!point           0.0       0.0   2251.76                              marker18
+!point           0.0       0.0     400.0                              marker19
+!point           0.0   1037.74   2251.76                              marker20
+!point           0.0   1037.74  -3051.76                              marker21
 PHOTONUC          1.                      BLCKHOLE  @LASTMAT
 BEAMPOS          0.0       0.0    -2300.       0.0       0.0
 START       2000000.
