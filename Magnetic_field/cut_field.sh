@@ -44,19 +44,22 @@ for x in $(seq $xlow $stepx $xhigh)
 do
 #    echo $x $y $z
 #    echo $x
-    x=`echo $x"\s" | gawk  '{sub(/\./,"\\\.",$0);printf($1)}'`
+    x=`echo $x | gawk  '{sub(/\./,"\\\.",$0);printf($1)}'`
 #    echo $x
     for y in -25 -20 -15 -10 -5 0 5 10 15 20 25
     do
 #	echo $y
-	y=`echo "\t"$y"\s"`
+	y=`echo "\t"$y`
 #	echo $y
 	for z in 9.5 10 10.5 11 11.5 12 12.5 13 13.5 14 14.5 15 15.5 16 16.5 17
 	do
 	    z=`echo "\t"$z"\s" | gawk  '{sub(/\./,"\\\.",$0);printf($1)}'`
-#	    echo $x $y $z	    
+#	    echo $x $y $z
+	    string=`echo $x$y$z`
+#	    echo $string
 #	    grep -P "0\.015\s" blockyHybrid_rm_3.0.txt | grep -P "\t9\s" | grep -P "\t9\.5\s"
-	    grep -P "$x" $file | grep -P "$y" | grep -P "$z"
+#	    grep -P "$x" $file | grep -P "$y" | grep -P "$z"
+	    grep -P "$string" $file
 	done
     done   
 done

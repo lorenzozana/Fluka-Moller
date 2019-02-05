@@ -23,7 +23,7 @@ PHYSICS           3.                                                  EVAPORAT
 !point           0.0       0.0  -2251.76                              marker16
 !point           0.0       0.0  -3051.76                              marker17
 !point           0.0       0.0   2251.76                              marker18
-!point           0.0       0.0     400.0                              marker19
+!point           0.0       0.0      400.                              marker19
 !point           0.0   1037.74   2251.76                              marker20
 !point           0.0   1037.74  -3051.76                              marker21
 PHOTONUC          1.                      BLCKHOLE  @LASTMAT
@@ -74,15 +74,15 @@ MATERIAL                          2.0023                              Soil
 COMPOUND       -.175     WATER     -.825      SiO2                    Soil
 * 276 Water liquid H2O
 * Chemical Formula:  H -- O -- H
-MATERIAL                             1.0                              WATER
-COMPOUND         2.0  HYDROGEN       1.0    OXYGEN                    WATER
+MATERIAL                              1.                              WATER
+COMPOUND          2.  HYDROGEN        1.    OXYGEN                    WATER
 * Silicon dioxide Si_O2
 *
 MATERIAL                            2.32                              SiO2
 COMPOUND    -.532565    OXYGEN  -.467435   SILICON                    SiO2
 MAT-PROP                           139.2      SiO2
 STERNHEI      4.0029     .1385    3.0025    .08408    3.5064          SiO2
-MAT-PROP                            75.0     WATER
+MAT-PROP                             75.     WATER
 STERNHEI      3.5017       .24    2.8004    .09116    3.4773          WATER
 ASSIGNMA      VACUUM  logicMot
 ASSIGNMA         AIR      hall
@@ -839,12 +839,14 @@ PLA dirtou10   0.0 -1.25 -1. 0.0 432. 6255.
 PLA dirtou11   0.0 1.1 -1. 0.0 -489. 6255.
 PLA dirtou12   0.0 -1.25 1. 0.0 432. 5172.
 PLA dirtou13   0.0 1.6 1. 0.0 -489. 5172.
-PLA dirtou14   -1.0 0.0 -1. 563.88 0.0 6250.
-PLA dirtou15   1.0 0.0 -1. -563.88 0.0 6250.
-PLA dirtou16   -1.0 0.0 1. 563.88 0.0 5250.
-PLA dirtou17   1.0 0.0 1. -563.88 0.0 5250.
+PLA dirtou14   -1. 0.0 -1. 563.88 0.0 6250.
+PLA dirtou15   1. 0.0 -1. -563.88 0.0 6250.
+PLA dirtou16   -1. 0.0 1. 563.88 0.0 5250.
+PLA dirtou17   1. 0.0 1. -563.88 0.0 5250.
 * hall_top_in
-SPH hal_tin    0.0 -5535.26 400. 7090.553794222
+SPH hal_tin    0.0 -5535.26 400.0 7087.7471627947
+* hall_top_in
+SPH hal_tin1   0.0 -5505.26 400.0 7071.6900916987
 * hall_top_sub
 RCC hal_tsub   0.0 -9615.560000000001 400. 0.0 10653.3 0.0 6472.78
 * hall_cylinder_out
@@ -852,7 +854,7 @@ RCC hal_cout   0.0 -447. 400. 0.0 1484.74 0.0 2807.7
 * hall_cylinder_in
 RCC hal_cin    0.0 -298.3 400. 0.0 1336.04 0.0 2651.76
 * hall_vacuum_pipe
-RCC hal_pipe   0.0 0.0 -2294.8 0.0 0.0 2219.8 1.
+RCC hal_pipe   0.0 0.0 -2194.8 0.0 0.0 2119.8 1.
 * hall_wall_hole
 RPP hal_hole   -106.408 106.408 -193.46900000000025 106.40699999999978 2797.3
               3243.4
@@ -1300,6 +1302,8 @@ PLA col5t7p9   -4.328557005379408 -6.2018622405839405 0.0 -13.444236410291404
               12.0469128138372 1287.005
 XZP hallcut    -900.
 RCC ha_out     0.0 -355. 400. 0.0 1600. 0.0 2651.76
+RCC ha_1       0.0 -330. 400. 0.0 1367.74 0.0 2682.9
+RCC ha_2       0.0 -360. 400. 0.0 1397.74 0.0 2712.9
 $start_translat 0 0 3052.9
 RPP dmptun2    -137. 137. -137. 137. -25. 2788.1
 RPP dmptun3    -167. 167. -167. 167. -25. 2818.1
@@ -2002,7 +2006,7 @@ Dumpcov      5 +dirtou9 -tun4 -dirtou10 -dirtou11 -dirtou12 -dirtou13 -dirtou14 
                | +dirtou9 -tun5 -dirtou10 -dirtou11 -dirtou12 -dirtou13 -dirtou14 -dirtou15
                -dirtou16 -dirtou17 -dirtou18 -dirtou19
 * cylwall
-cylwall      5 +hal_cout -hal_cin -hal_hole -hal_pipe -(+tun4 -ha_out) -(+tun5 -ha_out +pl60 )
+cylwall      5 +hal_cout -ha_2  -hal_hole -hal_pipe -(+tun4 -ha_out) -(+tun5 -ha_out +pl60 )
 * h2Targ
 h2Targ       5 +tubeTarg
 * Collimator1_cut
@@ -2128,12 +2132,13 @@ WALL1        5 +dmptun2 -dmp_tunl -pl1830 -ha_out
                | +pl1860 +tun2 -dmptun2 -pl1830
                | +pl30 +ypl305 -ypl330 +tun5 -ha_out
                | +pl30 -pl0 -tun2 -ypl305 +tun5 -ha_out
-               | +pl0 +tun5 -ha_out -tun1
+               | +ha_1 -hal_cin -tun1
 WALL2        5 +dmptun3 -dmptun2 -pl1860
                | +pl1860 +tun3 -tun2 -pl30
                | +pl1890 +tun3 -dmptun3 -pl1860
                | +pl60 +tun5 +ypl330 -pl0
                | +pl60 +tun5 -pl30 -tun3 -ypl330
+               | +ha_2 -ha_1 -tun2
 WALL3        5 +dmptun4 -dmptun3 -pl1890 +tun5
                | +pl1890 +tun4 -tun3 -pl60
                | +pl1920 +tun4 -dmptun4 -pl1890

@@ -116,9 +116,9 @@ Material:
 End
 
 # Material
-Material: AL-6061
+Material: ZINC
 	alpha: 0
-	color: #309030
+	color: #1070B0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -166,9 +166,9 @@ Material: POTASSIU
 End
 
 # Material
-Material: ZINC
+Material: AL-6061
 	alpha: 0
-	color: #1070B0
+	color: #309030
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -228,15 +228,14 @@ End
 # Geometry Information
 Geometry:
 	Frame.bsplit: 0.5
-	Frame.tsplit: 0.5
-	Frame.vsplit: 0.5
+	Frame.tsplit: 0.99
+	Frame.vsplit: 0.99
 
 	# Layer
 	Layer: Media
 		: True
 		._visible: True
 		Beam._visible: False
-		Image: True
 		Image._visible: True
 		Image.file: HallA.png
 		Image.marker: 9
@@ -256,7 +255,7 @@ Geometry:
 
 	# Layer
 	Layer: Lattice
-		Image._visible: True
+		Image._visible: False
 		Image.alpha: 183
 		Image.file: HallA_topview_new.jpg
 		Image.marker: 4
@@ -300,12 +299,12 @@ Plot: Red
 	cbtics: 0
 	coord: Z-Y
 	cpd: 0
-	extends: 11447.5 8117.35
+	extends: 0.097974 0.0714235
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 0 -1522.74 21.6962
+	origin: 0 1037.74 3051.73
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: 0
@@ -326,7 +325,7 @@ Plot: Green
 	basisv: 0 0.932917 -0.36009
 	boundaries: 1
 	coord: U-V
-	extends: 13475.2 9568.5
+	extends: 13475.2 1.15999e+06
 	labels: 1
 	layer: Media
 	origin: -2737.21 -1470.4 -1255.37
@@ -339,10 +338,10 @@ Plot: Blue
 	Format: .eps
 	Type:   Geometry
 	basisu: 0.00163589 0.00759819 0.99997
-	basisv: 0.265778 0.964003 -0.00775969
+	basisv: 0.265778 0.964003 -0.0077597
 	boundaries: 1
 	coord: U-V
-	extends: 1848.85 1311
+	extends: 1848.85 2.5858
 	labels: 1
 	layer: 3D
 	origin: -52.4553 -193.093 2020.73
@@ -358,7 +357,7 @@ Plot: Magenta
 	basisv: 0 0 1
 	boundaries: 1
 	coord: X-Z
-	extends: 29258.2 20775.7
+	extends: 29258.2 40.9779
 	labels: 1
 	layer: Lattice
 	origin: -744.71 0 9024.25
