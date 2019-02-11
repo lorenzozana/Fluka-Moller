@@ -1,0 +1,239 @@
+#!/usr/local/flair/flair
+# FLUKA Project file
+Version: 2
+Title: MOLLER_Test
+Input: MOLLER-hallA.inp
+Submit: *Default
+Tabs: 0.1 0.32 0.56 0.81 1.0
+Page: Flair
+DefMain: True
+LinkPrg: lfluka
+F77bound: True
+F77dline: False
+
+# Run information
+Run: <default>
+	Prev:     0
+	Last:     5
+	Status:   0
+	Pid:      0
+	StartRun: 0
+End
+
+# Material
+Material: AL-6061
+	alpha: 0
+	color: #309030
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: LiquidHy
+	alpha: 0
+	color: #C09030
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: SiO2
+	alpha: 0
+	color: #60D0B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: H-LIQUID
+	alpha: 0
+	color: #A070B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: POTASSIU
+	alpha: 0
+	color: #70B0B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: ZINC
+	alpha: 0
+	color: #1070B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: Soil
+	alpha: 0
+	color: #74ff00
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: CW95
+	alpha: 0
+	color: #5090D0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: SS316LN
+	alpha: 0
+	color: #401010
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: MANGANES
+	alpha: 0
+	color: #B050D0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: DMPATM
+	alpha: 0
+	color: #40B090
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Geometry Information
+Geometry:
+	Frame.bsplit: 0.99
+	Frame.tsplit: 0.5
+	Frame.vsplit: 0.01
+
+	# Layer
+	Layer: Media
+		Image: True
+		Image._visible: True
+		Image.file: HallA.png
+		Image.marker: 4
+		Image.marker.0: 167.25 310.0 0.0 1037.74 -2251.76
+		Image.marker.1: 165.142857143 617.857142857 0.0 -298.3 -2251.76
+		Image.marker.2: 1155.125 617.75 0.0 -298.3 3051.76
+		Image.marker.3: 1155.84615385 309.230769231 0.0 1037.74 3051.76
+		Options.shortcut: F3
+		Show._visible: True
+		layer: Media
+	End
+
+	# Layer
+	Layer: 3D
+		3D: True
+		3D._visible: True
+		3D.edgedetect: 1
+		Image: True
+		Image._visible: True
+		Image.file: HallA.png
+		Image.marker: 4
+		Image.marker.0: 168.4 309.0 0.0 1037.74 -2251.76
+		Image.marker.1: 165.5 617.375 0.0 -298.3 -2251.76
+		Image.marker.2: 1155.75 617.75 0.0 -298.3 3051.76
+		Image.marker.3: 1155.44444444 309.444444444 0.0 1037.74 3051.76
+		Options.shortcut: F4
+		Options.viewport: 0
+		Show: 0
+		Show.lattice: 1
+		Show.voxel: 1
+		deflights: 1
+		layer: 3D
+	End
+End
+
+# Geometry plot "GeoViewer Red plot"
+Plot: Red
+	Format: .eps
+	Type:   Geometry
+	basisu: 0 -1 0
+	basisv: 0 0 -1
+	boundaries: 1
+	coord: Y-Z
+	extends: 100 0.15361
+	labels: 1
+	layer: Media
+	origin: 0 0 0
+	subtype: Material
+	title: GeoViewer Red plot
+End
+
+# Geometry plot "GeoViewer Green plot"
+Plot: Green
+	Format: .eps
+	Type:   Geometry
+	basisu: 0 -1 0
+	basisv: 0 0 -1
+	boundaries: 1
+	coord: Y-Z
+	extends: 5520.61 8.49325
+	labels: 1
+	layer: Media
+	origin: -1121.61 0 -2163.03
+	subtype: Material
+	title: GeoViewer Green plot
+End
+
+# Geometry plot "GeoViewer Blue plot"
+Plot: Blue
+	Format: .eps
+	Type:   Geometry
+	basisu: 0 0 1
+	basisv: 0 1 0
+	boundaries: 1
+	coord: Z-Y
+	extends: 6624.74 4390.81
+	labels: 1
+	layer: 3D
+	origin: 0 0 382.684
+	subtype: Material
+	title: GeoViewer Blue plot
+End
+
+# Geometry plot "GeoViewer Magenta plot"
+Plot: Magenta
+	Format: .eps
+	Type:   Geometry
+	basisu: 0 -1 0
+	basisv: 0 0 -1
+	boundaries: 1
+	coord: Y-Z
+	extends: 100 7990.91
+	labels: 1
+	layer: Media
+	origin: 0 0 0
+	subtype: Material
+	title: GeoViewer Magenta plot
+End

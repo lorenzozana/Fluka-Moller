@@ -88,8 +88,6 @@ ASSIGNMA      VACUUM  logicMot
 ASSIGNMA         AIR      hall
 ASSIGNMA      VACUUM      pipe
 ASSIGNMA     AL-6061  BL_DMPTN
-ASSIGNMA    CONCRETE   topwall
-ASSIGNMA    CONCRETE   cylwall
 ASSIGNMA    LiquidHy    h2Targ
 ASSIGNMA      VACUUM   col1cut
 ASSIGNMA      VACUUM  fin_cut0
@@ -795,6 +793,7 @@ ASSIGNMA      HELIUM    HEBLIN
 ASSIGNMA     AL-6061  DIFFUSER
 ASSIGNMA     AL-6061  VAC_WIND
 ASSIGNMA    Concrete   Dumpcov
+ASSIGNMA    BLCKHOLE  Dirthlow
 RADDECAY          1.        1.                       1008000
 * 7days intensity     4days intensity     7days intensity
 IRRPROFI     604800. 5.3053E14   345600.       0.0   604800. 5.3053E14
@@ -817,9 +816,14 @@ USRBIN       -2694.7     -447.   -2294.7      216.       98.      216. &
 GEOBEGIN                                                              COMBNAME
     0    0          
 * boxMother
-RPP boxMothe   -10000. 10000. -10000. 10000. -20000. 20000.
+RPP boxMothe   -100000. 100000. -10000. 100358. -100000. 100000.
+RCC air1       0.0 358. 400. 0.0 100000. 0.0 6700.
+RCC air2       0.0 358. 400. 0.0 100000. 0.0 10000.
+RCC air3       0.0 358. 400. 0.0 100000. 0.0 15000.
+RCC air4       0.0 358. 400. 0.0 100000. 0.0 20000.
+RCC air5       0.0 358. 400. 0.0 100000. 0.0 30000.
 * hall_top_out
-SPH hal_tout   0.0 -5805.26 400. 7402.2633097992
+SPH hal_tout   0.0 -5805.26 400. 7396.6092435843
 * Dirth out
 SPH dirtou1    0.0 -6305.26 400. 7975.3164242931
 * Dirth out
@@ -827,7 +831,9 @@ SPH dirtou3    0.0 -6205.26 400. 7975.3164242931
 * Dirth out
 RCC dirtou2    0.0 -647. 400. 0.0 1857. 0.0 4607.7
 * Dirth out
-RCC dirtou4    0.0 -2847. 400. 0.0 3205. 0.0 8807.7
+RCC dirtou4    0.0 -447. 400. 0.0 805. 0.0 48807.7
+* Dirth out
+RCC dirtou20   0.0 -2847. 400. 0.0 3205. 0.0 68807.7
 RPP dirtou5    -857.2 857.2 300. 780. 4200. 7000.
 PLA dirtou6    0.0 -1. -1. 0.0 780. 6600.
 PLA dirtou7    -1. -1. 0.0 197. 780. 6600.
@@ -844,9 +850,11 @@ PLA dirtou15   1. 0.0 -1. -563.88 0.0 6250.
 PLA dirtou16   -1. 0.0 1. 563.88 0.0 5250.
 PLA dirtou17   1. 0.0 1. -563.88 0.0 5250.
 * hall_top_in
-SPH hal_tin    0.0 -5535.26 400.0 7087.7471627947
+SPH hal_tin    0.0 -5535.26 400. 7087.7471627947
 * hall_top_in
-SPH hal_tin1   0.0 -5505.26 400.0 7071.6900916987
+SPH hal_tin1   0.0 -5505.26 400. 7071.6900916987
+* hall_top_in
+SPH hal_tin2   0.0 -5495.26 400. 7073.8896945033
 * hall_top_sub
 RCC hal_tsub   0.0 -9615.560000000001 400. 0.0 10653.3 0.0 6472.78
 * hall_cylinder_out
@@ -1302,8 +1310,8 @@ PLA col5t7p9   -4.328557005379408 -6.2018622405839405 0.0 -13.444236410291404
               12.0469128138372 1287.005
 XZP hallcut    -900.
 RCC ha_out     0.0 -355. 400. 0.0 1600. 0.0 2651.76
-RCC ha_1       0.0 -330. 400. 0.0 1367.74 0.0 2682.9
-RCC ha_2       0.0 -360. 400. 0.0 1397.74 0.0 2712.9
+RCC ha_1       0.0 -447. 400. 0.0 1484.74 0.0 2682.9
+RCC ha_2       0.0 -447. 400. 0.0 1484.74 0.0 2712.9
 $start_translat 0 0 3052.9
 RPP dmptun2    -137. 137. -137. 137. -25. 2788.1
 RPP dmptun3    -167. 167. -167. 167. -25. 2818.1
@@ -1976,17 +1984,15 @@ XYP g122       318.89699999999999
 $end_translat 
 END
 * logicMother
-logicMot     5 +boxMothe -(+dirtou1 -dirtou2 -hallcut ) -(+dirtou2 +dirtou3) -dirtou4 -( +dirtou5 -dirtou6
-               -dirtou7 -dirtou8 )
+logicMot     5 +boxMothe -(+dirtou1 -dirtou2 -hallcut) -(+dirtou2 +dirtou3) -dirtou4 -(+dirtou5 -dirtou6 -dirtou7
+               -dirtou8) -dirtou20
 * hall_air
 hall         5 (+hal_tin -hal_tsub -hallcut )
                | hal_cin -hal_pipe -tubeTarg -(col1_0 | col1_1 | col1_2) -col2_0 -col1fin0 -col4_0 -col5_cut
 * hall_pipe
 pipe         5 +hal_pipe
-* topwall
-topwall      5 +hal_tout -hal_tin -hal_tsub -hallcut
 Dirth        5 +dirtou1 -hal_tout -dirtou2 -hallcut -hal_tsub
-               | +dirtou2 -(+hal_tout -hal_tsub) -hal_cout +dirtou3 -hallcut -tun5 -dirtou9
+               | +dirtou2 -(+hal_tout -hal_tsub) -hal_cout +dirtou3 -hallcut -tun5 -dirtou9 -dirtou20
                | +dirtou4 -hal_cout -tun5 -dirtou9
                | +tun5 -pl60 -tun4 -hal_cout -dirtou9
                | +dirtou5 -dirtou6 -dirtou7 -dirtou8 -dirtou9
@@ -2000,13 +2006,12 @@ Dirth        5 +dirtou1 -hal_tout -dirtou2 -hallcut -hal_tsub
                | +dirtou17 +dirtou9 -dirtou7 -dirtou8
                | +dirtou18 +dirtou9 -dirtou7 -dirtou8
                | +dirtou19 +dirtou9 -dirtou7 -dirtou8
+Dirthlow     5 +dirtou20 -dirtou9 -dirtou4
 Dumpcov      5 +dirtou9 -tun4 -dirtou10 -dirtou11 -dirtou12 -dirtou13 -dirtou14 -dirtou15
                -dirtou16 -dirtou17 -dirtou18 -dirtou19
                | +tun4 +tun5 -dmptun4 -pl1920
                | +dirtou9 -tun5 -dirtou10 -dirtou11 -dirtou12 -dirtou13 -dirtou14 -dirtou15
                -dirtou16 -dirtou17 -dirtou18 -dirtou19
-* cylwall
-cylwall      5 +hal_cout -ha_2  -hal_hole -hal_pipe -(+tun4 -ha_out) -(+tun5 -ha_out +pl60 )
 * h2Targ
 h2Targ       5 +tubeTarg
 * Collimator1_cut
@@ -2130,18 +2135,18 @@ DMPWALL      5 +pl552 +tun1 -pl551 -heblout
 WALL1        5 +dmptun2 -dmp_tunl -pl1830 -ha_out
                | +pl1830 +tun2 -tun1 -ha_out
                | +pl1860 +tun2 -dmptun2 -pl1830
-               | +pl30 +ypl305 -ypl330 +tun5 -ha_out
-               | +pl30 -pl0 -tun2 -ypl305 +tun5 -ha_out
                | +ha_1 -hal_cin -tun1
+               | +hal_tin1 -hal_tin -hal_tsub -hallcut
 WALL2        5 +dmptun3 -dmptun2 -pl1860
                | +pl1860 +tun3 -tun2 -pl30
                | +pl1890 +tun3 -dmptun3 -pl1860
-               | +pl60 +tun5 +ypl330 -pl0
-               | +pl60 +tun5 -pl30 -tun3 -ypl330
                | +ha_2 -ha_1 -tun2
+               | +hal_tin2 -hal_tin1 -hal_tsub -hallcut
 WALL3        5 +dmptun4 -dmptun3 -pl1890 +tun5
-               | +pl1890 +tun4 -tun3 -pl60
+               | +pl1890 +tun4 -tun3 -ha_2
                | +pl1920 +tun4 -dmptun4 -pl1890
+               | +hal_cout -ha_2 -tun4
+               | +hal_tout -hal_tin2 -hal_tsub -hallcut
 WINDOW       5 +window +winpl2 -winpl1
                | +pl_0 +tnktip3 -tnktip4 -window
 TIP_TANK     5 +tnktip1 +tankpl1 -tnktipc1 -tnktip2
