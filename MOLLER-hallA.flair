@@ -214,9 +214,9 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 6624.74 4390.81
+	extends: 6624.74 4514.07
 	labels: 1
-	layer: 3D
+	layer: Media
 	origin: 0 0 382.684
 	subtype: Material
 	title: GeoViewer Blue plot
