@@ -794,6 +794,7 @@ ASSIGNMA     AL-6061  DIFFUSER
 ASSIGNMA     AL-6061  VAC_WIND
 ASSIGNMA    Concrete   Dumpcov
 ASSIGNMA    BLCKHOLE  Dirthlow
+ASSIGNMA         AIR   Air1_50  Air5_500
 RADDECAY          1.        1.                       1008000
 * 7days intensity     4days intensity     7days intensity
 IRRPROFI     604800. 5.3053E14   345600.       0.0   604800. 5.3053E14
@@ -822,6 +823,10 @@ RCC air2       0.0 358. 400. 0.0 100000. 0.0 10000.
 RCC air3       0.0 358. 400. 0.0 100000. 0.0 15000.
 RCC air4       0.0 358. 400. 0.0 100000. 0.0 20000.
 RCC air5       0.0 358. 400. 0.0 100000. 0.0 30000.
+XZP air_c1     5000.
+XZP air_c2     25000.
+XZP air_c3     50000.
+XZP air_c4     75000.
 * hall_top_out
 SPH hal_tout   0.0 -5805.26 400. 7396.6092435843
 * Dirth out
@@ -1984,8 +1989,26 @@ XYP g122       318.89699999999999
 $end_translat 
 END
 * logicMother
-logicMot     5 +boxMothe -(+dirtou1 -dirtou2 -hallcut) -(+dirtou2 +dirtou3) -dirtou4 -(+dirtou5 -dirtou6 -dirtou7
-               -dirtou8) -dirtou20
+logicMot     5 +boxMothe -air5  -dirtou20
+* logicMother
+Air1_50      5 +air1  -(+dirtou1 -dirtou2 -hallcut) -(+dirtou2 +dirtou3) -dirtou4 -(+dirtou5 -dirtou6 -dirtou7
+               -dirtou8) +air_c1
+* logicMother
+Air1_250     5 +air1  -air_c1 +air_c2
+* logicMother
+Air1_500     5 +air1  -air_c1 -air_c2
+* logicMother
+Air3_50      5 +air3  -air1 +air_c1
+* logicMother
+Air3_250     5 +air3  -air1 -air_c1 +air_c2
+* logicMother
+Air3_500     5 +air3  -air1 -air_c1 -air_c2
+* logicMother
+Air5_50      5 +air5  -air3 +air_c1
+* logicMother
+Air5_250     5 +air5  -air3 -air_c1 +air_c2
+* logicMother
+Air5_500     5 +air5  -air3 -air_c1 -air_c2
 * hall_air
 hall         5 (+hal_tin -hal_tsub -hallcut )
                | hal_cin -hal_pipe -tubeTarg -(col1_0 | col1_1 | col1_2) -col2_0 -col1fin0 -col4_0 -col5_cut
