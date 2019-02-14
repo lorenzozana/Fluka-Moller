@@ -821,11 +821,11 @@ ASSIGNMA     AL-6061  DIFFUSER
 ASSIGNMA     AL-6061  VAC_WIND
 ASSIGNMA    Concrete   Dumpcov
 ASSIGNMA    BLCKHOLE  Dirthlow
-ASSIGNMA        AIR1    Ai1_50    Ai6_50
-ASSIGNMA        AIR2   Ai1_250   Ai6_250
-ASSIGNMA        AIR3   Ai1_500   Ai6_500
-ASSIGNMA        AIR4   Ai1_750   Ai6_750
-ASSIGNMA        AIR5  Ai1_1000  Ai6_1000
+ASSIGNMA        AIR1  logicMot    Ai6_50
+ASSIGNMA        AIR2  logicMo1   Ai6_250
+ASSIGNMA        AIR3  logicMo2   Ai6_500
+ASSIGNMA        AIR4  logicMo3   Ai6_750
+ASSIGNMA        AIR5  logicMo4  Ai6_1000
 RADDECAY          1.        1.                       1008000
 * 7days intensity     4days intensity     7days intensity
 IRRPROFI     604800. 5.3053E14   345600.       0.0   604800. 5.3053E14
@@ -847,8 +847,7 @@ USRBIN           10.   DOSE-EQ      -50.    2694.7   1967.54    3094.7hall_3d
 USRBIN       -2694.7     -447.   -2294.7      216.       98.      216. &
 GEOBEGIN                                                              COMBNAME
     0    0          
-* boxMother
-RPP boxMothe   -100000. 100000. -10000. 100358. -100000. 100000.
+RCC boxMothe   0.0 -10000. 400. 0.0 110358. 0.0 100000.
 RCC air1       0.0 358. 400. 0.0 100000. 0.0 6700.
 RCC air2       0.0 358. 400. 0.0 100000. 0.0 10000.
 RCC air3       0.0 358. 400. 0.0 100000. 0.0 15000.
@@ -870,7 +869,7 @@ RCC dirtou2    0.0 -647. 400. 0.0 1857. 0.0 4607.7
 * Dirth out
 RCC dirtou4    0.0 -447. 400. 0.0 805. 0.0 48807.7
 * Dirth out
-RCC dirtou20   0.0 -2847. 400. 0.0 3205. 0.0 68807.7
+RCC dirtou20   0.0 -2847. 400. 0.0 3205. 0.0 100000.
 RPP dirtou5    -857.2 857.2 300. 780. 4200. 7000.
 PLA dirtou6    0.0 -1. -1. 0.0 780. 6600.
 PLA dirtou7    -1. -1. 0.0 197. 780. 6600.
@@ -2021,7 +2020,7 @@ XYP g122       318.89699999999999
 $end_translat 
 END
 * logicMother
-logicMot     5 +boxMothe -air6  -dirtou20
+logicMot     5 +boxMothe -air6  -dirtou20 +air_c1
 * logicMother
 Ai1_50       5 +air1  -(+dirtou1 -dirtou2 -hallcut) -(+dirtou2 +dirtou3) -dirtou4 -(+dirtou5 -dirtou6 -dirtou7
                -dirtou8) +air_c1
@@ -2032,6 +2031,8 @@ Ai5_50       5 +air5  -air3 +air_c1
 * logicMother
 Ai6_50       5 +air6  -air5 +air_c1
 * logicMother
+logicMo1     5 +boxMothe -air6  -dirtou20 -air_c1 +air_c2
+* logicMother
 Ai1_250      5 +air1  -air_c1 +air_c2
 * logicMother
 Ai3_250      5 +air3  -air1 -air_c1 +air_c2
@@ -2039,6 +2040,8 @@ Ai3_250      5 +air3  -air1 -air_c1 +air_c2
 Ai5_250      5 +air5  -air3 -air_c1 +air_c2
 * logicMother
 Ai6_250      5 +air6  -air5 -air_c1 +air_c2
+* logicMother
+logicMo2     5 +boxMothe -air6  -dirtou20 -air_c2 +air_c3
 * logicMother
 Ai1_500      5 +air1  +air_c3 -air_c2
 * logicMother
@@ -2048,6 +2051,8 @@ Ai5_500      5 +air5  -air3 +air_c3 -air_c2
 * logicMother
 Ai6_500      5 +air6  -air5 +air_c3 -air_c2
 * logicMother
+logicMo3     5 +boxMothe -air6  -dirtou20 -air_c3 +air_c4
+* logicMother
 Ai1_750      5 +air1  +air_c4 -air_c3
 * logicMother
 Ai3_750      5 +air3  -air1 +air_c4 -air_c3
@@ -2055,6 +2060,8 @@ Ai3_750      5 +air3  -air1 +air_c4 -air_c3
 Ai5_750      5 +air5  -air3 +air_c4 -air_c3
 * logicMother
 Ai6_750      5 +air6  -air5 +air_c4 -air_c3
+* logicMother
+logicMo4     5 +boxMothe -air6  -dirtou20 -air_c4
 * logicMother
 Ai1_1000     5 +air1  -air_c4
 * logicMother
