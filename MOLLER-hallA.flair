@@ -61,9 +61,59 @@ Material: H-LIQUID
 End
 
 # Material
+Material: AIR2
+	alpha: 0
+	color: #46b8f1
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: AIR1
+	alpha: 0
+	color: #46a4f1
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
 Material: POTASSIU
 	alpha: 0
 	color: #70B0B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: AIR3
+	alpha: 0
+	color: #46ccf1
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: AIR4
+	alpha: 0
+	color: #46e0f1
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: AIR5
+	alpha: 0
+	color: #46f4f1
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -182,10 +232,10 @@ Plot: Red
 	basisv: 0 0 -1
 	boundaries: 1
 	coord: Y-Z
-	extends: 100 0.15361
+	extends: 6624.74 9.26537
 	labels: 1
 	layer: Media
-	origin: 0 0 0
+	origin: 0 -1282.07 632.001
 	subtype: Material
 	title: GeoViewer Red plot
 End
@@ -198,10 +248,10 @@ Plot: Green
 	basisv: 0 0 -1
 	boundaries: 1
 	coord: Y-Z
-	extends: 5520.61 8.49325
+	extends: 6624.74 9.27834
 	labels: 1
 	layer: Media
-	origin: -1121.61 0 -2163.03
+	origin: -1121.61 442.268 -2305.3
 	subtype: Material
 	title: GeoViewer Green plot
 End
@@ -214,10 +264,10 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 6624.74 4514.07
+	extends: 122481 89289.2
 	labels: 1
 	layer: Media
-	origin: 0 0 382.684
+	origin: 0 41166.5 4185.99
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -230,10 +280,10 @@ Plot: Magenta
 	basisv: 0 0 -1
 	boundaries: 1
 	coord: Y-Z
-	extends: 100 7990.91
+	extends: 4600.51 396027
 	labels: 1
 	layer: Media
-	origin: 0 0 0
+	origin: 0 -795.729 -969.836
 	subtype: Material
 	title: GeoViewer Magenta plot
 End

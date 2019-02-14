@@ -80,6 +80,33 @@ COMPOUND          2.  HYDROGEN        1.    OXYGEN                    WATER
 *
 MATERIAL                            2.32                              SiO2
 COMPOUND    -.532565    OXYGEN  -.467435   SILICON                    SiO2
+* 104 Air dry (near sea level)
+*
+MATERIAL                       .00122210                              AIR1
+COMPOUND   -1.248E-4    CARBON  -.755267  NITROGEN  -.231781    OXYGENAIR
+COMPOUND   -0.012827     ARGON                                        AIR1
+MAT-PROP                            85.7      AIR1
+STERNHEI     10.5961    1.7418    4.2759   0.10914    3.3994          AIR1
+MATERIAL                       .00120755                              AIR2
+COMPOUND   -1.248E-4    CARBON  -.755267  NITROGEN  -.231781    OXYGENAIR
+COMPOUND   -0.012827     ARGON                                        AIR2
+MAT-PROP                            85.7      AIR2
+STERNHEI     10.5961    1.7418    4.2759   0.10914    3.3994          AIR2
+MATERIAL                       .00118160                              AIR3
+COMPOUND   -1.248E-4    CARBON  -.755267  NITROGEN  -.231781    OXYGENAIR
+COMPOUND   -0.012827     ARGON                                        AIR3
+MAT-PROP                            85.7      AIR3
+STERNHEI     10.5961    1.7418    4.2759   0.10914    3.3994          AIR3
+MATERIAL                       .00115325                              AIR4
+COMPOUND   -1.248E-4    CARBON  -.755267  NITROGEN  -.231781    OXYGENAIR
+COMPOUND   -0.012827     ARGON                                        AIR4
+MAT-PROP                            85.7      AIR4
+STERNHEI     10.5961    1.7418    4.2759   0.10914    3.3994          AIR4
+MATERIAL                       .00112545                              AIR5
+COMPOUND   -1.248E-4    CARBON  -.755267  NITROGEN  -.231781    OXYGENAIR
+COMPOUND   -0.012827     ARGON                                        AIR5
+MAT-PROP                            85.7      AIR5
+STERNHEI     10.5961    1.7418    4.2759   0.10914    3.3994          AIR5
 MAT-PROP                           139.2      SiO2
 STERNHEI      4.0029     .1385    3.0025    .08408    3.5064          SiO2
 MAT-PROP                             75.     WATER
@@ -794,7 +821,11 @@ ASSIGNMA     AL-6061  DIFFUSER
 ASSIGNMA     AL-6061  VAC_WIND
 ASSIGNMA    Concrete   Dumpcov
 ASSIGNMA    BLCKHOLE  Dirthlow
-ASSIGNMA         AIR   Air1_50  Air5_500
+ASSIGNMA        AIR1    Ai1_50    Ai6_50
+ASSIGNMA        AIR2   Ai1_250   Ai6_250
+ASSIGNMA        AIR3   Ai1_500   Ai6_500
+ASSIGNMA        AIR4   Ai1_750   Ai6_750
+ASSIGNMA        AIR5  Ai1_1000  Ai6_1000
 RADDECAY          1.        1.                       1008000
 * 7days intensity     4days intensity     7days intensity
 IRRPROFI     604800. 5.3053E14   345600.       0.0   604800. 5.3053E14
@@ -823,6 +854,7 @@ RCC air2       0.0 358. 400. 0.0 100000. 0.0 10000.
 RCC air3       0.0 358. 400. 0.0 100000. 0.0 15000.
 RCC air4       0.0 358. 400. 0.0 100000. 0.0 20000.
 RCC air5       0.0 358. 400. 0.0 100000. 0.0 30000.
+RCC air6       0.0 358. 400. 0.0 100000. 0.0 50000.
 XZP air_c1     5000.
 XZP air_c2     25000.
 XZP air_c3     50000.
@@ -1989,26 +2021,48 @@ XYP g122       318.89699999999999
 $end_translat 
 END
 * logicMother
-logicMot     5 +boxMothe -air5  -dirtou20
+logicMot     5 +boxMothe -air6  -dirtou20
 * logicMother
-Air1_50      5 +air1  -(+dirtou1 -dirtou2 -hallcut) -(+dirtou2 +dirtou3) -dirtou4 -(+dirtou5 -dirtou6 -dirtou7
+Ai1_50       5 +air1  -(+dirtou1 -dirtou2 -hallcut) -(+dirtou2 +dirtou3) -dirtou4 -(+dirtou5 -dirtou6 -dirtou7
                -dirtou8) +air_c1
 * logicMother
-Air1_250     5 +air1  -air_c1 +air_c2
+Ai3_50       5 +air3  -air1 +air_c1
 * logicMother
-Air1_500     5 +air1  -air_c1 -air_c2
+Ai5_50       5 +air5  -air3 +air_c1
 * logicMother
-Air3_50      5 +air3  -air1 +air_c1
+Ai6_50       5 +air6  -air5 +air_c1
 * logicMother
-Air3_250     5 +air3  -air1 -air_c1 +air_c2
+Ai1_250      5 +air1  -air_c1 +air_c2
 * logicMother
-Air3_500     5 +air3  -air1 -air_c1 -air_c2
+Ai3_250      5 +air3  -air1 -air_c1 +air_c2
 * logicMother
-Air5_50      5 +air5  -air3 +air_c1
+Ai5_250      5 +air5  -air3 -air_c1 +air_c2
 * logicMother
-Air5_250     5 +air5  -air3 -air_c1 +air_c2
+Ai6_250      5 +air6  -air5 -air_c1 +air_c2
 * logicMother
-Air5_500     5 +air5  -air3 -air_c1 -air_c2
+Ai1_500      5 +air1  +air_c3 -air_c2
+* logicMother
+Ai3_500      5 +air3  -air1 +air_c3 -air_c2
+* logicMother
+Ai5_500      5 +air5  -air3 +air_c3 -air_c2
+* logicMother
+Ai6_500      5 +air6  -air5 +air_c3 -air_c2
+* logicMother
+Ai1_750      5 +air1  +air_c4 -air_c3
+* logicMother
+Ai3_750      5 +air3  -air1 +air_c4 -air_c3
+* logicMother
+Ai5_750      5 +air5  -air3 +air_c4 -air_c3
+* logicMother
+Ai6_750      5 +air6  -air5 +air_c4 -air_c3
+* logicMother
+Ai1_1000     5 +air1  -air_c4
+* logicMother
+Ai3_1000     5 +air3  -air1 -air_c4
+* logicMother
+Ai5_1000     5 +air5  -air3 -air_c4
+* logicMother
+Ai6_1000     5 +air6  -air5 -air_c4
 * hall_air
 hall         5 (+hal_tin -hal_tsub -hallcut )
                | hal_cin -hal_pipe -tubeTarg -(col1_0 | col1_1 | col1_2) -col2_0 -col1fin0 -col4_0 -col5_cut
