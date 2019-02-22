@@ -57,6 +57,24 @@ c$$$and NZ are given as parameters,
       DATA LFIRST /.TRUE./
       SAVE LFIRST
 
+      REAL XMIN,XMAX
+      REAL YMIN,YMAX
+      REAL ZMIN,ZMAX
+      REAL DX, DY, DZ
+      INTEGER BINX,BINY,BINZ
+
+      XMIN = 0.015
+      XMAX = 0.375
+      YMIN = -25.0
+      YMAX = 25.0
+      ZMIN = 9.5
+      ZMAX = 17.0
+
+      DX=(XMAX-XMIN)/NX
+      DY=(YMAX-YMIN)/NY
+      DZ=(ZMAX-ZMIN)/NZ
+
+
       IDISC = 0
 
       IF (LFIRST) THEN
@@ -69,19 +87,16 @@ c$$$and NZ are given as parameters,
 * NY points in Y with running index J
 * NZ points in Z with running index K
          LUNRD = NINT(WHASOU(1))
-         DO 1 I = 1, NX
-            DO 2 J = 1, NY
-               DO 3 K = 1, NZ
-                  READ(LUNRD,*,END=999) X(I), Y(J), Z(K),
-                                   BTX(I,J,K), BTY(I,J,K), BTZ(I,J,K)
-
- 1       CONTINUE
- 2       CONTINUE
- 3       CONTINUE
- 999     CONTINUE
+         iloop: DO I = 1, NX
+            jloop: DO  J = 1, NY
+               kloop: DO 3 K = 1, NZ
+                  READ(LUNRD,*) XB(I), YB(J), ZB(K),
+                                   BX(I,J,K), BY(I,J,K), BZ(I,J,K)
+                      END DO kloop
+            END DO jloop
+         END DO iloop   
          LFIRST = .FALSE.
       ENDIF
-
 * Optional check on the Region at run time, to avoid calculation in
 * regions where magnetic field is expected to be null..
       IF(NREG .NE. ...) THEN
@@ -96,11 +111,27 @@ c$$$and NZ are given as parameters,
 * algorithm of your choice that, given the particle coordinates X, Y
 * and Z, finds the closest XB(), YB() and ZB() coordinates and
 * interpolates the local value of BX, BY and BZ...
-* Then:
-         B = SQRT(BX**2 + BY**2 + BZ**2)
-         BTX = BX / B
-         BTY = BY / B
-         BTZ = BZ / B
+*     Then:
+         IF(X.GE.XMIN .AND. X.LE.XMAX .AND. 
+            Y.GE.YMIN .AND. Y.LE.YMAX .AND.
+            Z.GE.ZMIN .AND. Z.LE.ZMAX) THEN
+            BINX = CEILING((X-XMIN)/DX)
+            BINY = CEILING((Y-YMIN)/DY)
+            BINZ = CEILING((Z-ZMIN)/DZ)
+         
+            B = SQRT(BX(BINX,BINY,BINZ)**2 + BY(BINX,BINY,BINZ)**2 
+            + BZ(BINX,BINY,BINZ)**2)
+            BTX = BX(BINX,BINY,BINZ) / B
+            BTY = BY(BINX,BINY,BINZ) / B
+            BTZ = SQRT(1 - BTX**2 -BTY**2)
+            RETURN
+         ELSE
+            B = 0
+            BTX = 0
+            BTY = 0
+            BTZ = 1
+            RETURN
+         ENDIF
          RETURN
       ENDIF
 *=== End of subroutine magfld =========================================*

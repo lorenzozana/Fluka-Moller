@@ -5,30 +5,9 @@ DEFAULTS                                                              NEW-DEFA
 BEAM            -11.       0.0       0.0      0.01      0.01          ELECTRON
 PHYSICS           1.                                                  COALESCE
 PHYSICS           3.                                                  EVAPORAT
-!point           0.0    -298.3  -2651.76                              marker1
-!point           0.0    -298.3   2651.76                              marker2
-!point           0.0    -298.3       0.0                              marker3
-!point           0.0   1037.74  -2651.76                              marker4
-!point           0.0   1037.74   2651.76                              marker5
-!point           0.0    -298.3  -2251.76                              marker6
-!point           0.0    -298.3   3051.76                              marker7
-!point           0.0    -298.3      400.                              marker8
-!point           0.0   1037.74  -2251.76                              marker9
-!point           0.0   1037.74   3051.76                              marker10
-!point           0.0       0.0   2651.76                              marker11
-!point           0.0       0.0  -2651.76                              marker12
-!point       2651.76       0.0       0.0                              marker13
-!point      -2651.76       0.0       0.0                              marker14
-!point           0.0       0.0   3051.76                              marker15
-!point           0.0       0.0  -2251.76                              marker16
-!point           0.0       0.0  -3051.76                              marker17
-!point           0.0       0.0   2251.76                              marker18
-!point           0.0       0.0      400.                              marker19
-!point           0.0   1037.74   2251.76                              marker20
-!point           0.0   1037.74  -3051.76                              marker21
 PHOTONUC          1.                      BLCKHOLE  @LASTMAT
 BEAMPOS          0.0       0.0    -2300.       0.0       0.0
-START       2000000.
+START          5000.
 RANDOMIZ          1.       21.
 MATERIAL         19.   39.0983     0.862                           0.0POTASSIU
 MATERIAL         0.0       0.0      2.35                           0.0CONCRETE
@@ -124,14 +103,14 @@ ASSIGNMA      VACUUM  col4cut0
 ASSIGNMA      VACUUM  col4cut1
 ASSIGNMA      VACUUM  col4cut2
 ASSIGNMA      VACUUM  col4cut3
-ASSIGNMA      VACUUM  col5cut0
-ASSIGNMA      VACUUM  col5cut1
-ASSIGNMA      VACUUM  col5cut2
-ASSIGNMA      VACUUM  col5cut3
-ASSIGNMA      VACUUM  col5cut4
-ASSIGNMA      VACUUM  col5cut5
-ASSIGNMA      VACUUM  col5cut6
-ASSIGNMA      VACUUM  col5cut7
+ASSIGNMA      VACUUM  col5cut0                            1.
+ASSIGNMA      VACUUM  col5cut1                            1.
+ASSIGNMA      VACUUM  col5cut2                            1.
+ASSIGNMA      VACUUM  col5cut3                            1.
+ASSIGNMA      VACUUM  col5cut4                            1.
+ASSIGNMA      VACUUM  col5cut5                            1.
+ASSIGNMA      VACUUM  col5cut6                            1.
+ASSIGNMA      VACUUM  col5cut7                            1.
 ASSIGNMA        CW95     coll1
 ASSIGNMA        CW95   col1fin
 ASSIGNMA        CW95  col2rin1
@@ -826,6 +805,7 @@ ASSIGNMA        AIR2  logicMo1   Ai6_250
 ASSIGNMA        AIR3  logicMo2   Ai6_500
 ASSIGNMA        AIR4  logicMo3   Ai6_750
 ASSIGNMA        AIR5  logicMo4  Ai6_1000
+MGNFIELD         30.     0.001      0.01
 RADDECAY          1.        1.                       1008000
 * 7days intensity     4days intensity     7days intensity
 IRRPROFI     604800. 5.3053E14   345600.       0.0   604800. 5.3053E14
@@ -1381,13 +1361,9 @@ ZCC col_in     0.0 0.0 2.5
 ZCC colout     0.0 0.0 5.
 XYP plcol1     -2609.91
 XYP plcol2     -2606.91
-!@what.8=18*inch
 TRC conein     0.0 0.0 -2606.91 0.0 0.0 500. 2.5 45.719999999999999
-!@what.8=0.15875+18*inch
 TRC coneout    0.0 0.0 -2606.91 0.0 0.0 500. 2.65875 45.878749999999997
-!@what.7=18.06*inch
 RCC blout      0.0 0.0 -2106.91 0.0 0.0 3000. 45.872399999999999
-!@what.7=18*inch
 RCC blin       0.0 0.0 -2106.91 0.0 0.0 3000. 45.719999999999999
 ZCC heblout    0.0 0.0 30.95625
 ZCC heblin     0.0 0.0 30.48
@@ -1426,21 +1402,11 @@ PLA viewer2    1. 0.0 -1. 0.0 22. 570.035921
 $end_translat 
 $start_translat 0 0 5128.54
 * Beam dump tunnel 7ftx7ft
-!@what.1=-42*inch
-!@what.2=42*inch
-!@what.3=-42*inch
-!@what.4=42*inch
-!@what.5=-200.0*inch
-!@what.6=(25.4+108+17.13)*inch+300.0
 RPP dmp_tunl   -106.68000000000001 106.68000000000001 -106.68000000000001
               106.68000000000001 -508. 682.34619999999995
-!@what.3=21.63*inch
 ZCC tankout    0.0 0.0 54.940199999999997
-!@what.3=21*inch
 ZCC tankin     0.0 0.0 53.340000000000003
-!@what.3=12.065*inch
 ZCC tnktipc1   0.0 0.0 30.645099999999999
-!@what.3=(12.065-0.63)*inch
 ZCC tnktipc2   0.0 0.0 29.044899999999998
 XYP pl_0       0.0
 ELL tnktip1    0.0 -0.5 53.296229210036 0.0 -0.5 213.70377078996 230.73794659744
@@ -1449,573 +1415,285 @@ ELL tnktip3    0.0 0.0 21.80331621063 0.0 0.0 190.79668378936 230.79133064086
 ELL tnktip4    0.0 0.0 22.673551852651 0.0 0.0 192.92644814734 231.95963344247
 ELL tnktail1   0.0 0.0 184.16970273809 0.0 0.0 345.83029726191 231.59047437618
 ELL tnktail2   0.0 0.0 183.33613362501 0.0 0.0 345.06231811773 230.51876042395
-!@what.1=4.5*inch
 XYP tankpl0    11.43
-!@what.1=18.5*inch
 XYP tankpl1    46.990000000000002
-!@what.1=(24.5+108+6)*inch
 XYP tankpl2    351.79000000000002
-!@what.1=(24.5+108+17.13)*inch
 XYP tankpl3    380.06020000000001
-!@what.3=2*inch
 ZCC window     0.0 0.0 5.0800000000000001
-!@what.1=-3.5*inch
 XYP winpl1     -8.8900000000000006
-!@what.1=(0.375-3.5)*inch
 XYP winpl2     -7.9375
-!@what.1=(24.5+108+25.89)*inch
 XYP inletpl    402.31059999999997
-!@what.6=125.925*inch
 RCC coreout    0.0 0.0 0.0 0.0 0.0 319.84949999999998 25.4
-!@what.6=125.925*inch
 RCC core       0.0 0.0 0.0 0.0 0.0 319.84949999999998 24.4475
-!@what.3=3.015*inch
 ZCC thru       0.0 0.0 7.6581000000000001
 * Thru in the closure plate
-!@what.3=2.28*inch
 ZCC thru_cls   0.0 0.0 5.7911999999999999
 * outer cylinder containing plates 121_1-121_0
-!@what.3=9.25*inch
 ZCC plts121    0.0 0.0 23.495000000000001
-!@what.1=-5*inch
-!@what.2=5*inch
-!@what.3=-5*inch
-!@what.4=5*inch
 RPP center     -12.699999999999999 12.699999999999999 -12.699999999999999
               12.699999999999999 0.0 400.
-!@what.1=7*inch
 XZP pltdown    17.780000000000001
-!@what.1=-7*inch
 XZP pltup      -17.780000000000001
-!@what.4=5*inch
-!@what.5=5*inch
 PLA fin1       -2. 1.61 0.0 12.699999999999999 12.699999999999999 0.0
-!@what.4=-5*inch
-!@what.5=5*inch
 PLA fin2       2. 1.61 0.0 -12.699999999999999 12.699999999999999 0.0
-!@what.4=5*inch
-!@what.5=-5*inch
 PLA fin3       -2. -1.61 0.0 12.699999999999999 -12.699999999999999 0.0
-!@what.4=-5*inch
-!@what.5=-5*inch
 PLA fin4       2. -1.61 0.0 -12.699999999999999 -12.699999999999999 0.0
-!@what.4=5*inch
-!@what.5=4*inch
 PLA spcr1      -1.85 2.64 0.0 12.699999999999999 10.16 0.0
-!@what.4=-5*inch
-!@what.5=4*inch
 PLA spcr2      1.85 2.64 0.0 -12.699999999999999 10.16 0.0
-!@what.4=5*inch
-!@what.5=-4*inch
 PLA spcr3      -1.85 -2.64 0.0 12.699999999999999 -10.16 0.0
-!@what.4=-5*inch
-!@what.5=-4*inch
 PLA spcr4      1.85 -2.64 0.0 -12.699999999999999 -10.16 0.0
-!@what.1=0.5*inch
 XYP n_plate    1.27
-!@what.1=2.0*inch
 XYP g1         5.0800000000000001
-!@what.1=2.5*inch
 XYP u1         6.3499999999999996
-!@what.1=3.0*inch
 XYP g2         7.6200000000000001
-!@what.1=3.5*inch
 XYP f2         8.8900000000000006
-!@what.1=4*inch
 XYP g3         10.16
-!@what.1=4.5*inch
 XYP d3         11.43
-!@what.1=4.875*inch
 XYP g4         12.3825
-!@what.1=5.25*inch
 XYP f4         13.335000000000001
-!@what.1=5.625*inch
 XYP g5         14.2875
-!@what.1=6*inch
 XYP f5         15.24
-!@what.1=6.375*inch
 XYP g6         16.192499999999999
-!@what.1=6.75*inch
 XYP u6         17.145
-!@what.1=7*inch
 XYP g7         17.780000000000001
-!@what.1=7.25*inch
 XYP f7         18.414999999999999
-!@what.1=7.5*inch
 XYP g8         19.050000000000001
-!@what.1=7.75*inch
 XYP f8         19.684999999999999
-!@what.1=8*inch
 XYP g9         20.32
-!@what.1=8.25*inch
 XYP f9         20.955000000000002
-!@what.1=8.5*inch
 XYP g10        21.59
-!@what.1=8.75*inch
 XYP d10        22.225000000000001
-!@what.1=9*inch
 XYP g11        22.859999999999999
-!@what.1=9.25*inch
 XYP f11        23.495000000000001
-!@what.1=9.5*inch
 XYP g12        24.129999999999999
-!@what.1=9.75*inch
 XYP f12        24.765000000000001
-!@what.1=10*inch
 XYP g13        25.399999999999999
-!@what.1=10.25*inch
 XYP f13        26.035
-!@what.1=10.5*inch
 XYP g14        26.670000000000002
-!@what.1=10.75*inch
 XYP u14        27.305
-!@what.1=10.938*inch
 XYP g15        27.782520000000002
-!@what.1=11.126*inch
 XYP f15        28.26004
-!@what.1=11.314*inch
 XYP g16        28.737560000000002
-!@what.1=11.502*inch
 XYP f16        29.21508
-!@what.1=11.69*inch
 XYP g17        29.692599999999999
-!@what.1=11.878*inch
 XYP f17        30.170120000000001
-!@what.1=12.066*inch
 XYP g18        30.647640000000003
-!@what.1=12.254*inch
 XYP f18        31.125160000000001
-!@what.1=12.442*inch
 XYP g19        31.602679999999999
-!@what.1=12.63*inch
 XYP d19        32.080200000000005
-!@what.1=12.818*inch
 XYP g20        32.557719999999996
-!@what.1=13.006*inch
 XYP f20        33.035240000000002
-!@what.1=13.194*inch
 XYP g21        33.51276
-!@what.1=13.382*inch
 XYP f21        33.990279999999998
-!@what.1=13.57*inch
 XYP g22        34.467800000000004
-!@what.1=13.758*inch
 XYP f22        34.945319999999995
-!@what.1=13.946*inch
 XYP g23        35.422840000000001
-!@what.1=14.134*inch
 XYP f23        35.900359999999999
-!@what.1=14.322*inch
 XYP g24        36.377879999999998
-!@what.1=14.51*inch
 XYP u24        36.855400000000003
-!@what.1=14.698*inch
 XYP g25        37.332920000000001
-!@what.1=14.886*inch
 XYP f25        37.81044
-!@what.1=15.074*inch
 XYP g26        38.287959999999998
-!@what.1=15.262*inch
 XYP f26        38.765480000000004
-!@what.1=15.45*inch
 XYP g27        39.243000000000002
-!@what.1=15.638*inch
 XYP f27        39.72052
-!@what.1=15.826*inch
 XYP g28        40.198039999999999
-!@what.1=16.014*inch
 XYP f28        40.675559999999997
-!@what.1=16.202*inch
 XYP g29        41.153080000000003
-!@what.1=16.39*inch
 XYP d29        41.630600000000001
-!@what.1=16.578*inch
 XYP g30        42.10812
-!@what.1=16.766*inch
 XYP f30        42.585639999999998
-!@what.1=16.954*inch
 XYP g31        43.063160000000003
-!@what.1=17.142*inch
 XYP f31        43.540680000000002
-!@what.1=17.33*inch
 XYP g32        44.018199999999993
-!@what.1=17.518*inch
 XYP f32        44.495720000000006
-!@what.1=17.706*inch
 XYP g33        44.973239999999997
-!@what.1=17.894*inch
 XYP f33        45.450759999999995
-!@what.1=18.082*inch
 XYP g34        45.928280000000001
-!@what.1=18.27*inch
 XYP u34        46.405799999999999
-!@what.1=18.458*inch
 XYP g35        46.883319999999998
-!@what.1=18.646*inch
 XYP f35        47.360840000000003
-!@what.1=18.834*inch
 XYP g36        47.838360000000002
-!@what.1=19.022*inch
 XYP f36        48.31588
-!@what.1=19.21*inch
 XYP g37        48.793400000000005
-!@what.1=19.398*inch
 XYP f37        49.270919999999997
-!@what.1=19.586*inch
 XYP g38        49.748439999999995
-!@what.1=19.774*inch
 XYP f38        50.225960000000001
-!@what.1=19.962*inch
 XYP g39        50.703479999999999
-!@what.1=20.15*inch
 XYP d39        51.180999999999997
-!@what.1=20.338*inch
 XYP g40        51.658520000000003
-!@what.1=20.526*inch
 XYP f40        52.136040000000001
-!@what.1=20.714*inch
 XYP g41        52.61356
-!@what.1=20.902*inch
 XYP f41        53.091080000000005
-!@what.1=21.09*inch
 XYP g42        53.568600000000004
-!@what.1=21.278*inch
 XYP f42        54.046119999999995
-!@what.1=21.466*inch
 XYP g43        54.52364
-!@what.1=21.654*inch
 XYP f43        55.001159999999999
-!@what.1=21.842*inch
 XYP g44        55.478679999999997
-!@what.1=22.03*inch
 XYP u44        55.956200000000003
-!@what.1=22.218*inch
 XYP g45        56.433720000000001
-!@what.1=22.406*inch
 XYP f45        56.911239999999999
-!@what.1=22.594*inch
 XYP g46        57.388760000000005
-!@what.1=22.782*inch
 XYP f46        57.866280000000003
-!@what.1=22.97*inch
 XYP g47        58.343799999999995
-!@what.1=23.158*inch
 XYP f47        58.821320000000007
-!@what.1=23.346*inch
 XYP g48        59.298839999999998
-!@what.1=23.534*inch
 XYP f48        59.776359999999997
-!@what.1=23.722*inch
 XYP g49        60.253880000000002
-!@what.1=23.91*inch
 XYP d49        60.731400000000001
-!@what.1=24.098*inch
 XYP g50        61.208919999999999
-!@what.1=24.286*inch
 XYP f50        61.686440000000005
-!@what.1=24.474*inch
 XYP g51        62.163960000000003
-!@what.1=24.662*inch
 XYP f51        62.641480000000001
-!@what.1=24.85*inch
 XYP g52        63.119000000000007
-!@what.1=25.038*inch
 XYP f52        63.596519999999998
-!@what.1=25.226*inch
 XYP g53        64.074039999999997
-!@what.1=25.414*inch
 XYP f53        64.551560000000009
-!@what.1=25.602*inch
 XYP g54        65.029080000000008
-!@what.1=25.79*inch
 XYP u54        65.506599999999992
-!@what.1=25.978*inch
 XYP g55        65.984120000000004
-!@what.1=26.166*inch
 XYP f55        66.461640000000003
-!@what.1=26.354*inch
 XYP g56        66.939160000000001
-!@what.1=26.542*inch
 XYP f56        67.416679999999999
-!@what.1=26.73*inch
 XYP g57        67.894199999999998
-!@what.1=26.918*inch
 XYP f57        68.371719999999996
-!@what.1=27.106*inch
 XYP g58        68.849240000000009
-!@what.1=27.294*inch
 XYP f58        69.326760000000007
-!@what.1=27.482*inch
 XYP g59        69.804280000000006
-!@what.1=27.67*inch
 XYP d59        70.281800000000004
-!@what.1=27.858*inch
 XYP g60        70.759320000000002
-!@what.1=28.046*inch
 XYP f60        71.236840000000001
-!@what.1=28.234*inch
 XYP g61        71.714359999999999
-!@what.1=28.422*inch
 XYP f61        72.191879999999998
-!@what.1=28.61*inch
 XYP g62        72.669399999999996
-!@what.1=28.798*inch
 XYP f62        73.146919999999994
-!@what.1=28.986*inch
 XYP g63        73.624440000000007
-!@what.1=29.174*inch
 XYP f63        74.101960000000005
-!@what.1=29.362*inch
 XYP g64        74.579480000000004
-!@what.1=29.55*inch
 XYP u64        75.057000000000002
-!@what.1=29.8*inch
 XYP g65        75.692000000000007
-!@what.1=30.05*inch
 XYP f65        76.326999999999998
-!@what.1=30.3*inch
 XYP g66        76.962000000000003
-!@what.1=30.55*inch
 XYP f66        77.597000000000008
-!@what.1=30.8*inch
 XYP g67        78.231999999999999
-!@what.1=31.05*inch
 XYP f67        78.867000000000004
-!@what.1=31.3*inch
 XYP g68        79.50200000000001
-!@what.1=31.55*inch
 XYP d68        80.137
-!@what.1=31.8*inch
 XYP g69        80.772000000000006
-!@what.1=32.05*inch
 XYP f69        81.406999999999996
-!@what.1=32.3*inch
 XYP g70        82.041999999999987
-!@what.1=32.55*inch
 XYP f70        82.676999999999992
-!@what.1=32.8*inch
 XYP g71        83.311999999999998
-!@what.1=33.05*inch
 XYP f71        83.946999999999989
-!@what.1=33.3*inch
 XYP g72        84.581999999999994
-!@what.1=33.55*inch
 XYP u72        85.216999999999999
-!@what.1=33.8*inch
 XYP g73        85.85199999999999
-!@what.1=34.05*inch
 XYP f73        86.486999999999995
-!@what.1=34.3*inch
 XYP g74        87.122
-!@what.1=34.55*inch
 XYP f74        87.756999999999991
-!@what.1=34.8*inch
 XYP g75        88.391999999999996
-!@what.1=35.05*inch
 XYP f75        89.027000000000001
-!@what.1=35.3*inch
 XYP g76        89.661999999999992
-!@what.1=35.55*inch
 XYP d76        90.296999999999997
-!@what.1=35.8*inch
 XYP g77        90.931999999999988
-!@what.1=36.05*inch
 XYP f77        91.566999999999993
-!@what.1=36.3*inch
 XYP g78        92.201999999999998
-!@what.1=36.55*inch
 XYP f78        92.836999999999989
-!@what.1=36.8*inch
 XYP g79        93.471999999999994
-!@what.1=37.05*inch
 XYP f79        94.106999999999999
-!@what.1=37.3*inch
 XYP g80        94.74199999999999
-!@what.1=37.55*inch
 XYP u80        95.376999999999995
-!@what.1=37.925*inch
 XYP g81        96.329499999999996
-!@what.1=38.3*inch
 XYP f81        97.281999999999996
-!@what.1=38.675*inch
 XYP g82        98.234499999999997
-!@what.1=39.05*inch
 XYP f82        99.186999999999998
-!@what.1=39.425*inch
 XYP g83        100.1395
-!@what.1=39.8*inch
 XYP d83        101.092
-!@what.1=40.175*inch
 XYP g84        102.0445
-!@what.1=40.55*inch
 XYP f84        102.997
-!@what.1=40.925*inch
 XYP g85        103.9495
-!@what.1=41.3*inch
 XYP f85        104.902
-!@what.1=41.675*inch
 XYP g86        105.85449999999999
-!@what.1=42.05*inch
 XYP u86        106.80699999999999
-!@what.1=42.425*inch
 XYP g87        107.75949999999999
-!@what.1=42.8*inch
 XYP f87        108.71199999999999
-!@what.1=43.175*inch
 XYP g88        109.66449999999999
-!@what.1=43.55*inch
 XYP f88        110.61699999999999
-!@what.1=43.925*inch
 XYP g89        111.56949999999999
-!@what.1=44.3*inch
 XYP d89        112.52199999999999
-!@what.1=44.8*inch
 XYP g90        113.79199999999999
-!@what.1=45.3*inch
 XYP f90        115.062
-!@what.1=45.8*inch
 XYP g91        116.33199999999999
-!@what.1=46.3*inch
 XYP u91        117.60199999999999
-!@what.1=46.8*inch
 XYP g92        118.872
-!@what.1=47.3*inch
 XYP f92        120.142
-!@what.1=47.8*inch
 XYP g93        121.41199999999999
-!@what.1=48.3*inch
 XYP d93        122.68199999999999
-!@what.1=48.8*inch
 XYP g94        123.952
-!@what.1=49.3*inch
 XYP f94        125.22199999999999
-!@what.1=49.8*inch
 XYP g95        126.49199999999999
-!@what.1=50.3*inch
 XYP u95        127.762
-!@what.1=50.8*inch
 XYP g96        129.03199999999998
-!@what.1=51.3*inch
 XYP f96        130.30199999999999
-!@what.1=51.8*inch
 XYP g97        131.572
-!@what.1=52.3*inch
 XYP f97        132.84199999999998
-!@what.1=52.8*inch
 XYP g98        134.11199999999999
-!@what.1=53.3*inch
 XYP d98        135.38200000000001
-!@what.1=53.8*inch
 XYP g99        136.65199999999999
-!@what.1=54.3*inch
 XYP f99        137.922
-!@what.1=54.8*inch
 XYP g100       139.19200000000001
-!@what.1=55.3*inch
 XYP f100       140.46199999999999
-!@what.1=55.8*inch
 XYP g101       141.732
-!@what.1=56.3*inch
 XYP u101       143.00199999999998
-!@what.1=56.8*inch
 XYP g102       144.27199999999999
-!@what.1=57.55*inch
 XYP f102       146.17699999999999
-!@what.1=58.05*inch
 XYP g103       147.447
-!@what.1=58.8*inch
 XYP f103       149.352
-!@what.1=59.3*inch
 XYP g104       150.62199999999999
-!@what.1=60.05*inch
 XYP d104       152.52699999999999
-!@what.1=60.55*inch
 XYP g105       153.797
-!@what.1=61.3*inch
 XYP f105       155.702
-!@what.1=61.8*inch
 XYP g106       156.97200000000001
-!@what.1=62.55*inch
 XYP f106       158.87699999999998
-!@what.1=63.05*inch
 XYP g107       160.14699999999999
-!@what.1=63.8*inch
 XYP u107       162.05199999999999
-!@what.1=64.3*inch
 XYP g108       163.322
-!@what.1=65.05*inch
 XYP f108       165.227
-!@what.1=65.55*inch
 XYP g109       166.49699999999999
-!@what.1=66.3*inch
 XYP f109       168.40199999999999
-!@what.1=66.8*inch
 XYP g110       169.672
-!@what.1=67.55*inch
 XYP d110       171.577
-!@what.1=68.05*inch
 XYP g111       172.84700000000001
-!@what.1=68.8*inch
 XYP f111       174.75199999999998
-!@what.1=69.3*inch
 XYP g112       176.02199999999999
-!@what.1=70.05*inch
 XYP f112       177.92699999999999
-!@what.1=70.55*inch
 XYP g113       179.197
-!@what.1=71.3*inch
 XYP u113       181.102
-!@what.1=71.8*inch
 XYP g114       182.37199999999999
-!@what.1=72.8*inch
 XYP f114       184.91200000000001
-!@what.1=73.3*inch
 XYP g115       186.18199999999999
-!@what.1=74.3*inch
 XYP f115       188.72200000000001
-!@what.1=74.8*inch
 XYP g116       189.99199999999999
-!@what.1=75.8*inch
 XYP d116       192.53199999999998
-!@what.1=76.3*inch
 XYP g117       193.80199999999999
-!@what.1=77.3*inch
 XYP f117       196.34199999999998
-!@what.1=77.8*inch
 XYP g118       197.61199999999999
-!@what.1=78.8*inch
 XYP f118       200.15199999999999
-!@what.1=79.3*inch
 XYP g119       201.422
-!@what.1=80.3*inch
 XYP u119       203.96199999999999
-!@what.1=81.8*inch
 XYP g120       207.77199999999999
-!@what.1=82.55*inch
 XYP p120       209.67699999999999
-!@what.1=84.55*inch
 XYP g121       214.75700000000001
-!@what.1=87.55*inch
 XYP p121_1     222.37700000000001
-!@what.1=90.55*inch
 XYP p121_2     229.99699999999999
-!@what.1=93.55*inch
 XYP p121_3     237.61699999999999
-!@what.1=96.55*inch
 XYP p121_4     245.23699999999999
-!@what.1=99.55*inch
 XYP p121_5     252.857
-!@what.1=102.55*inch
 XYP p121_6     260.47699999999998
-!@what.1=105.55*inch
 XYP p121_7     268.09699999999998
-!@what.1=108.55*inch
 XYP p121_8     275.71699999999998
-!@what.1=111.55*inch
 XYP p121_9     283.33699999999999
-!@what.1=114.55*inch
 XYP p121_0     290.95699999999999
-!@what.1=125.55*inch
 XYP g122       318.89699999999999
 $end_translat 
 END
