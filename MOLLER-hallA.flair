@@ -5,9 +5,11 @@ Title: MOLLER_Test
 Input: MOLLER-hallA.inp
 Exec: moller.exe
 Submit: *Default
+Notes:
+{img:MOLLER-hallA_plot05.png}
 Tabs: 0.1 0.32 0.56 0.81 1.0
 Page: Flair
-Source: Magnetic_field/magfld_test.f
+Source: Magnetic_field/magnetic_field_readtable.f
 DefMain: True
 LinkPrg: lfluka
 F77bound: True
@@ -17,9 +19,17 @@ F77dline: False
 Run: <default>
 	Prev:     0
 	Last:     5
-	Status:   0
+	Status:   3
 	Pid:      0
-	StartRun: 0
+	StartRun: 1550869260
+
+	# USRxxx data file: MOLLER-hallA_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
 End
 
 # Material
@@ -282,10 +292,10 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 33.4898 24.4142
+	extends: 144 104.977
 	labels: 1
 	layer: Media
-	origin: 0 8.45978 34.5549
+	origin: 0 -64.5292 1098.73
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -320,11 +330,11 @@ Plot: MOLLER-hallA_plot05
 	cbtics: 0
 	coord: U-V
 	cpd: 0
-	extends: 10 10
+	extends: 10 100
 	grid: 0
 	index: 0
 	labels: 0
-	origin: 15 0 3
+	origin: 15 2 1000
 	subtype: Field
 	title: Plot #5
 	x2log: 0
@@ -334,5 +344,46 @@ Plot: MOLLER-hallA_plot05
 	y2tics: 0
 	ylog: 0
 	zlog: 0
+	ztics: 0
+End
+
+# USRBIN plot "USRBIN MOLLER-hallA 50"
+Plot: MOLLER-hallA_50_plot
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: MOLLER-hallA_50.bnn
+	det: 2
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 1.05235844E+15
+	lw.0: 0
+	max: 4043671.25
+	min: 5.20736355E-19
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: USRBIN MOLLER-hallA 50
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
 	ztics: 0
 End

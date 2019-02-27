@@ -69,9 +69,15 @@
          by =  testmf(X,Y,Z,2)
          bz =  testmf(X,Y,Z,3)
          B = SQRT(bx**2 + by**2 +bz**2)
-         BTX   = bx/B
-         BTY   = by/B
-         BTZ   = SQRT(1.0 - BTX**2 - BTY**2)
+         IF(B.GT.0.0) THEN
+            BTX   = bx/B
+            BTY   = by/B
+            BTZ   = SQRT(1.0 - BTX**2 - BTY**2)
+         ELSE
+            BTX = 0.0
+            BTY = 0.0
+            BTZ = 1.0
+         END IF
          RETURN
       END IF
 *=== End of subroutine Magfld =========================================*
