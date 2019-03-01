@@ -62,12 +62,12 @@ c$$$  and NZ are given as parameters,
 
       PARAMETER (NSEC = 7)
       PARAMETER (PHIOFF = 25.71429)
-      PARAMETER (XMIN = 0.015)
-      PARAMETER (XMAX = 0.375)
+      PARAMETER (XMIN = 0.015*100)
+      PARAMETER (XMAX = 0.375*100)
       PARAMETER (YMIN = -25.0)
       PARAMETER (YMAX = 25.0)
-      PARAMETER (ZMIN = 9.5)
-      PARAMETER (ZMAX = 17.0)
+      PARAMETER (ZMIN = 9.5*100)
+      PARAMETER (ZMAX = 17.0*100)
 
 
 
@@ -81,7 +81,7 @@ c$$$  and NZ are given as parameters,
 *     NX points in R with running index I
 *     NY points in PHY with running index J
 *     NZ points in Z with running index K
-         OPEN(UNIT = 20, FILE = 'Magnetic_field/c_bH.txt')
+         OPEN(UNIT = 20, FILE = '/home/zana/c_bH.txt')
 *         LUNRD = NINT(WHASOU(1))
          DO I = 1, NX
             DO  J = 1, NY
@@ -98,6 +98,16 @@ c$$$  and NZ are given as parameters,
          END DO    
          LFIRST = .FALSE.
       ENDIF
+
+*     Rotating phi till reached the right angle
+      PHI = ATAN2(Y,X) * 180. / 3.1416
+ 10   IF (PHI.LT.(YMIN+PHIOFF).AND.PHI.GT.(YMAX+PHIOFF)) THEN
+         PHI = PHI + 360./NSEC
+         IF (PHI > 360) THEN
+            PHI = PHI - 360
+         END IF
+         GOTO 10
+      END IF
 *     Optional check on the Region at run time, to avoid calculation in
 *     regions where magnetic field is expected to be null..
 *     Each time the routine is called, activate an
@@ -108,50 +118,39 @@ c$$$  and NZ are given as parameters,
       PRINT*, RB(1), PHIB(2), ZB(3), BR(1,2,3)
 
       IF (X.GE.XMIN .AND.X.LE.XMAX) THEN
-         IF(Y.GE.YMIN.AND.Y.LE.YMAX) THEN
-            IF(Z.GE.ZMIN.AND.Z.LE.ZMAX) THEN
-               DX = (XMAX-XMIN)/NX
-               DY = (YMAX-YMIN)/NY
-               DZ = (ZMAX-ZMIN)/NZ
-               BINX = NINT((X-XMIN)/DX)+1
-               BINY = NINT((Y-YMIN)/DY)+1
-               BINZ = NINT((Z-ZMIN)/DZ)+1
-               BRV=BR(BINX,BINY,BINZ)
-               BPHIV=BPHI(BINX,BINY,BINZ)
-               BZV=BZ(BINX,BINY,BINZ)
-               B = SQRT(BRV**2 + BZV**2)
-               IF (B.GT.0.0) THEN
-                  BTX = COS(BPHIV)
-                  BTY = SIN(BPHIV)
-                  BTZ = SQRT(1 - BTX**2 -BTY**2)
-               ELSE
-                  BTX = 0.0
-                  BTY = 0.0
-                  BTZ = 1.0
-               END IF
-               RETURN
+         IF(Z.GE.ZMIN.AND.Z.LE.ZMAX) THEN
+            DX = (XMAX-XMIN)/NX
+            DY = (YMAX-YMIN)/NY
+            DZ = (ZMAX-ZMIN)/NZ
+            BINX = NINT((X-XMIN)/DX)+1
+            BINY = NINT((PHI-YMIN)/DY)+1
+            BINZ = NINT((Z-ZMIN)/DZ)+1
+            BRV=BR(BINX,BINY,BINZ)
+            BPHIV=BPHI(BINX,BINY,BINZ)
+            BZV=BZ(BINX,BINY,BINZ)
+            B = SQRT(BRV**2 + BZV**2)
+            IF (B.GT.0.0) THEN
+               BTX = COS(BPHIV)
+               BTY = SIN(BPHIV)
+               BTZ = SQRT(1 - BTX**2 -BTY**2)
             ELSE
-               B = 0.0
                BTX = 0.0
                BTY = 0.0
                BTZ = 1.0
-               RETURN
-            ENDIF
+            END IF
          ELSE
             B = 0.0
             BTX = 0.0
             BTY = 0.0
             BTZ = 1.0
-            RETURN
          ENDIF
       ELSE
          B = 0.0
          BTX = 0.0
          BTY = 0.0
          BTZ = 1.0
-         RETURN
       ENDIF
-      
+      RETURN
 *===  End of subroutine magfld =========================================*
       END 
 *     
