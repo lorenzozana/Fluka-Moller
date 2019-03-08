@@ -92,6 +92,7 @@ MAT-PROP                             75.     WATER
 STERNHEI      3.5017       .24    2.8004    .09116    3.4773          WATER
 ASSIGNMA      VACUUM  logicMot
 ASSIGNMA         AIR      hall
+ASSIGNMA      VACUUM   airsol1                            1.
 ASSIGNMA      VACUUM      pipe
 ASSIGNMA     AL-6061  BL_DMPTN
 ASSIGNMA    LiquidHy    h2Targ
@@ -834,6 +835,7 @@ RCC air3       0.0 358. 400. 0.0 100000. 0.0 15000.
 RCC air4       0.0 358. 400. 0.0 100000. 0.0 20000.
 RCC air5       0.0 358. 400. 0.0 100000. 0.0 30000.
 RCC air6       0.0 358. 400. 0.0 100000. 0.0 50000.
+RCC air7       0.0 0.0 600. 0.0 0.0 376.657 40.
 XZP air_c1     5000.
 XZP air_c2     25000.
 XZP air_c3     50000.
@@ -1750,7 +1752,8 @@ Ai5_1000     5 +air5  -air3 -air_c4
 Ai6_1000     5 +air6  -air5 -air_c4
 * hall_air
 hall         5 (+hal_tin -hal_tsub -hallcut )
-               | hal_cin -hal_pipe -tubeTarg -(col1_0 | col1_1 | col1_2) -col2_0 -col1fin0 -col4_0 -col5_cut
+               | hal_cin -hal_pipe -tubeTarg -(col1_0 | col1_1 | col1_2) -col2_0 -col1fin0 -col4_0 -col5_cut -air7
+airsol1      5 +air7
 * hall_pipe
 pipe         5 +hal_pipe
 Dirth        5 +dirtou1 -hal_tout -dirtou2 -hallcut -hal_tsub

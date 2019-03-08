@@ -183,25 +183,7 @@ c     -- or make sure it is exactly the same in the calling routine        --
       parameter (NX=5)   ! Number of table nodes in x
       parameter (NY=4)   ! Number of table nodes in y
       parameter (NZ=3)   ! Number of table nodes in z
-      parameter (LENT=NX+NY+NZ)   ! Length of the ENT array
-      parameter (LENBT=NX*NY*NZ)  ! Length of the BX, BY, BZ component tables
-      logical init
-      integer NENT(NARG)
-      real ENT(LENT),BX(LENBT),BY(LENBT),BZ(LENBT)
-      common/magtable/init,NENT,ENT,BX,BY,BZ
-c
-      real    ARG(NARG)
-c
-      FX  =  0.
-      FY  =  0.
-      FZ  =  0.
-      IF(NARG .LT. 1  .OR.  NARG .GT. 5)  RETURN
-      LMAX      =  0
-      ISTEP     =  1
-      KNOTS     =  1
-      INDEX(1)  =  1
-      WEIGHT(1) =  1.
-      DO 100    N  =  1, NARG
+      parameter (LENT=NX+NY+NZ)   ! Length of the ENT array      DO 100    N  =  1, NARG
          X     =  ARG(N)
          NDIM  =  NENT(N)
          LOCA  =  LMAX
