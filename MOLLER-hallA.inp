@@ -808,7 +808,7 @@ ASSIGNMA        AIR2  logicMo1   Ai6_250
 ASSIGNMA        AIR3  logicMo2   Ai6_500
 ASSIGNMA        AIR4  logicMo3   Ai6_750
 ASSIGNMA        AIR5  logicMo4  Ai6_1000
-ASSIGNMA        IRON     SOLE1     SOLE7
+ASSIGNMA      COPPER     SOLE1     SOLE7
 MGNFIELD         30.     0.001      0.01
 RADDECAY          1.        1.                       1008000
 * 7days intensity     4days intensity     7days intensity

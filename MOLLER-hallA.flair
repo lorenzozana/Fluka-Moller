@@ -195,8 +195,8 @@ End
 # Geometry Information
 Geometry:
 	Frame.bsplit: 0.5
-	Frame.tsplit: 0.01
-	Frame.vsplit: 0.99
+	Frame.tsplit: 0.5
+	Frame.vsplit: 0.5
 
 	# Layer
 	Layer: Media
@@ -250,7 +250,7 @@ Plot: Red
 	cbtics: 0
 	coord: Y-Z
 	cpd: 0
-	extends: 2662.33 112484
+	extends: 2662.33 1887.84
 	grid: 0
 	index: 0
 	labels: 1
@@ -272,14 +272,14 @@ End
 Plot: Green
 	Format: .eps
 	Type:   Geometry
-	basisu: -0.238406 0.000143243 0.971165
-	basisv: 2.22718e-05 1 -0.000142029
+	basisu: -0.221464 0.00694678 0.975144
+	basisv: 0.0439851 0.999028 0.0028725
 	boundaries: 1
 	coord: U-V
-	extends: 248.832 181.4
+	extends: 2662.33 1890.48
 	labels: 1
 	layer: 3D
-	origin: -40.4487 -23.8214 558.893
+	origin: 72.4671 -214.086 11.4624
 	subtype: Material
 	title: GeoViewer Green plot
 End
@@ -292,10 +292,10 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 426.664 302.543
+	extends: 1528.81 1084.07
 	labels: 1
-	layer: 3D
-	origin: 0 -67.185 606.957
+	layer: Media
+	origin: 0 -95.8292 187.04
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -314,7 +314,7 @@ Plot: Magenta
 	cbtics: 0
 	coord: Y-Z
 	cpd: 0
-	extends: 5520.61 233246
+	extends: 5520.61 3920.1
 	grid: 0
 	index: 0
 	labels: 1
