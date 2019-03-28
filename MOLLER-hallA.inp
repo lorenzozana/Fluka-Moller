@@ -6,7 +6,7 @@ BEAM            -11.       0.0     0.136       0.5       0.5          ELECTRON
 PHYSICS           1.                                                  COALESCE
 PHYSICS           3.                                                  EVAPORAT
 PHOTONUC          1.                      BLCKHOLE  @LASTMAT
-BEAMPOS          0.0       0.0     -625.       0.0       0.0
+BEAMPOS          0.0       0.0     -62.5       0.0       0.0
 START          5000.
 RANDOMIZ          1.       21.
 MATERIAL         19.   39.0983     0.862                           0.0POTASSIU
@@ -863,6 +863,9 @@ $start_transform Coil1
 RPP Sol1       -0.77 0.77 3.5 20. 600. 800.
 RPP Sol2       -1.54 1.54 8.12 15.38 604.62 795.38
 RPP Sol3       -1.54 1.54 6.58 16.92 603.08 796.92
+XCC Sol31      13.58 610.08 7.0
+XYP Sol32      610.08
+XZP Sol33      13.58
 $end_transform 
 $start_transform Coil2
 RPP Sol4       -0.77 0.77 3.5 20. 600. 800.
@@ -1825,8 +1828,9 @@ ShHutC2      5 +CBox3_o -air7
 ShLeadC3     5 +CBox4_o -air7
 SHLead       5 +LBox -ShBore
                | +LBox1 -LBox1_i
-SOLE1        5 +Sol1 -Sol3
+SOLE1        5 +Sol1 -Sol3 -( +Sol33 +Sol32 )
                | +Sol3 -Sol2
+               | +Sol31 +Sol32 +Sol33 +Sol1 -Sol3
 SOLE2        5 +Sol4 -Sol6
                | +Sol6 -Sol5
 SOLE3        5 +Sol7 -Sol9
