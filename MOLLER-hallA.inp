@@ -811,6 +811,7 @@ ASSIGNMA        AIR3  logicMo2   Ai6_500
 ASSIGNMA        AIR4  logicMo3   Ai6_750
 ASSIGNMA        AIR5  logicMo4  Ai6_1000
 ASSIGNMA      COPPER     SOLE1     SOLE7
+ASSIGNMA      COPPER     SPIPE
 MGNFIELD         30.     0.001      0.01
 RADDECAY          1.        1.                       1008000
 * 7days intensity     4days intensity     7days intensity
@@ -863,6 +864,7 @@ $start_transform Coil1
 RPP Sol1       -0.77 0.77 3.5 20. 600. 800.
 RPP Sol2       -1.54 1.54 8.12 15.38 604.62 795.38
 RPP Sol3       -1.54 1.54 6.58 16.92 603.08 796.92
+TRC Scone      0.0 0.0 597.1 0.0 0.0 7. 13.4 3.5
 XCC Sol31      13.58 610.08 7.0
 XYP Sol32      610.08
 XZP Sol33      13.58
@@ -897,6 +899,8 @@ RPP Sol19      -0.77 0.77 3.5 20. 600. 800.
 RPP Sol20      -1.54 1.54 8.12 15.38 604.62 795.38
 RPP Sol21      -1.54 1.54 6.58 16.92 603.08 796.92
 $end_transform 
+RCC Spipe_i    0.0 0.0 604.0 0.0 0.0 193.6 3.5
+RCC Spipe_o    0.0 0.0 604.5 0.0 0.0 193.1 4.2
 XZP air_c1     5000.
 XZP air_c2     25000.
 XZP air_c3     50000.
@@ -1818,7 +1822,7 @@ Ai6_1000     5 +air6  -air5 -air_c4
 hall         5 (+hal_tin -hal_tsub -hallcut )
                | hal_cin -hal_pipe -( +SC_o -Sc_i2 )  -(col1_0 | col1_1 | col1_2) -col2_0 -col1fin0 -col5_cut -air7
                -( +CBox_o -CBox_i -ShBore -ShBore1  )  -( +LBox -ShBore ) -( +CBox2_o -ShBore2 ) -CBox3_o
-               -CBox4_o  -LBox1
+               -CBox4_o  -LBox1 -Spipe_o
                | +LBox1_i +LBox1
                | +SC_i -tubeTarg -hal_pipe
 SC           5 +SC_o -SC_i -Sc_i2 -hal_pipe
@@ -1828,23 +1832,24 @@ ShHutC2      5 +CBox3_o -air7
 ShLeadC3     5 +CBox4_o -air7
 SHLead       5 +LBox -ShBore
                | +LBox1 -LBox1_i
-SOLE1        5 +Sol1 -Sol3 -( +Sol33 +Sol32 )
+SOLE1        5 +Sol1 -Sol3 -Scone
                | +Sol3 -Sol2
-               | +Sol31 +Sol32 +Sol33 +Sol1 -Sol3
-SOLE2        5 +Sol4 -Sol6
+SOLE2        5 +Sol4 -Sol6 -Scone
                | +Sol6 -Sol5
-SOLE3        5 +Sol7 -Sol9
+SOLE3        5 +Sol7 -Sol9 -Scone
                | +Sol9 -Sol8
-SOLE4        5 +Sol10 -Sol12
+SOLE4        5 +Sol10 -Sol12 -Scone
                | +Sol12 -Sol11
-SOLE5        5 +Sol13 -Sol15
+SOLE5        5 +Sol13 -Sol15 -Scone
                | +Sol15 -Sol14
-SOLE6        5 +Sol16 -Sol18
+SOLE6        5 +Sol16 -Sol18 -Scone
                | +Sol18 -Sol17
-SOLE7        5 +Sol19 -Sol21
+SOLE7        5 +Sol19 -Sol21 -Scone
                | +Sol21 -Sol20
+SPIPE        5 +Spipe_o -Spipe_i -Sol1 -Sol4 -Sol7 -Sol10 -Sol13 -Sol16 -Sol19
+               | +Scone +Spipe_o -Spipe_i
 airsol1      5 +air7 -Sol1 -Sol3 -Sol4 -Sol6 -Sol7 -Sol9 -Sol10 -Sol12 -Sol13 -Sol15 -Sol16 -Sol18
-               -Sol19 -Sol21 -col4_0
+               -Sol19 -Sol21 -col4_0 -Spipe_o
                | +Sol2
                | +Sol5
                | +Sol8
@@ -1852,6 +1857,14 @@ airsol1      5 +air7 -Sol1 -Sol3 -Sol4 -Sol6 -Sol7 -Sol9 -Sol10 -Sol12 -Sol13 -S
                | +Sol14
                | +Sol17
                | +Sol20
+               | +Spipe_i
+               | +Sol1 +Scone -Spipe_o
+               | +Sol4 +Scone -Spipe_o
+               | +Sol7 +Scone -Spipe_o
+               | +Sol10 +Scone -Spipe_o
+               | +Sol13 +Scone -Spipe_o
+               | +Sol16 +Scone -Spipe_o
+               | +Sol19 +Scone -Spipe_o
 * hall_pipe
 pipe         5 +hal_pipe
 Dirth        5 +dirtou1 -hal_tout -dirtou2 -hallcut -hal_tsub

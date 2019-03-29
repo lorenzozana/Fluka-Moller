@@ -21,7 +21,7 @@ Run: <default>
 	Last:     5
 	Status:   3
 	Pid:      0
-	StartRun: 1553720784
+	StartRun: 1553783663
 
 	# USRxxx data file: MOLLER-hallA_50.bnn
 	Data: \I_\U.\e
@@ -33,19 +33,9 @@ Run: <default>
 End
 
 # Material
-Material: ZINC
+Material: AL-6061
 	alpha: 0
-	color: #1070B0
-	fuzz: 0.0
-	ior: 1.0
-	shine: 10.0
-	specular: 0.0
-End
-
-# Material
-Material: POTASSIU
-	alpha: 0
-	color: #70B0B0
+	color: #309030
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -55,7 +45,17 @@ End
 # Material
 Material: LiquidHy
 	alpha: 0
-	color: #C09030
+	color: #2b13b4
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: MANGANES
+	alpha: 0
+	color: #B050D0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -93,9 +93,9 @@ Material: AIR1
 End
 
 # Material
-Material: AIR2
+Material: POTASSIU
 	alpha: 0
-	color: #46b8f1
+	color: #70B0B0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -133,9 +133,9 @@ Material: AIR5
 End
 
 # Material
-Material: AL-6061
+Material: ZINC
 	alpha: 0
-	color: #309030
+	color: #1070B0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -173,9 +173,9 @@ Material: SS316LN
 End
 
 # Material
-Material: MANGANES
+Material: AIR2
 	alpha: 0
-	color: #B050D0
+	color: #46b8f1
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -218,7 +218,7 @@ Geometry:
 		3D: True
 		3D._visible: True
 		3D.edgedetect: 1
-		Image: True
+		3D.shadows: 0
 		Image._visible: True
 		Image.file: HallA.png
 		Image.marker: 4
@@ -226,6 +226,7 @@ Geometry:
 		Image.marker.1: 165.5 617.375 0.0 -298.3 -2251.76
 		Image.marker.2: 1155.75 617.75 0.0 -298.3 3051.76
 		Image.marker.3: 1155.44444444 309.444444444 0.0 1037.74 3051.76
+		Options.axes: 0
 		Options.shortcut: F4
 		Options.viewport: 0
 		Show: 0
@@ -240,22 +241,22 @@ End
 Plot: Red
 	Format: .eps
 	Type:   Geometry
-	basisu: 0 -1 0
-	basisv: 0 0 -1
+	basisu: 1 0 0
+	basisv: 0 0 1
 	boundaries: 1
 	cbcolors: 0
 	cblog: 0
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 0
-	coord: Y-Z
+	coord: X-Z
 	cpd: 0
-	extends: 2662.33 1996.75
+	extends: 83.3332 2634.26
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: -119.606 -650.359 1144.66
+	origin: 16.5552 0 632.066
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: 0
@@ -272,14 +273,14 @@ End
 Plot: Green
 	Format: .eps
 	Type:   Geometry
-	basisu: 0 -0.00287527 0.999996
-	basisv: 0 0.999996 0.00287527
+	basisu: -0.00226485 -0.00272876 0.999994
+	basisv: -1.08241e-05 0.999996 0.00272874
 	boundaries: 1
 	coord: U-V
-	extends: 2662.33 1374.03
+	extends: 1069.93 600.385
 	labels: 1
 	layer: 3D
-	origin: 72.4671 -214.086 11.4624
+	origin: -0.618716 -81.5751 486.263
 	subtype: Material
 	title: GeoViewer Green plot
 End
@@ -292,10 +293,10 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 1274.01 955.506
+	extends: 426.663 238.763
 	labels: 1
 	layer: Media
-	origin: 0 1.4106 440.071
+	origin: 0 40.0709 405.477
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -314,12 +315,12 @@ Plot: Magenta
 	cbtics: 0
 	coord: Y-Z
 	cpd: 0
-	extends: 5520.61 4140.46
+	extends: 41018.6 23947.7
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 0 -489.029 22799.5
+	origin: 0 -3157.81 11651.1
 	subtype: Material
 	title: GeoViewer Magenta plot
 	x2log: 0
@@ -507,16 +508,16 @@ Plot: MOLLER-hallA_50_plot
 	cbtics: 1
 	cpd: 0
 	datafile: MOLLER-hallA_50.bnn
-	det: 1
+	det: 2
 	errors: 0
 	geo: -Auto-
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 2.99720305E+15
+	int: 290254079123900.19
 	lw.0: 0
-	max: 8250024.5
-	min: 9.88152404E-09
+	max: 2345170.50
+	min: 3.09290172E-19
 	proj: Z
 	ps.0: 0
 	pt.0: 0
