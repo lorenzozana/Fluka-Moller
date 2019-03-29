@@ -812,6 +812,14 @@ ASSIGNMA        AIR4  logicMo3   Ai6_750
 ASSIGNMA        AIR5  logicMo4  Ai6_1000
 ASSIGNMA      COPPER     SOLE1     SOLE7
 ASSIGNMA      COPPER     SPIPE
+ASSIGNMA        IRON  IronShie
+ASSIGNMA        IRON  IronShi1
+ASSIGNMA        IRON  IronShi2
+ASSIGNMA        IRON  IronShi3
+ASSIGNMA        IRON  IronShi4
+ASSIGNMA        IRON  SteelShi
+ASSIGNMA         AIR  sbsBunke
+ASSIGNMA         AIR  sbsbunke
 MGNFIELD         30.     0.001      0.01
 RADDECAY          1.        1.                       1008000
 * 7days intensity     4days intensity     7days intensity
@@ -822,16 +830,25 @@ IRRPROFI     345600.       0.0   604800. 5.3053E14
 DCYTIMES       3600.    86400.   259200.   604800.  1209600.  2592000.
 DCYSCORE          1.                       hall_1h   hall_1h          USRBIN
 AUXSCORE      USRBIN                       hall_1h   hall_1h          EWT74
-USRBIN           10.   DOSE-EQ      -50.    2694.7   1967.54    3094.7hall_1h
-USRBIN       -2694.7     -447.   -2294.7      216.       98.      216. &
+USRBIN           10.   DOSE-EQ      -50.     2660.      400.     3060.hall_1h
+USRBIN        -2660.     -300.    -2260.      266.       35.      266. &
 DCYSCORE          2.                       hall_1d   hall_1d          USRBIN
 AUXSCORE      USRBIN                       hall_1d   hall_1d          EWT74
-USRBIN           10.   DOSE-EQ      -50.    2694.7   1967.54    3094.7hall_1d
-USRBIN       -2694.7     -447.   -2294.7      216.       98.      216. &
+USRBIN           10.   DOSE-EQ      -50.     2660.      400.     3060.hall_1d
+USRBIN        -2660.     -300.    -2260.      266.       35.      266. &
 DCYSCORE          3.                       hall_3d   hall_3d          USRBIN
 AUXSCORE      USRBIN                       hall_3d   hall_3d          EWT74
-USRBIN           10.   DOSE-EQ      -50.    2694.7   1967.54    3094.7hall_3d
-USRBIN       -2694.7     -447.   -2294.7      216.       98.      216. &
+USRBIN           10.   DOSE-EQ      -50.     2660.      400.     3060.hall_3d
+USRBIN        -2660.     -300.    -2260.      266.       35.      266. &
+DCYSCORE          4.                       hall_1w                    USRBIN
+AUXSCORE      USRBIN                       hall_1w   hall_1w          EWT74
+USRBIN           10.   DOSE-EQ      -50.     2660.      400.     3060.hall_1w
+USRBIN        -2660.     -300.    -2260.      266.       35.      266. &
+USRBIN           10.  SI1MEVNE      -51.     2660.      400.     3060.hall1MeV
+USRBIN        -2660.     -300.    -2260.      266.       35.      266. &
+AUXSCORE      USRBIN                         bdose     bdose          EWT74
+USRBIN           10.   DOSE-EQ      -52.    20000.    30358.    20000.bdose
+USRBIN       -20000.      358.   -20000.       80.      150.       80. &
 ROT-DEFI                   0.0       90.       0.0       0.0       0.0Coil1
 ROT-DEFI                   0.0    38.571       0.0       0.0       0.0Coil2
 ROT-DEFI                   0.0   -12.857       0.0       0.0       0.0Coil3
@@ -839,6 +856,7 @@ ROT-DEFI                   0.0   -64.286       0.0       0.0       0.0Coil4
 ROT-DEFI                   0.0  -115.714       0.0       0.0       0.0Coil5
 ROT-DEFI                   0.0  -167.143       0.0       0.0       0.0Coil6
 ROT-DEFI                   0.0   141.429       0.0       0.0       0.0Coil7
+ROT-DEFI        200.                 30.      346.     -100.   -1371.3SBS_b
 GEOBEGIN                                                              COMBNAME
     0    0          
 RCC boxMothe   0.0 -10000. 400. 0.0 110358. 0.0 100000.
@@ -860,12 +878,30 @@ RPP CBox_i     -220. 269. -298.3 231.7 -177.5 177.5
 RPP LBox       -188.5 188.5 -113. 142. 119. 159.
 RPP LBox1      -18.5 18.5 -18.5 18.5 285.1 305.1
 ZCC LBox1_i    0.0 0.0 7.4
+$start_transform SBS_b
+* sbsBunkerRegion_s [/sbsbunker]
+RPP sbsBunke   -528. 528. -198. 198. -462. 462.
+* IronShieldType1_s [/sbsbunker/IronShieldType1_l]
+RPP IronShie   -330. 330. -198. 132. 330. 462.
+* IronShieldType2_s [/sbsbunker/IronShieldType2_l]
+RPP IronShi1   330. 462. -198. 132. 330. 396.
+* IronShieldType2_s [/sbsbunker/IronShieldType2_l]
+RPP IronShi2   -462. -330. -198. 132. 330. 396.
+* IronShieldType3_s [/sbsbunker/IronShieldType3_l]
+RPP IronShi3   429. 495. -198. 132. -330. 330.
+* IronShieldType3_s [/sbsbunker/IronShieldType3_l]
+RPP IronShi4   -495. -429. -198. 132. -330. 330.
+* SteelShield_s [/sbsbunker/SteelShield_l]
+RPP SteelShi   -488. 488. 132. 144. -141.5 346.5
+* sbsBunkerVacuumDet1_s [/sbsbunker/sbsBunkerVacuumDet1_l]
+RPP sbsBunk1   -412.25 412.25 -197.75 131.75 -329.75 329.75
+$end_transform 
 $start_transform Coil1
 RPP Sol1       -0.77 0.77 3.5 20. 600. 800.
 RPP Sol2       -1.54 1.54 8.12 15.38 604.62 795.38
 RPP Sol3       -1.54 1.54 6.58 16.92 603.08 796.92
 TRC Scone      0.0 0.0 597.1 0.0 0.0 7. 13.4 3.5
-XCC Sol31      13.58 610.08 7.0
+XCC Sol31      13.58 610.08 7.
 XYP Sol32      610.08
 XZP Sol33      13.58
 $end_transform 
@@ -899,7 +935,7 @@ RPP Sol19      -0.77 0.77 3.5 20. 600. 800.
 RPP Sol20      -1.54 1.54 8.12 15.38 604.62 795.38
 RPP Sol21      -1.54 1.54 6.58 16.92 603.08 796.92
 $end_transform 
-RCC Spipe_i    0.0 0.0 604.0 0.0 0.0 193.6 3.5
+RCC Spipe_i    0.0 0.0 604. 0.0 0.0 193.6 3.5
 RCC Spipe_o    0.0 0.0 604.5 0.0 0.0 193.1 4.2
 XZP air_c1     5000.
 XZP air_c2     25000.
@@ -1818,11 +1854,35 @@ Ai3_1000     5 +air3  -air1 -air_c4
 Ai5_1000     5 +air5  -air3 -air_c4
 * logicMother
 Ai6_1000     5 +air6  -air5 -air_c4
+* IronShieldType1_l [/sbsbunker]
+* ref: IronShieldType1_l
+IronShie     5 +IronShie
+* IronShieldType2_l [/sbsbunker]
+* ref: IronShieldType2_l
+IronShi1     5 +IronShi1
+* IronShieldType2_l [/sbsbunker]
+* ref: IronShieldType2_l
+IronShi2     5 +IronShi2
+* IronShieldType3_l [/sbsbunker]
+* ref: IronShieldType3_l
+IronShi3     5 +IronShi3
+* IronShieldType3_l [/sbsbunker]
+* ref: IronShieldType3_l
+IronShi4     5 +IronShi4
+* SteelShield_l [/sbsbunker]
+* ref: SteelShield_l
+SteelShi     5 +SteelShi
+* sbsBunkerVacuumDet1_l [/sbsbunker]
+* ref: sbsBunkerVacuumDet1_l
+sbsBunke     5 +sbsBunk1
+* sbsbunker []
+* ref: sbsbunker
+sbsbunke     5 +sbsBunke -IronShie -IronShi1 -IronShi2 -IronShi3 -IronShi4 -SteelShi -sbsBunk1
 * hall_air
 hall         5 (+hal_tin -hal_tsub -hallcut )
                | hal_cin -hal_pipe -( +SC_o -Sc_i2 )  -(col1_0 | col1_1 | col1_2) -col2_0 -col1fin0 -col5_cut -air7
                -( +CBox_o -CBox_i -ShBore -ShBore1  )  -( +LBox -ShBore ) -( +CBox2_o -ShBore2 ) -CBox3_o
-               -CBox4_o  -LBox1 -Spipe_o
+               -CBox4_o  -LBox1 -Spipe_o -sbsBunke
                | +LBox1_i +LBox1
                | +SC_i -tubeTarg -hal_pipe
 SC           5 +SC_o -SC_i -Sc_i2 -hal_pipe

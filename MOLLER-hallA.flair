@@ -21,11 +21,27 @@ Run: <default>
 	Last:     5
 	Status:   3
 	Pid:      0
-	StartRun: 1553783663
+	StartRun: 1553894715
 
 	# USRxxx data file: MOLLER-hallA_50.bnn
 	Data: \I_\U.\e
 		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
 		Type: b
 		Rule: +,\I\d\d\d_fort\.\U
 		Rule: +,\I\d\d\d_ftn\.\U
@@ -229,9 +245,19 @@ Geometry:
 		Options.axes: 0
 		Options.shortcut: F4
 		Options.viewport: 0
+		Palette: True
+		Palette._visible: True
+		Palette.cpd: 5
+		Palette.max: 1e+17
+		Palette.min: 10000000.0
+		Palette.n: 50
 		Show: 0
 		Show.lattice: 1
 		Show.voxel: 1
+		Usrbin: True
+		Usrbin._visible: True
+		Usrbin.file: MOLLER-hallA_51.bnn
+		Usrbin.norm: 1.34e21
 		deflights: 1
 		layer: 3D
 	End
@@ -241,22 +267,22 @@ End
 Plot: Red
 	Format: .eps
 	Type:   Geometry
-	basisu: 1 0 0
-	basisv: 0 0 1
+	basisu: 0 0 1
+	basisv: 1 0 0
 	boundaries: 1
 	cbcolors: 0
 	cblog: 0
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 0
-	coord: X-Z
+	coord: Z-X
 	cpd: 0
-	extends: 83.3332 2634.26
+	extends: 3194.8 1790.97
 	grid: 0
 	index: 0
 	labels: 1
-	layer: Media
-	origin: 16.5552 0 632.066
+	layer: 3D
+	origin: 330.055 0 1067.1
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: 0
@@ -274,13 +300,13 @@ Plot: Green
 	Format: .eps
 	Type:   Geometry
 	basisu: -0.00226485 -0.00272876 0.999994
-	basisv: -1.08241e-05 0.999996 0.00272874
+	basisv: 2.31859e-05 0.999996 0.00272882
 	boundaries: 1
 	coord: U-V
-	extends: 1069.93 600.385
+	extends: 3833.76 2151.29
 	labels: 1
 	layer: 3D
-	origin: -0.618716 -81.5751 486.263
+	origin: -0.964893 456.788 643.005
 	subtype: Material
 	title: GeoViewer Green plot
 End
@@ -293,10 +319,10 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 426.663 238.763
+	extends: 5478.01 3195.06
 	labels: 1
 	layer: Media
-	origin: 0 40.0709 405.477
+	origin: 0 -1546.04 1623.35
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -541,10 +567,176 @@ End
 Plot: MOLLER-hallA_50_plot
 	Format: .eps
 	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: MOLLER-hallA_50.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 5850887494202.9238
+	lw.0: 0
+	max: 376740.594
+	min: 6.26467454E-07
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: USRBIN MOLLER-hallA 50
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "USRBIN MOLLER-hallA 50"
+Plot: MOLLER-hallA_50_plot
+	Format: .eps
+	Type:   USRBIN
 	cbcolors: 30
 	cblog: 1
 	cbtics: 1
 	datafile: MOLLER-hallA_50.bnn
 	geo: -Auto-
 	title: USRBIN MOLLER-hallA 50
+End
+
+# USRBIN plot "USRBIN MOLLER-hallA 50"
+Plot: MOLLER-hallA_50_plot
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: MOLLER-hallA_50.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 5850887278614.4062
+	lw.0: 0
+	max: 999965.750
+	min: 3.43366580E-08
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: USRBIN MOLLER-hallA 50
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "USRBIN MOLLER-hallA 51"
+Plot: MOLLER-hallA_51_plot
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: MOLLER-hallA_51.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 257.87773282989235
+	lw.0: 0
+	max: 3.01880882E-05
+	min: 1.74279014E-16
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: USRBIN MOLLER-hallA 51
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "USRBIN MOLLER-hallA 52"
+Plot: MOLLER-hallA_52_plot
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bymax: 1358.
+	bymin: 358.
+	cbcolors: 30
+	cblog: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: MOLLER-hallA_52.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 1077.1282528986014
+	lw.0: 0
+	max: 4.35863505E-08
+	min: 3.60352026E-11
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: USRBIN MOLLER-hallA 52
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
 End
