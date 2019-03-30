@@ -7,7 +7,7 @@ PHYSICS           1.                                                  COALESCE
 PHYSICS           3.                                                  EVAPORAT
 PHOTONUC          1.                      BLCKHOLE  @LASTMAT
 BEAMPOS          0.0       0.0     -62.5       0.0       0.0
-START          5000.
+START        200000.
 RANDOMIZ          1.       21.
 MATERIAL         19.   39.0983     0.862                           0.0POTASSIU
 MATERIAL         0.0       0.0      2.35                           0.0CONCRETE
@@ -846,9 +846,11 @@ USRBIN           10.   DOSE-EQ      -50.     2660.      400.     3060.hall_1w
 USRBIN        -2660.     -300.    -2260.      266.       35.      266. &
 USRBIN           10.  SI1MEVNE      -51.     2660.      400.     3060.hall1MeV
 USRBIN        -2660.     -300.    -2260.      266.       35.      266. &
-AUXSCORE      USRBIN                         bdose     bdose          EWT74
-USRBIN           10.   DOSE-EQ      -52.    20000.    30358.    20000.bdose
-USRBIN       -20000.      358.   -20000.       80.      150.       80. &
+AUXSCORE      USRBIN                       bdoseeq   bdoseeq          EWT74
+USRBIN           10.   DOSE-EQ      -52.    30000.    30358.    30000.bdoseeq
+USRBIN       -30000.      358.   -30000.      120.      150.      120. &
+USRBIN           10.      DOSE      -52.    30000.    30358.    30000.bdose
+USRBIN       -30000.      358.   -30000.      120.      150.      120. &
 ROT-DEFI                   0.0       90.       0.0       0.0       0.0Coil1
 ROT-DEFI                   0.0    38.571       0.0       0.0       0.0Coil2
 ROT-DEFI                   0.0   -12.857       0.0       0.0       0.0Coil3
@@ -3393,5 +3395,9 @@ HEBLIN       5 +heblin +dmppl1 -hewin2 +pl1830
 END
 GEOEND
 STOP
+BIASING          0.0                125.     Dirth     Dirth
+BIASING          0.0                  1.     WALL1     WALL1
+BIASING          0.0                  5.     WALL2     WALL2
+BIASING          0.0                 25.     WALL3     WALL3
 LAM-BIAS                  0.02              PHOTON    PHOTON
 STOP

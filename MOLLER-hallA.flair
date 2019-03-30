@@ -22,6 +22,7 @@ Run: <default>
 	Status:   3
 	Pid:      0
 	StartRun: 1553894715
+	Family:  MOLLER-hallA_aa MOLLER-hallA_ab MOLLER-hallA_ac MOLLER-hallA_ad MOLLER-hallA_ae MOLLER-hallA_af MOLLER-hallA_ag MOLLER-hallA_ah MOLLER-hallA_ai MOLLER-hallA_aj MOLLER-hallA_ak MOLLER-hallA_al MOLLER-hallA_am MOLLER-hallA_an MOLLER-hallA_ao MOLLER-hallA_ap MOLLER-hallA_aq MOLLER-hallA_ar MOLLER-hallA_as MOLLER-hallA_at MOLLER-hallA_au MOLLER-hallA_av MOLLER-hallA_aw MOLLER-hallA_ax MOLLER-hallA_ay MOLLER-hallA_az MOLLER-hallA_ba MOLLER-hallA_bb MOLLER-hallA_bc MOLLER-hallA_bd
 
 	# USRxxx data file: MOLLER-hallA_50.bnn
 	Data: \I_\U.\e
@@ -40,6 +41,1056 @@ Run: <default>
 	End
 
 	# USRxxx data file: MOLLER-hallA_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_aa
+	Rnd:      22
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896406
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_aa_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_aa_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_aa_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ab
+	Rnd:      23
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896406
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ab_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ab_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ab_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ac
+	Rnd:      24
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896406
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ac_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ac_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ac_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ad
+	Rnd:      25
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896406
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ad_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ad_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ad_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ae
+	Rnd:      26
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896406
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ae_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ae_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ae_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_af
+	Rnd:      27
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896406
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_af_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_af_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_af_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ag
+	Rnd:      28
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896406
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ag_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ag_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ag_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ah
+	Rnd:      29
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896406
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ah_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ah_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ah_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ai
+	Rnd:      30
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896407
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ai_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ai_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ai_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_aj
+	Rnd:      31
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896407
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_aj_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_aj_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_aj_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ak
+	Rnd:      32
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896407
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ak_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ak_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ak_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_al
+	Rnd:      33
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896407
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_al_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_al_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_al_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_am
+	Rnd:      34
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896407
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_am_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_am_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_am_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_an
+	Rnd:      35
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896407
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_an_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_an_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_an_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ao
+	Rnd:      36
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896407
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ao_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ao_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ao_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ap
+	Rnd:      37
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896407
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ap_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ap_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ap_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_aq
+	Rnd:      38
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896407
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_aq_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_aq_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_aq_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ar
+	Rnd:      39
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896408
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ar_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ar_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ar_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_as
+	Rnd:      40
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896408
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_as_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_as_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_as_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_at
+	Rnd:      41
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896408
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_at_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_at_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_at_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_au
+	Rnd:      42
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896408
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_au_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_au_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_au_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_av
+	Rnd:      43
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896408
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_av_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_av_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_av_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_aw
+	Rnd:      44
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896408
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_aw_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_aw_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_aw_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ax
+	Rnd:      45
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896408
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ax_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ax_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ax_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ay
+	Rnd:      46
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896408
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ay_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ay_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ay_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_az
+	Rnd:      47
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896409
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_az_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_az_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_az_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ba
+	Rnd:      48
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896409
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ba_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ba_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ba_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_bb
+	Rnd:      49
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896409
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_bb_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_bb_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_bb_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_bc
+	Rnd:      50
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896409
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_bc_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_bc_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_bc_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_bd
+	Rnd:      51
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553896409
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_bd_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_bd_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_bd_52.bnn
 	Data: \I_\U.\e
 		Unit: 52
 		Type: b
@@ -245,19 +1296,26 @@ Geometry:
 		Options.axes: 0
 		Options.shortcut: F4
 		Options.viewport: 0
-		Palette: True
 		Palette._visible: True
+		Palette.alphamin: 1
 		Palette.cpd: 5
-		Palette.max: 1e+17
-		Palette.min: 10000000.0
-		Palette.n: 50
+		Palette.max: 1e+19
+		Palette.min: 100000.0
+		Palette.n: 70
+		Palette2._visible: True
+		Palette2.cpd: 5
+		Palette2.max: 10000.0
+		Palette2.min: 0.01
+		Palette3: True
+		Palette3._visible: True
 		Show: 0
 		Show.lattice: 1
 		Show.voxel: 1
 		Usrbin: True
 		Usrbin._visible: True
-		Usrbin.file: MOLLER-hallA_51.bnn
-		Usrbin.norm: 1.34e21
+		Usrbin.file: MOLLER-hallA_52.bnn
+		Usrbin.norm: 1.35e7
+		Usrbin.palette: Palette3
 		deflights: 1
 		layer: 3D
 	End
@@ -282,7 +1340,7 @@ Plot: Red
 	index: 0
 	labels: 1
 	layer: 3D
-	origin: 330.055 0 1067.1
+	origin: 885.511 0 -436.94
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: 0
@@ -303,10 +1361,10 @@ Plot: Green
 	basisv: 2.31859e-05 0.999996 0.00272882
 	boundaries: 1
 	coord: U-V
-	extends: 3833.76 2151.29
+	extends: 6624.73 3717.43
 	labels: 1
 	layer: 3D
-	origin: -0.964893 456.788 643.005
+	origin: -2.38618 2814.84 1301.14
 	subtype: Material
 	title: GeoViewer Green plot
 End
@@ -319,10 +1377,10 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 5478.01 3195.06
+	extends: 3170.14 1848.99
 	labels: 1
 	layer: Media
-	origin: 0 -1546.04 1623.35
+	origin: 0 -475.753 936.612
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -346,7 +1404,7 @@ Plot: Magenta
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 0 -3157.81 11651.1
+	origin: 0 -3157.81 6861.51
 	subtype: Material
 	title: GeoViewer Magenta plot
 	x2log: 0
@@ -703,7 +1761,9 @@ Plot: MOLLER-hallA_52_plot
 	Format: .eps
 	Type:   USRBIN
 	axes: Auto
-	bymax: 1358.
+	bxmax: 500.
+	bxmin: 0.
+	bymax: 8958.
 	bymin: 358.
 	cbcolors: 30
 	cblog: 1
@@ -718,11 +1778,11 @@ Plot: MOLLER-hallA_52_plot
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 1077.1282528986014
+	int: 65.682942365289080
 	lw.0: 0
-	max: 4.35863505E-08
-	min: 3.60352026E-11
-	proj: Z
+	max: 1.70665032E-07
+	min: 8.91615774E-13
+	proj: X
 	ps.0: 0
 	pt.0: 0
 	swap: 0
