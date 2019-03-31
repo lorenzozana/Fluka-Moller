@@ -3395,9 +3395,9 @@ HEBLIN       5 +heblin +dmppl1 -hewin2 +pl1830
 END
 GEOEND
 STOP
-BIASING          0.0                125.     Dirth     Dirth
-BIASING          0.0                  1.     WALL1     WALL1
-BIASING          0.0                  5.     WALL2     WALL2
-BIASING          0.0                 25.     WALL3     WALL3
+BIASING          0.0                  5.     WALL1     WALL1        1.
+BIASING          0.0                 25.     WALL2     WALL2        1.
+BIASING          0.0                125.     WALL3     WALL3        1.
+BIASING          0.0                625.     Dirth     Dirth        1.
 LAM-BIAS                  0.02              PHOTON    PHOTON
 STOP
