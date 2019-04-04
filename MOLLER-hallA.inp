@@ -949,6 +949,12 @@ SPH hal_tout   0.0 -5805.26 400. 7396.6092435843
 * Dirth out
 SPH dirtou1    0.0 -6305.26 400. 7975.3164242931
 * Dirth out
+SPH dirto1_1   0.0 -5930.26 400. 7541.28
+* Dirth out
+SPH dirto1_2   0.0 -6055.26 400. 7685.95
+* Dirth out
+SPH dirto1_3   0.0 -6180.26 400. 7830.62
+* Dirth out
 SPH dirtou3    0.0 -6205.26 400. 7975.3164242931
 * Dirth out
 RCC dirtou2    0.0 -647. 400. 0.0 1857. 0.0 4607.7
@@ -957,6 +963,9 @@ RCC dirtou4    0.0 -447. 400. 0.0 805. 0.0 48807.7
 * Dirth out
 RCC dirtou20   0.0 -2847. 400. 0.0 3205. 0.0 100000.
 RPP dirtou5    -857.2 857.2 300. 780. 4200. 7000.
+XZP dir_c1     700.
+XZP dir_c2     600.
+XZP dir_c3     500.
 PLA dirtou6    0.0 -1. -1. 0.0 780. 6600.
 PLA dirtou7    -1. -1. 0.0 197. 780. 6600.
 PLA dirtou19   -1. -1. 0.0 197. 432. 6600.
