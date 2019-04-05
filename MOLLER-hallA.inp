@@ -961,7 +961,7 @@ RCC dirtou2    0.0 -647. 400. 0.0 1857. 0.0 4607.7
 * Dirth out
 RCC dirtou4    0.0 -447. 400. 0.0 805. 0.0 48807.7
 * Dirth out
-RCC dir4_r     0.0 -447.0 400.0 0.0 805.0 0.0 4309.2647759952
+RCC dir4_r     0.0 -447. 400. 0.0 805. 0.0 4309.2647759952
 XZP dir4_c1    300.
 XZP dir4_c2    250.
 XZP dir4_c3    200.
@@ -1000,21 +1000,21 @@ PLA dirtou17   1. 0.0 1. -563.88 0.0 5250.
 * hall_top_in
 SPH hal_tin    0.0 -5535.26 400. 7087.7471627947
 * hall_top_in
-SPH hal_tin1   0.0 -5505.26 400.0 7066.4809777663
+SPH hal_tin1   0.0 -5505.26 400. 7066.4809777663
 * hall_top_in
-SPH hal_tin2   0.0 -5495.26 400.0 7063.7623641465
+SPH hal_tin2   0.0 -5495.26 400. 7063.7623641465
 * hall_top_in
-SPH hal_tin3   0.0 -5545.26 400.0 7116.5594856737
+SPH hal_tin3   0.0 -5545.26 400. 7116.5594856737
 * hall_top_in
-SPH hal_tin4   0.0 -5595.26 400.0 7169.4769282795
+SPH hal_tin4   0.0 -5595.26 400. 7169.4769282795
 * hall_top_in
-SPH hal_tin5   0.0 -5645.26 400.0 7222.2906573422
+SPH hal_tin5   0.0 -5645.26 400. 7222.2906573422
 * hall_top_in
-SPH hal_tin6   0.0 -5675.26 400.0 7256.6149047013
+SPH hal_tin6   0.0 -5675.26 400. 7256.6149047013
 * hall_top_in
-SPH hal_tin7   0.0 -5715.26 400.0 7300.1736379098
+SPH hal_tin7   0.0 -5715.26 400. 7300.1736379098
 * hall_top_in
-SPH hal_tin8   0.0 -5745.26 400.0 7334.5106672588
+SPH hal_tin8   0.0 -5745.26 400. 7334.5106672588
 * hall_top_sub
 RCC hal_tsub   0.0 -9615.560000000001 400. 0.0 10653.3 0.0 6472.78
 * hall_cylinder_out
@@ -1474,14 +1474,14 @@ PLA col5t7p9   -4.328557005379408 -6.2018622405839405 0.0 -13.444236410291404
               12.0469128138372 1287.005
 XZP hallcut    -900.
 RCC ha_out     0.0 -355. 400. 0.0 1600. 0.0 2651.76
-RCC ha_1       0.0 -447.0 400.0 0.0 1484.74 0.0 2669.09
+RCC ha_1       0.0 -447. 400. 0.0 1484.74 0.0 2669.09
 RCC ha_2       0.0 -447. 400. 0.0 1484.74 0.0 2686.42
 RCC ha_3       0.0 -447. 400. 0.0 1484.74 0.0 2703.75
 RCC ha_4       0.0 -447. 400. 0.0 1484.74 0.0 2721.08
 RCC ha_5       0.0 -447. 400. 0.0 1484.74 0.0 2738.41
-RCC ha_6       0.0 -447.0 400.0 0.0 1484.74 0.0 2755.74
-RCC ha_7       0.0 -447.0 400.0 0.0 1484.74 0.0 2773.07
-RCC ha_8       0.0 -447.0 400.0 0.0 1484.74 0.0 2790.4
+RCC ha_6       0.0 -447. 400. 0.0 1484.74 0.0 2755.74
+RCC ha_7       0.0 -447. 400. 0.0 1484.74 0.0 2773.07
+RCC ha_8       0.0 -447. 400. 0.0 1484.74 0.0 2790.4
 $start_translat 0 0 3052.9
 RPP dmptun2    -137. 137. -137. 137. -25. 2788.1
 RPP dmptun3    -167. 167. -167. 167. -25. 2818.1
@@ -1920,6 +1920,95 @@ Ai3_1000     5 +air3  -air1 -air_c4
 Ai5_1000     5 +air5  -air3 -air_c4
 * logicMother
 Ai6_1000     5 +air6  -air5 -air_c4
+Dirth1       5 +dirto1_1 -(+hal_tout -hal_tsub) -hal_cout +dirtou3 -hallcut -tun5 -dirtou9 -dir4_c3
+               | +dirtou4 -hal_cout -tun5 -dirtou9 +dir4_c3
+               | +tun5 -pl60 -tun4 -hal_cout -dirtou9
+               | +dir5_3 -dir6_c3 -dir7_c3 -dir8_c3 -dirtou9
+               | +dirtou10 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
+               | +dirtou11 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
+               | +dirtou12 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
+               | +dirtou13 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
+               | +dirtou14 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
+               | +dirtou15 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
+               | +dirtou16 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
+               | +dirtou17 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
+               | +dirtou18 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
+               | +dirtou19 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
+Dirth2       5 +dirto1_2 -dir4_c3 -dirto1_1 +dirtou3 -(+dirtou5 +dir8_c3 -dir8_c3) -(+dirtou5 +dir7_c3 -dir7_c3) -
+               (+dir5_3 -dir8_c3 -dir7_c3)
+               | +dir5_2 -dir6_c2 -dir7_c2 -dir8_c2 -dirtou9 -dir_c3 -dirto1_2 -dirto1_1
+               | +dir5_2 +dir6_c3 -dir6_c2 -dir7_c2 -dir8_c2 -dir4_c3 -dirto1_1
+               | +dir5_2 +dir8_c3 -dir8_c2 -dir6_c2 -dir4_c3 -dirto1_1
+               | +dir5_2 +dir7_c3 -dir7_c2 -dir6_c2 -dir4_c3 -dirto1_1
+               | +dirtou4 -dirtou5 -dir4_r -dir4_c3 +dir4_c2 -dirto1_1
+               | +dirtou5 +dir6_c2 -dir4_c3 +dir4_c2 -dirto1_1
+Dirth3       5 +dirto1_3 -dir4_c2 -dirto1_2 +dirtou3 -(+dirtou5 +dir8_c2 -dir8_c1) -(+dirtou5 +dir7_c2 -dir7_c1) -
+               (+dir5_2 -dir8_c2 -dir7_c2)
+               | +dir5_1 -dir6_c1 -dir7_c1 -dir8_c1 -dirtou9 -dir_c2 -dirto1_2
+               | +dir5_1 +dir6_c2 -dir6_c1 -dir7_c1 -dir8_c1 -dir4_c2 -dirto1_2
+               | +dir5_1 +dir8_c2 -dir8_c1 -dir6_c1 -dir4_c2 -dirto1_2
+               | +dir5_1 +dir7_c2 -dir7_c1 -dir6_c1 -dir4_c2 -dirto1_2
+               | +dirtou4 -dirtou5 -dir4_r -dir4_c2 +dir4_c1 -dirto1_2
+               | +dirtou5 +dir6_c1 -dir4_c2 +dir4_c1 -dirto1_2
+Dirth4       5 +dirtou1 -dirto1_3 -dir_c1
+               | +dirtou2 -dirto1_3 -dirtou4 +dirtou3 -(+dirtou5 +dir8_c1 -dirtou8) -(+dirtou5 +dir7_c1 -dirtou7)
+               -(+dir5_1 -dir8_c1 -dir7_c1)
+               | +dirtou5 -dirtou6 -dirtou7 -dirtou8 -dirtou9 -dir_c1 -dirto1_3
+               | +dirtou5 +dir6_c1 -dirtou6 -dirtou7 -dirtou8 -dir4_c1 -dirto1_3
+               | +dirtou5 +dir8_c1 -(+dirtou8 -dirtou4 ) -dirtou6 -dir4_c1 -dirto1_3
+               | +dirtou5 +dir7_c1 -(+dirtou7 -dirtou4 ) -dirtou6 -dir4_c1 -dirto1_3
+               | +dirtou4 -dirtou5 -dir4_r -dir4_c1 -dirto1_3
+WALL1        5 +dmptun2 -dmp_tunl -pl1830 -ha_out
+               | +pl1830 +tun2 -tun1 -ha_out
+               | +pl1860 +tun2 -dmptun2 -pl1830
+               | +ha_1 -hal_cin -tun1
+               | +hal_tin1 -hal_tin -hal_tsub -hallcut
+WALL2        5 +dmptun3 -dmptun2 -pl1860
+               | +pl1860 +tun3 -tun2 -ha_1
+               | +pl1890 +tun3 -dmptun3 -pl1860
+               | +ha_2 -ha_1 -tun2
+               | +hal_tin2 -hal_tin1 -hal_tsub -hallcut
+WALL3        5 +dmptun5 -dmptun3 -pl1890 +tun6
+               | +pl1890 +tun6 -tun3 -ha_2
+               | +pl1891 +tun6 -dmptun5 -pl1890
+               | +ha_3 -ha_2 -tun6
+               | +hal_tin3 -hal_tin2 -hal_tsub -hallcut
+WALL4        5 +dmptun6 -dmptun5 -pl1891 +tun7
+               | +pl1891 +tun7 -tun6 -ha_3
+               | +pl1892 +tun7 -dmptun6 -pl1891
+               | +ha_4 -ha_3 -tun7
+               | +hal_tin4 -hal_tin3 -hal_tsub -hallcut
+WALL5        5 +dmptun7 -dmptun6 -pl1892 +tun8
+               | +pl1892 +tun8 -tun7 -ha_4
+               | +pl1893 +tun8 -dmptun7 -pl1892
+               | +ha_5 -ha_4 -tun8
+               | +hal_tin5 -hal_tin4 -hal_tsub -hallcut
+WALL6        5 +dmptun8 -dmptun7 -pl1893 +tun9
+               | +pl1893 +tun9 -tun8 -ha_5
+               | +pl1894 +tun9 -dmptun8 -pl1893
+               | +ha_6 -ha_5 -tun9
+               | +hal_tin6 -hal_tin5 -hal_tsub -hallcut
+WALL7        5 +dmptun9 -dmptun8 -pl1894 +tun10
+               | +pl1894 +tun10 -tun9 -ha_6
+               | +pl1895 +tun10 -dmptun9 -pl1894
+               | +ha_7 -ha_6 -tun10
+               | +hal_tin7 -hal_tin6 -hal_tsub -hallcut
+WALL8        5 +dmptun10 -dmptun9 -pl1895 +tun11
+               | +pl1895 +tun11 -tun10 -ha_7
+               | +pl1896 +tun11 -dmptun10 -pl1895
+               | +ha_8 -ha_7 -tun11
+               | +hal_tin8 -hal_tin7 -hal_tsub -hallcut
+WALL9        5 +dmptun4 -dmptun10 -pl1896 +tun5
+               | +pl1896 +tun4 -tun11 -ha_8
+               | +pl1920 +tun4 -dmptun4 -pl1896
+               | +hal_cout -ha_8 -tun4
+               | +hal_tout -hal_tin8 -hal_tsub -hallcut
+Dumpcov      5 +dirtou9 -tun4 -dirtou10 -dirtou11 -dirtou12 -dirtou13 -dirtou14 -dirtou15
+               -dirtou16 -dirtou17 -dirtou18 -dirtou19
+               | +tun4 +tun5 -dmptun4 -pl1920
+               | +dirtou9 -tun5 -dirtou10 -dirtou11 -dirtou12 -dirtou13 -dirtou14 -dirtou15
+               -dirtou16 -dirtou17 -dirtou18 -dirtou19
+Dirthlow     5 +dirtou20 -dirtou9 -dirtou4
 * IronShieldType1_l [/sbsbunker]
 * ref: IronShieldType1_l
 IronShie     5 +IronShie
@@ -1994,50 +2083,6 @@ airsol1      5 +air7 -Sol1 -Sol3 -Sol4 -Sol6 -Sol7 -Sol9 -Sol10 -Sol12 -Sol13 -S
                | +Sol19 +Scone -Spipe_o
 * hall_pipe
 pipe         5 +hal_pipe
-Dirth1       5 +dirto1_1 -(+hal_tout -hal_tsub) -hal_cout +dirtou3 -hallcut -tun5 -dirtou9 -dir4_c3
-               | +dirtou4 -hal_cout -tun5 -dirtou9 +dir4_c3
-               | +tun5 -pl60 -tun4 -hal_cout -dirtou9
-               | +dir5_3 -dir6_c3 -dir7_c3 -dir8_c3 -dirtou9
-               | +dirtou10 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
-               | +dirtou11 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
-               | +dirtou12 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
-               | +dirtou13 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
-               | +dirtou14 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
-               | +dirtou15 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
-               | +dirtou16 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
-               | +dirtou17 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
-               | +dirtou18 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
-               | +dirtou19 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
-Dirth2       5 +dirto1_2 -dir4_c3 -dirto1_1 +dirtou3 -(+dirtou5 +dir8_c3 -dir8_c3) -(+dirtou5 +dir7_c3 -dir7_c3) -
-               (+dir5_3 -dir8_c3 -dir7_c3)
-               | +dir5_2 -dir6_c2 -dir7_c2 -dir8_c2 -dirtou9 -dir_c3 -dirto1_2 -dirto1_1
-               | +dir5_2 +dir6_c3 -dir6_c2 -dir7_c2 -dir8_c2 -dir4_c3 -dirto1_1
-               | +dir5_2 +dir8_c3 -dir8_c2 -dir6_c2 -dir4_c3 -dirto1_1
-               | +dir5_2 +dir7_c3 -dir7_c2 -dir6_c2 -dir4_c3 -dirto1_1
-               | +dirtou4 -dirtou5 -dir4_r -dir4_c3 +dir4_c2 -dirto1_1
-               | +dirtou5 +dir6_c2 -dir4_c3 +dir4_c2 -dirto1_1
-Dirth3       5 +dirto1_3 -dir4_c2 -dirto1_2 +dirtou3 -(+dirtou5 +dir8_c2 -dir8_c1) -(+dirtou5 +dir7_c2 -dir7_c1) -
-               (+dir5_2 -dir8_c2 -dir7_c2)
-               | +dir5_1 -dir6_c1 -dir7_c1 -dir8_c1 -dirtou9 -dir_c2 -dirto1_2
-               | +dir5_1 +dir6_c2 -dir6_c1 -dir7_c1 -dir8_c1 -dir4_c2 -dirto1_2
-               | +dir5_1 +dir8_c2 -dir8_c1 -dir6_c1 -dir4_c2 -dirto1_2
-               | +dir5_1 +dir7_c2 -dir7_c1 -dir6_c1 -dir4_c2 -dirto1_2
-               | +dirtou4 -dirtou5 -dir4_r -dir4_c2 +dir4_c1 -dirto1_2
-               | +dirtou5 +dir6_c1 -dir4_c2 +dir4_c1 -dirto1_2
-Dirth4       5 +dirtou1 -dirto1_3 -dir_c1
-               | +dirtou2 -dirto1_3 -dirtou4 +dirtou3 -(+dirtou5 +dir8_c1 -dirtou8) -(+dirtou5 +dir7_c1 -dirtou7) 
-               -(+dir5_1 -dir8_c1 -dir7_c1)
-               | +dirtou5 -dirtou6 -dirtou7 -dirtou8 -dirtou9 -dir_c1 -dirto1_3
-               | +dirtou5 +dir6_c1 -dirtou6 -dirtou7 -dirtou8 -dir4_c1 -dirto1_3
-               | +dirtou5 +dir8_c1 -(+dirtou8 -dirtou4 ) -dirtou6 -dir4_c1 -dirto1_3
-               | +dirtou5 +dir7_c1 -(+dirtou7 -dirtou4 ) -dirtou6 -dir4_c1 -dirto1_3
-               | +dirtou4 -dirtou5 -dir4_r -dir4_c1 -dirto1_3
-Dirthlow     5 +dirtou20 -dirtou9 -dirtou4
-Dumpcov      5 +dirtou9 -tun4 -dirtou10 -dirtou11 -dirtou12 -dirtou13 -dirtou14 -dirtou15
-               -dirtou16 -dirtou17 -dirtou18 -dirtou19
-               | +tun4 +tun5 -dmptun4 -pl1920
-               | +dirtou9 -tun5 -dirtou10 -dirtou11 -dirtou12 -dirtou13 -dirtou14 -dirtou15
-               -dirtou16 -dirtou17 -dirtou18 -dirtou19
 * h2Targ
 h2Targ       5 +tubeTarg
 * Collimator1_cut
@@ -2158,51 +2203,6 @@ BLVAC_       5 +heblin +aptpl1 -pl20
 APTPLT       5 +aptpl4 +aptr2 -aptpl1 -aptr1
                | +heblin +aptpl3 -aptpl2 -aptr2
 DMPWALL      5 +pl552 +tun1 -pl551 -heblout
-WALL1        5 +dmptun2 -dmp_tunl -pl1830 -ha_out
-               | +pl1830 +tun2 -tun1 -ha_out
-               | +pl1860 +tun2 -dmptun2 -pl1830
-               | +ha_1 -hal_cin -tun1
-               | +hal_tin1 -hal_tin -hal_tsub -hallcut
-WALL2        5 +dmptun3 -dmptun2 -pl1860
-               | +pl1860 +tun3 -tun2 -ha_1
-               | +pl1890 +tun3 -dmptun3 -pl1860
-               | +ha_2 -ha_1 -tun2
-               | +hal_tin2 -hal_tin1 -hal_tsub -hallcut
-WALL3        5 +dmptun5 -dmptun3 -pl1890 +tun6
-               | +pl1890 +tun6 -tun3 -ha_2
-               | +pl1891 +tun6 -dmptun5 -pl1890
-               | +ha_3 -ha_2 -tun6
-               | +hal_tin3 -hal_tin2 -hal_tsub -hallcut
-WALL4        5 +dmptun6 -dmptun5 -pl1891 +tun7
-               | +pl1891 +tun7 -tun6 -ha_3
-               | +pl1892 +tun7 -dmptun6 -pl1891
-               | +ha_4 -ha_3 -tun7
-               | +hal_tin4 -hal_tin3 -hal_tsub -hallcut
-WALL5        5 +dmptun7 -dmptun6 -pl1892 +tun8
-               | +pl1892 +tun8 -tun7 -ha_4
-               | +pl1893 +tun8 -dmptun7 -pl1892
-               | +ha_5 -ha_4 -tun8
-               | +hal_tin5 -hal_tin4 -hal_tsub -hallcut
-WALL6        5 +dmptun8 -dmptun7 -pl1893 +tun9
-               | +pl1893 +tun9 -tun8 -ha_5
-               | +pl1894 +tun9 -dmptun8 -pl1893
-               | +ha_6 -ha_5 -tun9
-               | +hal_tin6 -hal_tin5 -hal_tsub -hallcut
-WALL7        5 +dmptun9 -dmptun8 -pl1894 +tun10
-               | +pl1894 +tun10 -tun9 -ha_6
-               | +pl1895 +tun10 -dmptun9 -pl1894
-               | +ha_7 -ha_6 -tun10
-               | +hal_tin7 -hal_tin6 -hal_tsub -hallcut
-WALL8        5 +dmptun10 -dmptun9 -pl1895 +tun11
-               | +pl1895 +tun11 -tun10 -ha_7
-               | +pl1896 +tun11 -dmptun10 -pl1895
-               | +ha_8 -ha_7 -tun11
-               | +hal_tin8 -hal_tin7 -hal_tsub -hallcut
-WALL9        5 +dmptun4 -dmptun10 -pl1896 +tun5
-               | +pl1896 +tun4 -tun11 -ha_8
-               | +pl1920 +tun4 -dmptun4 -pl1896
-               | +hal_cout -ha_8 -tun4
-               | +hal_tout -hal_tin8 -hal_tsub -hallcut
 WINDOW       5 +window +winpl2 -winpl1
                | +pl_0 +tnktip3 -tnktip4 -window
 TIP_TANK     5 +tnktip1 +tankpl1 -tnktipc1 -tnktip2
@@ -3513,44 +3513,44 @@ HEBLIN       5 +heblin +dmppl1 -hewin2 +pl1830
 END
 GEOEND
 STOP
-BIASING          0.0              0.0001                            1.
-BIASING          0.0                  5.     WALL1     WALL1        1.
-BIASING          0.0                 25.     WALL2     WALL2        1.
-BIASING          0.0                125.     WALL3     WALL3        1.
-BIASING          0.0                625.     WALL4                  1.
-BIASING          0.0               3125.     WALL5                  1.
-BIASING          0.0              15625.     WALL6                  1.
-BIASING          0.0              78125.     WALL6                  1.
-BIASING          0.0             100000.     WALL8                  1.
-BIASING          0.0                125.     WALL9                  1.
-BIASING          0.0                625.    Dirth1                  1.
-BIASING          0.0                625.    Dirth2                  1.
-BIASING          0.0                625.    Dirth3                  1.
-BIASING          0.0                625.    Dirth4                  1.
-BIASING          0.0               3125.    Ai1_50    Ai1_50        1.
-BIASING          0.0               3125.   Ai1_250   Ai1_250        1.
-BIASING          0.0               3125.   Ai1_500   Ai1_500        1.
-BIASING          0.0               3125.   Ai1_750   Ai1_750        1.
-BIASING          0.0               3125.  Ai1_1000  Ai1_1000        1.
-BIASING          0.0              15625.    Ai3_50    Ai3_50        1.
-BIASING          0.0              15625.   Ai3_250   Ai3_250        1.
-BIASING          0.0              15625.   Ai3_500   Ai3_500        1.
-BIASING          0.0              15625.   Ai3_750   Ai3_750        1.
-BIASING          0.0              15625.  Ai3_1000  Ai3_1000        1.
-BIASING          0.0              78125.    Ai5_50    Ai5_50        1.
-BIASING          0.0              78125.   Ai5_250   Ai5_250        1.
-BIASING          0.0              78125.   Ai5_500   Ai5_500        1.
-BIASING          0.0              78125.   Ai5_750   Ai5_750        1.
-BIASING          0.0              78125.  Ai5_1000  Ai5_1000        1.
-BIASING          0.0              78125.    Ai6_50    Ai6_50        1.
-BIASING          0.0              78125.   Ai6_250   Ai6_250        1.
-BIASING          0.0              78125.   Ai6_500   Ai6_500        1.
-BIASING          0.0              78125.   Ai6_750   Ai6_750        1.
-BIASING          0.0              78125.  Ai6_1000  Ai6_1000        1.
-BIASING          0.0              78125.  logicMot  logicMot        1.
-BIASING          0.0              78125.  logicMo1  logicMo1        1.
-BIASING          0.0              78125.  logicMo2  logicMo2        1.
-BIASING          0.0              78125.  logicMo3  logicMo3        1.
-BIASING          0.0              78125.  logicMo4  logicMo4        1.
+BIASING          0.0              0.0001  Dirthlow    HEBLIN        1.
+BIASING          0.0              0.0005     WALL1     WALL1        1.
+BIASING          0.0              0.0025     WALL2     WALL2        1.
+BIASING          0.0              0.0125     WALL3     WALL3        1.
+BIASING          0.0              0.0625     WALL4                  1.
+BIASING          0.0              0.3125     WALL5                  1.
+BIASING          0.0              1.5625     WALL6                  1.
+BIASING          0.0              7.8125     WALL6                  1.
+BIASING          0.0                 10.     WALL8                  1.
+BIASING          0.0                 30.     WALL9   Dumpcov        1.
+BIASING          0.0                 90.    Dirth1                  1.
+BIASING          0.0                270.    Dirth2                  1.
+BIASING          0.0                500.    Dirth3                  1.
+BIASING          0.0                700.    Dirth4                  1.
+BIASING          0.0               1000.    Ai1_50    Ai1_50        1.
+BIASING          0.0               1000.   Ai1_250   Ai1_250        1.
+BIASING          0.0               1000.   Ai1_500   Ai1_500        1.
+BIASING          0.0               1000.   Ai1_750   Ai1_750        1.
+BIASING          0.0               1000.  Ai1_1000  Ai1_1000        1.
+BIASING          0.0               1000.    Ai3_50    Ai3_50        1.
+BIASING          0.0               1000.   Ai3_250   Ai3_250        1.
+BIASING          0.0               1000.   Ai3_500   Ai3_500        1.
+BIASING          0.0               1000.   Ai3_750   Ai3_750        1.
+BIASING          0.0               1000.  Ai3_1000  Ai3_1000        1.
+BIASING          0.0               1000.    Ai5_50    Ai5_50        1.
+BIASING          0.0               1000.   Ai5_250   Ai5_250        1.
+BIASING          0.0               1000.   Ai5_500   Ai5_500        1.
+BIASING          0.0               1000.   Ai5_750   Ai5_750        1.
+BIASING          0.0               1000.  Ai5_1000  Ai5_1000        1.
+BIASING          0.0               1000.    Ai6_50    Ai6_50        1.
+BIASING          0.0               1000.   Ai6_250   Ai6_250        1.
+BIASING          0.0               1000.   Ai6_500   Ai6_500        1.
+BIASING          0.0               1000.   Ai6_750   Ai6_750        1.
+BIASING          0.0               1000.  Ai6_1000  Ai6_1000        1.
+BIASING          0.0               1000.  logicMot  logicMot        1.
+BIASING          0.0               1000.  logicMo1  logicMo1        1.
+BIASING          0.0               1000.  logicMo2  logicMo2        1.
+BIASING          0.0               1000.  logicMo3  logicMo3        1.
+BIASING          0.0               1000.  logicMo4  logicMo4        1.
 LAM-BIAS                  0.02              PHOTON    PHOTON
 STOP
