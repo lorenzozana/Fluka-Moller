@@ -7,7 +7,7 @@ PHYSICS           1.                                                  COALESCE
 PHYSICS           3.                                                  EVAPORAT
 PHOTONUC          1.                      BLCKHOLE  @LASTMAT
 BEAMPOS          0.0       0.0     -62.5       0.0       0.0
-START        200000.
+START       1000000.
 RANDOMIZ          1.       21.
 MATERIAL         19.   39.0983     0.862                           0.0POTASSIU
 MATERIAL         0.0       0.0      2.35                           0.0CONCRETE
@@ -139,7 +139,7 @@ ASSIGNMA        CW95  col5trd5
 ASSIGNMA        CW95  col5trd6
 ASSIGNMA        CW95  col5trd7
 ASSIGNMA    BLCKHOLE   BLKBODY
-ASSIGNMA        Soil     Dirth
+ASSIGNMA        Soil    Dirth1    Dirth4
 ASSIGNMA     AL-6061   COROUT1
 ASSIGNMA     AL-6061   PLATE_N
 ASSIGNMA       WATER    THRU_N
@@ -961,24 +961,41 @@ RCC dirtou2    0.0 -647. 400. 0.0 1857. 0.0 4607.7
 * Dirth out
 RCC dirtou4    0.0 -447. 400. 0.0 805. 0.0 48807.7
 * Dirth out
+RCC dir4_r     0.0 -447.0 400.0 0.0 805.0 0.0 4309.2647759952
+XZP dir4_c1    300.
+XZP dir4_c2    250.
+XZP dir4_c3    200.
+* Dirth out
 RCC dirtou20   0.0 -2847. 400. 0.0 3205. 0.0 100000.
-RPP dirtou5    -857.2 857.2 300. 780. 4200. 7000.
+RPP dirtou5    -857.2 857.2 200. 780. 4200. 7000.
+RPP dir5_1     -857.2 857.2 250. 700. 4000. 7000.
+RPP dir5_2     -857.2 857.2 200. 600. 4000. 7000.
+RPP dir5_3     -857.2 857.2 200. 500. 4000. 7000.
 XZP dir_c1     700.
 XZP dir_c2     600.
 XZP dir_c3     500.
 PLA dirtou6    0.0 -1. -1. 0.0 780. 6600.
+PLA dir6_c1    0.0 -1. -1. 0.0 600. 6600.
+PLA dir6_c2    0.0 -1. -1. 0.0 500. 6600.
+PLA dir6_c3    0.0 -1. -1. 0.0 400. 6600.
 PLA dirtou7    -1. -1. 0.0 197. 780. 6600.
-PLA dirtou19   -1. -1. 0.0 197. 432. 6600.
+PLA dir7_c1    -1. -1. 0.0 197. 700. 6600.
+PLA dir7_c2    -1. -1. 0.0 197. 600. 6600.
+PLA dir7_c3    -1. -1. 0.0 197. 500. 6600.
 PLA dirtou8    1. -1. 0.0 -197. 780. 6600.
-PLA dirtou18   1. -1. 0.0 -197. 432. 6600.
+PLA dir8_c1    1. -1. 0.0 -197. 700. 6600.
+PLA dir8_c2    1. -1. 0.0 -197. 600. 6600.
+PLA dir8_c3    1. -1. 0.0 -197. 500. 6600.
 RPP dirtou9    -563.88 563.88 -489. 432. 4892. 6604.
 PLA dirtou10   0.0 -1.25 -1. 0.0 432. 6255.
 PLA dirtou11   0.0 1.1 -1. 0.0 -489. 6255.
+PLA dirtou19   -1. -1. 0.0 197. 432. 6600.
 PLA dirtou12   0.0 -1.25 1. 0.0 432. 5172.
 PLA dirtou13   0.0 1.6 1. 0.0 -489. 5172.
 PLA dirtou14   -1. 0.0 -1. 563.88 0.0 6250.
 PLA dirtou15   1. 0.0 -1. -563.88 0.0 6250.
 PLA dirtou16   -1. 0.0 1. 563.88 0.0 5250.
+PLA dirtou18   1. -1. 0.0 -197. 432. 6600.
 PLA dirtou17   1. 0.0 1. -563.88 0.0 5250.
 * hall_top_in
 SPH hal_tin    0.0 -5535.26 400. 7087.7471627947
@@ -1977,21 +1994,44 @@ airsol1      5 +air7 -Sol1 -Sol3 -Sol4 -Sol6 -Sol7 -Sol9 -Sol10 -Sol12 -Sol13 -S
                | +Sol19 +Scone -Spipe_o
 * hall_pipe
 pipe         5 +hal_pipe
-Dirth        5 +dirtou1 -hal_tout -dirtou2 -hallcut -hal_tsub
-               | +dirtou2 -(+hal_tout -hal_tsub) -hal_cout +dirtou3 -hallcut -tun5 -dirtou9 -dirtou20
-               | +dirtou4 -hal_cout -tun5 -dirtou9
+Dirth1       5 +dirto1_1 -(+hal_tout -hal_tsub) -hal_cout +dirtou3 -hallcut -tun5 -dirtou9 -dir4_c3
+               | +dirtou4 -hal_cout -tun5 -dirtou9 +dir4_c3
                | +tun5 -pl60 -tun4 -hal_cout -dirtou9
-               | +dirtou5 -dirtou6 -dirtou7 -dirtou8 -dirtou9
-               | +dirtou10 +dirtou9 -dirtou7 -dirtou8
-               | +dirtou11 +dirtou9 -dirtou7 -dirtou8
-               | +dirtou12 +dirtou9 -dirtou7 -dirtou8
-               | +dirtou13 +dirtou9 -dirtou7 -dirtou8
-               | +dirtou14 +dirtou9 -dirtou7 -dirtou8
-               | +dirtou15 +dirtou9 -dirtou7 -dirtou8
-               | +dirtou16 +dirtou9 -dirtou7 -dirtou8
-               | +dirtou17 +dirtou9 -dirtou7 -dirtou8
-               | +dirtou18 +dirtou9 -dirtou7 -dirtou8
-               | +dirtou19 +dirtou9 -dirtou7 -dirtou8
+               | +dir5_3 -dir6_c3 -dir7_c3 -dir8_c3 -dirtou9
+               | +dirtou10 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
+               | +dirtou11 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
+               | +dirtou12 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
+               | +dirtou13 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
+               | +dirtou14 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
+               | +dirtou15 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
+               | +dirtou16 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
+               | +dirtou17 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
+               | +dirtou18 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
+               | +dirtou19 +dirtou9 -dir7_c3 -dir8_c3 -dir6_c3
+Dirth2       5 +dirto1_2 -dir4_c3 -dirto1_1 +dirtou3 -(+dirtou5 +dir8_c3 -dir8_c3) -(+dirtou5 +dir7_c3 -dir7_c3) -
+               (+dir5_3 -dir8_c3 -dir7_c3)
+               | +dir5_2 -dir6_c2 -dir7_c2 -dir8_c2 -dirtou9 -dir_c3 -dirto1_2 -dirto1_1
+               | +dir5_2 +dir6_c3 -dir6_c2 -dir7_c2 -dir8_c2 -dir4_c3 -dirto1_1
+               | +dir5_2 +dir8_c3 -dir8_c2 -dir6_c2 -dir4_c3 -dirto1_1
+               | +dir5_2 +dir7_c3 -dir7_c2 -dir6_c2 -dir4_c3 -dirto1_1
+               | +dirtou4 -dirtou5 -dir4_r -dir4_c3 +dir4_c2 -dirto1_1
+               | +dirtou5 +dir6_c2 -dir4_c3 +dir4_c2 -dirto1_1
+Dirth3       5 +dirto1_3 -dir4_c2 -dirto1_2 +dirtou3 -(+dirtou5 +dir8_c2 -dir8_c1) -(+dirtou5 +dir7_c2 -dir7_c1) -
+               (+dir5_2 -dir8_c2 -dir7_c2)
+               | +dir5_1 -dir6_c1 -dir7_c1 -dir8_c1 -dirtou9 -dir_c2 -dirto1_2
+               | +dir5_1 +dir6_c2 -dir6_c1 -dir7_c1 -dir8_c1 -dir4_c2 -dirto1_2
+               | +dir5_1 +dir8_c2 -dir8_c1 -dir6_c1 -dir4_c2 -dirto1_2
+               | +dir5_1 +dir7_c2 -dir7_c1 -dir6_c1 -dir4_c2 -dirto1_2
+               | +dirtou4 -dirtou5 -dir4_r -dir4_c2 +dir4_c1 -dirto1_2
+               | +dirtou5 +dir6_c1 -dir4_c2 +dir4_c1 -dirto1_2
+Dirth4       5 +dirtou1 -dirto1_3 -dir_c1
+               | +dirtou2 -dirto1_3 -dirtou4 +dirtou3 -(+dirtou5 +dir8_c1 -dirtou8) -(+dirtou5 +dir7_c1 -dirtou7) 
+               -(+dir5_1 -dir8_c1 -dir7_c1)
+               | +dirtou5 -dirtou6 -dirtou7 -dirtou8 -dirtou9 -dir_c1 -dirto1_3
+               | +dirtou5 +dir6_c1 -dirtou6 -dirtou7 -dirtou8 -dir4_c1 -dirto1_3
+               | +dirtou5 +dir8_c1 -(+dirtou8 -dirtou4 ) -dirtou6 -dir4_c1 -dirto1_3
+               | +dirtou5 +dir7_c1 -(+dirtou7 -dirtou4 ) -dirtou6 -dir4_c1 -dirto1_3
+               | +dirtou4 -dirtou5 -dir4_r -dir4_c1 -dirto1_3
 Dirthlow     5 +dirtou20 -dirtou9 -dirtou4
 Dumpcov      5 +dirtou9 -tun4 -dirtou10 -dirtou11 -dirtou12 -dirtou13 -dirtou14 -dirtou15
                -dirtou16 -dirtou17 -dirtou18 -dirtou19
@@ -3473,10 +3513,20 @@ HEBLIN       5 +heblin +dmppl1 -hewin2 +pl1830
 END
 GEOEND
 STOP
+BIASING          0.0              0.0001                            1.
 BIASING          0.0                  5.     WALL1     WALL1        1.
 BIASING          0.0                 25.     WALL2     WALL2        1.
 BIASING          0.0                125.     WALL3     WALL3        1.
-BIASING          0.0                625.     Dirth     Dirth        1.
+BIASING          0.0                625.     WALL4                  1.
+BIASING          0.0               3125.     WALL5                  1.
+BIASING          0.0              15625.     WALL6                  1.
+BIASING          0.0              78125.     WALL6                  1.
+BIASING          0.0             100000.     WALL8                  1.
+BIASING          0.0                125.     WALL9                  1.
+BIASING          0.0                625.    Dirth1                  1.
+BIASING          0.0                625.    Dirth2                  1.
+BIASING          0.0                625.    Dirth3                  1.
+BIASING          0.0                625.    Dirth4                  1.
 BIASING          0.0               3125.    Ai1_50    Ai1_50        1.
 BIASING          0.0               3125.   Ai1_250   Ai1_250        1.
 BIASING          0.0               3125.   Ai1_500   Ai1_500        1.
