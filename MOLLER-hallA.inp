@@ -7,7 +7,7 @@ PHYSICS           1.                                                  COALESCE
 PHYSICS           3.                                                  EVAPORAT
 PHOTONUC          1.                      BLCKHOLE  @LASTMAT
 BEAMPOS          0.0       0.0     -62.5       0.0       0.0
-START       1000000.
+START         10000.
 RANDOMIZ          1.       21.
 MATERIAL         19.   39.0983     0.862                           0.0POTASSIU
 MATERIAL         0.0       0.0      2.35                           0.0CONCRETE
@@ -760,7 +760,7 @@ ASSIGNMA     AL-6061  TANKTAIL
 ASSIGNMA      DMPATM  ATM_TAIL
 ASSIGNMA     AL-6061  TIP_TANK
 ASSIGNMA     AL-6061    WINDOW
-ASSIGNMA       WATER        W0
+ASSIGNMA    BLCKHOLE        W0
 ASSIGNMA     AL-6061   COROUT2
 ASSIGNMA       WATER   TANKW_2
 ASSIGNMA     AL-6061   MTANK_2
@@ -3515,42 +3515,42 @@ GEOEND
 STOP
 BIASING          0.0              0.0001  Dirthlow    HEBLIN        1.
 BIASING          0.0              0.0005     WALL1     WALL1        1.
-BIASING          0.0              0.0025     WALL2     WALL2        1.
-BIASING          0.0              0.0125     WALL3     WALL3        1.
-BIASING          0.0              0.0625     WALL4                  1.
-BIASING          0.0              0.3125     WALL5                  1.
-BIASING          0.0              1.5625     WALL6                  1.
-BIASING          0.0              7.8125     WALL6                  1.
-BIASING          0.0                 10.     WALL8                  1.
-BIASING          0.0                 30.     WALL9   Dumpcov        1.
-BIASING          0.0                 90.    Dirth1                  1.
-BIASING          0.0                270.    Dirth2                  1.
-BIASING          0.0                500.    Dirth3                  1.
-BIASING          0.0                700.    Dirth4                  1.
-BIASING          0.0               1000.    Ai1_50    Ai1_50        1.
-BIASING          0.0               1000.   Ai1_250   Ai1_250        1.
-BIASING          0.0               1000.   Ai1_500   Ai1_500        1.
-BIASING          0.0               1000.   Ai1_750   Ai1_750        1.
-BIASING          0.0               1000.  Ai1_1000  Ai1_1000        1.
-BIASING          0.0               1000.    Ai3_50    Ai3_50        1.
-BIASING          0.0               1000.   Ai3_250   Ai3_250        1.
-BIASING          0.0               1000.   Ai3_500   Ai3_500        1.
-BIASING          0.0               1000.   Ai3_750   Ai3_750        1.
-BIASING          0.0               1000.  Ai3_1000  Ai3_1000        1.
-BIASING          0.0               1000.    Ai5_50    Ai5_50        1.
-BIASING          0.0               1000.   Ai5_250   Ai5_250        1.
-BIASING          0.0               1000.   Ai5_500   Ai5_500        1.
-BIASING          0.0               1000.   Ai5_750   Ai5_750        1.
-BIASING          0.0               1000.  Ai5_1000  Ai5_1000        1.
-BIASING          0.0               1000.    Ai6_50    Ai6_50        1.
-BIASING          0.0               1000.   Ai6_250   Ai6_250        1.
-BIASING          0.0               1000.   Ai6_500   Ai6_500        1.
-BIASING          0.0               1000.   Ai6_750   Ai6_750        1.
-BIASING          0.0               1000.  Ai6_1000  Ai6_1000        1.
-BIASING          0.0               1000.  logicMot  logicMot        1.
-BIASING          0.0               1000.  logicMo1  logicMo1        1.
-BIASING          0.0               1000.  logicMo2  logicMo2        1.
-BIASING          0.0               1000.  logicMo3  logicMo3        1.
-BIASING          0.0               1000.  logicMo4  logicMo4        1.
+BIASING          0.0              0.0020     WALL2     WALL2        1.
+BIASING          0.0              0.0080     WALL3     WALL3        1.
+BIASING          0.0              0.0320     WALL4                  1.
+BIASING          0.0                 0.1     WALL5                  1.
+BIASING          0.0                 0.3     WALL6                  1.
+BIASING          0.0                 0.9     WALL6                  1.
+BIASING          0.0                 2.7     WALL8                  1.
+BIASING          0.0                 8.1     WALL9   Dumpcov        1.
+BIASING          0.0                24.0    Dirth1                  1.
+BIASING          0.0                 80.    Dirth2                  1.
+BIASING          0.0                200.    Dirth3                  1.
+BIASING          0.0                400.    Dirth4                  1.
+BIASING          0.0               2000.    Ai1_50    Ai1_50        1.
+BIASING          0.0              10000.   Ai1_250   Ai1_250        1.
+BIASING          0.0              10000.   Ai1_500   Ai1_500        1.
+BIASING          0.0              10000.   Ai1_750   Ai1_750        1.
+BIASING          0.0              10000.  Ai1_1000  Ai1_1000        1.
+BIASING          0.0              10000.    Ai3_50    Ai3_50        1.
+BIASING          0.0              10000.   Ai3_250   Ai3_250        1.
+BIASING          0.0              10000.   Ai3_500   Ai3_500        1.
+BIASING          0.0              10000.   Ai3_750   Ai3_750        1.
+BIASING          0.0              10000.  Ai3_1000  Ai3_1000        1.
+BIASING          0.0              10000.    Ai5_50    Ai5_50        1.
+BIASING          0.0              10000.   Ai5_250   Ai5_250        1.
+BIASING          0.0              10000.   Ai5_500   Ai5_500        1.
+BIASING          0.0              10000.   Ai5_750   Ai5_750        1.
+BIASING          0.0              10000.  Ai5_1000  Ai5_1000        1.
+BIASING          0.0              10000.    Ai6_50    Ai6_50        1.
+BIASING          0.0              10000.   Ai6_250   Ai6_250        1.
+BIASING          0.0              10000.   Ai6_500   Ai6_500        1.
+BIASING          0.0              10000.   Ai6_750   Ai6_750        1.
+BIASING          0.0              10000.  Ai6_1000  Ai6_1000        1.
+BIASING          0.0              10000.  logicMot  logicMot        1.
+BIASING          0.0              10000.  logicMo1  logicMo1        1.
+BIASING          0.0              10000.  logicMo2  logicMo2        1.
+BIASING          0.0              10000.  logicMo3  logicMo3        1.
+BIASING          0.0              10000.  logicMo4  logicMo4        1.
 LAM-BIAS                  0.02              PHOTON    PHOTON
 STOP
