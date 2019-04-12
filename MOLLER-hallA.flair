@@ -2,7 +2,7 @@
 # FLUKA Project file
 Version: 2
 Title: MOLLER_Test
-Input: MOLLER-hallA.inp
+Input: MOLLER-hallA_picsversion.inp
 Exec: moller.exe
 Submit: *Default
 Notes:
@@ -19,12 +19,12 @@ F77dline: False
 Run: <default>
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
 	StartRun: 1553894715
 	Family:  MOLLER-hallA_aa MOLLER-hallA_ab MOLLER-hallA_ac MOLLER-hallA_ad MOLLER-hallA_ae MOLLER-hallA_af MOLLER-hallA_ag MOLLER-hallA_ah MOLLER-hallA_ai MOLLER-hallA_aj MOLLER-hallA_ak MOLLER-hallA_al MOLLER-hallA_am MOLLER-hallA_an MOLLER-hallA_ao MOLLER-hallA_ap MOLLER-hallA_aq MOLLER-hallA_ar MOLLER-hallA_as MOLLER-hallA_at MOLLER-hallA_au MOLLER-hallA_av MOLLER-hallA_aw MOLLER-hallA_ax MOLLER-hallA_ay MOLLER-hallA_az MOLLER-hallA_ba MOLLER-hallA_bb MOLLER-hallA_bc MOLLER-hallA_bd
 
-	# USRxxx data file: MOLLER-hallA_50.bnn
+	# USRxxx data file: MOLLER-hallA_picsversion_50.bnn
 	Data: \I_\U.\e
 		Unit: 50
 		Type: b
@@ -32,7 +32,7 @@ Run: <default>
 		Rule: +,\I\d\d\d_ftn\.\U
 	End
 
-	# USRxxx data file: MOLLER-hallA_51.bnn
+	# USRxxx data file: MOLLER-hallA_picsversion_51.bnn
 	Data: \I_\U.\e
 		Unit: 51
 		Type: b
@@ -40,7 +40,7 @@ Run: <default>
 		Rule: +,\I\d\d\d_ftn\.\U
 	End
 
-	# USRxxx data file: MOLLER-hallA_52.bnn
+	# USRxxx data file: MOLLER-hallA_picsversion_52.bnn
 	Data: \I_\U.\e
 		Unit: 52
 		Type: b
@@ -54,9 +54,9 @@ Run: MOLLER-hallA_aa
 	Rnd:      22
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744017
+	StartRun: 1554752827
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_aa_50.bnn
@@ -89,9 +89,9 @@ Run: MOLLER-hallA_ab
 	Rnd:      23
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744017
+	StartRun: 1554752827
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_ab_50.bnn
@@ -124,9 +124,9 @@ Run: MOLLER-hallA_ac
 	Rnd:      24
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744018
+	StartRun: 1554752827
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_ac_50.bnn
@@ -159,9 +159,9 @@ Run: MOLLER-hallA_ad
 	Rnd:      25
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744018
+	StartRun: 1554752827
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_ad_50.bnn
@@ -194,9 +194,9 @@ Run: MOLLER-hallA_ae
 	Rnd:      26
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744018
+	StartRun: 1554752828
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_ae_50.bnn
@@ -229,9 +229,9 @@ Run: MOLLER-hallA_af
 	Rnd:      27
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744018
+	StartRun: 1554752828
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_af_50.bnn
@@ -264,9 +264,9 @@ Run: MOLLER-hallA_ag
 	Rnd:      28
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744018
+	StartRun: 1554752828
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_ag_50.bnn
@@ -299,9 +299,9 @@ Run: MOLLER-hallA_ah
 	Rnd:      29
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744018
+	StartRun: 1554752828
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_ah_50.bnn
@@ -334,9 +334,9 @@ Run: MOLLER-hallA_ai
 	Rnd:      30
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744018
+	StartRun: 1554752828
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_ai_50.bnn
@@ -369,9 +369,9 @@ Run: MOLLER-hallA_aj
 	Rnd:      31
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744019
+	StartRun: 1554752828
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_aj_50.bnn
@@ -404,9 +404,9 @@ Run: MOLLER-hallA_ak
 	Rnd:      32
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744019
+	StartRun: 1554752828
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_ak_50.bnn
@@ -439,9 +439,9 @@ Run: MOLLER-hallA_al
 	Rnd:      33
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744019
+	StartRun: 1554752828
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_al_50.bnn
@@ -474,9 +474,9 @@ Run: MOLLER-hallA_am
 	Rnd:      34
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744019
+	StartRun: 1554752828
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_am_50.bnn
@@ -509,9 +509,9 @@ Run: MOLLER-hallA_an
 	Rnd:      35
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744019
+	StartRun: 1554752829
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_an_50.bnn
@@ -544,9 +544,9 @@ Run: MOLLER-hallA_ao
 	Rnd:      36
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744019
+	StartRun: 1554752829
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_ao_50.bnn
@@ -579,9 +579,9 @@ Run: MOLLER-hallA_ap
 	Rnd:      37
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744020
+	StartRun: 1554752829
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_ap_50.bnn
@@ -614,9 +614,9 @@ Run: MOLLER-hallA_aq
 	Rnd:      38
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744020
+	StartRun: 1554752829
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_aq_50.bnn
@@ -649,9 +649,9 @@ Run: MOLLER-hallA_ar
 	Rnd:      39
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744020
+	StartRun: 1554752829
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_ar_50.bnn
@@ -684,9 +684,9 @@ Run: MOLLER-hallA_as
 	Rnd:      40
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744020
+	StartRun: 1554752829
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_as_50.bnn
@@ -719,9 +719,9 @@ Run: MOLLER-hallA_at
 	Rnd:      41
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744020
+	StartRun: 1554752829
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_at_50.bnn
@@ -754,9 +754,9 @@ Run: MOLLER-hallA_au
 	Rnd:      42
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744020
+	StartRun: 1554752829
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_au_50.bnn
@@ -789,9 +789,9 @@ Run: MOLLER-hallA_av
 	Rnd:      43
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744020
+	StartRun: 1554752829
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_av_50.bnn
@@ -824,9 +824,9 @@ Run: MOLLER-hallA_aw
 	Rnd:      44
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744021
+	StartRun: 1554752830
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_aw_50.bnn
@@ -859,9 +859,9 @@ Run: MOLLER-hallA_ax
 	Rnd:      45
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744021
+	StartRun: 1554752830
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_ax_50.bnn
@@ -894,9 +894,9 @@ Run: MOLLER-hallA_ay
 	Rnd:      46
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744021
+	StartRun: 1554752830
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_ay_50.bnn
@@ -929,9 +929,9 @@ Run: MOLLER-hallA_az
 	Rnd:      47
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744021
+	StartRun: 1554752830
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_az_50.bnn
@@ -964,9 +964,9 @@ Run: MOLLER-hallA_ba
 	Rnd:      48
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744022
+	StartRun: 1554752830
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_ba_50.bnn
@@ -999,9 +999,9 @@ Run: MOLLER-hallA_bb
 	Rnd:      49
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744022
+	StartRun: 1554752830
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_bb_50.bnn
@@ -1034,9 +1034,9 @@ Run: MOLLER-hallA_bc
 	Rnd:      50
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744022
+	StartRun: 1554752830
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_bc_50.bnn
@@ -1069,9 +1069,9 @@ Run: MOLLER-hallA_bd
 	Rnd:      51
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1554744022
+	StartRun: 1554752831
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_bd_50.bnn
@@ -1100,9 +1100,9 @@ Run: MOLLER-hallA_bd
 End
 
 # Material
-Material: AL-6061
+Material: ZINC
 	alpha: 0
-	color: #309030
+	color: #1070B0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1113,16 +1113,6 @@ End
 Material: LiquidHy
 	alpha: 0
 	color: #2b13b4
-	fuzz: 0.0
-	ior: 1.0
-	shine: 10.0
-	specular: 0.0
-End
-
-# Material
-Material: MANGANES
-	alpha: 0
-	color: #B050D0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1143,6 +1133,16 @@ End
 Material: H-LIQUID
 	alpha: 0
 	color: #A070B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: AIR2
+	alpha: 100
+	color: #46b8f1
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1200,9 +1200,9 @@ Material: AIR5
 End
 
 # Material
-Material: ZINC
+Material: AL-6061
 	alpha: 0
-	color: #1070B0
+	color: #309030
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1240,9 +1240,9 @@ Material: SS316LN
 End
 
 # Material
-Material: AIR2
-	alpha: 100
-	color: #46b8f1
+Material: MANGANES
+	alpha: 0
+	color: #B050D0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1267,6 +1267,8 @@ Geometry:
 
 	# Layer
 	Layer: Media
+		: True
+		._visible: True
 		Image: True
 		Image._visible: True
 		Image.file: HallA.png
@@ -1276,10 +1278,16 @@ Geometry:
 		Image.marker.2: 1155.125 617.75 0.0 -298.3 3051.76
 		Image.marker.3: 1155.84615385 309.230769231 0.0 1037.74 3051.76
 		Options.shortcut: F3
+		Palette._visible: True
+		Palette.cpd: 4
+		Palette.max: 1e+20
+		Palette.min: 100000.0
+		Palette.n: 60
 		Show._visible: True
-		Usrbin.file: FarmData/data_040119_52.bnn
-		Usrbin.norm: 3.807E14
-		Usrbin.palette: Palette3
+		Usrbin._visible: True
+		Usrbin.alpha: 31
+		Usrbin.file: data_0410_51.bnn
+		Usrbin.norm: 3.807E21
 		layer: Media
 	End
 
@@ -1289,6 +1297,8 @@ Geometry:
 		3D._visible: True
 		3D.edgedetect: 1
 		3D.shadows: 0
+		Beam: True
+		Beam._visible: True
 		Image._visible: True
 		Image.file: HallA.png
 		Image.marker: 4
@@ -1320,8 +1330,8 @@ Geometry:
 		Show.voxel: 1
 		Usrbin: True
 		Usrbin._visible: True
-		Usrbin.alpha: 1
-		Usrbin.file: data_new_51.bnn
+		Usrbin.alpha: 2
+		Usrbin.file: data_0411_51.bnn
 		Usrbin.norm: 3.807E21
 		deflights: 1
 		layer: 3D
@@ -1332,22 +1342,22 @@ End
 Plot: Red
 	Format: .eps
 	Type:   Geometry
-	basisu: 0 -1 0
-	basisv: 0 0 -1
+	basisu: -1 0 0
+	basisv: 0 0 1
 	boundaries: 1
 	cbcolors: 0
 	cblog: 0
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 0
-	coord: Y-Z
+	coord: X-Z
 	cpd: 0
-	extends: 57.8703 33.8099
+	extends: 4600.51 2687.78
 	grid: 0
 	index: 0
 	labels: 1
-	layer: Media
-	origin: 18.3338 -11.3029 1285
+	layer: 3D
+	origin: 202.452 0 444.558
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: 0
@@ -1364,14 +1374,14 @@ End
 Plot: Green
 	Format: .eps
 	Type:   Geometry
-	basisu: 0 0 1
-	basisv: 1 0 0
+	basisu: -1 0 0
+	basisv: 0 1 0
 	boundaries: 1
-	coord: Z-X
-	extends: 6624.73 3717.43
+	coord: X-Y
+	extends: 1540.7 864.555
 	labels: 1
 	layer: 3D
-	origin: -638.899 1771.29 8387.82
+	origin: 2.27374e-13 142.445 0
 	subtype: Material
 	title: GeoViewer Green plot
 End
@@ -1384,10 +1394,10 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 1282.33 747.922
+	extends: 3190.85 1861.07
 	labels: 1
-	layer: Media
-	origin: 0 51.4957 2802.42
+	layer: 3D
+	origin: 0 639.129 634.242
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -1396,8 +1406,8 @@ End
 Plot: Magenta
 	Format: .eps
 	Type:   Geometry
-	basisu: -0.664767 0.0146769 0.746907
-	basisv: 0.182912 0.972573 0.143685
+	basisu: -0.578718 0.0146769 0.815395
+	basisv: 0.197585 0.972573 0.122728
 	boundaries: 1
 	cbcolors: 0
 	cblog: 0
@@ -1406,12 +1416,12 @@ Plot: Magenta
 	cbtics: 0
 	coord: U-V
 	cpd: 0
-	extends: 1848.84 1079.4
+	extends: 3194.8 1865.21
 	grid: 0
 	index: 0
 	labels: 1
 	layer: 3D
-	origin: -611.828 -63.6882 505.362
+	origin: -49.192 544.532 95.123
 	subtype: Material
 	title: GeoViewer Magenta plot
 	x2log: 0
@@ -1768,8 +1778,6 @@ Plot: MOLLER-hallA_52_plot
 	Format: .eps
 	Type:   USRBIN
 	axes: Auto
-	bymax: 558.
-	bymin: 358.
 	cbcolors: 30
 	cblog: 1
 	cbmax: 100000
@@ -1778,17 +1786,17 @@ Plot: MOLLER-hallA_52_plot
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: FarmData/data_040119_52.bnn
+	datafile: MOLLER-hallA_52.bnn
 	det: 1
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 87.686992728078266
+	int: 87.672859512091861
 	lw.0: 0
-	max: 1.50229724E-07
-	min: 6.01011910E-16
+	max: 2.97751018E-10
+	min: 2.40419206E-14
 	norm: 1.35E14
 	proj: Y
 	ps.0: 0
@@ -1863,7 +1871,7 @@ Plot: MOLLER-hallA_52_plot03
 	Format: .eps
 	Type:   USRBIN
 	axes: Auto
-	bymax: 10358.
+	bymax: 10358
 	bymin: 358.
 	cbcolors: 30
 	cblog: 1
@@ -1911,9 +1919,10 @@ Plot: MOLLER-hallA_52_plot02
 	Format: .eps
 	Type:   USRBIN
 	axes: Auto
-	bxmax: 10000
-	bxmin: -10000.
-	bymin: 358.
+	bxmax: 17000.
+	bxmin: 13000.
+	bzmax: 17000
+	bzmin: 13000.
 	cbcolors: 30
 	cblog: 1
 	cbmax: 10000
@@ -1922,23 +1931,227 @@ Plot: MOLLER-hallA_52_plot02
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: dataE7_52.bnn
+	datafile: data_0411_52.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Projection
+	index: 7
+	int: 5.0775620050579597E-002
+	lw.0: 0
+	max: 2.01177305E-13
+	min: 1.51153148E-14
+	norm: 3.807E14
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: First Simulation E7
+	with.0: errorlines
+	x2log: 0
+	x2tics: 0
+	xlabel: cm
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylabel: mrem
+	ylog: 0
+	ymax: 100
+	ymin: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: First Simulation E7"
+Plot: MOLLER-hallA_52_plot07
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 18000
+	bxmin: 13000.
+	bymax: 30358.
+	bzmax: 18000
+	bzmin: 13000.
+	cbcolors: 30
+	cblog: 1
+	cbmax: 10000
+	cbmin: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: data_0409_52.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Projection
+	index: 2
+	int: 9.0381881842212769E-002
+	lw.0: 0
+	max: 2.14271431E-13
+	min: 3.75812628E-14
+	norm: 3.807E14
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: First Simulation E7
+	with.0: errorlines
+	x2log: 0
+	x2tics: 0
+	xlabel: cm
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylabel: mrem
+	ylog: 0
+	ymax: 120
+	ymin: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: First Simulation E7"
+Plot: MOLLER-hallA_52_plot08
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bxmax: -13000.
+	bxmin: -18000.
+	bymax: 6758.
+	bzmax: 27000.
+	bzmin: 0.
+	cbcolors: 30
+	cblog: 1
+	cbmax: 10000
+	cbmin: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: data_0409_52.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Projection
+	index: 9
+	int: 6.6815618617645164E-002
+	lw.0: 0
+	max: 2.13496999E-13
+	min: 1.26889423E-14
+	norm: 3.807E14
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: First Simulation E7
+	with.0: errorlines
+	x2log: 0
+	x2tics: 0
+	xlabel: cm
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylabel: mrem
+	ylog: 0
+	ymax: 120
+	ymin: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: First Simulation"
+Plot: MOLLER-hallA_52_plot06
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 10000.
+	bxmin: -10000.
+	cbcolors: 30
+	cblog: 1
+	cbmax: 1000
+	cbmin: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: data_0411_52.bnn
 	det: 1
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 2D Projection
-	index: 2
-	int: 99.917414333610054
+	index: 6
+	int: 99.473951279171800
 	lw.0: 0
-	max: 1.77686210E-09
-	min: 4.94334508E-19
+	max: 1.77138315E-09
+	min: 1.67666067E-18
 	norm: 3.807E14
 	proj: X
 	ps.0: 0
 	pt.0: 0
 	swap: 0
-	title: Boundary Dose: First Simulation E7
+	title: Boundary Dose: First Simulation
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlabel: cm
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylabel: cm
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: First Simulation 50m average"
+Plot: MOLLER-hallA_52_plot04
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bymax: 5558
+	bymin: 358.
+	cbcolors: 30
+	cblog: 1
+	cbmax: 1000
+	cbmin: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: data_0411_52.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 4
+	int: 94.288166074141799
+	lw.0: 0
+	max: 1.79277260E-09
+	min: 1.51074662E-17
+	norm: 3.807E14
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: First Simulation 50m average
 	with.0: errorbars
 	x2log: 0
 	x2tics: 0
@@ -1956,15 +2169,15 @@ Plot: MOLLER-hallA_52_plot02
 End
 
 # USRBIN plot "Boundary Dose: First Simulation E7"
-Plot: MOLLER-hallA_52_plot04
+Plot: MOLLER-hallA_52_plot05
 	Format: .eps
 	Type:   USRBIN
 	axes: Auto
-	bymax: 2358.
+	bymax: 5558
 	bymin: 358.
 	cbcolors: 30
 	cblog: 1
-	cbmax: 10000
+	cbmax: 1000
 	cbmin: 1
 	cbpalette: FLUKA
 	cbround: 0
@@ -1976,11 +2189,11 @@ Plot: MOLLER-hallA_52_plot04
 	geo: -No-
 	grid: 0
 	hist: 2D Projection
-	index: 4
-	int: 93.087106388547468
+	index: 5
+	int: 94.769552537045655
 	lw.0: 0
-	max: 4.63452521E-09
-	min: 1.49583014E-16
+	max: 1.78666382E-09
+	min: 2.99526864E-17
 	norm: 3.807E14
 	proj: Y
 	ps.0: 0
@@ -2121,24 +2334,28 @@ Plot: MOLLER-hallA_52_plot
 	Format: .eps
 	Type:   USRBIN
 	axes: Auto
-	bymax: 2758.
+	bxmax: 14000.
+	bxmin: -14000.
 	cbcolors: 30
 	cblog: 1
+	cbmax: 10000
+	cbmin: 1
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: MOLLER-hallA_aa_52.bnn
+	datafile: data_0410_52.bnn
 	det: 1
 	errors: 0
 	geo: -Auto-
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 208.86611839954907
+	int: 101.04053035523482
 	lw.0: 0
-	max: 1.39095691E-09
-	min: 7.07106118E-12
+	max: 1.26438182E-09
+	min: 3.34692417E-16
+	norm: 3.8E14
 	proj: X
 	ps.0: 0
 	pt.0: 0
