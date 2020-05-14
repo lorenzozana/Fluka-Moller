@@ -2,7 +2,7 @@
 # FLUKA Project file
 Version: 2
 Title: MOLLER_Test
-Input: MOLLER-hallA_picsversion.inp
+Input: MOLLER-hallA_newTGshield.inp
 Exec: moller.exe
 Submit: *Default
 Notes:
@@ -24,7 +24,7 @@ Run: <default>
 	StartRun: 1553894715
 	Family:  MOLLER-hallA_aa MOLLER-hallA_ab MOLLER-hallA_ac MOLLER-hallA_ad MOLLER-hallA_ae MOLLER-hallA_af MOLLER-hallA_ag MOLLER-hallA_ah MOLLER-hallA_ai MOLLER-hallA_aj MOLLER-hallA_ak MOLLER-hallA_al MOLLER-hallA_am MOLLER-hallA_an MOLLER-hallA_ao MOLLER-hallA_ap MOLLER-hallA_aq MOLLER-hallA_ar MOLLER-hallA_as MOLLER-hallA_at MOLLER-hallA_au MOLLER-hallA_av MOLLER-hallA_aw MOLLER-hallA_ax MOLLER-hallA_ay MOLLER-hallA_az MOLLER-hallA_ba MOLLER-hallA_bb MOLLER-hallA_bc MOLLER-hallA_bd
 
-	# USRxxx data file: MOLLER-hallA_picsversion_50.bnn
+	# USRxxx data file: MOLLER-hallA_newTGshield_50.bnn
 	Data: \I_\U.\e
 		Unit: 50
 		Type: b
@@ -32,7 +32,7 @@ Run: <default>
 		Rule: +,\I\d\d\d_ftn\.\U
 	End
 
-	# USRxxx data file: MOLLER-hallA_picsversion_51.bnn
+	# USRxxx data file: MOLLER-hallA_newTGshield_51.bnn
 	Data: \I_\U.\e
 		Unit: 51
 		Type: b
@@ -40,7 +40,7 @@ Run: <default>
 		Rule: +,\I\d\d\d_ftn\.\U
 	End
 
-	# USRxxx data file: MOLLER-hallA_picsversion_52.bnn
+	# USRxxx data file: MOLLER-hallA_newTGshield_52.bnn
 	Data: \I_\U.\e
 		Unit: 52
 		Type: b
@@ -1100,9 +1100,29 @@ Run: MOLLER-hallA_bd
 End
 
 # Material
-Material: ZINC
+Material: 
 	alpha: 0
-	color: #1070B0
+	color: #101010
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: AL-6061
+	alpha: 0
+	color: #309030
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: POTASSIU
+	alpha: 0
+	color: #70B0B0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1140,16 +1160,6 @@ Material: H-LIQUID
 End
 
 # Material
-Material: AIR2
-	alpha: 100
-	color: #46b8f1
-	fuzz: 0.0
-	ior: 1.0
-	shine: 10.0
-	specular: 0.0
-End
-
-# Material
 Material: AIR1
 	alpha: 100
 	color: #46a4f1
@@ -1160,9 +1170,9 @@ Material: AIR1
 End
 
 # Material
-Material: POTASSIU
-	alpha: 0
-	color: #70B0B0
+Material: AIR2
+	alpha: 100
+	color: #46b8f1
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1200,9 +1210,9 @@ Material: AIR5
 End
 
 # Material
-Material: AL-6061
+Material: ZINC
 	alpha: 0
-	color: #309030
+	color: #1070B0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1240,6 +1250,16 @@ Material: SS316LN
 End
 
 # Material
+Material: Marble
+	alpha: 0
+	color: #E09070
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
 Material: MANGANES
 	alpha: 0
 	color: #B050D0
@@ -1269,7 +1289,7 @@ Geometry:
 	Layer: Media
 		: True
 		._visible: True
-		Image: True
+		3D.fov: 22.8
 		Image._visible: True
 		Image.file: HallA.png
 		Image.marker: 4
@@ -1296,6 +1316,7 @@ Geometry:
 		3D: True
 		3D._visible: True
 		3D.edgedetect: 1
+		3D.fov: 22.8
 		3D.shadows: 0
 		Beam: True
 		Beam._visible: True
@@ -1309,7 +1330,6 @@ Geometry:
 		Options.axes: 0
 		Options.shortcut: F4
 		Options.viewport: 0
-		Palette: True
 		Palette._visible: True
 		Palette.alphamin: 1
 		Palette.cpd: 5
@@ -1322,16 +1342,18 @@ Geometry:
 		Palette2.max: 10000.0
 		Palette2.min: 0.01
 		Palette3._visible: True
+		Palette3.alphamin: 1
 		Palette3.cpd: 10
+		Palette3.max: 10000.0
 		Palette3.min: 1.0
-		Palette3.n: 50
+		Palette3.n: 40
+		Palette5._visible: True
 		Show._visible: True
 		Show.lattice: 1
 		Show.voxel: 1
-		Usrbin: True
 		Usrbin._visible: True
 		Usrbin.alpha: 2
-		Usrbin.file: data_0411_51.bnn
+		Usrbin.file: data_0412_51.bnn
 		Usrbin.norm: 3.807E21
 		deflights: 1
 		layer: 3D
@@ -1342,7 +1364,7 @@ End
 Plot: Red
 	Format: .eps
 	Type:   Geometry
-	basisu: -1 0 0
+	basisu: 1 0 0
 	basisv: 0 0 1
 	boundaries: 1
 	cbcolors: 0
@@ -1352,12 +1374,12 @@ Plot: Red
 	cbtics: 0
 	coord: X-Z
 	cpd: 0
-	extends: 4600.51 2687.78
+	extends: 515.978 301.453
 	grid: 0
 	index: 0
 	labels: 1
-	layer: 3D
-	origin: 202.452 0 444.558
+	layer: Media
+	origin: 176.302 0 -131.038
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: 0
@@ -1378,10 +1400,10 @@ Plot: Green
 	basisv: 0 1 0
 	boundaries: 1
 	coord: X-Y
-	extends: 1540.7 864.555
+	extends: 1069.93 625.709
 	labels: 1
 	layer: 3D
-	origin: 2.27374e-13 142.445 0
+	origin: -128.292 74.2453 0
 	subtype: Material
 	title: GeoViewer Green plot
 End
@@ -1394,10 +1416,10 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 3190.85 1861.07
+	extends: 1538.8 897.505
 	labels: 1
-	layer: 3D
-	origin: 0 639.129 634.242
+	layer: Media
+	origin: 0 -494.333 1341.35
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -1406,8 +1428,8 @@ End
 Plot: Magenta
 	Format: .eps
 	Type:   Geometry
-	basisu: -0.578718 0.0146769 0.815395
-	basisv: 0.197585 0.972573 0.122728
+	basisu: -0.416395 0.0149058 0.909062
+	basisv: 0.217145 0.97256 0.0835164
 	boundaries: 1
 	cbcolors: 0
 	cblog: 0
@@ -1416,12 +1438,12 @@ Plot: Magenta
 	cbtics: 0
 	coord: U-V
 	cpd: 0
-	extends: 3194.8 1865.21
+	extends: 515.977 301.241
 	grid: 0
 	index: 0
 	labels: 1
 	layer: 3D
-	origin: -49.192 544.532 95.123
+	origin: -112.771 -41.5184 166.328
 	subtype: Material
 	title: GeoViewer Magenta plot
 	x2log: 0
@@ -1919,9 +1941,9 @@ Plot: MOLLER-hallA_52_plot02
 	Format: .eps
 	Type:   USRBIN
 	axes: Auto
-	bxmax: 17000.
-	bxmin: 13000.
-	bzmax: 17000
+	bxmax: 16000
+	bxmin: 12000.
+	bzmax: 15000
 	bzmin: 13000.
 	cbcolors: 30
 	cblog: 1
@@ -1931,17 +1953,17 @@ Plot: MOLLER-hallA_52_plot02
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: data_0411_52.bnn
+	datafile: data_0412_52.bnn
 	det: 1
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 1D Projection
 	index: 7
-	int: 5.0775620050579597E-002
+	int: 2.7176918278071008E-002
 	lw.0: 0
-	max: 2.01177305E-13
-	min: 1.51153148E-14
+	max: 2.54496592E-13
+	min: 9.22545273E-17
 	norm: 3.807E14
 	proj: Y
 	ps.0: 0
@@ -2024,11 +2046,11 @@ Plot: MOLLER-hallA_52_plot08
 	Format: .eps
 	Type:   USRBIN
 	axes: Auto
-	bxmax: -13000.
-	bxmin: -18000.
-	bymax: 6758.
-	bzmax: 27000.
-	bzmin: 0.
+	bxmax: 0
+	bxmin: -30000.
+	bymax: 5158.
+	bzmax: 18000
+	bzmin: 10000.
 	cbcolors: 30
 	cblog: 1
 	cbmax: 10000
@@ -2037,19 +2059,19 @@ Plot: MOLLER-hallA_52_plot08
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: data_0409_52.bnn
+	datafile: data_0412_52.bnn
 	det: 1
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 1D Projection
-	index: 9
-	int: 6.6815618617645164E-002
+	index: 10
+	int: 7.4899673253468774E-002
 	lw.0: 0
-	max: 2.13496999E-13
-	min: 1.26889423E-14
+	max: 1.68575467E-13
+	min: 1.99000548E-14
 	norm: 3.807E14
-	proj: Z
+	proj: X
 	ps.0: 0
 	pt.0: 0
 	swap: 0
@@ -2074,10 +2096,10 @@ End
 
 # USRBIN plot "Boundary Dose: First Simulation"
 Plot: MOLLER-hallA_52_plot06
-	Format: .eps
+	Format: .pdf
 	Type:   USRBIN
 	axes: Auto
-	bxmax: 10000.
+	bxmax: 10000
 	bxmin: -10000.
 	cbcolors: 30
 	cblog: 1
@@ -2087,17 +2109,17 @@ Plot: MOLLER-hallA_52_plot06
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: data_0411_52.bnn
+	datafile: data_0412_52.bnn
 	det: 1
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 2D Projection
 	index: 6
-	int: 99.473951279171800
+	int: 99.749224909963317
 	lw.0: 0
-	max: 1.77138315E-09
-	min: 1.67666067E-18
+	max: 1.77402182E-09
+	min: 3.13237072E-16
 	norm: 3.807E14
 	proj: X
 	ps.0: 0

@@ -90,11 +90,15 @@ MAT-PROP                           139.2      SiO2
 STERNHEI      4.0029     .1385    3.0025    .08408    3.5064          SiO2
 MAT-PROP                             75.     WATER
 STERNHEI      3.5017       .24    2.8004    .09116    3.4773          WATER
+MATERIAL                            2.71                              Marble
+COMPOUND                                                                                                                                                                                                                                                                                                                                           CALCIUM       1.0    CARBON       3.0    OXYGENMarble
 ASSIGNMA      VACUUM  logicMot
 ASSIGNMA         AIR      hall
 ASSIGNMA    ALUMINUM        SC
-ASSIGNMA    Concrete    ShHutC   ShHutC2
+ASSIGNMA    Concrete   ShHutC1   ShHutC2
 ASSIGNMA        LEAD    SHLead
+ASSIGNMA        IRON    SHIron
+ASSIGNMA      Marble    SHMarb
 ASSIGNMA        LEAD  ShLeadC3
 ASSIGNMA      VACUUM   airsol1                            1.
 ASSIGNMA      VACUUM      pipe
@@ -821,6 +825,7 @@ ASSIGNMA        IRON  SteelShi
 ASSIGNMA         AIR  sbsBunke
 ASSIGNMA         AIR  sbsbunke
 ASSIGNMA      VACUUM     Vdown
+ASSIGNMA      VACUUM    Vac_tg
 MGNFIELD         30.     0.001      0.01
 RADDECAY          1.        1.                       1008000
 * 7days intensity     4days intensity     7days intensity
@@ -868,16 +873,27 @@ RCC air3       0.0 358. 400. 0.0 100000. 0.0 15000.
 RCC air4       0.0 358. 400. 0.0 100000. 0.0 20000.
 RCC air5       0.0 358. 400. 0.0 100000. 0.0 30000.
 RCC air6       0.0 358. 400. 0.0 100000. 0.0 50000.
-RCC air7       0.0 0.0 600. 0.0 0.0 376.657 35.
+RCC air7       0.0 0.0 600.0 0.0 0.0 386.657 35.0
 RCC ShBore     0.0 0.0 100. 0.0 0.0 600. 40.
 RCC ShBore2    0.0 0.0 100. 0.0 0.0 710. 35.
 RCC ShBore1    0.0 0.0 0.0 0.0 0.0 -600. 5.
 RPP CBox_o     -360. 409. -298.3 371.7 -317.5 317.5
 RPP CBox2_o    -175. 175. -210. 210. 320. 801.5
-RPP CBox3_o    -175. 175. -122.5 125. 812. 941.5
+RPP CBox3_o    -175.0 175.0 -122.5 125.0 801.5 941.5
 RPP CBox4_o    -133. 133. -200. 200. 941.5 967.
 RPP CBox_i     -220. 269. -298.3 231.7 -177.5 177.5
 RPP LBox       -188.5 188.5 -113. 142. 119. 159.
+RCC LBoxN_o    0.0 50. -120. 0.0 0.0 359. 145.
+TRC LBoxN_o5   0.0 50. -120. 0.0 0.0 359. 135. 180.
+RCC LBoxN_o3   0.0 50. -120. 0.0 0.0 359. 185.
+TRC LBoxN_o4   0.0 50. -120. 0.0 0.0 359. 185. 230.
+RCC LBoxN_i    0.0 50. -115. 0.0 0.0 234. 115.
+RCC LBoxN_i1   0.0 50. -105. 0.0 0.0 214. 105.
+RCC LBoxN_o1   0.0 0.0 239. 0.0 0.0 81. 65.
+RCC LBoxN_o7   0.0 0.0 119. 0.0 0.0 120. 65.
+RCC LBoxN_o6   0.0 0.0 239. 0.0 0.0 81. 95.
+TRC LBoxN_o8   0.0 0.0 239. 0.0 0.0 81. 130. 95.
+RCC LBoxN_o2   0.0 50. 239. 0.0 0.0 81. 230.
 RPP LBox1      -18.5 18.5 -18.5 18.5 285.1 305.1
 ZCC LBox1_i    0.0 0.0 7.4
 $start_transform SBS_b
@@ -1029,8 +1045,8 @@ RPP hal_hole   -106.408 106.408 -193.46900000000025 106.40699999999978 2797.3
 RCC tubeTarg   0.0 0.0 -62.5 0.0 0.0 125. 4.
 * col1_0
 RCC col1_0     0.0 0.0 517.5 0.0 0.0 10. 3.1703
-RCC SC_o       0.0 -100. 0.0 0.0 200. 0.0 100.
-RCC SC_i       0.0 -98.72 0.0 0.0 197.44 0.0 97.44
+RCC SC_o       0.0 0.0 -100. 0.0 0.0 200. 50.
+RCC SC_i       0.0 0.0 -98.72 0.0 0.0 197.44 47.44
 RCC Sc_i2      0.0 0.0 80. 0.0 0.0 20. 20.
 * col1_0
 RCC col1_1     0.0 0.0 527.5 0.0 0.0 10. 2.8703
@@ -2034,19 +2050,35 @@ sbsBunke     5 +sbsBunk1
 sbsbunke     5 +sbsBunke -IronShie -IronShi1 -IronShi2 -IronShi3 -IronShi4 -SteelShi -sbsBunk1
 * hall_air
 hall         5 (+hal_tin -hal_tsub -hallcut )
-               | hal_cin -hal_pipe -( +SC_o -Sc_i2 )  -(col1_0 | col1_1 | col1_2) -col2_0 -col1fin0 -col5_cut -air7
-               -( +CBox_o -CBox_i -ShBore -ShBore1  )  -( +LBox -ShBore ) -( +CBox2_o -ShBore2 ) -CBox3_o
-               -CBox4_o  -LBox1 -Spipe_o -sbsBunke -vp_down
-               | +LBox1_i +LBox1
-               | +SC_i -tubeTarg -hal_pipe
+               | hal_cin -hal_pipe
+               -LBoxN_o4 -CBox2_o -CBox3_o -LBoxN_o2
+               -CBox4_o  -LBox1 -Spipe_o -sbsBunke -vp_down -col5_cut -air7
+               | +LBoxN_i1 -ShBore1 -ShBore -SC_o
+               | +ShBore1 +LBoxN_o5 -SC_o -ShBore -hal_pipe
 Vdown        5 +vp_down
 SC           5 +SC_o -SC_i -Sc_i2 -hal_pipe
-ShHutC       5 +CBox_o -CBox_i -ShBore -ShBore1
 ShHutC1      5 +CBox2_o -ShBore2
+ShHitC0      5 +LBoxN_o4 -LBoxN_o5
+               | +LBoxN_o2 -LBoxN_o8
 ShHutC2      5 +CBox3_o -air7
 ShLeadC3     5 +CBox4_o -air7
-SHLead       5 +LBox -ShBore
-               | +LBox1 -LBox1_i
+SHLead       5 +LBox1 -LBox1_i
+SHIron       5 +LBoxN_o5 -LBoxN_i -LBoxN_o7 -ShBore1
+               | +LBoxN_o8 -LBoxN_o1
+SHMarb       5 +LBoxN_i -LBoxN_i1 -ShBore -ShBore1
+               | +LBoxN_o1 -ShBore2
+               | +LBoxN_o7 -ShBore
+* h2Targ
+h2Targ       5 +tubeTarg
+Vac_tg       5 +ShBore +LBoxN_o5
+               | +ShBore2 -( +LBox1 -LBox1_i )  -(col1_0 | col1_1 | col1_2) -col2_0 -col1fin0
+               -air7
+               | +SC_i -tubeTarg -hal_pipe
+               | +Sc_i2
+* hall_pipe
+pipe         5 +hal_pipe
+* Collimator1_cut
+col1cut      5 col1_su1 |col1_su2 |col1_ri1 |col1_ri2 |col1_ri3
 SOLE1        5 +Sol1 -Sol3 -Scone
                | +Sol3 -Sol2
 SOLE2        5 +Sol4 -Sol6 -Scone
@@ -2080,12 +2112,6 @@ airsol1      5 +air7 -Sol1 -Sol3 -Sol4 -Sol6 -Sol7 -Sol9 -Sol10 -Sol12 -Sol13 -S
                | +Sol13 +Scone -Spipe_o
                | +Sol16 +Scone -Spipe_o
                | +Sol19 +Scone -Spipe_o
-* hall_pipe
-pipe         5 +hal_pipe
-* h2Targ
-h2Targ       5 +tubeTarg
-* Collimator1_cut
-col1cut      5 col1_su1 |col1_su2 |col1_ri1 |col1_ri2 |col1_ri3
 * Collimator1_fin_cut0
 fin_cut0     5 +col1fin0 -col1fin1 -(+fin_con1 -fin_con2) +((+finpla11 -finpla10) | (+finpla21 -finpla20) | (
                +finpla31 -finpla30) | (
