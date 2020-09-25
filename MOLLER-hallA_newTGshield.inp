@@ -91,7 +91,7 @@ STERNHEI      4.0029     .1385    3.0025    .08408    3.5064          SiO2
 MAT-PROP                             75.     WATER
 STERNHEI      3.5017       .24    2.8004    .09116    3.4773          WATER
 MATERIAL                            2.71                              Marble
-COMPOUND                                                              CALCIUM       1.0    CARBON       3.0    OXYGENMarble
+COMPOUND         1.0   CALCIUM       1.0    CARBON       3.0    OXYGENMarble
 ASSIGNMA      VACUUM  logicMot
 ASSIGNMA         AIR      hall
 ASSIGNMA    ALUMINUM        SC
