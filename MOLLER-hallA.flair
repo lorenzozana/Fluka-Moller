@@ -8,12 +8,17 @@ Submit: *Default
 Notes:
 {img:MOLLER-hallA_plot05.png}
 Tabs: 0.1 0.32 0.56 0.81 1.0
-Page: Flair
+Page: Input
 Source: Magnetic_field/magfld_test7.f
 DefMain: True
 LinkPrg: lfluka
 F77bound: True
 F77dline: False
+
+# Properties
+Properties: Input
+	REGION/SHLead1/@select: 1
+End
 
 # Run information
 Run: <default>
@@ -1110,19 +1115,9 @@ Material:
 End
 
 # Material
-Material: AL-6061
+Material: ZINC
 	alpha: 0
-	color: #309030
-	fuzz: 0.0
-	ior: 1.0
-	shine: 10.0
-	specular: 0.0
-End
-
-# Material
-Material: POTASSIU
-	alpha: 0
-	color: #70B0B0
+	color: #1070B0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1133,6 +1128,16 @@ End
 Material: LiquidHy
 	alpha: 0
 	color: #2b13b4
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: MANGANES
+	alpha: 0
+	color: #B050D0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1170,9 +1175,9 @@ Material: AIR1
 End
 
 # Material
-Material: AIR2
-	alpha: 100
-	color: #46b8f1
+Material: POTASSIU
+	alpha: 0
+	color: #70B0B0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1210,9 +1215,9 @@ Material: AIR5
 End
 
 # Material
-Material: ZINC
+Material: AL-6061
 	alpha: 0
-	color: #1070B0
+	color: #309030
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1260,9 +1265,9 @@ Material: Marble
 End
 
 # Material
-Material: MANGANES
-	alpha: 0
-	color: #B050D0
+Material: AIR2
+	alpha: 100
+	color: #46b8f1
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1281,9 +1286,9 @@ End
 
 # Geometry Information
 Geometry:
-	Frame.bsplit: 0.5
+	Frame.bsplit: 0.99
 	Frame.tsplit: 0.5
-	Frame.vsplit: 0.5
+	Frame.vsplit: 0.01
 
 	# Layer
 	Layer: Media
@@ -1374,7 +1379,7 @@ Plot: Red
 	cbtics: 0
 	coord: X-Z
 	cpd: 0
-	extends: 515.978 301.453
+	extends: 515.978 386.983
 	grid: 0
 	index: 0
 	labels: 1
@@ -1400,7 +1405,7 @@ Plot: Green
 	basisv: 0 1 0
 	boundaries: 1
 	coord: X-Y
-	extends: 1069.93 625.709
+	extends: 1069.93 802.448
 	labels: 1
 	layer: 3D
 	origin: -128.292 74.2453 0
@@ -1416,10 +1421,10 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 1538.8 897.505
+	extends: 1068.61 801.458
 	labels: 1
 	layer: Media
-	origin: 0 -494.333 1341.35
+	origin: 0 -132.206 738.955
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -1429,7 +1434,7 @@ Plot: Magenta
 	Format: .eps
 	Type:   Geometry
 	basisu: -0.416395 0.0149058 0.909062
-	basisv: 0.217145 0.97256 0.0835164
+	basisv: 0.217145 0.97256 0.0835162
 	boundaries: 1
 	cbcolors: 0
 	cblog: 0
@@ -1438,7 +1443,7 @@ Plot: Magenta
 	cbtics: 0
 	coord: U-V
 	cpd: 0
-	extends: 515.977 301.241
+	extends: 515.977 28585.1
 	grid: 0
 	index: 0
 	labels: 1

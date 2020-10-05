@@ -857,9 +857,18 @@ USRBIN           10.   DOSE-EQ      -52.    30000.    30358.    30000.bdoseeq
 USRBIN       -30000.      358.   -30000.       60.       75.       60. &
 USRBIN           10.      DOSE      -52.    30000.    30358.    30000.bdose
 USRBIN       -30000.      358.   -30000.       60.       75.       60. &
-USRBIN           11.      DOSE      -54.      300.       0.0      400.SHTgDose
+USRBIN           11.    ENERGY      -54.      300.       0.0      400.SHTgEn
 USRBIN           0.0       0.0     -200.      150.        4.      300. &
-USRBIN           11.  SI1MEVNE      -54.      300.       0.0      400.SHTgDos1
+USRBIN           11.    ENERGY      -54.      300.       0.0      400.SHTgEnN
+USRBIN           0.0       0.0     -200.      150.        4.      300. &
+USRBIN           11.    ENERGY      -54.      300.       0.0      400.SHTgEnPh
+USRBIN           0.0       0.0     -200.      150.        4.      300. &
+USRBIN           11.    ENERGY      -54.      300.       0.0      400.SHTgEne
+USRBIN           0.0       0.0     -200.      150.        4.      300. &
+AUXSCORE      USRBIN   NEUTRON             SHTgEnN   SHTgEnN
+AUXSCORE      USRBIN    PHOTON            SHTgEnPh  SHTgEnPh
+AUXSCORE      USRBIN  ELECTRON             SHTgEne   SHTgEne
+USRBIN           11.  SI1MEVNE      -54.      300.       0.0      400.SHTg1MeV
 USRBIN           0.0       0.0     -200.      150.        4.      300. &
 ROT-DEFI                   0.0       90.       0.0       0.0       0.0Coil1
 ROT-DEFI                   0.0    38.571       0.0       0.0       0.0Coil2
