@@ -8,7 +8,7 @@ Submit: *Default
 Notes:
 {img:MOLLER-hallA_plot05.png}
 Tabs: 0.1 0.32 0.56 0.81 1.0
-Page: Input
+Page: Flair
 Source: Magnetic_field/magfld_test7.f
 DefMain: True
 LinkPrg: lfluka
@@ -17,7 +17,7 @@ F77dline: False
 
 # Properties
 Properties: Input
-	REGION/SHLead1/@select: 1
+	REGION/hall/@select: 1
 End
 
 # Run information
@@ -1115,9 +1115,9 @@ Material:
 End
 
 # Material
-Material: ZINC
+Material: AL-6061
 	alpha: 0
-	color: #1070B0
+	color: #309030
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1128,16 +1128,6 @@ End
 Material: LiquidHy
 	alpha: 0
 	color: #2b13b4
-	fuzz: 0.0
-	ior: 1.0
-	shine: 10.0
-	specular: 0.0
-End
-
-# Material
-Material: MANGANES
-	alpha: 0
-	color: #B050D0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1158,6 +1148,16 @@ End
 Material: H-LIQUID
 	alpha: 0
 	color: #A070B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: AIR2
+	alpha: 100
+	color: #46b8f1
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1215,9 +1215,9 @@ Material: AIR5
 End
 
 # Material
-Material: AL-6061
+Material: ZINC
 	alpha: 0
-	color: #309030
+	color: #1070B0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1265,9 +1265,9 @@ Material: Marble
 End
 
 # Material
-Material: AIR2
-	alpha: 100
-	color: #46b8f1
+Material: MANGANES
+	alpha: 0
+	color: #B050D0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1286,9 +1286,9 @@ End
 
 # Geometry Information
 Geometry:
-	Frame.bsplit: 0.99
+	Frame.bsplit: 0.5
 	Frame.tsplit: 0.5
-	Frame.vsplit: 0.01
+	Frame.vsplit: 0.5
 
 	# Layer
 	Layer: Media
@@ -1320,9 +1320,9 @@ Geometry:
 	Layer: 3D
 		3D: True
 		3D._visible: True
-		3D.edgedetect: 1
+		3D.edgedetect: True
 		3D.fov: 22.8
-		3D.shadows: 0
+		3D.shadows: False
 		Beam: True
 		Beam._visible: True
 		Image._visible: True
@@ -1332,34 +1332,36 @@ Geometry:
 		Image.marker.1: 165.5 617.375 0.0 -298.3 -2251.76
 		Image.marker.2: 1155.75 617.75 0.0 -298.3 3051.76
 		Image.marker.3: 1155.44444444 309.444444444 0.0 1037.74 3051.76
-		Options.axes: 0
+		Options.axes: False
 		Options.shortcut: F4
-		Options.viewport: 0
+		Options.viewport: False
 		Palette._visible: True
-		Palette.alphamin: 1
-		Palette.cpd: 5
-		Palette.max: 1e+19
+		Palette.alphamin: True
+		Palette.cpd: 4
+		Palette.max: 3.16228e+22
 		Palette.min: 100000.0
 		Palette.n: 70
 		Palette2._visible: True
-		Palette2.alphamin: 1
+		Palette2.alphamin: True
 		Palette2.cpd: 5
 		Palette2.max: 10000.0
 		Palette2.min: 0.01
+		Palette3: True
 		Palette3._visible: True
-		Palette3.alphamin: 1
+		Palette3.alphamin: True
 		Palette3.cpd: 10
 		Palette3.max: 10000.0
 		Palette3.min: 1.0
 		Palette3.n: 40
 		Palette5._visible: True
 		Show._visible: True
-		Show.lattice: 1
-		Show.voxel: 1
+		Show.lattice: True
+		Show.voxel: True
+		Usrbin: True
 		Usrbin._visible: True
 		Usrbin.alpha: 2
-		Usrbin.file: data_0412_51.bnn
-		Usrbin.norm: 3.807E21
+		Usrbin.file: target_shield54.bnn
+		Usrbin.norm: 6.34E21
 		deflights: 1
 		layer: 3D
 	End
@@ -1373,27 +1375,27 @@ Plot: Red
 	basisv: 0 0 1
 	boundaries: 1
 	cbcolors: 0
-	cblog: 0
+	cblog: False
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 0
 	coord: X-Z
 	cpd: 0
-	extends: 515.978 386.983
+	extends: 358.318 190.195
 	grid: 0
 	index: 0
 	labels: 1
-	layer: Media
-	origin: 176.302 0 -131.038
+	layer: 3D
+	origin: 141.017 0 147.885
 	subtype: Material
 	title: GeoViewer Red plot
-	x2log: 0
+	x2log: False
 	x2tics: 0
-	xlog: 0
-	y2log: 0
+	xlog: False
+	y2log: False
 	y2tics: 0
-	ylog: 0
-	zlog: 0
+	ylog: False
+	zlog: False
 	ztics: 0
 End
 
@@ -1405,7 +1407,7 @@ Plot: Green
 	basisv: 0 1 0
 	boundaries: 1
 	coord: X-Y
-	extends: 1069.93 802.448
+	extends: 1069.93 568.664
 	labels: 1
 	layer: 3D
 	origin: -128.292 74.2453 0
@@ -1421,10 +1423,10 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 1068.61 801.458
+	extends: 618.409 340.288
 	labels: 1
-	layer: Media
-	origin: 0 -132.206 738.955
+	layer: 3D
+	origin: 0 175.112 -164.027
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -1443,12 +1445,12 @@ Plot: Magenta
 	cbtics: 0
 	coord: U-V
 	cpd: 0
-	extends: 515.977 28585.1
+	extends: 743.007 47552.4
 	grid: 0
 	index: 0
 	labels: 1
 	layer: 3D
-	origin: -112.771 -41.5184 166.328
+	origin: -186.978 -138.705 271.547
 	subtype: Material
 	title: GeoViewer Magenta plot
 	x2log: 0
@@ -2364,7 +2366,7 @@ Plot: MOLLER-hallA_52_plot
 	bxmax: 14000.
 	bxmin: -14000.
 	cbcolors: 30
-	cblog: 1
+	cblog: True
 	cbmax: 10000
 	cbmin: 1
 	cbpalette: FLUKA
@@ -2389,15 +2391,107 @@ Plot: MOLLER-hallA_52_plot
 	swap: 0
 	title: USRBIN MOLLER-hallA 52
 	with.0: errorbars
-	x2log: 0
+	x2log: False
 	x2tics: 0
-	xlog: 0
+	xlog: False
 	xrebin: 1
-	y2log: 0
+	y2log: False
 	y2tics: 0
-	ylog: 0
+	ylog: False
 	yrebin: 1
-	zlog: 0
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Plot #28"
+Plot: MOLLER-hallA_plot28
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 14000
+	bxmin: 0.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: target_shield54.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 0.11048788465687294
+	lw.0: 0
+	max: 1.45068325E-05
+	min: 1.64905476E-24
+	norm: 6.34E21
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Plot #28
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Plot #28"
+Plot: MOLLER-hallA_plot29
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 500.
+	bxmin: -500.
+	bymax: 80.
+	bymin: -80.
+	bzmax: 400.
+	bzmin: -400.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: target_shield50.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 2104752692294.1633
+	lw.0: 0
+	max: 2879224.00
+	min: 3.13132176E-07
+	norm: 3.6E-4
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Plot #28
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	yrebin: 1
+	zlog: False
 	zrebin: 1
 	ztics: 0
 End
