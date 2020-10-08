@@ -1335,7 +1335,6 @@ Geometry:
 		Options.axes: False
 		Options.shortcut: F4
 		Options.viewport: False
-		Palette: True
 		Palette._visible: True
 		Palette.alphamin: True
 		Palette.cpd: 4
@@ -1352,6 +1351,7 @@ Geometry:
 		Palette3.max: 46415.9
 		Palette3.min: 0.01
 		Palette3.n: 20
+		Palette5: True
 		Palette5._visible: True
 		Palette5.alphamin: True
 		Palette5.cpd: 4
@@ -1363,9 +1363,10 @@ Geometry:
 		Usrbin: True
 		Usrbin._visible: True
 		Usrbin.alpha: 2
-		Usrbin.det: 9
+		Usrbin.det: 4
 		Usrbin.file: target_shield54_3.bnn
-		Usrbin.norm: 6.34E21
+		Usrbin.norm: 3.6E-4
+		Usrbin.palette: Palette5
 		deflights: 1
 		layer: 3D
 	End
@@ -1385,12 +1386,12 @@ Plot: Red
 	cbtics: 0
 	coord: X-Z
 	cpd: 0
-	extends: 619.174 328.657
+	extends: 515.978 273.881
 	grid: 0
 	index: 0
 	labels: 1
 	layer: 3D
-	origin: 153.86 0 2.3032
+	origin: 115.132 -0.1 -130.181
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: False
@@ -1427,10 +1428,10 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 248.525 131.917
+	extends: 515.34 273.542
 	labels: 1
 	layer: 3D
-	origin: 0 81.5695 -50.6337
+	origin: 0 69.6799 -51.3331
 	subtype: Material
 	title: GeoViewer Blue plot
 End

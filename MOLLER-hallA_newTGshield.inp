@@ -839,25 +839,25 @@ AUXSCORE      USRBIN                       hall_1h  SHTg_a1h          EWT74
 USRBIN           10.   DOSE-EQ      -50.     2660.      400.     3060.hall_1h
 USRBIN        -2660.     -300.    -2260.      266.       35.      266. &
 USRBIN           11.   DOSE-EQ      -54.      300.       0.0      400.SHTg_a1h
-USRBIN           0.0       0.0     -200.       75.        4.      300. &
+USRBIN           0.0       0.0     -200.       30.        4.       60. &
 DCYSCORE          2.                       hall_1d  SHTg_a1d          USRBIN
 AUXSCORE      USRBIN                       hall_1d  SHTg_a1d          EWT74
 USRBIN           10.   DOSE-EQ      -50.     2660.      400.     3060.hall_1d
 USRBIN        -2660.     -300.    -2260.      266.       35.      266. &
 USRBIN           11.   DOSE-EQ      -54.      300.       0.0      400.SHTg_a1d
-USRBIN           0.0       0.0     -200.       75.        4.      300. &
+USRBIN           0.0       0.0     -200.       30.        4.       60. &
 DCYSCORE          3.                       hall_3d  SHTg_a3d          USRBIN
 AUXSCORE      USRBIN                       hall_3d  SHTg_a3d          EWT74
 USRBIN           10.   DOSE-EQ      -50.     2660.      400.     3060.hall_3d
 USRBIN        -2660.     -300.    -2260.      266.       35.      266. &
 USRBIN           11.   DOSE-EQ      -54.      300.       0.0      400.SHTg_a3d
-USRBIN           0.0       0.0     -200.       75.        4.      300. &
+USRBIN           0.0       0.0     -200.       30.        4.       60. &
 DCYSCORE          4.                       hall_1w  SHTg_a1w          USRBIN
 AUXSCORE      USRBIN                       hall_1w  SHTg_a1w          EWT74
 USRBIN           10.   DOSE-EQ      -50.     2660.      400.     3060.hall_1w
 USRBIN        -2660.     -300.    -2260.      266.       35.      266. &
 USRBIN           11.   DOSE-EQ      -54.      300.       0.0      400.SHTg_a1w
-USRBIN           0.0       0.0     -200.       75.        4.      300. &
+USRBIN           0.0       0.0     -200.       30.        4.       60. &
 USRBIN           10.  SI1MEVNE      -51.     2660.      400.     3060.hall1MeV
 USRBIN        -2660.     -300.    -2260.      266.       35.      266. &
 AUXSCORE      USRBIN                       bdoseeq   bdoseeq          EWT74
