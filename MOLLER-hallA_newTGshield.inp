@@ -7,7 +7,7 @@ PHYSICS           1.                                                  COALESCE
 PHYSICS           3.                                                  EVAPORAT
 PHOTONUC          1.                      BLCKHOLE  @LASTMAT
 BEAMPOS          0.0       0.0     -62.5       0.0       0.0
-START         10000.
+START         20000.
 RANDOMIZ          1.       21.
 MATERIAL         19.   39.0983     0.862                           0.0POTASSIU
 MATERIAL         0.0       0.0      2.35                           0.0CONCRETE
@@ -834,25 +834,25 @@ IRRPROFI     604800. 5.3053E14   345600.       0.0   604800. 5.3053E14
 * 4days intensity     7days intensity
 IRRPROFI     345600.       0.0   604800. 5.3053E14
 DCYTIMES       3600.    86400.   259200.   604800.  1209600.  2592000.
-DCYSCORE          1.                       hall_1h   hall_1h          USRBIN
+DCYSCORE          1.                       hall_1h  SHTg_a1h          USRBIN
 AUXSCORE      USRBIN                       hall_1h  SHTg_a1h          EWT74
 USRBIN           10.   DOSE-EQ      -50.     2660.      400.     3060.hall_1h
 USRBIN        -2660.     -300.    -2260.      266.       35.      266. &
 USRBIN           11.   DOSE-EQ      -54.      300.       0.0      400.SHTg_a1h
 USRBIN           0.0       0.0     -200.       75.        4.      300. &
-DCYSCORE          2.                       hall_1d   hall_1d          USRBIN
+DCYSCORE          2.                       hall_1d  SHTg_a1d          USRBIN
 AUXSCORE      USRBIN                       hall_1d  SHTg_a1d          EWT74
 USRBIN           10.   DOSE-EQ      -50.     2660.      400.     3060.hall_1d
 USRBIN        -2660.     -300.    -2260.      266.       35.      266. &
 USRBIN           11.   DOSE-EQ      -54.      300.       0.0      400.SHTg_a1d
 USRBIN           0.0       0.0     -200.       75.        4.      300. &
-DCYSCORE          3.                       hall_3d   hall_3d          USRBIN
+DCYSCORE          3.                       hall_3d  SHTg_a3d          USRBIN
 AUXSCORE      USRBIN                       hall_3d  SHTg_a3d          EWT74
 USRBIN           10.   DOSE-EQ      -50.     2660.      400.     3060.hall_3d
 USRBIN        -2660.     -300.    -2260.      266.       35.      266. &
 USRBIN           11.   DOSE-EQ      -54.      300.       0.0      400.SHTg_a3d
 USRBIN           0.0       0.0     -200.       75.        4.      300. &
-DCYSCORE          4.                       hall_1w                    USRBIN
+DCYSCORE          4.                       hall_1w  SHTg_a1w          USRBIN
 AUXSCORE      USRBIN                       hall_1w  SHTg_a1w          EWT74
 USRBIN           10.   DOSE-EQ      -50.     2660.      400.     3060.hall_1w
 USRBIN        -2660.     -300.    -2260.      266.       35.      266. &
@@ -906,8 +906,8 @@ RPP CBox4_o    -133. 133. -200. 200. 941.5 967.
 RPP CBox_i     -220. 269. -298.3 231.7 -177.5 177.5
 RPP LBox       -188.5 188.5 -113. 142. 119. 159.
 RCC LBoxN_o    0.0 50. -120. 0.0 0.0 359. 145.
-TRC LBoxN_o5   0.0 50. -125. 0.0 0.0 294. 185. 230.
-RCC LBoxN_11   0.0 0.0 -125. 0.0 0.0 -10. 140.
+TRC LBoxN_o5   0.0 50. -125. 0.0 0.0 294. 195. 240.
+RCC LBoxN_11   0.0 0.0 -125. 0.0 0.0 -15. 180.
 TRC LBoxN_o9   0.0 50.0 -116.0 0.0 0.0 255.0 123.0 130.0
 RCC LBoxN_o3   0.0 50. -120. 0.0 0.0 359. 185.
 TRC LBoxN_o4   0.0 50. -120. 0.0 0.0 359. 185. 230.
@@ -917,7 +917,7 @@ RCC LBoxN_o1   0.0 0.0 139.0 0.0 0.0 181.0 65.0
 RCC LBoxN_10   0.0 0.0 139.0 0.0 0.0 181.0 50.0
 RCC LBoxN_o7   0.0 0.0 119.0 0.0 0.0 20.0 40.0
 RCC LBoxN_o6   0.0 0.0 239. 0.0 0.0 81. 95.
-TRC LBoxN_o8   0.0 0.0 169. 0.0 0.0 151. 190. 130.
+TRC LBoxN_o8   0.0 0.0 169. 0.0 0.0 151. 190. 120.
 RCC LBoxN_o2   0.0 50. 239. 0.0 0.0 81. 230.
 RPP LBox1      -18.5 18.5 -18.5 18.5 285.1 305.1
 ZCC LBox1_i    0.0 0.0 7.4
