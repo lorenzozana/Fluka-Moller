@@ -1166,7 +1166,7 @@ End
 
 # Material
 Material: AIR1
-	alpha: 100
+	alpha: 99
 	color: #46a4f1
 	fuzz: 0.0
 	ior: 1.0
@@ -1335,6 +1335,7 @@ Geometry:
 		Options.axes: False
 		Options.shortcut: F4
 		Options.viewport: False
+		Palette: True
 		Palette._visible: True
 		Palette.alphamin: True
 		Palette.cpd: 4
@@ -1346,21 +1347,24 @@ Geometry:
 		Palette2.cpd: 5
 		Palette2.max: 10000.0
 		Palette2.min: 0.01
-		Palette3: True
 		Palette3._visible: True
 		Palette3.alphamin: True
-		Palette3.cpd: 10
-		Palette3.max: 10000.0
-		Palette3.min: 1.0
-		Palette3.n: 40
+		Palette3.max: 46415.9
+		Palette3.min: 0.01
+		Palette3.n: 20
 		Palette5._visible: True
+		Palette5.alphamin: True
+		Palette5.cpd: 4
+		Palette5.min: 1e-10
+		Palette5.n: 60
 		Show._visible: True
 		Show.lattice: True
 		Show.voxel: True
 		Usrbin: True
 		Usrbin._visible: True
 		Usrbin.alpha: 2
-		Usrbin.file: target_shield54.bnn
+		Usrbin.det: 9
+		Usrbin.file: target_shield54_3.bnn
 		Usrbin.norm: 6.34E21
 		deflights: 1
 		layer: 3D
@@ -1371,7 +1375,7 @@ End
 Plot: Red
 	Format: .eps
 	Type:   Geometry
-	basisu: 1 0 0
+	basisu: -1 0 0
 	basisv: 0 0 1
 	boundaries: 1
 	cbcolors: 0
@@ -1381,12 +1385,12 @@ Plot: Red
 	cbtics: 0
 	coord: X-Z
 	cpd: 0
-	extends: 358.318 190.195
+	extends: 619.174 328.657
 	grid: 0
 	index: 0
 	labels: 1
 	layer: 3D
-	origin: 141.017 0 147.885
+	origin: 153.86 0 2.3032
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: False
@@ -1403,14 +1407,14 @@ End
 Plot: Green
 	Format: .eps
 	Type:   Geometry
-	basisu: -1 0 0
-	basisv: 0 1 0
+	basisu: 0 -1 0
+	basisv: 0 0 -1
 	boundaries: 1
-	coord: X-Y
-	extends: 1069.93 568.664
+	coord: Y-Z
+	extends: 515.977 274.24
 	labels: 1
 	layer: 3D
-	origin: -128.292 74.2453 0
+	origin: -70.1342 148.396 0
 	subtype: Material
 	title: GeoViewer Green plot
 End
@@ -1423,10 +1427,10 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 618.409 340.288
+	extends: 248.525 131.917
 	labels: 1
 	layer: 3D
-	origin: 0 175.112 -164.027
+	origin: 0 81.5695 -50.6337
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -1435,8 +1439,8 @@ End
 Plot: Magenta
 	Format: .eps
 	Type:   Geometry
-	basisu: -0.416395 0.0149058 0.909062
-	basisv: 0.217145 0.97256 0.0835162
+	basisu: 0 -0.0855576 0.996333
+	basisv: 0 0.996333 0.0855576
 	boundaries: 1
 	cbcolors: 0
 	cblog: 0
@@ -1445,12 +1449,12 @@ Plot: Magenta
 	cbtics: 0
 	coord: U-V
 	cpd: 0
-	extends: 743.007 47552.4
+	extends: 1283.92 682.396
 	grid: 0
 	index: 0
 	labels: 1
 	layer: 3D
-	origin: -186.978 -138.705 271.547
+	origin: -259.985 -265.527 357.315
 	subtype: Material
 	title: GeoViewer Magenta plot
 	x2log: 0
