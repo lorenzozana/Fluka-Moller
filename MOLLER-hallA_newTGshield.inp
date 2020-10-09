@@ -913,12 +913,13 @@ RCC LBoxN_o3   0.0 50. -120. 0.0 0.0 359. 185.
 TRC LBoxN_o4   0.0 50. -120. 0.0 0.0 359. 185. 230.
 RCC LBoxN_i    0.0 50. -115. 0.0 0.0 234. 115.
 RCC LBoxN_i1   0.0 50. -105. 0.0 0.0 205. 105.
-RCC LBoxN_o1   0.0 0.0 139.0 0.0 0.0 181.0 65.0
-TRC LBoxN_12   0.0 20. 139. 0.0 0.0 120. 110. 40.
-RCC LBoxN_10   0.0 0.0 139.0 0.0 0.0 181.0 50.0
-TRC LBoxN_o7   0.0 5. 119. 0.0 0.0 50. 80. 45.
+RCC LBoxN_o1   0.0 0.0 139.0 0.0 0.0 181.0 60.0
+TRC LBoxN_12   0.0 20. 139. 0.0 0.0 140. 110. 40.
+RCC LBoxN_10   0.0 0.0 139.0 0.0 0.0 181.0 45.0
+TRC LBoxN_o7   0.0 5. 119. 0.0 0.0 60. 80. 40.
 RCC LBoxN_o6   0.0 0.0 239. 0.0 0.0 81. 95.
-TRC LBoxN_o8   0.0 0.0 169. 0.0 0.0 151. 190. 150.
+TRC LBoxN_o8   0.0 20.0 169. 0.0 0.0 151. 210. 120.
+TRC LBoxN_13   0.0 30.0 169. 0.0 0.0 151. 240. 200.
 RCC LBoxN_o2   0.0 50. 239. 0.0 0.0 81. 230.
 RPP LBox1      -18.5 18.5 -18.5 18.5 285.1 305.1
 ZCC LBox1_i    0.0 0.0 7.4
@@ -2077,7 +2078,7 @@ sbsbunke     5 +sbsBunke -IronShie -IronShi1 -IronShi2 -IronShi3 -IronShi4 -Stee
 * hall_air
 hall         5 (+hal_tin -hal_tsub -hallcut )
                | hal_cin -hal_pipe
-               -LBoxN_o5 -CBox2_o -CBox3_o -LBoxN_o8 -LBoxN_11
+               -LBoxN_o5 -CBox2_o -CBox3_o -LBoxN_13 -LBoxN_11
                -CBox4_o  -LBox1 -Spipe_o -sbsBunke -vp_down -col5_cut -air7
                | +LBoxN_i1 -ShBore1 -ShBore -SC_o
                | +ShBore1 +LBoxN_o5 -SC_o -ShBore -hal_pipe
@@ -2085,6 +2086,7 @@ hall         5 (+hal_tin -hal_tsub -hallcut )
 Vdown        5 +vp_down
 SC           5 +SC_o -SC_i -Sc_i2 -hal_pipe
 ShHutC1      5 +CBox2_o -ShBore2
+               | +LBoxN_13 -LBoxN_o8
 ShHutC2      5 +CBox3_o -air7
 ShLeadC3     5 +CBox4_o -air7
 SHLead       5 +LBox1 -LBox1_i
