@@ -907,17 +907,18 @@ RPP CBox_i     -220. 269. -298.3 231.7 -177.5 177.5
 RPP LBox       -188.5 188.5 -113. 142. 119. 159.
 RCC LBoxN_o    0.0 50. -120. 0.0 0.0 359. 145.
 TRC LBoxN_o5   0.0 50. -125. 0.0 0.0 294. 195. 240.
-RCC LBoxN_11   0.0 0.0 -125. 0.0 0.0 -15. 180.
-TRC LBoxN_o9   0.0 50.0 -116.0 0.0 0.0 255.0 123.0 130.0
+RCC LBoxN_11   0.0 50.0 -125. 0.0 0.0 -25. 180.
+TRC LBoxN_o9   0.0 50.0 -116.0 0.0 0.0 255.0 123.0 140.0
 RCC LBoxN_o3   0.0 50. -120. 0.0 0.0 359. 185.
 TRC LBoxN_o4   0.0 50. -120. 0.0 0.0 359. 185. 230.
 RCC LBoxN_i    0.0 50. -115. 0.0 0.0 234. 115.
-RCC LBoxN_i1   0.0 50. -105. 0.0 0.0 214. 105.
+RCC LBoxN_i1   0.0 50. -105. 0.0 0.0 205. 105.
 RCC LBoxN_o1   0.0 0.0 139.0 0.0 0.0 181.0 65.0
+TRC LBoxN_12   0.0 20. 139. 0.0 0.0 120. 110. 40.
 RCC LBoxN_10   0.0 0.0 139.0 0.0 0.0 181.0 50.0
-RCC LBoxN_o7   0.0 0.0 119.0 0.0 0.0 20.0 40.0
+TRC LBoxN_o7   0.0 5. 119. 0.0 0.0 50. 80. 45.
 RCC LBoxN_o6   0.0 0.0 239. 0.0 0.0 81. 95.
-TRC LBoxN_o8   0.0 0.0 169. 0.0 0.0 151. 190. 120.
+TRC LBoxN_o8   0.0 0.0 169. 0.0 0.0 151. 190. 150.
 RCC LBoxN_o2   0.0 50. 239. 0.0 0.0 81. 230.
 RPP LBox1      -18.5 18.5 -18.5 18.5 285.1 305.1
 ZCC LBox1_i    0.0 0.0 7.4
@@ -2087,11 +2088,12 @@ ShHutC1      5 +CBox2_o -ShBore2
 ShHutC2      5 +CBox3_o -air7
 ShLeadC3     5 +CBox4_o -air7
 SHLead       5 +LBox1 -LBox1_i
-SHIron       5 +LBoxN_o5 -LBoxN_i -LBoxN_o7 -ShBore1 -LBoxN_o9 -LBoxN_o1
-               | +LBoxN_o8 -LBoxN_o1
+SHIron       5 +LBoxN_o5 -LBoxN_i -LBoxN_o7 -ShBore1 -LBoxN_o9 -LBoxN_o1 -LBoxN_12
+               | +LBoxN_o8 -LBoxN_o1 -LBoxN_12
                | +LBoxN_11 -ShBore1
 SHLead1      5 +LBoxN_o9 -LBoxN_i -LBoxN_o7 -ShBore1
-               | +LBoxN_o1 -LBoxN_10
+               | +LBoxN_o1 -LBoxN_10 -LBoxN_o7
+               | +LBoxN_12 -LBoxN_o1 -LBoxN_o7
 SHMarb       5 +LBoxN_i -LBoxN_i1 -ShBore -ShBore1
                | +LBoxN_10 -ShBore2
                | +LBoxN_o7 -ShBore

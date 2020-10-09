@@ -17,7 +17,7 @@ F77dline: False
 
 # Properties
 Properties: Input
-	REGION/hall/@select: 1
+	TRC/LBoxN_o7/@select: 1
 End
 
 # Run information
@@ -1338,9 +1338,9 @@ Geometry:
 		Palette._visible: True
 		Palette.alphamin: True
 		Palette.cpd: 4
-		Palette.max: 3.16228e+22
+		Palette.max: 1e+19
 		Palette.min: 100000.0
-		Palette.n: 70
+		Palette.n: 56
 		Palette2._visible: True
 		Palette2.alphamin: True
 		Palette2.cpd: 5
@@ -1354,8 +1354,9 @@ Geometry:
 		Palette5: True
 		Palette5._visible: True
 		Palette5.alphamin: True
-		Palette5.cpd: 4
-		Palette5.min: 1e-10
+		Palette5.cpd: 10
+		Palette5.max: 10000.0
+		Palette5.min: 0.01
 		Palette5.n: 60
 		Show._visible: True
 		Show.lattice: True
@@ -1363,7 +1364,6 @@ Geometry:
 		Usrbin: True
 		Usrbin._visible: True
 		Usrbin.alpha: 2
-		Usrbin.det: 4
 		Usrbin.file: target_shield54_3.bnn
 		Usrbin.norm: 3.6E-4
 		Usrbin.palette: Palette5
@@ -1386,12 +1386,12 @@ Plot: Red
 	cbtics: 0
 	coord: X-Z
 	cpd: 0
-	extends: 515.978 273.881
+	extends: 619.174 328.657
 	grid: 0
 	index: 0
 	labels: 1
-	layer: 3D
-	origin: 115.132 -0.1 -130.181
+	layer: Media
+	origin: -86.5741 -0.1 -2.55553
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: False
@@ -1428,10 +1428,10 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 515.34 273.542
+	extends: 742.09 809.199
 	labels: 1
-	layer: 3D
-	origin: 0 69.6799 -51.3331
+	layer: Media
+	origin: 0 113.09 204.171
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -1450,7 +1450,7 @@ Plot: Magenta
 	cbtics: 0
 	coord: U-V
 	cpd: 0
-	extends: 1283.92 682.396
+	extends: 1283.92 82170.6
 	grid: 0
 	index: 0
 	labels: 1
