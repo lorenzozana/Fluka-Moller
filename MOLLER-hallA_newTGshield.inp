@@ -859,7 +859,7 @@ USRBIN        -2660.     -300.    -2260.      266.       35.      266. &
 USRBIN           11.   DOSE-EQ      -54.      300.       0.0      400.SHTg_a1w
 USRBIN           0.0       0.0     -200.       15.        4.       30. &
 USRBIN           10.  SI1MEVNE      -51.     2660.      400.     3060.hall1MeV
-USRBIN        -2660.     -300.    -2260.      266.       35.      266. &
+USRBIN        -2660.     -300.    -2260.      100.       10.      110. &
 AUXSCORE      USRBIN                       bdoseeq   bdoseeq          EWT74
 USRBIN           10.   DOSE-EQ      -52.    30000.    30358.    30000.bdoseeq
 USRBIN       -30000.      358.   -30000.       60.       75.       60. &

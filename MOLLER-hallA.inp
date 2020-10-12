@@ -828,29 +828,50 @@ IRRPROFI     604800. 5.3053E14   345600.       0.0   604800. 5.3053E14
 * 4days intensity     7days intensity
 IRRPROFI     345600.       0.0   604800. 5.3053E14
 DCYTIMES       3600.    86400.   259200.   604800.  1209600.  2592000.
-DCYSCORE          1.                       hall_1h   hall_1h          USRBIN
-AUXSCORE      USRBIN                       hall_1h   hall_1h          EWT74
+DCYSCORE          1.                       hall_1h  SHTg_a1h          USRBIN
+AUXSCORE      USRBIN                       hall_1h  SHTg_a1h          EWT74
 USRBIN           10.   DOSE-EQ      -50.     2660.      400.     3060.hall_1h
 USRBIN        -2660.     -300.    -2260.      266.       35.      266. &
-DCYSCORE          2.                       hall_1d   hall_1d          USRBIN
-AUXSCORE      USRBIN                       hall_1d   hall_1d          EWT74
+USRBIN           11.   DOSE-EQ      -54.      300.       0.0      400.SHTg_a1h
+USRBIN           0.0       0.0     -200.       15.        4.       30. &
+DCYSCORE          2.                       hall_1d  SHTg_a1d          USRBIN
+AUXSCORE      USRBIN                       hall_1d  SHTg_a1d          EWT74
 USRBIN           10.   DOSE-EQ      -50.     2660.      400.     3060.hall_1d
 USRBIN        -2660.     -300.    -2260.      266.       35.      266. &
-DCYSCORE          3.                       hall_3d   hall_3d          USRBIN
-AUXSCORE      USRBIN                       hall_3d   hall_3d          EWT74
+USRBIN           11.   DOSE-EQ      -54.      300.       0.0      400.SHTg_a1d
+USRBIN           0.0       0.0     -200.       15.        4.       30. &
+DCYSCORE          3.                       hall_3d  SHTg_a3d          USRBIN
+AUXSCORE      USRBIN                       hall_3d  SHTg_a3d          EWT74
 USRBIN           10.   DOSE-EQ      -50.     2660.      400.     3060.hall_3d
 USRBIN        -2660.     -300.    -2260.      266.       35.      266. &
-DCYSCORE          4.                       hall_1w                    USRBIN
-AUXSCORE      USRBIN                       hall_1w   hall_1w          EWT74
+USRBIN           11.   DOSE-EQ      -54.      300.       0.0      400.SHTg_a3d
+USRBIN           0.0       0.0     -200.       15.        4.       30. &
+DCYSCORE          4.                       hall_1w  SHTg_a1w          USRBIN
+AUXSCORE      USRBIN                       hall_1w  SHTg_a1w          EWT74
 USRBIN           10.   DOSE-EQ      -50.     2660.      400.     3060.hall_1w
 USRBIN        -2660.     -300.    -2260.      266.       35.      266. &
+USRBIN           11.   DOSE-EQ      -54.      300.       0.0      400.SHTg_a1w
+USRBIN           0.0       0.0     -200.       15.        4.       30. &
 USRBIN           10.  SI1MEVNE      -51.     2660.      400.     3060.hall1MeV
-USRBIN        -2660.     -300.    -2260.      266.       35.      266. &
+USRBIN        -2660.     -300.    -2260.      100.       10.      110. &
 AUXSCORE      USRBIN                       bdoseeq   bdoseeq          EWT74
 USRBIN           10.   DOSE-EQ      -52.    30000.    30358.    30000.bdoseeq
 USRBIN       -30000.      358.   -30000.       60.       75.       60. &
 USRBIN           10.      DOSE      -52.    30000.    30358.    30000.bdose
 USRBIN       -30000.      358.   -30000.       60.       75.       60. &
+USRBIN           11.    ENERGY      -54.      300.       0.0      400.SHTgEn
+USRBIN           0.0       0.0     -200.       75.        4.      150. &
+USRBIN           11.    ENERGY      -54.      300.       0.0      400.SHTgEnN
+USRBIN           0.0       0.0     -200.       75.        4.      150. &
+USRBIN           11.    ENERGY      -54.      300.       0.0      400.SHTgEnPh
+USRBIN           0.0       0.0     -200.       75.        4.      150. &
+USRBIN           11.    ENERGY      -54.      300.       0.0      400.SHTgEne
+USRBIN           0.0       0.0     -200.       75.        4.      150. &
+AUXSCORE      USRBIN   NEUTRON             SHTgEnN   SHTgEnN
+AUXSCORE      USRBIN    PHOTON            SHTgEnPh  SHTgEnPh
+AUXSCORE      USRBIN  ELECTRON             SHTgEne   SHTgEne
+USRBIN           11.  SI1MEVNE      -54.      300.       0.0      400.SHTg1MeV
+USRBIN           0.0       0.0     -200.       75.        4.      150. &
 ROT-DEFI                   0.0       90.       0.0       0.0       0.0Coil1
 ROT-DEFI                   0.0    38.571       0.0       0.0       0.0Coil2
 ROT-DEFI                   0.0   -12.857       0.0       0.0       0.0Coil3
