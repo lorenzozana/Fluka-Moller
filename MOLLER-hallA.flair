@@ -2,7 +2,7 @@
 # FLUKA Project file
 Version: 2
 Title: MOLLER_Test
-Input: MOLLER-hallA_newTGshield.inp
+Input: MOLLER-hallA.inp
 Exec: moller.exe
 Submit: *Default
 Notes:
@@ -17,7 +17,7 @@ F77dline: False
 
 # Properties
 Properties: Input
-	TRC/LBoxN_o7/@select: 1
+	REGION/hall/@select: 1
 End
 
 # Run information
@@ -29,7 +29,7 @@ Run: <default>
 	StartRun: 1553894715
 	Family:  MOLLER-hallA_aa MOLLER-hallA_ab MOLLER-hallA_ac MOLLER-hallA_ad MOLLER-hallA_ae MOLLER-hallA_af MOLLER-hallA_ag MOLLER-hallA_ah MOLLER-hallA_ai MOLLER-hallA_aj MOLLER-hallA_ak MOLLER-hallA_al MOLLER-hallA_am MOLLER-hallA_an MOLLER-hallA_ao MOLLER-hallA_ap MOLLER-hallA_aq MOLLER-hallA_ar MOLLER-hallA_as MOLLER-hallA_at MOLLER-hallA_au MOLLER-hallA_av MOLLER-hallA_aw MOLLER-hallA_ax MOLLER-hallA_ay MOLLER-hallA_az MOLLER-hallA_ba MOLLER-hallA_bb MOLLER-hallA_bc MOLLER-hallA_bd
 
-	# USRxxx data file: MOLLER-hallA_newTGshield_50.bnn
+	# USRxxx data file: MOLLER-hallA_50.bnn
 	Data: \I_\U.\e
 		Unit: 50
 		Type: b
@@ -37,7 +37,7 @@ Run: <default>
 		Rule: +,\I\d\d\d_ftn\.\U
 	End
 
-	# USRxxx data file: MOLLER-hallA_newTGshield_51.bnn
+	# USRxxx data file: MOLLER-hallA_51.bnn
 	Data: \I_\U.\e
 		Unit: 51
 		Type: b
@@ -45,7 +45,7 @@ Run: <default>
 		Rule: +,\I\d\d\d_ftn\.\U
 	End
 
-	# USRxxx data file: MOLLER-hallA_newTGshield_52.bnn
+	# USRxxx data file: MOLLER-hallA_52.bnn
 	Data: \I_\U.\e
 		Unit: 52
 		Type: b
@@ -1115,9 +1115,19 @@ Material:
 End
 
 # Material
-Material: AL-6061
+Material: ZINC
 	alpha: 0
-	color: #309030
+	color: #1070B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: POTASSIU
+	alpha: 0
+	color: #70B0B0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1155,16 +1165,6 @@ Material: H-LIQUID
 End
 
 # Material
-Material: AIR2
-	alpha: 100
-	color: #46b8f1
-	fuzz: 0.0
-	ior: 1.0
-	shine: 10.0
-	specular: 0.0
-End
-
-# Material
 Material: AIR1
 	alpha: 99
 	color: #46a4f1
@@ -1175,9 +1175,9 @@ Material: AIR1
 End
 
 # Material
-Material: POTASSIU
-	alpha: 0
-	color: #70B0B0
+Material: AIR2
+	alpha: 100
+	color: #46b8f1
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1215,9 +1215,9 @@ Material: AIR5
 End
 
 # Material
-Material: ZINC
+Material: AL-6061
 	alpha: 0
-	color: #1070B0
+	color: #309030
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1287,8 +1287,8 @@ End
 # Geometry Information
 Geometry:
 	Frame.bsplit: 0.5
-	Frame.tsplit: 0.5
-	Frame.vsplit: 0.5
+	Frame.tsplit: 0.99
+	Frame.vsplit: 0.99
 
 	# Layer
 	Layer: Media
@@ -1355,16 +1355,16 @@ Geometry:
 		Palette5._visible: True
 		Palette5.alphamin: True
 		Palette5.cpd: 10
-		Palette5.max: 10000.0
-		Palette5.min: 0.01
-		Palette5.n: 60
+		Palette5.max: 1000.0
+		Palette5.min: 0.1
+		Palette5.n: 40
 		Show._visible: True
-		Show.lattice: True
-		Show.voxel: True
+		Show.label: None
 		Usrbin: True
 		Usrbin._visible: True
 		Usrbin.alpha: 2
-		Usrbin.file: target_shield54_3.bnn
+		Usrbin.det: 4
+		Usrbin.file: data_040119_50.bnn
 		Usrbin.norm: 3.6E-4
 		Usrbin.palette: Palette5
 		deflights: 1
@@ -1386,12 +1386,12 @@ Plot: Red
 	cbtics: 0
 	coord: X-Z
 	cpd: 0
-	extends: 619.174 328.657
+	extends: 891.611 451.503
 	grid: 0
 	index: 0
 	labels: 1
-	layer: Media
-	origin: -86.5741 -0.1 -2.55553
+	layer: 3D
+	origin: -34.8404 -0.1 26.8603
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: False
@@ -1412,7 +1412,7 @@ Plot: Green
 	basisv: 0 0 -1
 	boundaries: 1
 	coord: Y-Z
-	extends: 515.977 274.24
+	extends: 515.977 13931.4
 	labels: 1
 	layer: 3D
 	origin: -70.1342 148.396 0
@@ -1428,10 +1428,10 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 742.09 809.199
+	extends: 742.09 375.788
 	labels: 1
-	layer: Media
-	origin: 0 113.09 204.171
+	layer: 3D
+	origin: 0 -47.9255 243.126
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -1450,7 +1450,7 @@ Plot: Magenta
 	cbtics: 0
 	coord: U-V
 	cpd: 0
-	extends: 1283.92 82170.6
+	extends: 1283.92 71214.8
 	grid: 0
 	index: 0
 	labels: 1
