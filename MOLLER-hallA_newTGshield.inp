@@ -7,7 +7,7 @@ PHYSICS           1.                                                  COALESCE
 PHYSICS           3.                                                  EVAPORAT
 PHOTONUC          1.                      BLCKHOLE  @LASTMAT
 BEAMPOS          0.0       0.0     -62.5       0.0       0.0
-START         20000.
+START        500000.
 RANDOMIZ          1.       21.
 MATERIAL         19.   39.0983     0.862                           0.0POTASSIU
 MATERIAL         0.0       0.0      2.35                           0.0CONCRETE
@@ -93,7 +93,7 @@ STERNHEI      3.5017       .24    2.8004    .09116    3.4773          WATER
 MATERIAL                            2.71                              Marble
 COMPOUND         1.0   CALCIUM       1.0    CARBON       3.0    OXYGENMarble
 ASSIGNMA      VACUUM  logicMot
-ASSIGNMA         AIR      hall
+ASSIGNMA         AIR      hall  Air_tgch
 ASSIGNMA    ALUMINUM        SC
 ASSIGNMA    Concrete   ShHutC1   ShHutC2
 ASSIGNMA        LEAD   SHLead1
@@ -2004,6 +2004,13 @@ Dirth4       5 +dirtou1 -dirto1_3 -dir_c1
                | +dirtou5 +dir8_c1 -(+dirtou8 -dirtou4 ) -dirtou6 -dir4_c1 -dirto1_3
                | +dirtou5 +dir7_c1 -(+dirtou7 -dirtou4 ) -dirtou6 -dir4_c1 -dirto1_3
                | +dirtou4 -dirtou5 -dir4_r -dir4_c1 -dirto1_3
+* hall_air
+hall         5 (+hal_tin -hal_tsub -hallcut )
+               | hal_cin -hal_pipe
+               -LBoxN_o5 -CBox2_o -CBox3_o -LBoxN_13 -LBoxN_11
+               -CBox4_o  -LBox1 -Spipe_o -sbsBunke -vp_down -col5_cut -air7
+               | +ShBore1 +LBoxN_o5 -SC_o -ShBore -hal_pipe
+               | +ShBore1 +LBoxN_11 -hal_pipe
 WALL1        5 +dmptun2 -dmp_tunl -pl1830 -ha_out
                | +pl1830 +tun2 -tun1 -ha_out
                | +pl1860 +tun2 -dmptun2 -pl1830
@@ -2054,6 +2061,7 @@ Dumpcov      5 +dirtou9 -tun4 -dirtou10 -dirtou11 -dirtou12 -dirtou13 -dirtou14 
                | +tun4 +tun5 -dmptun4 -pl1920
                | +dirtou9 -tun5 -dirtou10 -dirtou11 -dirtou12 -dirtou13 -dirtou14 -dirtou15
                -dirtou16 -dirtou17 -dirtou18 -dirtou19
+Air_tgch     5 +LBoxN_i1 -ShBore1 -ShBore -SC_o
 Dirthlow     5 +dirtou20 -dirtou9 -dirtou4
 * IronShieldType1_l [/sbsbunker]
 * ref: IronShieldType1_l
@@ -2079,14 +2087,6 @@ sbsBunke     5 +sbsBunk1
 * sbsbunker []
 * ref: sbsbunker
 sbsbunke     5 +sbsBunke -IronShie -IronShi1 -IronShi2 -IronShi3 -IronShi4 -SteelShi -sbsBunk1
-* hall_air
-hall         5 (+hal_tin -hal_tsub -hallcut )
-               | hal_cin -hal_pipe
-               -LBoxN_o5 -CBox2_o -CBox3_o -LBoxN_13 -LBoxN_11
-               -CBox4_o  -LBox1 -Spipe_o -sbsBunke -vp_down -col5_cut -air7
-               | +LBoxN_i1 -ShBore1 -ShBore -SC_o
-               | +ShBore1 +LBoxN_o5 -SC_o -ShBore -hal_pipe
-               | +ShBore1 +LBoxN_11 -hal_pipe
 Vdown        5 +vp_down
 SC           5 +SC_o -SC_i -Sc_i2 -hal_pipe
 ShHutC1      5 +CBox2_o -ShBore2
@@ -3573,19 +3573,20 @@ HEBLIN       5 +heblin +dmppl1 -hewin2 +pl1830
 END
 GEOEND
 STOP
-BIASING          0.0              0.0001  Dirthlow    HEBLIN        1.
-BIASING          0.0              0.0001     WALL1     WALL1        1.
-BIASING          0.0              0.0001     WALL2     WALL2        1.
-BIASING          0.0              0.0001     WALL3     WALL3        1.
-BIASING          0.0              0.0001     WALL4                  1.
-BIASING          0.0              0.0001     WALL5                  1.
-BIASING          0.0              0.0005     WALL6                  1.
+BIASING          0.0              0.0001  Air_tgch    HEBLIN        1.
+BIASING          0.0              0.0005      hall                  1.
+BIASING          0.0              0.0005     WALL1     WALL1        1.
+BIASING          0.0              0.0025     WALL2     WALL2        1.
+BIASING          0.0              0.0025     WALL3     WALL3        1.
+BIASING          0.0              0.0025     WALL4                  1.
+BIASING          0.0              0.0025     WALL5                  1.
 BIASING          0.0              0.0025     WALL6                  1.
-BIASING          0.0              0.0125     WALL8                  1.
-BIASING          0.0              0.0625     WALL9   Dumpcov        1.
-BIASING          0.0              0.3125    Dirth1                  1.
-BIASING          0.0              1.5625    Dirth2                  1.
-BIASING          0.0              7.8125    Dirth3                  1.
+BIASING          0.0              0.0125     WALL7                  1.
+BIASING          0.0              0.0625     WALL8                  1.
+BIASING          0.0              0.3125     WALL9   Dumpcov        1.
+BIASING          0.0              1.5625    Dirth1                  1.
+BIASING          0.0              7.8125    Dirth2                  1.
+BIASING          0.0              39.065    Dirth3                  1.
 BIASING          0.0              39.065    Dirth4                  1.
 BIASING          0.0            195.3125    Ai1_50    Ai1_50        1.
 BIASING          0.0                900.   Ai1_250   Ai1_250        1.
