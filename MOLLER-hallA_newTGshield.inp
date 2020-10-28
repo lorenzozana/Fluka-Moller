@@ -37,7 +37,6 @@ MATERIAL                            2.34                              Concrete
 COMPOUND         23.    CARBON       40.    OXYGEN       12.   SILICONConcrete
 COMPOUND         12.   CALCIUM       10.  HYDROGEN        2.  MAGNESIUConcrete
 MATERIAL          1.               .0708                              H-LIQUID
-LOW-MAT     LiquidHy        1.       -2.       87.                    HYDROGEN
 * Nitrogen atmosphere in the dump tunnel
 MATERIAL                       .00120484                              DMPATM
 COMPOUND   -1.248E-4    CARBON -.9800482  NITROGEN -0.012827     ARGONDMPATM
