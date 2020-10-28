@@ -6,6 +6,7 @@ BEAM            -11.       0.0     0.136       0.5       0.5          ELECTRON
 PHYSICS           1.                                                  COALESCE
 PHYSICS           3.                                                  EVAPORAT
 PHOTONUC          1.                      BLCKHOLE  @LASTMAT
+PHOTONUC          1.                      LiquidHy  LiquidHy          ELECTNUC
 BEAMPOS          0.0       0.0     -62.5       0.0       0.0
 START        500000.
 RANDOMIZ          1.       21.
@@ -15,7 +16,7 @@ COMPOUND       -0.01  HYDROGEN    -0.001    CARBON -0.529107    OXYGENCONCRETE
 COMPOUND      -0.016    SODIUM    -0.002  MAGNESIU -0.033872  ALUMINUMCONCRETE
 COMPOUND   -0.337021   SILICON    -0.013  POTASSIU    -0.044   CALCIUMCONCRETE
 COMPOUND      -0.014      IRON                                        CONCRETE
-MATERIAL          1.   1.00794    0.0708                              LiquidHy
+MATERIAL          1.   1.00794    0.0708            H-LIQUID          LiquidHy
 COMPOUND          2.  HYDROGEN                                        LiquidHy
 MATERIAL                             18.                              CW95
 COMPOUND        0.95  TUNGSTEN     0.015    COPPER     0.035    NICKELCW95
