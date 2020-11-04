@@ -2,13 +2,13 @@
 # FLUKA Project file
 Version: 2
 Title: MOLLER_Test
-Input: MOLLER-hallA_newTGshield.inp
+Input: MOLLER-hallA_full_Iron.inp
 Exec: moller.exe
 Submit: *Default
 Notes:
 {img:MOLLER-hallA_plot05.png}
 Tabs: 0.1 0.32 0.56 0.81 1.0
-Page: Input
+Page: Flair
 Source: Magnetic_field/magfld_test7.f
 DefMain: True
 LinkPrg: lfluka
@@ -17,7 +17,7 @@ F77dline: False
 
 # Properties
 Properties: Input
-	RCC/hal_cout/@select: 1
+	REGION/ShHutC1/@select: 1
 End
 
 # Run information
@@ -29,7 +29,7 @@ Run: <default>
 	StartRun: 1553894715
 	Family:  MOLLER-hallA_aa MOLLER-hallA_ab MOLLER-hallA_ac MOLLER-hallA_ad MOLLER-hallA_ae MOLLER-hallA_af MOLLER-hallA_ag MOLLER-hallA_ah MOLLER-hallA_ai MOLLER-hallA_aj MOLLER-hallA_ak MOLLER-hallA_al MOLLER-hallA_am MOLLER-hallA_an MOLLER-hallA_ao MOLLER-hallA_ap MOLLER-hallA_aq MOLLER-hallA_ar MOLLER-hallA_as MOLLER-hallA_at MOLLER-hallA_au MOLLER-hallA_av MOLLER-hallA_aw MOLLER-hallA_ax MOLLER-hallA_ay MOLLER-hallA_az MOLLER-hallA_ba MOLLER-hallA_bb MOLLER-hallA_bc MOLLER-hallA_bd
 
-	# USRxxx data file: MOLLER-hallA_newTGshield_50.bnn
+	# USRxxx data file: MOLLER-hallA_full_Iron_50.bnn
 	Data: \I_\U.\e
 		Unit: 50
 		Type: b
@@ -37,7 +37,7 @@ Run: <default>
 		Rule: +,\I\d\d\d_ftn\.\U
 	End
 
-	# USRxxx data file: MOLLER-hallA_newTGshield_51.bnn
+	# USRxxx data file: MOLLER-hallA_full_Iron_51.bnn
 	Data: \I_\U.\e
 		Unit: 51
 		Type: b
@@ -45,7 +45,7 @@ Run: <default>
 		Rule: +,\I\d\d\d_ftn\.\U
 	End
 
-	# USRxxx data file: MOLLER-hallA_newTGshield_52.bnn
+	# USRxxx data file: MOLLER-hallA_full_Iron_52.bnn
 	Data: \I_\U.\e
 		Unit: 52
 		Type: b
@@ -1115,9 +1115,19 @@ Material:
 End
 
 # Material
-Material: ZINC
+Material: AL-6061
 	alpha: 0
-	color: #1070B0
+	color: #309030
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: POTASSIU
+	alpha: 0
+	color: #70B0B0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1155,16 +1165,6 @@ Material: H-LIQUID
 End
 
 # Material
-Material: AIR2
-	alpha: 100
-	color: #46b8f1
-	fuzz: 0.0
-	ior: 1.0
-	shine: 10.0
-	specular: 0.0
-End
-
-# Material
 Material: AIR1
 	alpha: 99
 	color: #46a4f1
@@ -1175,9 +1175,9 @@ Material: AIR1
 End
 
 # Material
-Material: POTASSIU
-	alpha: 0
-	color: #70B0B0
+Material: AIR2
+	alpha: 100
+	color: #46b8f1
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1215,9 +1215,9 @@ Material: AIR5
 End
 
 # Material
-Material: AL-6061
+Material: ZINC
 	alpha: 0
-	color: #309030
+	color: #1070B0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1286,9 +1286,9 @@ End
 
 # Geometry Information
 Geometry:
-	Frame.bsplit: 0.99
+	Frame.bsplit: 0.5
 	Frame.tsplit: 0.5
-	Frame.vsplit: 0.01
+	Frame.vsplit: 0.5
 
 	# Layer
 	Layer: Media
@@ -1367,7 +1367,8 @@ Geometry:
 		Usrbin: True
 		Usrbin._visible: True
 		Usrbin.alpha: 2
-		Usrbin.file: target_shield51_5.bnn
+		Usrbin.det: 9
+		Usrbin.file: target_shield54_7.bnn
 		Usrbin.norm: 6.34E21
 		deflights: 1
 		layer: 3D
@@ -1388,12 +1389,12 @@ Plot: Red
 	cbtics: 0
 	coord: X-Z
 	cpd: 0
-	extends: 5520.62 2765.53
+	extends: 743.009 345.961
 	grid: 0
 	index: 0
 	labels: 1
-	layer: 3D
-	origin: 1426 -0.1 665.455
+	layer: Media
+	origin: -39.466 -0.1 95.9709
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: False
@@ -1414,7 +1415,7 @@ Plot: Green
 	basisv: 0 0 1
 	boundaries: 1
 	coord: X-Z
-	extends: 619.172 35160.1
+	extends: 619.172 288.3
 	labels: 1
 	layer: Media
 	origin: 0 0 4.92023
@@ -1430,10 +1431,10 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 3190.85 1598.44
+	extends: 890.508 414.639
 	labels: 1
 	layer: Media
-	origin: 0.1 -75.1181 2742.68
+	origin: 0.1 -97.0285 134.287
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -1452,7 +1453,7 @@ Plot: Magenta
 	cbtics: 0
 	coord: U-V
 	cpd: 0
-	extends: 1283.92 35399.5
+	extends: 1283.92 597.82
 	grid: 0
 	index: 0
 	labels: 1
@@ -2156,13 +2157,13 @@ Plot: MOLLER-hallA_52_plot06
 	ztics: 0
 End
 
-# USRBIN plot "Boundary Dose: First Simulation"
+# USRBIN plot "Boundary Dose: New shielding"
 Plot: MOLLER-hallA_52_plot09
 	Format: .pdf
 	Type:   USRBIN
 	axes: Auto
 	bxmax: 10000
-	bxmin: -10000.
+	bxmin: 0.
 	cbcolors: 30
 	cblog: True
 	cbmax: 1000
@@ -2171,23 +2172,23 @@ Plot: MOLLER-hallA_52_plot09
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: target_shield52_5.bnn
+	datafile: target_shield53_7.bnn
 	det: 1
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 2D Projection
 	index: 7
-	int: 91.356891965779326
+	int: 47.136139758103340
 	lw.0: 0
-	max: 1.48792711E-09
-	min: 7.70786284E-17
+	max: 9.60577617E-10
+	min: 6.06531905E-17
 	norm: 3.807E14
 	proj: X
 	ps.0: 0
 	pt.0: 0
 	swap: 0
-	title: Boundary Dose: First Simulation
+	title: Boundary Dose: New shielding
 	with.0: errorbars
 	x2log: False
 	x2tics: 0
@@ -2204,7 +2205,7 @@ Plot: MOLLER-hallA_52_plot09
 	ztics: 0
 End
 
-# USRBIN plot "Boundary Dose: First Simulation"
+# USRBIN plot "Boundary Dose: First Simulation (-100m to 100m in x)"
 Plot: MOLLER-hallA_52_plot10
 	Format: .pdf
 	Type:   USRBIN
@@ -2219,23 +2220,23 @@ Plot: MOLLER-hallA_52_plot10
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: data_0412_52.bnn
+	datafile: data_040119_52.bnn
 	det: 1
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 2D Projection
 	index: 6
-	int: 99.749224909963317
+	int: 300.99134413568368
 	lw.0: 0
-	max: 1.77402182E-09
-	min: 3.13237072E-16
+	max: 3.49617113E-09
+	min: 1.65346032E-14
 	norm: 3.807E14
 	proj: X
 	ps.0: 0
 	pt.0: 0
 	swap: 0
-	title: Boundary Dose: First Simulation
+	title: Boundary Dose: First Simulation (-100m to 100m in x)
 	with.0: errorbars
 	x2log: False
 	x2tics: 0
@@ -2246,105 +2247,249 @@ Plot: MOLLER-hallA_52_plot10
 	y2tics: 0
 	ylabel: cm
 	ylog: False
-	yrebin: 1
+	yrebin: 5
 	zlog: False
-	zrebin: 1
+	zrebin: 5
 	ztics: 0
 End
 
-# USRBIN plot "Boundary Dose: First Simulation 50m average"
+# USRBIN plot "Boundary Dose: First Simulation 10m average"
 Plot: MOLLER-hallA_52_plot04
 	Format: .eps
 	Type:   USRBIN
 	axes: Auto
-	bymax: 7558.
+	bymax: 1358
 	bymin: 358.
 	cbcolors: 30
-	cblog: True
-	cbmax: 1000
-	cbmin: 1
+	cblog: False
+	cbmax: 100
+	cbmin: 0
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: data_0412_52.bnn
+	datafile: data_040119_52.bnn
 	det: 1
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 2D Projection
 	index: 4
-	int: 95.511582714217880
+	int: 274.22795445740513
 	lw.0: 0
-	max: 1.29775879E-09
-	min: 1.25806329E-17
+	max: 1.17207621E-09
+	min: 1.51807904E-14
 	norm: 3.807E14
 	proj: Y
 	ps.0: 0
 	pt.0: 0
 	swap: 0
-	title: Boundary Dose: First Simulation 50m average
+	title: Boundary Dose: First Simulation 10m average
 	with.0: errorbars
 	x2log: False
 	x2tics: 0
 	xlabel: cm
 	xlog: False
-	xrebin: 1
+	xrebin: 19
 	y2log: False
 	y2tics: 0
 	ylabel: cm
 	ylog: False
 	yrebin: 1
 	zlog: False
-	zrebin: 1
+	zrebin: 20
 	ztics: 0
 End
 
-# USRBIN plot "Boundary Dose: First Simulation E7"
-Plot: MOLLER-hallA_52_plot05
+# USRBIN plot "Boundary Dose: First Simulation 10m average"
+Plot: MOLLER-hallA_52_plot11
 	Format: .eps
 	Type:   USRBIN
 	axes: Auto
-	bymax: 5558
+	bymax: 1558
 	bymin: 358.
 	cbcolors: 30
-	cblog: True
-	cbmax: 1000
-	cbmin: 1
+	cblog: False
+	cbmax: 100
+	cbmin: 0
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: dataE7_52.bnn
+	datafile: target_shield52_7.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 3
+	int: 100.09132235533922
+	lw.0: 0
+	max: 2.92837088E-10
+	min: 3.81576617E-16
+	norm: 3.807E14
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: First Simulation 10m average
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: cm
+	xlog: False
+	xrebin: 10
+	y2log: False
+	y2tics: 0
+	ylabel: cm
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 10
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: First Simulation 10m average"
+Plot: MOLLER-hallA_52_plot12
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bymax: 1558
+	bymin: 358.
+	cbcolors: 30
+	cblog: False
+	cbmax: 50
+	cbmin: 0
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: target_shield52_7.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 3
+	int: 100.09132235533922
+	lw.0: 0
+	max: 2.92837088E-10
+	min: 3.81576617E-16
+	norm: 3.807E14
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: First Simulation 10m average
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: cm
+	xlog: False
+	xrebin: 10
+	y2log: False
+	y2tics: 0
+	ylabel: cm
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 10
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: New shielding 10m (height) average."
+Plot: MOLLER-hallA_52_plot05
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bymax: 1358
+	bymin: 358.
+	cbcolors: 30
+	cblog: False
+	cbmax: 100
+	cbmin: 0
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: target_shield53_7.bnn
 	det: 1
 	errors: 0
 	geo: -No-
 	grid: 0
 	hist: 2D Projection
 	index: 5
-	int: 94.769552537045655
+	int: 43.613879546310265
 	lw.0: 0
-	max: 1.78666382E-09
-	min: 2.99526864E-17
+	max: 7.31726346E-10
+	min: 3.79018359E-17
 	norm: 3.807E14
 	proj: Y
 	ps.0: 0
 	pt.0: 0
 	swap: 0
-	title: Boundary Dose: First Simulation E7
+	title: Boundary Dose: New shielding 10m (height) average.
 	with.0: errorbars
 	x2log: False
 	x2tics: 0
 	xlabel: cm
 	xlog: False
-	xrebin: 1
+	xrebin: 8
 	y2log: False
 	y2tics: 0
 	ylabel: cm
 	ylog: False
 	yrebin: 1
 	zlog: False
-	zrebin: 1
+	zrebin: 3
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: New shielding 10m (height) average."
+Plot: MOLLER-hallA_52_plot13
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bymax: 1358
+	bymin: 358.
+	cbcolors: 30
+	cblog: False
+	cbmax: 50
+	cbmin: 0
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: target_shield53_7.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 8
+	int: 43.613879546310265
+	lw.0: 0
+	max: 7.31726346E-10
+	min: 3.79018359E-17
+	norm: 3.807E14
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: New shielding 10m (height) average.
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: cm
+	xlog: False
+	xrebin: 8
+	y2log: False
+	y2tics: 0
+	ylabel: cm
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 3
 	ztics: 0
 End
 
