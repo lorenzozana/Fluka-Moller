@@ -6,6 +6,7 @@ BEAM            -11.       0.0     0.136       0.5       0.5          ELECTRON
 PHYSICS           1.                                                  COALESCE
 PHYSICS           3.                                                  EVAPORAT
 PHOTONUC          1.                      BLCKHOLE  @LASTMAT
+PHOTONUC          1.                      LiquidHy  LiquidHy          ELECTNUC
 BEAMPOS          0.0       0.0     -62.5       0.0       0.0
 START         10000.
 RANDOMIZ          1.       21.
@@ -92,6 +93,7 @@ MAT-PROP                             75.     WATER
 STERNHEI      3.5017       .24    2.8004    .09116    3.4773          WATER
 ASSIGNMA      VACUUM  logicMot
 ASSIGNMA         AIR      hall
+ASSIGNMA         AIR   hall_in
 ASSIGNMA    ALUMINUM        SC
 ASSIGNMA    Concrete    ShHutC   ShHutC2
 ASSIGNMA        LEAD    SHLead
@@ -854,11 +856,15 @@ USRBIN           11.   DOSE-EQ      -54.      300.       0.0      400.SHTg_a1w
 USRBIN           0.0       0.0     -200.       15.        4.       30. &
 USRBIN           10.  SI1MEVNE      -51.     2660.      400.     3060.hall1MeV
 USRBIN        -2660.     -300.    -2260.      100.       10.      110. &
-AUXSCORE      USRBIN                       bdoseeq   bdoseeq          EWT74
+AUXSCORE      USRBIN                      bdoseeq1  bdoseeq1          EWT74
 USRBIN           10.   DOSE-EQ      -52.    30000.    30358.    30000.bdoseeq
 USRBIN       -30000.      358.   -30000.       60.       75.       60. &
 USRBIN           10.      DOSE      -52.    30000.    30358.    30000.bdose
 USRBIN       -30000.      358.   -30000.       60.       75.       60. &
+USRBIN           13.   DOSE-EQ      -53.    30000.    30358.    30000.bdoseeq1
+USRBIN           0.0      358.   -30000.       30.       30.       20. &
+USRBIN           13.      DOSE      -53.    30000.    30358.    30000.bdose1
+USRBIN           0.0      358.   -30000.       30.       30.       20. &
 USRBIN           11.    ENERGY      -54.      300.       0.0      400.SHTgEn
 USRBIN           0.0       0.0     -200.       75.        4.      150. &
 USRBIN           11.    ENERGY      -54.      300.       0.0      400.SHTgEnN
@@ -892,8 +898,8 @@ RCC air6       0.0 358. 400. 0.0 100000. 0.0 50000.
 RCC air7       0.0 0.0 600. 0.0 0.0 376.657 35.
 RCC ShBore     0.0 0.0 100. 0.0 0.0 600. 40.
 RCC ShBore2    0.0 0.0 100. 0.0 0.0 710. 35.
-RCC ShBore1    0.0 0.0 0.0 0.0 0.0 -600. 5.
-RPP CBox_o     -360. 409. -298.3 371.7 -317.5 317.5
+RCC ShBore1    0.0 0.0 0.0 0.0 0.0 -317.5 5.
+RPP CBox_o     -360.0 409.0 -298.3 371.7 -317.5 320.0
 RPP CBox2_o    -175. 175. -210. 210. 320. 801.5
 RPP CBox3_o    -175. 175. -122.5 125. 812. 941.5
 RPP CBox4_o    -133. 133. -200. 200. 941.5 967.
@@ -1312,7 +1318,7 @@ PLA pcon_b76   4.70759639978788 4.8780749973841315 0.0 8.77095659680842
 PLA pcon_b77   7.201810436639886 8.314681379024984 0.0 18.155804262123574
               -14.847736229192616 -5.5
 * col5_vacuum_cut
-RCC col5_cut   0.0 0.0 986.657 0.0 0.0 700. 42.
+RCC col5_cut   0.0 0.0 976.66 0.0 0.0 709.997 42.0
 TRC vp_down    0.0 0.0 1686.657 0.0 0.0 1363.343 42. 45.72
 * col5_trd1_plane1
 YZP col5t1p1   -7.199999999999999
@@ -1978,6 +1984,10 @@ Dirth4       5 +dirtou1 -dirto1_3 -dir_c1
                | +dirtou5 +dir8_c1 -(+dirtou8 -dirtou4 ) -dirtou6 -dir4_c1 -dirto1_3
                | +dirtou5 +dir7_c1 -(+dirtou7 -dirtou4 ) -dirtou6 -dir4_c1 -dirto1_3
                | +dirtou4 -dirtou5 -dir4_r -dir4_c1 -dirto1_3
+* hall_air
+hall         5 (+hal_tin -hal_tsub -hallcut )
+               | hal_cin -hal_pipe  -CBox_o  -( +LBox -ShBore ) -CBox2_o -CBox3_o -col5_cut -air7
+               -CBox4_o  -LBox1 -Spipe_o -sbsBunke -vp_down
 WALL1        5 +dmptun2 -dmp_tunl -pl1830 -ha_out
                | +pl1830 +tun2 -tun1 -ha_out
                | +pl1860 +tun2 -dmptun2 -pl1830
@@ -2053,11 +2063,10 @@ sbsBunke     5 +sbsBunk1
 * sbsbunker []
 * ref: sbsbunker
 sbsbunke     5 +sbsBunke -IronShie -IronShi1 -IronShi2 -IronShi3 -IronShi4 -SteelShi -sbsBunk1
-* hall_air
-hall         5 (+hal_tin -hal_tsub -hallcut )
-               | hal_cin -hal_pipe -( +SC_o -Sc_i2 )  -(col1_0 | col1_1 | col1_2) -col2_0 -col1fin0 -col5_cut -air7
-               -( +CBox_o -CBox_i -ShBore -ShBore1  )  -( +LBox -ShBore ) -( +CBox2_o -ShBore2 ) -CBox3_o
-               -CBox4_o  -LBox1 -Spipe_o -sbsBunke -vp_down
+hall_in      5 | +CBox_i -( +SC_o -SC_i -Sc_i2 ) -hal_pipe -( +LBox -ShBore ) -tubeTarg
+               | +ShBore +CBox_o -( +LBox1 -LBox1_i )
+               | +ShBore1 -hal_pipe -tubeTarg -( +SC_o -SC_i )
+               | +ShBore2 -( +LBox1 -LBox1_i ) -(col1_0 | col1_1 | col1_2) -col2_0 -col1fin0 -air7
                | +LBox1_i +LBox1
                | +SC_i -tubeTarg -hal_pipe
 Vdown        5 +vp_down
@@ -3534,18 +3543,19 @@ END
 GEOEND
 STOP
 BIASING          0.0              0.0001  Dirthlow    HEBLIN        1.
-BIASING          0.0              0.0001     WALL1     WALL1        1.
-BIASING          0.0              0.0001     WALL2     WALL2        1.
-BIASING          0.0              0.0001     WALL3     WALL3        1.
-BIASING          0.0              0.0001     WALL4                  1.
-BIASING          0.0              0.0001     WALL5                  1.
-BIASING          0.0              0.0005     WALL6                  1.
+BIASING          0.0              0.0005     WALL1     WALL1        1.
+BIASING          0.0              0.0005   hall_in   hall_in        1.
+BIASING          0.0              0.0025     WALL2     WALL2        1.
+BIASING          0.0              0.0025     WALL3     WALL3        1.
+BIASING          0.0              0.0025     WALL4                  1.
+BIASING          0.0              0.0025     WALL5                  1.
 BIASING          0.0              0.0025     WALL6                  1.
-BIASING          0.0              0.0125     WALL8                  1.
-BIASING          0.0              0.0625     WALL9   Dumpcov        1.
-BIASING          0.0              0.3125    Dirth1                  1.
-BIASING          0.0              1.5625    Dirth2                  1.
-BIASING          0.0              7.8125    Dirth3                  1.
+BIASING          0.0              0.0125     WALL7                  1.
+BIASING          0.0              0.0625     WALL8                  1.
+BIASING          0.0              0.3125     WALL9   Dumpcov        1.
+BIASING          0.0              1.5625    Dirth1                  1.
+BIASING          0.0              7.8125    Dirth2                  1.
+BIASING          0.0              39.065    Dirth3                  1.
 BIASING          0.0              39.065    Dirth4                  1.
 BIASING          0.0            195.3125    Ai1_50    Ai1_50        1.
 BIASING          0.0                900.   Ai1_250   Ai1_250        1.
