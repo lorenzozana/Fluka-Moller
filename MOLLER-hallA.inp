@@ -8,7 +8,7 @@ PHYSICS           3.                                                  EVAPORAT
 PHOTONUC          1.                      BLCKHOLE  @LASTMAT
 PHOTONUC          1.                      LiquidHy  LiquidHy          ELECTNUC
 BEAMPOS          0.0       0.0     -62.5       0.0       0.0
-START         10000.
+START        500000.
 RANDOMIZ          1.       21.
 MATERIAL         19.   39.0983     0.862                           0.0POTASSIU
 MATERIAL         0.0       0.0      2.35                           0.0CONCRETE
@@ -865,19 +865,19 @@ USRBIN           13.   DOSE-EQ      -53.    30000.    30358.    30000.bdoseeq1
 USRBIN           0.0      358.   -30000.       30.       30.       20. &
 USRBIN           13.      DOSE      -53.    30000.    30358.    30000.bdose1
 USRBIN           0.0      358.   -30000.       30.       30.       20. &
-USRBIN           11.    ENERGY      -54.      300.       0.0      400.SHTgEn
-USRBIN           0.0       0.0     -200.       75.        4.      150. &
-USRBIN           11.    ENERGY      -54.      300.       0.0      400.SHTgEnN
-USRBIN           0.0       0.0     -200.       75.        4.      150. &
-USRBIN           11.    ENERGY      -54.      300.       0.0      400.SHTgEnPh
-USRBIN           0.0       0.0     -200.       75.        4.      150. &
-USRBIN           11.    ENERGY      -54.      300.       0.0      400.SHTgEne
-USRBIN           0.0       0.0     -200.       75.        4.      150. &
+USRBIN           13.    ENERGY      -54.      450.      500.      400.SHTgEn
+USRBIN           0.0    -300.0     -400.       45.       80.       80. &
+USRBIN           13.    ENERGY      -54.      450.      500.      400.SHTgEnN
+USRBIN           0.0    -300.0     -400.       45.       80.       80. &
+USRBIN           13.    ENERGY      -54.      450.      500.      400.SHTgEne
+USRBIN           0.0    -300.0     -400.       45.       80.       80. &
+USRBIN           13.    ENERGY      -54.      450.      500.      400.SHTgEnPh
+USRBIN           0.0    -300.0     -400.       45.       80.       80. &
 AUXSCORE      USRBIN   NEUTRON             SHTgEnN   SHTgEnN
 AUXSCORE      USRBIN    PHOTON            SHTgEnPh  SHTgEnPh
 AUXSCORE      USRBIN  ELECTRON             SHTgEne   SHTgEne
-USRBIN           11.  SI1MEVNE      -54.      300.       0.0      400.SHTg1MeV
-USRBIN           0.0       0.0     -200.       75.        4.      150. &
+USRBIN           13.  SI1MEVNE      -54.      450.      500.      400.SHTg1MeV
+USRBIN           0.0    -300.0     -400.       45.       80.       80. &
 ROT-DEFI                   0.0       90.       0.0       0.0       0.0Coil1
 ROT-DEFI                   0.0    38.571       0.0       0.0       0.0Coil2
 ROT-DEFI                   0.0   -12.857       0.0       0.0       0.0Coil3

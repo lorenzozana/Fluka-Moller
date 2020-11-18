@@ -8,17 +8,12 @@ Submit: *Default
 Notes:
 {img:MOLLER-hallA_plot05.png}
 Tabs: 0.1 0.32 0.56 0.81 1.0
-Page: Flair
+Page: Input
 Source: Magnetic_field/magfld_test7.f
 DefMain: True
 LinkPrg: lfluka
 F77bound: True
 F77dline: False
-
-# Properties
-Properties: Input
-	REGION/hall/@select: 1
-End
 
 # Run information
 Run: <default>
@@ -1115,49 +1110,9 @@ Material:
 End
 
 # Material
-Material: ZINC
+Material: HdCoHE
 	alpha: 0
-	color: #1070B0
-	fuzz: 0.0
-	ior: 1.0
-	shine: 10.0
-	specular: 0.0
-End
-
-# Material
-Material: POTASSIU
-	alpha: 0
-	color: #70B0B0
-	fuzz: 0.0
-	ior: 1.0
-	shine: 10.0
-	specular: 0.0
-End
-
-# Material
-Material: LiquidHy
-	alpha: 0
-	color: #2b13b4
-	fuzz: 0.0
-	ior: 1.0
-	shine: 10.0
-	specular: 0.0
-End
-
-# Material
-Material: SiO2
-	alpha: 0
-	color: #60D0B0
-	fuzz: 0.0
-	ior: 1.0
-	shine: 10.0
-	specular: 0.0
-End
-
-# Material
-Material: H-LIQUID
-	alpha: 0
-	color: #A070B0
+	color: #E0D050
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1215,19 +1170,9 @@ Material: AIR5
 End
 
 # Material
-Material: AL-6061
+Material: ZINC
 	alpha: 0
-	color: #309030
-	fuzz: 0.0
-	ior: 1.0
-	shine: 10.0
-	specular: 0.0
-End
-
-# Material
-Material: Soil
-	alpha: 0
-	color: #74ff00
+	color: #1070B0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1245,19 +1190,9 @@ Material: CW95
 End
 
 # Material
-Material: SS316LN
+Material: HEMATITE
 	alpha: 0
-	color: #401010
-	fuzz: 0.0
-	ior: 1.0
-	shine: 10.0
-	specular: 0.0
-End
-
-# Material
-Material: Marble
-	alpha: 0
-	color: #E09070
+	color: #809030
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1275,6 +1210,56 @@ Material: MANGANES
 End
 
 # Material
+Material: H-LIQUID
+	alpha: 0
+	color: #A070B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: Marble
+	alpha: 0
+	color: #E09070
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: AL-6061
+	alpha: 0
+	color: #309030
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: SS316LN
+	alpha: 0
+	color: #401010
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: HdCoMA
+	alpha: 0
+	color: #B0B030
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
 Material: DMPATM
 	alpha: 0
 	color: #40B090
@@ -1284,11 +1269,81 @@ Material: DMPATM
 	specular: 0.0
 End
 
+# Material
+Material: SiO2
+	alpha: 0
+	color: #60D0B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: MAGNETIT
+	alpha: 0
+	color: #E07050
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: LiquidHy
+	alpha: 0
+	color: #2b13b4
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: POTASSIU
+	alpha: 0
+	color: #70B0B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: MAGNETITE
+	alpha: 0
+	color: #80D050
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: Soil
+	alpha: 0
+	color: #74ff00
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: ILMENITE
+	alpha: 0
+	color: #409070
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
 # Geometry Information
 Geometry:
 	Frame.bsplit: 0.5
-	Frame.tsplit: 0.99
-	Frame.vsplit: 0.99
+	Frame.tsplit: 0.5
+	Frame.vsplit: 0.5
 
 	# Layer
 	Layer: Media
@@ -1386,12 +1441,12 @@ Plot: Red
 	cbtics: 0
 	coord: X-Z
 	cpd: 0
-	extends: 891.611 451.503
+	extends: 515.978 258.324
 	grid: 0
 	index: 0
 	labels: 1
-	layer: 3D
-	origin: -34.8404 -0.1 26.8603
+	layer: Media
+	origin: -40.5424 -0.1 170.654
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: False
@@ -1412,9 +1467,9 @@ Plot: Green
 	basisv: 0 0 -1
 	boundaries: 1
 	coord: Y-Z
-	extends: 515.977 13931.4
+	extends: 515.977 258.323
 	labels: 1
-	layer: 3D
+	layer: Media
 	origin: -70.1342 148.396 0
 	subtype: Material
 	title: GeoViewer Green plot
@@ -1428,10 +1483,10 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 742.09 375.788
+	extends: 1068.61 534.998
 	labels: 1
-	layer: 3D
-	origin: 0 -47.9255 243.126
+	layer: Media
+	origin: 0 84.2437 -324.017
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -1450,11 +1505,11 @@ Plot: Magenta
 	cbtics: 0
 	coord: U-V
 	cpd: 0
-	extends: 1283.92 71214.8
+	extends: 1283.92 642.793
 	grid: 0
 	index: 0
 	labels: 1
-	layer: 3D
+	layer: Media
 	origin: -259.985 -265.527 357.315
 	subtype: Material
 	title: GeoViewer Magenta plot
