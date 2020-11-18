@@ -62,27 +62,27 @@ COMPOUND    -.532565    OXYGEN  -.467435   SILICON                    SiO2
 * 104 Air dry (near sea level)
 *
 MATERIAL                       .00122210                              AIR1
-COMPOUND   -1.248E-4    CARBON  -.755267  NITROGEN  -.231781    OXYGENAIR
+COMPOUND   -1.248E-4    CARBON  -.755267  NITROGEN  -.231781    OXYGENAIR1
 COMPOUND   -0.012827     ARGON                                        AIR1
 MAT-PROP                            85.7      AIR1
 STERNHEI     10.5961    1.7418    4.2759   0.10914    3.3994          AIR1
 MATERIAL                       .00120755                              AIR2
-COMPOUND   -1.248E-4    CARBON  -.755267  NITROGEN  -.231781    OXYGENAIR
+COMPOUND   -1.248E-4    CARBON  -.755267  NITROGEN  -.231781    OXYGENAIR2
 COMPOUND   -0.012827     ARGON                                        AIR2
 MAT-PROP                            85.7      AIR2
 STERNHEI     10.5961    1.7418    4.2759   0.10914    3.3994          AIR2
 MATERIAL                       .00118160                              AIR3
-COMPOUND   -1.248E-4    CARBON  -.755267  NITROGEN  -.231781    OXYGENAIR
+COMPOUND   -1.248E-4    CARBON  -.755267  NITROGEN  -.231781    OXYGENAIR3
 COMPOUND   -0.012827     ARGON                                        AIR3
 MAT-PROP                            85.7      AIR3
 STERNHEI     10.5961    1.7418    4.2759   0.10914    3.3994          AIR3
 MATERIAL                       .00115325                              AIR4
-COMPOUND   -1.248E-4    CARBON  -.755267  NITROGEN  -.231781    OXYGENAIR
+COMPOUND   -1.248E-4    CARBON  -.755267  NITROGEN  -.231781    OXYGENAIR4
 COMPOUND   -0.012827     ARGON                                        AIR4
 MAT-PROP                            85.7      AIR4
 STERNHEI     10.5961    1.7418    4.2759   0.10914    3.3994          AIR4
 MATERIAL                       .00112545                              AIR5
-COMPOUND   -1.248E-4    CARBON  -.755267  NITROGEN  -.231781    OXYGENAIR
+COMPOUND   -1.248E-4    CARBON  -.755267  NITROGEN  -.231781    OXYGENAIR5
 COMPOUND   -0.012827     ARGON                                        AIR5
 MAT-PROP                            85.7      AIR5
 STERNHEI     10.5961    1.7418    4.2759   0.10914    3.3994          AIR5

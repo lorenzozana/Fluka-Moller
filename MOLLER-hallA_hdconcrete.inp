@@ -10,6 +10,16 @@ PHOTONUC          1.                      LiquidHy  LiquidHy          ELECTNUC
 BEAMPOS          0.0       0.0     -62.5       0.0       0.0
 START         10000.
 RANDOMIZ          1.       21.
+MATERIAL                            5.26                              HEMATITE
+COMPOUND         2.0      IRON       3.0    OXYGEN                    HEMATITE
+MATERIAL                            4.79                              ILMENITE
+COMPOUND         1.0      IRON       1.0  TITANIUM       3.0    OXYGENILMENITE
+MATERIAL                            5.18                              MAGNETIT
+COMPOUND         3.0      IRON       4.0    OXYGEN                    MAGNETIT
+MATERIAL                             4.8                              HdCoHE
+COMPOUND      -0.839  HEMATITE    -0.161  CONCRETE                    HdCoHE
+MATERIAL                             4.8                              HdCoMA
+COMPOUND      -0.863  MAGNETIT    -0.137  CONCRETE                    HdCoMA
 MATERIAL         19.   39.0983     0.862                           0.0POTASSIU
 MATERIAL         0.0       0.0      2.35                           0.0CONCRETE
 COMPOUND       -0.01  HYDROGEN    -0.001    CARBON -0.529107    OXYGENCONCRETE
@@ -63,28 +73,28 @@ COMPOUND    -.532565    OXYGEN  -.467435   SILICON                    SiO2
 * 104 Air dry (near sea level)
 *
 MATERIAL                       .00122210                              AIR1
-COMPOUND   -1.248E-4    CARBON  -.755267  NITROGEN  -.231781    OXYGENAIR1
+COMPOUND   -1.248E-4    CARBON -0.755267  NITROGEN -0.231781    OXYGENAIR1
 COMPOUND   -0.012827     ARGON                                        AIR1
+COMPOUND   -1.248E-4    CARBON -0.755267  NITROGEN -0.231781    OXYGENAIR2
+COMPOUND   -0.012827     ARGON                                        AIR2
+COMPOUND   -1.248E-4    CARBON -0.755267  NITROGEN -0.231781    OXYGENAIR3
+COMPOUND   -0.012827     ARGON                                        AIR3
+COMPOUND   -1.248E-4    CARBON -0.755267  NITROGEN -0.231781    OXYGENAIR4
+COMPOUND   -0.012827     ARGON                                        AIR4
+COMPOUND   -1.248E-4    CARBON -0.755267  NITROGEN -0.231781    OXYGENAIR5
+COMPOUND   -0.012827     ARGON                                        AIR5
 MAT-PROP                            85.7      AIR1
 STERNHEI     10.5961    1.7418    4.2759   0.10914    3.3994          AIR1
 MATERIAL                       .00120755                              AIR2
-COMPOUND   -1.248E-4    CARBON  -.755267  NITROGEN  -.231781    OXYGENAIR2
-COMPOUND   -0.012827     ARGON                                        AIR2
 MAT-PROP                            85.7      AIR2
 STERNHEI     10.5961    1.7418    4.2759   0.10914    3.3994          AIR2
 MATERIAL                       .00118160                              AIR3
-COMPOUND   -1.248E-4    CARBON  -.755267  NITROGEN  -.231781    OXYGENAIR3
-COMPOUND   -0.012827     ARGON                                        AIR3
 MAT-PROP                            85.7      AIR3
 STERNHEI     10.5961    1.7418    4.2759   0.10914    3.3994          AIR3
 MATERIAL                       .00115325                              AIR4
-COMPOUND   -1.248E-4    CARBON  -.755267  NITROGEN  -.231781    OXYGENAIR4
-COMPOUND   -0.012827     ARGON                                        AIR4
 MAT-PROP                            85.7      AIR4
 STERNHEI     10.5961    1.7418    4.2759   0.10914    3.3994          AIR4
 MATERIAL                       .00112545                              AIR5
-COMPOUND   -1.248E-4    CARBON  -.755267  NITROGEN  -.231781    OXYGENAIR5
-COMPOUND   -0.012827     ARGON                                        AIR5
 MAT-PROP                            85.7      AIR5
 STERNHEI     10.5961    1.7418    4.2759   0.10914    3.3994          AIR5
 MAT-PROP                           139.2      SiO2
@@ -96,7 +106,9 @@ ASSIGNMA         AIR      hall
 ASSIGNMA         AIR   hall_in
 ASSIGNMA    ALUMINUM        SC
 ASSIGNMA    Concrete    ShHutC   ShHutC2
-ASSIGNMA        LEAD    SHLead
+ASSIGNMA      HdCoHE    ShHutC
+ASSIGNMA         AIR    SHLead
+ASSIGNMA        LEAD   SHLead1
 ASSIGNMA        LEAD  ShLeadC3
 ASSIGNMA      VACUUM   airsol1                            1.
 ASSIGNMA      VACUUM      pipe
@@ -2076,7 +2088,7 @@ ShHutC1      5 +CBox2_o -ShBore2
 ShHutC2      5 +CBox3_o -air7
 ShLeadC3     5 +CBox4_o -air7
 SHLead       5 +LBox -ShBore
-               | +LBox1 -LBox1_i
+SHLead1      5 +LBox1 -LBox1_i
 SOLE1        5 +Sol1 -Sol3 -Scone
                | +Sol3 -Sol2
 SOLE2        5 +Sol4 -Sol6 -Scone
