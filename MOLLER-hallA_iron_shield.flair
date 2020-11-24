@@ -15,11 +15,6 @@ LinkPrg: lfluka
 F77bound: True
 F77dline: False
 
-# Properties
-Properties: Input
-	REGION/hall/@select: 1
-End
-
 # Run information
 Run: <default>
 	Prev:     0
@@ -1125,9 +1120,9 @@ Material: ZINC
 End
 
 # Material
-Material: LiquidHy
+Material: POTASSIU
 	alpha: 0
-	color: #2b13b4
+	color: #70B0B0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1135,9 +1130,9 @@ Material: LiquidHy
 End
 
 # Material
-Material: MANGANES
+Material: LiquidHy
 	alpha: 0
-	color: #B050D0
+	color: #2b13b4
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1175,9 +1170,9 @@ Material: AIR1
 End
 
 # Material
-Material: POTASSIU
-	alpha: 0
-	color: #70B0B0
+Material: AIR2
+	alpha: 100
+	color: #46b8f1
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1265,9 +1260,9 @@ Material: Marble
 End
 
 # Material
-Material: AIR2
-	alpha: 100
-	color: #46b8f1
+Material: MANGANES
+	alpha: 0
+	color: #B050D0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1432,10 +1427,10 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 890.508 445.832
+	extends: 1068.61 534.998
 	labels: 1
 	layer: 3D
-	origin: 0.1 -97.0285 134.287
+	origin: 0.1 -97.0359 179.134
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -2526,6 +2521,54 @@ Plot: MOLLER-hallA_52_plot14
 	pt.0: 0
 	swap: 0
 	title: Boundary Dose: New shielding Iron 10m (height) average.
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: cm
+	xlog: False
+	xrebin: 8
+	y2log: False
+	y2tics: 0
+	ylabel: cm
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 3
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: HDConcrete 10m (height) average."
+Plot: MOLLER-hallA_52_plot15
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bymax: 1358.
+	bymin: 358.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1000
+	cbmin: 0.01
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: target_hdconcshield53_7.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 10
+	int: 43.262878176409792
+	lw.0: 0
+	max: 7.25874916E-10
+	min: 1.00582138E-16
+	norm: 3.807E14
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: HDConcrete 10m (height) average.
 	with.0: errorbars
 	x2log: False
 	x2tics: 0

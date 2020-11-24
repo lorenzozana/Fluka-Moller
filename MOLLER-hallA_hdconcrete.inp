@@ -3558,41 +3558,41 @@ BIASING          0.0              0.0001  Dirthlow    HEBLIN        1.
 BIASING          0.0              0.0005     WALL1     WALL1        1.
 BIASING          0.0              0.0005   hall_in   hall_in        1.
 BIASING          0.0              0.0025     WALL2     WALL2        1.
-BIASING          0.0              0.0025     WALL3     WALL3        1.
-BIASING          0.0              0.0025     WALL4                  1.
-BIASING          0.0              0.0025     WALL5                  1.
-BIASING          0.0              0.0025     WALL6                  1.
-BIASING          0.0              0.0125     WALL7                  1.
-BIASING          0.0              0.0625     WALL8                  1.
-BIASING          0.0              0.3125     WALL9   Dumpcov        1.
-BIASING          0.0              1.5625    Dirth1                  1.
-BIASING          0.0              7.8125    Dirth2                  1.
-BIASING          0.0              39.065    Dirth3                  1.
-BIASING          0.0              39.065    Dirth4                  1.
-BIASING          0.0            195.3125    Ai1_50    Ai1_50        1.
-BIASING          0.0                900.   Ai1_250   Ai1_250        1.
-BIASING          0.0                900.   Ai1_500   Ai1_500        1.
-BIASING          0.0                900.   Ai1_750   Ai1_750        1.
-BIASING          0.0                900.  Ai1_1000  Ai1_1000        1.
-BIASING          0.0                900.    Ai3_50    Ai3_50        1.
-BIASING          0.0                900.   Ai3_250   Ai3_250        1.
-BIASING          0.0                900.   Ai3_500   Ai3_500        1.
-BIASING          0.0                900.   Ai3_750   Ai3_750        1.
-BIASING          0.0                900.  Ai3_1000  Ai3_1000        1.
-BIASING          0.0               4500.    Ai5_50    Ai5_50        1.
-BIASING          0.0               4500.   Ai5_250   Ai5_250        1.
-BIASING          0.0               4500.   Ai5_500   Ai5_500        1.
-BIASING          0.0               4500.   Ai5_750   Ai5_750        1.
-BIASING          0.0               4500.  Ai5_1000  Ai5_1000        1.
-BIASING          0.0               4500.    Ai6_50    Ai6_50        1.
-BIASING          0.0               4500.   Ai6_250   Ai6_250        1.
-BIASING          0.0               4500.   Ai6_500   Ai6_500        1.
-BIASING          0.0               4500.   Ai6_750   Ai6_750        1.
-BIASING          0.0               4500.  Ai6_1000  Ai6_1000        1.
-BIASING          0.0               4500.  logicMot  logicMot        1.
-BIASING          0.0               4500.  logicMo1  logicMo1        1.
-BIASING          0.0               4500.  logicMo2  logicMo2        1.
-BIASING          0.0               4500.  logicMo3  logicMo3        1.
-BIASING          0.0               4500.  logicMo4  logicMo4        1.
+BIASING          0.0              0.0125     WALL3     WALL3        1.
+BIASING          0.0              0.0125     WALL4                  1.
+BIASING          0.0              0.0125     WALL5                  1.
+BIASING          0.0              0.0125     WALL6                  1.
+BIASING          0.0              0.0625     WALL7                  1.
+BIASING          0.0              0.3125     WALL8                  1.
+BIASING          0.0              1.5625     WALL9   Dumpcov        1.
+BIASING          0.0              7.8125    Dirth1                  1.
+BIASING          0.0              39.065    Dirth2                  1.
+BIASING          0.0               195.0    Dirth3                  1.
+BIASING          0.0                600.    Dirth4                  1.
+BIASING          0.0               1000.    Ai1_50    Ai1_50        1.
+BIASING          0.0               3000.   Ai1_250   Ai1_250        1.
+BIASING          0.0               3000.   Ai1_500   Ai1_500        1.
+BIASING          0.0               3000.   Ai1_750   Ai1_750        1.
+BIASING          0.0               3000.  Ai1_1000  Ai1_1000        1.
+BIASING          0.0               3000.    Ai3_50    Ai3_50        1.
+BIASING          0.0               3000.   Ai3_250   Ai3_250        1.
+BIASING          0.0               3000.   Ai3_500   Ai3_500        1.
+BIASING          0.0               3000.   Ai3_750   Ai3_750        1.
+BIASING          0.0               3000.  Ai3_1000  Ai3_1000        1.
+BIASING          0.0              10000.    Ai5_50    Ai5_50        1.
+BIASING          0.0              10000.   Ai5_250   Ai5_250        1.
+BIASING          0.0              10000.   Ai5_500   Ai5_500        1.
+BIASING          0.0              10000.   Ai5_750   Ai5_750        1.
+BIASING          0.0              10000.  Ai5_1000  Ai5_1000        1.
+BIASING          0.0              10000.    Ai6_50    Ai6_50        1.
+BIASING          0.0              10000.   Ai6_250   Ai6_250        1.
+BIASING          0.0              10000.   Ai6_500   Ai6_500        1.
+BIASING          0.0              10000.   Ai6_750   Ai6_750        1.
+BIASING          0.0              10000.  Ai6_1000  Ai6_1000        1.
+BIASING          0.0              10000.  logicMot  logicMot        1.
+BIASING          0.0              10000.  logicMo1  logicMo1        1.
+BIASING          0.0              10000.  logicMo2  logicMo2        1.
+BIASING          0.0              10000.  logicMo3  logicMo3        1.
+BIASING          0.0              10000.  logicMo4  logicMo4        1.
 LAM-BIAS                  0.02              PHOTON    PHOTON
 STOP
