@@ -3556,7 +3556,7 @@ GEOEND
 STOP
 BIASING          0.0              0.0001  Dirthlow    HEBLIN        1.
 BIASING          0.0              0.0005     WALL1     WALL1        1.
-BIASING          0.0              0.0005   hall_in   hall_in        1.
+BIASING          0.0              0.0005      hall      hall        1.
 BIASING          0.0              0.0025     WALL2     WALL2        1.
 BIASING          0.0              0.0125     WALL3     WALL3        1.
 BIASING          0.0              0.0125     WALL4                  1.
