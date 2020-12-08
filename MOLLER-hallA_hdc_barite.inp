@@ -11,11 +11,11 @@ BEAMPOS          0.0       0.0     -62.5       0.0       0.0
 START        500000.
 RANDOMIZ          1.       21.
 MATERIAL                            5.26                              HEMATITE
-COMPOUND         2.0      IRON       3.0    OXYGEN                    HEMATITE
+COMPOUND          2.      IRON        3.    OXYGEN                    HEMATITE
 MATERIAL                            4.79                              ILMENITE
-COMPOUND         1.0      IRON       1.0  TITANIUM       3.0    OXYGENILMENITE
+COMPOUND          1.      IRON        1.  TITANIUM        3.    OXYGENILMENITE
 MATERIAL                            5.18                              MAGNETIT
-COMPOUND         3.0      IRON       4.0    OXYGEN                    MAGNETIT
+COMPOUND          3.      IRON        4.    OXYGEN                    MAGNETIT
 MATERIAL                             4.8                              HdCoHE
 COMPOUND      -0.839  HEMATITE    -0.161  CONCRETE                    HdCoHE
 MATERIAL                             4.8                              HdCoMA
@@ -111,7 +111,7 @@ COMPOUND   -0.396964    OXYGEN -0.603036  MAGNESIU                    Mg_O
 * The density of aluminum oxide will vary by 5% according to the
 * method of preparation.
 MATERIAL                            3.98                              Al2O3
-COMPOUND         2.0  ALUMINUM       3.0    OXYGEN                    Al2O3
+COMPOUND          2.  ALUMINUM        3.    OXYGEN                    Al2O3
 * Ferric oxide Fe2_O3
 *
 MATERIAL                             5.2                              Fe2O3
@@ -122,8 +122,47 @@ MATERIAL         56.                 3.5                              BARIUM
 MATERIAL                             4.5                              BaSO4
 COMPOUND   -0.274212    OXYGEN -0.137368    SULFUR  -0.58842    BARIUMBaSO4
 MATERIAL                            3.13                              Cement
-COMPOUND    -0.60486       CaO-3.333E-36                              Cement
-COMPOUND                                                              Cement
+COMPOUND    -0.60486       CaO   -0.0353      Mg_O    0.0109       K2OCement
+COMPOUND    -0.03778     Fe2O3   -0.2237      SiO2   -0.0705     Al2O3Cement
+* Sodium monoxide Na2_O
+*
+MATERIAL                            2.27                              Na2O
+COMPOUND   -0.258143    OXYGEN -0.741857    SODIUM                    Na2O
+* 610 Sulfur dioxide
+*
+MATERIAL                         0.00262                              Sulfur_d
+COMPOUND         1.0    SULFUR       2.0    OXYGEN                    Sulfur_d
+* Calcium carbonate Ca_C_O3
+*
+MATERIAL                             2.8                              CaCO3
+COMPOUND   -0.120003    CARBON -0.479554    OXYGEN -0.400443   CALCIUMCaCO3
+MATERIAL                            2.39                              P205
+COMPOUND         2.0   PHOSPHO       5.0    OXYGEN                    P205
+MATERIAL                             3.7                              MnCO3
+COMPOUND         1.0  MANGANES       1.0    CARBON       3.0    OXYGENMnCO3
+MATERIAL         17.            0.003214                              CHLORINE
+* NaCl Crystal
+* NaCl crystals rapidly become damaged under ion bombardment, and
+* there can be up to 5% density change in the surface region.
+MATERIAL                           2.165                              NaCl
+COMPOUND         1.0    SODIUM       1.0  CHLORINE                    NaCl
+MATERIAL                            5.03                              MnO2
+COMPOUND         1.0  MANGANES       2.0    OXYGEN                    MnO2
+MATERIAL                            6.67                              NiO
+COMPOUND         1.0    NICKEL       1.0    OXYGEN                    NiO
+MATERIAL                            4.05                              Barite
+COMPOUND      -0.048       CaO  -0.00649      Mg_O  -0.00024       K2OBarite
+COMPOUND    -0.00229     Fe2O3  -0.03293      SiO2  -0.03913     WATERBarite
+COMPOUND    -0.01366     Al2O3   -83.132     BaSO4   -0.0009     MnCO3Barite
+COMPOUND    -0.01803     CaCO3  -0.00027      Na2O  -0.00019      P205Barite
+COMPOUND    -0.00205  Sulfur_d   -0.0009      NaCl   -0.0018      MnO2Barite
+COMPOUND     -0.0018       NiO                                        Barite
+MATERIAL                            3.36                              HdCoBa
+COMPOUND     -0.0829    Cement   -0.0593     WATER    -85.78    BariteHdCoBa
+MAT-PROP                           136.4     CaCO3
+STERNHEI      3.7738    0.0492    3.0549   0.08301     3.412          CaCO3
+MAT-PROP                           148.8      Na2O
+STERNHEI      4.1892    0.1652    2.9793   0.07501    3.6943          Na2O
 MAT-PROP                           285.7     BaSO4
 STERNHEI      4.8923   -0.0128    3.4069   0.11747    3.0427          BaSO4
 MAT-PROP                           227.3     Fe2O3
@@ -145,7 +184,7 @@ ASSIGNMA         AIR      hall
 ASSIGNMA         AIR   hall_in
 ASSIGNMA    ALUMINUM        SC
 ASSIGNMA    Concrete    ShHutC   ShHutC2
-ASSIGNMA      HdCoHE    ShHutC
+ASSIGNMA      HdCoBa    ShHutC
 ASSIGNMA         AIR    SHLead
 ASSIGNMA        LEAD   SHLead1
 ASSIGNMA        LEAD  ShLeadC3
@@ -917,18 +956,18 @@ USRBIN           0.0      358.   -30000.       30.       30.       20. &
 USRBIN           13.      DOSE      -53.    30000.    30358.    30000.bdose1
 USRBIN           0.0      358.   -30000.       30.       30.       20. &
 USRBIN           13.    ENERGY      -54.      450.      500.      400.SHTgEn
-USRBIN           0.0    -300.0     -400.       22.       40.       40. &
+USRBIN           0.0     -300.     -400.       22.       40.       40. &
 USRBIN           13.    ENERGY      -54.      450.      500.      400.SHTgEnN
-USRBIN           0.0    -300.0     -400.       22.       40.       40. &
+USRBIN           0.0     -300.     -400.       22.       40.       40. &
 USRBIN           13.    ENERGY      -54.      450.      500.      400.SHTgEne
-USRBIN           0.0    -300.0     -400.       22.       40.       40. &
+USRBIN           0.0     -300.     -400.       22.       40.       40. &
 USRBIN           13.    ENERGY      -54.      450.      500.      400.SHTgEnPh
-USRBIN           0.0    -300.0     -400.       22.       40.       40. &
+USRBIN           0.0     -300.     -400.       22.       40.       40. &
 AUXSCORE      USRBIN   NEUTRON             SHTgEnN   SHTgEnN
 AUXSCORE      USRBIN    PHOTON            SHTgEnPh  SHTgEnPh
 AUXSCORE      USRBIN  ELECTRON             SHTgEne   SHTgEne
 USRBIN           13.  SI1MEVNE      -54.      450.      500.      400.SHTg1MeV
-USRBIN           0.0    -300.0     -400.       22.       40.       40. &
+USRBIN           0.0     -300.     -400.       22.       40.       40. &
 ROT-DEFI                   0.0       90.       0.0       0.0       0.0Coil1
 ROT-DEFI                   0.0    38.571       0.0       0.0       0.0Coil2
 ROT-DEFI                   0.0   -12.857       0.0       0.0       0.0Coil3
@@ -950,7 +989,7 @@ RCC air7       0.0 0.0 600. 0.0 0.0 376.657 35.
 RCC ShBore     0.0 0.0 100. 0.0 0.0 600. 40.
 RCC ShBore2    0.0 0.0 100. 0.0 0.0 710. 35.
 RCC ShBore1    0.0 0.0 0.0 0.0 0.0 -317.5 5.
-RPP CBox_o     -360.0 409.0 -298.3 371.7 -317.5 320.0
+RPP CBox_o     -360. 409. -298.3 371.7 -317.5 320.
 RPP CBox2_o    -175. 175. -210. 210. 320. 801.5
 RPP CBox3_o    -175. 175. -122.5 125. 812. 941.5
 RPP CBox4_o    -133. 133. -200. 200. 941.5 967.
@@ -975,7 +1014,7 @@ RPP IronShi4   -495. -429. -198. 132. -330. 330.
 RPP SteelShi   -488. 488. 132. 144. -141.5 346.5
 * sbsBunkerVacuumDet1_s [/sbsbunker/sbsBunkerVacuumDet1_l]
 RPP sbsBunk1   -412.25 412.25 -197.75 131.75 -329.75 329.75
-$end_transform
+$end_transform 
 $start_transform Coil1
 RPP Sol1       -0.77 0.77 3.5 20. 600. 800.
 RPP Sol2       -1.54 1.54 8.12 15.38 604.62 795.38
@@ -984,37 +1023,37 @@ TRC Scone      0.0 0.0 597.1 0.0 0.0 7. 13.4 3.5
 XCC Sol31      13.58 610.08 7.
 XYP Sol32      610.08
 XZP Sol33      13.58
-$end_transform
+$end_transform 
 $start_transform Coil2
 RPP Sol4       -0.77 0.77 3.5 20. 600. 800.
 RPP Sol5       -1.54 1.54 8.12 15.38 604.62 795.38
 RPP Sol6       -1.54 1.54 6.58 16.92 603.08 796.92
-$end_transform
+$end_transform 
 $start_transform Coil3
 RPP Sol7       -0.77 0.77 3.5 20. 600. 800.
 RPP Sol8       -1.54 1.54 8.12 15.38 604.62 795.38
 RPP Sol9       -1.54 1.54 6.58 16.92 603.08 796.92
-$end_transform
+$end_transform 
 $start_transform Coil4
 RPP Sol10      -0.77 0.77 3.5 20. 600. 800.
 RPP Sol11      -1.54 1.54 8.12 15.38 604.62 795.38
 RPP Sol12      -1.54 1.54 6.58 16.92 603.08 796.92
-$end_transform
+$end_transform 
 $start_transform Coil5
 RPP Sol13      -0.77 0.77 3.5 20. 600. 800.
 RPP Sol14      -1.54 1.54 8.12 15.38 604.62 795.38
 RPP Sol15      -1.54 1.54 6.58 16.92 603.08 796.92
-$end_transform
+$end_transform 
 $start_transform Coil6
 RPP Sol16      -0.77 0.77 3.5 20. 600. 800.
 RPP Sol17      -1.54 1.54 8.12 15.38 604.62 795.38
 RPP Sol18      -1.54 1.54 6.58 16.92 603.08 796.92
-$end_transform
+$end_transform 
 $start_transform Coil7
 RPP Sol19      -0.77 0.77 3.5 20. 600. 800.
 RPP Sol20      -1.54 1.54 8.12 15.38 604.62 795.38
 RPP Sol21      -1.54 1.54 6.58 16.92 603.08 796.92
-$end_transform
+$end_transform 
 RCC Spipe_i    0.0 0.0 604. 0.0 0.0 193.6 3.5
 RCC Spipe_o    0.0 0.0 604.5 0.0 0.0 193.1 4.2
 XZP air_c1     5000.
@@ -1369,7 +1408,7 @@ PLA pcon_b76   4.70759639978788 4.8780749973841315 0.0 8.77095659680842
 PLA pcon_b77   7.201810436639886 8.314681379024984 0.0 18.155804262123574
               -14.847736229192616 -5.5
 * col5_vacuum_cut
-RCC col5_cut   0.0 0.0 976.66 0.0 0.0 709.997 42.0
+RCC col5_cut   0.0 0.0 976.66 0.0 0.0 709.997 42.
 TRC vp_down    0.0 0.0 1686.657 0.0 0.0 1363.343 42. 45.72
 * col5_trd1_plane1
 YZP col5t1p1   -7.199999999999999
@@ -1648,7 +1687,7 @@ ZCC viewrout   0.0 0.0 12.
 ZCC difout     0.0 0.0 25.
 PLA viewer1    1. 0.0 -1. 0.0 22. 570.
 PLA viewer2    1. 0.0 -1. 0.0 22. 570.035921
-$end_translat
+$end_translat 
 $start_translat 0 0 5128.54
 * Beam dump tunnel 7ftx7ft
 RPP dmp_tunl   -106.68000000000001 106.68000000000001 -106.68000000000001
@@ -1944,7 +1983,7 @@ XYP p121_8     275.71699999999998
 XYP p121_9     283.33699999999999
 XYP p121_0     290.95699999999999
 XYP g122       318.89699999999999
-$end_translat
+$end_translat 
 END
 * logicMother
 logicMot     5 +boxMothe -air6  -dirtou20 +air_c1
@@ -3606,7 +3645,7 @@ BIASING          0.0              0.3125     WALL8                  1.
 BIASING          0.0              1.5625     WALL9   Dumpcov        1.
 BIASING          0.0              7.8125    Dirth1                  1.
 BIASING          0.0              39.065    Dirth2                  1.
-BIASING          0.0               195.0    Dirth3                  1.
+BIASING          0.0                195.    Dirth3                  1.
 BIASING          0.0                600.    Dirth4                  1.
 BIASING          0.0               1000.    Ai1_50    Ai1_50        1.
 BIASING          0.0               3000.   Ai1_250   Ai1_250        1.
