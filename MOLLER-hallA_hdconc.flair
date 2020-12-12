@@ -1,0 +1,3155 @@
+#!/opt/flair/flair-2.5/flair
+# FLUKA Project file
+Version: 2
+Title: MOLLER_Test
+Input: MOLLER-hallA_hdc_barite.inp
+Exec: moller.exe
+Submit: *Default
+Notes:
+{img:MOLLER-hallA_plot05.png}
+Tabs: 0.1 0.32 0.56 0.81 1.0
+Page: Flair
+Source: Magnetic_field/magfld_test7.f
+DefMain: True
+LinkPrg: lfluka
+F77bound: True
+F77dline: False
+
+# Run information
+Run: <default>
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1553894715
+	Family:  MOLLER-hallA_aa MOLLER-hallA_ab MOLLER-hallA_ac MOLLER-hallA_ad MOLLER-hallA_ae MOLLER-hallA_af MOLLER-hallA_ag MOLLER-hallA_ah MOLLER-hallA_ai MOLLER-hallA_aj MOLLER-hallA_ak MOLLER-hallA_al MOLLER-hallA_am MOLLER-hallA_an MOLLER-hallA_ao MOLLER-hallA_ap MOLLER-hallA_aq MOLLER-hallA_ar MOLLER-hallA_as MOLLER-hallA_at MOLLER-hallA_au MOLLER-hallA_av MOLLER-hallA_aw MOLLER-hallA_ax MOLLER-hallA_ay MOLLER-hallA_az MOLLER-hallA_ba MOLLER-hallA_bb MOLLER-hallA_bc MOLLER-hallA_bd
+
+	# USRxxx data file: MOLLER-hallA_hdc_barite_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_hdc_barite_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_hdc_barite_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_aa
+	Rnd:      22
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752827
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_aa_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_aa_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_aa_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ab
+	Rnd:      23
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752827
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ab_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ab_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ab_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ac
+	Rnd:      24
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752827
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ac_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ac_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ac_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ad
+	Rnd:      25
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752827
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ad_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ad_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ad_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ae
+	Rnd:      26
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752828
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ae_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ae_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ae_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_af
+	Rnd:      27
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752828
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_af_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_af_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_af_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ag
+	Rnd:      28
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752828
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ag_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ag_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ag_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ah
+	Rnd:      29
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752828
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ah_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ah_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ah_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ai
+	Rnd:      30
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752828
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ai_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ai_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ai_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_aj
+	Rnd:      31
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752828
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_aj_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_aj_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_aj_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ak
+	Rnd:      32
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752828
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ak_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ak_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ak_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_al
+	Rnd:      33
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752828
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_al_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_al_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_al_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_am
+	Rnd:      34
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752828
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_am_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_am_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_am_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_an
+	Rnd:      35
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752829
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_an_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_an_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_an_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ao
+	Rnd:      36
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752829
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ao_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ao_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ao_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ap
+	Rnd:      37
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752829
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ap_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ap_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ap_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_aq
+	Rnd:      38
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752829
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_aq_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_aq_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_aq_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ar
+	Rnd:      39
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752829
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ar_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ar_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ar_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_as
+	Rnd:      40
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752829
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_as_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_as_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_as_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_at
+	Rnd:      41
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752829
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_at_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_at_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_at_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_au
+	Rnd:      42
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752829
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_au_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_au_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_au_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_av
+	Rnd:      43
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752829
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_av_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_av_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_av_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_aw
+	Rnd:      44
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752830
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_aw_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_aw_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_aw_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ax
+	Rnd:      45
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752830
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ax_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ax_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ax_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ay
+	Rnd:      46
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752830
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ay_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ay_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ay_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_az
+	Rnd:      47
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752830
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_az_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_az_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_az_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_ba
+	Rnd:      48
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752830
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_ba_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ba_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_ba_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_bb
+	Rnd:      49
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752830
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_bb_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_bb_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_bb_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_bc
+	Rnd:      50
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752830
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_bc_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_bc_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_bc_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_bd
+	Rnd:      51
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1554752831
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_bd_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_bd_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_bd_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Material
+Material: 
+	alpha: 0
+	color: #101010
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: HdCoHE
+	alpha: 0
+	color: #E0D050
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: BaSO4
+	alpha: 0
+	color: #7030D0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: BARIUM
+	alpha: 0
+	color: #907010
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: AIR1
+	alpha: 99
+	color: #46a4f1
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: AIR2
+	alpha: 100
+	color: #46b8f1
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: AIR3
+	alpha: 0
+	color: #46ccf1
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: AIR4
+	alpha: 0
+	color: #46e0f1
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: AIR5
+	alpha: 0
+	color: #46f4f1
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: ZINC
+	alpha: 0
+	color: #1070B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: CW95
+	alpha: 0
+	color: #5090D0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: HEMATITE
+	alpha: 0
+	color: #809030
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: MANGANES
+	alpha: 0
+	color: #B050D0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: Al2O3
+	alpha: 0
+	color: #509070
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: Fe2O3
+	alpha: 0
+	color: #B0B050
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: H-LIQUID
+	alpha: 0
+	color: #A070B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: Cement
+	alpha: 0
+	color: #707070
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: MAGNETIT
+	alpha: 0
+	color: #E07050
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: K2O
+	alpha: 0
+	color: #C09070
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: AL-6061
+	alpha: 0
+	color: #309030
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: SS316LN
+	alpha: 0
+	color: #401010
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: HdCoMA
+	alpha: 0
+	color: #B0B030
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: DMPATM
+	alpha: 0
+	color: #40B090
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: SiO2
+	alpha: 0
+	color: #60D0B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: Mg_O
+	alpha: 0
+	color: #D09010
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: Marble
+	alpha: 0
+	color: #E09070
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: LiquidHy
+	alpha: 0
+	color: #2b13b4
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: POTASSIU
+	alpha: 0
+	color: #70B0B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: CaO
+	alpha: 0
+	color: #105090
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: Soil
+	alpha: 0
+	color: #74ff00
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: ILMENITE
+	alpha: 0
+	color: #409070
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Geometry Information
+Geometry:
+	Frame.bsplit: 0.5
+	Frame.tsplit: 0.5
+	Frame.vsplit: 0.5
+
+	# Layer
+	Layer: Media
+		: True
+		._visible: True
+		3D.fov: 22.8
+		Image._visible: True
+		Image.file: HallA.png
+		Image.marker: 4
+		Image.marker.0: 167.25 310.0 0.0 1037.74 -2251.76
+		Image.marker.1: 165.142857143 617.857142857 0.0 -298.3 -2251.76
+		Image.marker.2: 1155.125 617.75 0.0 -298.3 3051.76
+		Image.marker.3: 1155.84615385 309.230769231 0.0 1037.74 3051.76
+		Options.shortcut: F3
+		Palette._visible: True
+		Palette.cpd: 4
+		Palette.max: 1e+20
+		Palette.min: 100000.0
+		Palette.n: 60
+		Show._visible: True
+		Usrbin._visible: True
+		Usrbin.alpha: 31
+		Usrbin.file: data_0410_51.bnn
+		Usrbin.norm: 3.807E21
+		layer: Media
+	End
+
+	# Layer
+	Layer: 3D
+		: True
+		._visible: True
+		3D: True
+		3D._visible: True
+		3D.edgedetect: True
+		3D.fov: 22.8
+		3D.shadows: False
+		Beam: True
+		Beam._visible: True
+		Image._visible: True
+		Image.file: HallA.png
+		Image.marker: 4
+		Image.marker.0: 168.4 309.0 0.0 1037.74 -2251.76
+		Image.marker.1: 165.5 617.375 0.0 -298.3 -2251.76
+		Image.marker.2: 1155.75 617.75 0.0 -298.3 3051.76
+		Image.marker.3: 1155.44444444 309.444444444 0.0 1037.74 3051.76
+		Options.axes: False
+		Options.shortcut: F4
+		Options.viewport: False
+		Palette._visible: True
+		Palette.alphamin: True
+		Palette.cpd: 4
+		Palette.max: 1e+19
+		Palette.min: 100000.0
+		Palette.n: 56
+		Palette2._visible: True
+		Palette2.alphamin: True
+		Palette2.cpd: 5
+		Palette2.max: 10000.0
+		Palette2.min: 0.01
+		Palette3._visible: True
+		Palette3.alphamin: True
+		Palette3.max: 46415.9
+		Palette3.min: 0.01
+		Palette3.n: 20
+		Palette5: True
+		Palette5._visible: True
+		Palette5.alphamin: True
+		Palette5.cpd: 10
+		Palette5.max: 1000.0
+		Palette5.min: 0.1
+		Palette5.n: 40
+		Show._visible: True
+		Show.label: None
+		Show.lattice: True
+		Show.voxel: True
+		Usrbin: True
+		Usrbin._visible: True
+		Usrbin.alpha: 2
+		Usrbin.det: 4
+		Usrbin.file: target_hdconc54_1.bnn
+		Usrbin.norm: 3.6E-4
+		Usrbin.palette: Palette5
+		deflights: 1
+		layer: 3D
+	End
+End
+
+# Geometry plot "GeoViewer Red plot"
+Plot: Red
+	Format: .eps
+	Type:   Geometry
+	basisu: -1 0 0
+	basisv: 0 0 1
+	boundaries: 1
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	coord: X-Z
+	cpd: 0
+	extends: 891.611 467.786
+	grid: 0
+	index: 0
+	labels: 1
+	layer: Media
+	origin: -69.1599 -0.1 179.847
+	subtype: Material
+	title: GeoViewer Red plot
+	x2log: False
+	x2tics: 0
+	xlog: False
+	y2log: False
+	y2tics: 0
+	ylog: False
+	zlog: False
+	ztics: 0
+End
+
+# Geometry plot "GeoViewer Red plot"
+Plot: Red01
+	Format: .eps
+	Type:   Geometry
+	basisu: -1 0 0
+	basisv: 0 0 1
+	boundaries: 1
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	coord: X-Z
+	cpd: 0
+	extends: 891.611 446.384
+	grid: 0
+	index: 0
+	labels: 1
+	layer: 3D
+	origin: -69.1599 -0.1 179.847
+	subtype: Material
+	title: GeoViewer Red plot
+	x2log: False
+	x2tics: 0
+	xlog: False
+	y2log: False
+	y2tics: 0
+	ylog: False
+	zlog: False
+	ztics: 0
+End
+
+# Geometry plot "GeoViewer Green plot"
+Plot: Green
+	Format: .eps
+	Type:   Geometry
+	basisu: 1 0 0
+	basisv: 0 0 1
+	boundaries: 1
+	coord: X-Z
+	extends: 619.172 324.85
+	labels: 1
+	layer: Media
+	origin: 0 0 4.92023
+	subtype: Material
+	title: GeoViewer Green plot
+End
+
+# Geometry plot "GeoViewer Blue plot"
+Plot: Blue
+	Format: .eps
+	Type:   Geometry
+	basisu: 0 0 1
+	basisv: 0 1 0
+	boundaries: 1
+	coord: Z-Y
+	extends: 1068.61 560.649
+	labels: 1
+	layer: 3D
+	origin: 0.1 -97.0359 179.134
+	subtype: Material
+	title: GeoViewer Blue plot
+End
+
+# Geometry plot "GeoViewer Magenta plot"
+Plot: Magenta
+	Format: .eps
+	Type:   Geometry
+	basisu: 0 -0.0855576 0.996333
+	basisv: 0 0.996333 0.0855576
+	boundaries: 1
+	cbcolors: 0
+	cblog: 0
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	coord: U-V
+	cpd: 0
+	extends: 1283.92 673.612
+	grid: 0
+	index: 0
+	labels: 1
+	layer: Media
+	origin: -259.985 -265.527 357.315
+	subtype: Material
+	title: GeoViewer Magenta plot
+	x2log: 0
+	x2tics: 0
+	xlog: 0
+	y2log: 0
+	y2tics: 0
+	ylog: 0
+	zlog: 0
+	ztics: 0
+End
+
+# Geometry plot "Plot #5"
+Plot: MOLLER-hallA_plot05
+	Format: .eps
+	Type:   Geometry
+	basisu: 0 0 1
+	basisv: 1 0 0
+	boundaries: 0
+	cbcolors: 0
+	cblog: 0
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	coord: Z-X
+	cpd: 0
+	extends: 350 50
+	grid: 0
+	index: 0
+	labels: 0
+	origin: 0 0 1350
+	subtype: Field Intensity
+	title: Plot #5
+	x2log: 0
+	x2tics: 0
+	xlog: 0
+	y2log: 0
+	y2tics: 0
+	ylog: 0
+	zlog: 0
+	ztics: 0
+End
+
+# Geometry plot "B Field (plane at z=7.0m) (Tesla)"
+Plot: MOLLER-hallA_plot06
+	Format: .eps
+	Type:   Geometry
+	basisu: 1 0 0
+	basisv: 0 1 0
+	boundaries: 0
+	cbcolors: 0
+	cblog: 0
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	coord: X-Y
+	cpd: 0
+	extends: 37 37
+	grid: 0
+	index: 2
+	labels: 0
+	origin: 0 0 700
+	subtype: Field Intensity
+	title: B Field (plane at z=7.0m) (Tesla)
+	x2log: 0
+	x2tics: 0
+	xlabel: X(cm)
+	xlog: 0
+	y2log: 0
+	y2tics: 0
+	ylabel: Y(cm)
+	ylog: 0
+	zlog: 0
+	ztics: 0
+End
+
+# Geometry plot "B Field (plane at y=0.0) (Tesla)"
+Plot: MOLLER-hallA_plot08
+	Format: .eps
+	Type:   Geometry
+	basisu: 0 0 1
+	basisv: 1 0 0
+	boundaries: 0
+	cbcolors: 0
+	cblog: 0
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	coord: Z-X
+	cpd: 0
+	extends: 650 50
+	grid: 0
+	index: 1
+	labels: 0
+	origin: 0 0 1150
+	subtype: Field Intensity
+	title: B Field (plane at y=0.0) (Tesla)
+	x2log: 0
+	x2tics: 0
+	xlabel: Z(cm)
+	xlog: 0
+	y2log: 0
+	y2tics: 0
+	ylabel: X(cm)
+	ylog: 0
+	zlog: 0
+	ztics: 0
+End
+
+# Geometry plot "B Field (plane at y=0.0) (Tesla)"
+Plot: MOLLER-hallA_plot09
+	Format: .eps
+	Type:   Geometry
+	basisu: 0 0 1
+	basisv: 1 0 0
+	boundaries: 0
+	cbcolors: 0
+	cblog: 0
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	coord: Z-X
+	cpd: 0
+	extends: 100 50
+	grid: 0
+	index: 4
+	labels: 0
+	origin: 0 0 700
+	subtype: Field Intensity
+	title: B Field (plane at y=0.0) (Tesla)
+	x2log: 0
+	x2tics: 0
+	xlabel: Z(cm)
+	xlog: 0
+	y2log: 0
+	y2tics: 0
+	ylabel: X(cm)
+	ylog: 0
+	zlog: 0
+	ztics: 0
+End
+
+# Geometry plot "B Field (plane at z=13.0m) (Tesla)"
+Plot: MOLLER-hallA_plot07
+	Format: .eps
+	Type:   Geometry
+	basisu: 1 0 0
+	basisv: 0 1 0
+	boundaries: 0
+	cbcolors: 0
+	cblog: 0
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	coord: X-Y
+	cpd: 0
+	extends: 38 38
+	grid: 0
+	index: 3
+	labels: 0
+	origin: 0 0 1300
+	subtype: Field Intensity
+	title: B Field (plane at z=13.0m) (Tesla)
+	x2log: 0
+	x2tics: 0
+	xlabel: X(cm)
+	xlog: 0
+	y2log: 0
+	y2tics: 0
+	ylabel: Y(cm)
+	ylog: 0
+	zlog: 0
+	ztics: 0
+End
+
+# USRBIN plot "USRBIN MOLLER-hallA 50"
+Plot: MOLLER-hallA_50_plot
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: MOLLER-hallA_50.bnn
+	det: 2
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 290254079123900.19
+	lw.0: 0
+	max: 2345170.50
+	min: 3.09290172E-19
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: USRBIN MOLLER-hallA 50
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "USRBIN MOLLER-hallA 50"
+Plot: MOLLER-hallA_50_plot
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: MOLLER-hallA_50.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 5850887494202.9238
+	lw.0: 0
+	max: 376740.594
+	min: 6.26467454E-07
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: USRBIN MOLLER-hallA 50
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "USRBIN MOLLER-hallA 50"
+Plot: MOLLER-hallA_50_plot
+	Format: .eps
+	Type:   USRBIN
+	cbcolors: 30
+	cblog: 1
+	cbtics: 1
+	datafile: MOLLER-hallA_50.bnn
+	geo: -Auto-
+	title: USRBIN MOLLER-hallA 50
+End
+
+# USRBIN plot "USRBIN MOLLER-hallA 50"
+Plot: MOLLER-hallA_50_plot
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: MOLLER-hallA_50.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 5850887278614.4062
+	lw.0: 0
+	max: 999965.750
+	min: 3.43366580E-08
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: USRBIN MOLLER-hallA 50
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "USRBIN MOLLER-hallA 51"
+Plot: MOLLER-hallA_51_plot
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: MOLLER-hallA_51.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 257.87773282989235
+	lw.0: 0
+	max: 3.01880882E-05
+	min: 1.74279014E-16
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: USRBIN MOLLER-hallA 51
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "USRBIN MOLLER-hallA 52"
+Plot: MOLLER-hallA_52_plot
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: 1
+	cbmax: 100000
+	cbmin: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: MOLLER-hallA_52.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 87.672859512091861
+	lw.0: 0
+	max: 2.97751018E-10
+	min: 2.40419206E-14
+	norm: 1.35E14
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: USRBIN MOLLER-hallA 52
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: First Simulation"
+Plot: MOLLER-hallA_52_plot01
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 10000
+	bxmin: -10000.
+	bymin: 358.
+	cbcolors: 30
+	cblog: True
+	cbmax: 10000
+	cbmin: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: data_040119_52.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 1
+	int: 300.99134413568515
+	lw.0: 0
+	max: 1.09126033E-08
+	min: 1.87303899E-17
+	norm: 3.807E14
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: First Simulation
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: cm
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: cm
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: First Simulation"
+Plot: MOLLER-hallA_52_plot03
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bymax: 10358
+	bymin: 358.
+	cbcolors: 30
+	cblog: True
+	cbmax: 10000
+	cbmin: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: data_new_52.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 3
+	int: 94.458258410997942
+	lw.0: 0
+	max: 9.13631892E-10
+	min: 2.76662467E-17
+	norm: 3.807E14
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: First Simulation
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: cm
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: cm
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: First Simulation E7"
+Plot: MOLLER-hallA_52_plot02
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 16000
+	bxmin: 12000.
+	bzmax: 15000
+	bzmin: 13000.
+	cbcolors: 30
+	cblog: True
+	cbmax: 10000
+	cbmin: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: data_0412_52.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Projection
+	index: 7
+	int: 2.7176918278071008E-002
+	lw.0: 0
+	max: 2.54496592E-13
+	min: 9.22545273E-17
+	norm: 3.807E14
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: First Simulation E7
+	with.0: errorlines
+	x2log: False
+	x2tics: 0
+	xlabel: cm
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: mrem
+	ylog: False
+	ymax: 100
+	ymin: 0
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: First Simulation E7"
+Plot: MOLLER-hallA_52_plot07
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 18000
+	bxmin: 13000.
+	bymax: 30358.
+	bzmax: 18000
+	bzmin: 13000.
+	cbcolors: 30
+	cblog: 1
+	cbmax: 10000
+	cbmin: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: data_0409_52.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Projection
+	index: 2
+	int: 9.0381881842212769E-002
+	lw.0: 0
+	max: 2.14271431E-13
+	min: 3.75812628E-14
+	norm: 3.807E14
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: First Simulation E7
+	with.0: errorlines
+	x2log: 0
+	x2tics: 0
+	xlabel: cm
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylabel: mrem
+	ylog: 0
+	ymax: 120
+	ymin: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: First Simulation E7"
+Plot: MOLLER-hallA_52_plot08
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 0
+	bxmin: -30000.
+	bymax: 5158.
+	bzmax: 18000
+	bzmin: 10000.
+	cbcolors: 30
+	cblog: True
+	cbmax: 10000
+	cbmin: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: data_0412_52.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 1D Projection
+	index: 10
+	int: 7.4899673253468774E-002
+	lw.0: 0
+	max: 1.68575467E-13
+	min: 1.99000548E-14
+	norm: 3.807E14
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: First Simulation E7
+	with.0: errorlines
+	x2log: False
+	x2tics: 0
+	xlabel: cm
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: mrem
+	ylog: False
+	ymax: 120
+	ymin: 0
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: First Simulation"
+Plot: MOLLER-hallA_52_plot06
+	Format: .pdf
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 10000
+	bxmin: -10000.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1000
+	cbmin: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: data_0412_52.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 6
+	int: 99.749224909963317
+	lw.0: 0
+	max: 1.77402182E-09
+	min: 3.13237072E-16
+	norm: 3.807E14
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: First Simulation
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: cm
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: cm
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: New shielding"
+Plot: MOLLER-hallA_52_plot09
+	Format: .pdf
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 10000
+	bxmin: 0.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1000
+	cbmin: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: target_shield53_7.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 7
+	int: 47.136139758103340
+	lw.0: 0
+	max: 9.60577617E-10
+	min: 6.06531905E-17
+	norm: 3.807E14
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: New shielding
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: cm
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: cm
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: First Simulation (-100m to 100m in x)"
+Plot: MOLLER-hallA_52_plot10
+	Format: .pdf
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 10000
+	bxmin: -10000.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1000
+	cbmin: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: data_040119_52.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 6
+	int: 300.99134413568368
+	lw.0: 0
+	max: 3.49617113E-09
+	min: 1.65346032E-14
+	norm: 3.807E14
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: First Simulation (-100m to 100m in x)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: cm
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylabel: cm
+	ylog: False
+	yrebin: 5
+	zlog: False
+	zrebin: 5
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: First Simulation 10m average"
+Plot: MOLLER-hallA_52_plot04
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bymax: 1358
+	bymin: 358.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1000
+	cbmin: 0.01
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: data_040119_52.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 4
+	int: 274.22795445739825
+	lw.0: 0
+	max: 2.09976192E-09
+	min: 6.77092049E-15
+	norm: 3.807E14
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: First Simulation 10m average
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: cm
+	xlog: False
+	xrebin: 15
+	y2log: False
+	y2tics: 0
+	ylabel: cm
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 18
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: First Simulation 10m average"
+Plot: MOLLER-hallA_52_plot11
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bymax: 1558
+	bymin: 358.
+	cbcolors: 30
+	cblog: False
+	cbmax: 100
+	cbmin: 0
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: target_shield52_7.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 3
+	int: 100.09132235533922
+	lw.0: 0
+	max: 2.92837088E-10
+	min: 3.81576617E-16
+	norm: 3.807E14
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: First Simulation 10m average
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: cm
+	xlog: False
+	xrebin: 10
+	y2log: False
+	y2tics: 0
+	ylabel: cm
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 10
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: First Simulation 10m average"
+Plot: MOLLER-hallA_52_plot12
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bymax: 1558
+	bymin: 358.
+	cbcolors: 30
+	cblog: False
+	cbmax: 50
+	cbmin: 0
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: target_shield52_7.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 3
+	int: 100.09132235533922
+	lw.0: 0
+	max: 2.92837088E-10
+	min: 3.81576617E-16
+	norm: 3.807E14
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: First Simulation 10m average
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: cm
+	xlog: False
+	xrebin: 10
+	y2log: False
+	y2tics: 0
+	ylabel: cm
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 10
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: New shielding 10m (height) average."
+Plot: MOLLER-hallA_52_plot05
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bymax: 1358
+	bymin: 358.
+	cbcolors: 30
+	cblog: False
+	cbmax: 100
+	cbmin: 0
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: target_shield53_7.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 43.613879546310265
+	lw.0: 0
+	max: 7.31726346E-10
+	min: 3.79018359E-17
+	norm: 3.807E14
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: New shielding 10m (height) average.
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: cm
+	xlog: False
+	xrebin: 8
+	y2log: False
+	y2tics: 0
+	ylabel: cm
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 3
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: New shielding 10m (height) average."
+Plot: MOLLER-hallA_52_plot13
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bymax: 1358
+	bymin: 358.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1000
+	cbmin: 0.01
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: target_shield53_7.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 8
+	int: 43.772763079778052
+	lw.0: 0
+	max: 7.34359129E-10
+	min: 3.61479272E-15
+	norm: 3.807E14
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: New shielding 10m (height) average.
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: cm
+	xlog: False
+	xrebin: 8
+	y2log: False
+	y2tics: 0
+	ylabel: cm
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 3
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: New shielding Iron 10m (height) average."
+Plot: MOLLER-hallA_52_plot14
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bymax: 1358
+	bymin: 358.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1000
+	cbmin: 0.01
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: target_ironshield53_7.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 9
+	int: 43.226873921572022
+	lw.0: 0
+	max: 2.70361122E-10
+	min: 9.50794483E-15
+	norm: 3.807E14
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: New shielding Iron 10m (height) average.
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: cm
+	xlog: False
+	xrebin: 8
+	y2log: False
+	y2tics: 0
+	ylabel: cm
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 5
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: HDConcrete 10m (height) average."
+Plot: MOLLER-hallA_52_plot15
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bymax: 1358
+	bymin: 358.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1000
+	cbmin: 0.001
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: target_hdconcshield53_7.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 9
+	int: 43.298813895861137
+	lw.0: 0
+	max: 2.91359797E-10
+	min: 2.83337921E-15
+	norm: 3.807E14
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: HDConcrete 10m (height) average.
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: cm
+	xlog: False
+	xrebin: 8
+	y2log: False
+	y2tics: 0
+	ylabel: cm
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 5
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: Concrete + Lead 10m (height) average."
+Plot: MOLLER-hallA_52_plot16
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 40000
+	bxmin: 0
+	bymax: 1358
+	bymin: 358.
+	bzmax: 30000
+	bzmin: -30000.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1000
+	cbmin: 0.001
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: target_concshield53_7.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 10
+	int: 44.546522718536274
+	lw.0: 0
+	max: 2.98953112E-10
+	min: 8.73335332E-16
+	norm: 3.807E14
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: Concrete + Lead 10m (height) average.
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: cm
+	xlog: False
+	xrebin: 8
+	y2log: False
+	y2tics: 0
+	ylabel: cm
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 5
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: Lead+Iron+Concrete 10m (height) average."
+Plot: MOLLER-hallA_52_plot17
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 40000
+	bxmin: 0
+	bymax: 1358
+	bymin: 358.
+	bzmax: 30000
+	bzmin: -30000.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1000
+	cbmin: 0.001
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: target_shield53_8.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 11
+	int: 43.558880949209595
+	lw.0: 0
+	max: 2.69847561E-10
+	min: 2.01812418E-15
+	norm: 3.807E14
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: Lead+Iron+Concrete 10m (height) average.
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: cm
+	xlog: False
+	xrebin: 8
+	y2log: False
+	y2tics: 0
+	ylabel: cm
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 5
+	ztics: 0
+End
+
+# USRBIN plot "Boundary Dose: Barite+Concrete 10m (height) average."
+Plot: MOLLER-hallA_52_plot18
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 40000
+	bxmin: 0
+	bymax: 1358
+	bymin: 358.
+	bzmax: 30000
+	bzmin: -30000.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1000
+	cbmin: 0.001
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: target_hd_bariteshield53_1.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 12
+	int: 47.823102108951495
+	lw.0: 0
+	max: 3.22776694E-10
+	min: 4.35398652E-15
+	norm: 3.807E14
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Boundary Dose: Barite+Concrete 10m (height) average.
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlabel: cm
+	xlog: False
+	xrebin: 8
+	y2log: False
+	y2tics: 0
+	ylabel: cm
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 5
+	ztics: 0
+End
+
+# Geometry plot "Plot #16"
+Plot: MOLLER-hallA_plot16
+	Format: .eps
+	Type:   Geometry
+	basisu: 0 0 1
+	basisv: 0 1 0
+	boundaries: 0
+	cbcolors: 0
+	cblog: 0
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	coord: U-V
+	cpd: 0
+	extends: 30000 10000
+	grid: 0
+	index: 0
+	labels: 0
+	origin: 0 0 0
+	subtype: Geometry
+	title: Plot #16
+	x2log: 0
+	x2tics: 0
+	xlog: 0
+	y2log: 0
+	y2tics: 0
+	ylog: 0
+	zlog: 0
+	ztics: 0
+End
+
+# USRBIN plot "USRBIN MOLLER-hallA 50"
+Plot: MOLLER-hallA_50_plot
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: MOLLER-hallA_aa_50.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 17235230439720.777
+	lw.0: 0
+	max: 650486.938
+	min: 2.90909785E-08
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: USRBIN MOLLER-hallA 50
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "USRBIN MOLLER-hallA 51"
+Plot: MOLLER-hallA_51_plot
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: MOLLER-hallA_aa_51.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 254.99286804219858
+	lw.0: 0
+	max: 2.96515645E-05
+	min: 7.15021208E-18
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: USRBIN MOLLER-hallA 51
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "USRBIN MOLLER-hallA 52"
+Plot: MOLLER-hallA_52_plot
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 14000.
+	bxmin: -14000.
+	cbcolors: 30
+	cblog: True
+	cbmax: 10000
+	cbmin: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: data_0410_52.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 101.04053035523482
+	lw.0: 0
+	max: 1.26438182E-09
+	min: 3.34692417E-16
+	norm: 3.8E14
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: USRBIN MOLLER-hallA 52
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Plot #28"
+Plot: MOLLER-hallA_plot28
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 14000
+	bxmin: 0.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: target_shield54.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 0.11048788465687294
+	lw.0: 0
+	max: 1.45068325E-05
+	min: 1.64905476E-24
+	norm: 6.34E21
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Plot #28
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Plot #28"
+Plot: MOLLER-hallA_plot29
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bxmax: 500
+	bxmin: -500.
+	bymax: 80
+	bymin: -80.
+	bzmax: 0
+	bzmin: -400.
+	cbcolors: 30
+	cblog: True
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: target_shield50.bnn
+	det: 1
+	errors: 0
+	geo: -No-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 2104752692294.1633
+	lw.0: 0
+	max: 2879224.00
+	min: 3.13132176E-07
+	norm: 3.6E-4
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Plot #28
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
