@@ -1,8 +1,8 @@
-#!/opt/flair/flair-2.5/flair
+#!/usr/local/flair/flair
 # FLUKA Project file
 Version: 2
 Title: MOLLER_Test
-Input: MOLLER-hallA_hdc_barite.inp
+Input: MOLLER-hallA_04_2021.inp
 Exec: moller.exe
 Submit: *Default
 Notes:
@@ -15,6 +15,15 @@ LinkPrg: lfluka
 F77bound: True
 F77dline: False
 
+# Properties
+Properties: Input
+	RCC/c1_i_14/@select: 1
+	RCC/c1_o_11/@select: 1
+	RCC/c1_o_12/@select: 1
+	RCC/c1_o_13/@select: 1
+	RCC/c1_o_14/@select: 1
+End
+
 # Run information
 Run: <default>
 	Prev:     0
@@ -24,7 +33,7 @@ Run: <default>
 	StartRun: 1553894715
 	Family:  MOLLER-hallA_aa MOLLER-hallA_ab MOLLER-hallA_ac MOLLER-hallA_ad MOLLER-hallA_ae MOLLER-hallA_af MOLLER-hallA_ag MOLLER-hallA_ah MOLLER-hallA_ai MOLLER-hallA_aj MOLLER-hallA_ak MOLLER-hallA_al MOLLER-hallA_am MOLLER-hallA_an MOLLER-hallA_ao MOLLER-hallA_ap MOLLER-hallA_aq MOLLER-hallA_ar MOLLER-hallA_as MOLLER-hallA_at MOLLER-hallA_au MOLLER-hallA_av MOLLER-hallA_aw MOLLER-hallA_ax MOLLER-hallA_ay MOLLER-hallA_az MOLLER-hallA_ba MOLLER-hallA_bb MOLLER-hallA_bc MOLLER-hallA_bd
 
-	# USRxxx data file: MOLLER-hallA_hdc_barite_50.bnn
+	# USRxxx data file: MOLLER-hallA_04_2021_50.bnn
 	Data: \I_\U.\e
 		Unit: 50
 		Type: b
@@ -32,7 +41,7 @@ Run: <default>
 		Rule: +,\I\d\d\d_ftn\.\U
 	End
 
-	# USRxxx data file: MOLLER-hallA_hdc_barite_51.bnn
+	# USRxxx data file: MOLLER-hallA_04_2021_51.bnn
 	Data: \I_\U.\e
 		Unit: 51
 		Type: b
@@ -40,7 +49,7 @@ Run: <default>
 		Rule: +,\I\d\d\d_ftn\.\U
 	End
 
-	# USRxxx data file: MOLLER-hallA_hdc_barite_52.bnn
+	# USRxxx data file: MOLLER-hallA_04_2021_52.bnn
 	Data: \I_\U.\e
 		Unit: 52
 		Type: b
@@ -1120,6 +1129,16 @@ Material: HdCoHE
 End
 
 # Material
+Material: NiO
+	alpha: 0
+	color: #8090B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
 Material: BaSO4
 	alpha: 0
 	color: #7030D0
@@ -1133,6 +1152,16 @@ End
 Material: BARIUM
 	alpha: 0
 	color: #907010
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: NaCl
+	alpha: 0
+	color: #107030
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1240,9 +1269,29 @@ Material: Al2O3
 End
 
 # Material
+Material: MnCO3
+	alpha: 0
+	color: #403030
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
 Material: Fe2O3
 	alpha: 0
 	color: #B0B050
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: Sulfur_d
+	alpha: 0
+	color: #B0B010
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1270,9 +1319,19 @@ Material: Cement
 End
 
 # Material
-Material: MAGNETIT
+Material: Marble
 	alpha: 0
-	color: #E07050
+	color: #E09070
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: HdCoBa
+	alpha: 0
+	color: #E01030
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1330,9 +1389,49 @@ Material: DMPATM
 End
 
 # Material
+Material: Na2O
+	alpha: 0
+	color: #301070
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: MnO2
+	alpha: 0
+	color: #707030
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
 Material: SiO2
 	alpha: 0
 	color: #60D0B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: CaCO3
+	alpha: 0
+	color: #B0B070
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: P205
+	alpha: 0
+	color: #809030
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1350,9 +1449,19 @@ Material: Mg_O
 End
 
 # Material
-Material: Marble
+Material: MAGNETIT
 	alpha: 0
-	color: #E09070
+	color: #E07050
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: Barite
+	alpha: 0
+	color: #C09090
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1400,6 +1509,16 @@ Material: Soil
 End
 
 # Material
+Material: CW95H2O
+	alpha: 0
+	color: #9030B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
 Material: ILMENITE
 	alpha: 0
 	color: #409070
@@ -1409,11 +1528,21 @@ Material: ILMENITE
 	specular: 0.0
 End
 
+# Material
+Material: CHLORINE
+	alpha: 0
+	color: #503010
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
 # Geometry Information
 Geometry:
-	Frame.bsplit: 0.5
+	Frame.bsplit: 0.99
 	Frame.tsplit: 0.5
-	Frame.vsplit: 0.5
+	Frame.vsplit: 0.01
 
 	# Layer
 	Layer: Media
@@ -1515,7 +1644,7 @@ Plot: Red
 	cbtics: 0
 	coord: X-Z
 	cpd: 0
-	extends: 891.611 467.786
+	extends: 891.611 668.708
 	grid: 0
 	index: 0
 	labels: 1
@@ -1573,7 +1702,7 @@ Plot: Green
 	basisv: 0 0 1
 	boundaries: 1
 	coord: X-Z
-	extends: 619.172 324.85
+	extends: 619.172 464.379
 	labels: 1
 	layer: Media
 	origin: 0 0 4.92023
@@ -1589,10 +1718,10 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 1068.61 560.649
+	extends: 5.40211 2.57775
 	labels: 1
-	layer: 3D
-	origin: 0.1 -97.0359 179.134
+	layer: Media
+	origin: 0.1 0.99266 534.97
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -1611,7 +1740,7 @@ Plot: Magenta
 	cbtics: 0
 	coord: U-V
 	cpd: 0
-	extends: 1283.92 673.612
+	extends: 1283.92 66678.2
 	grid: 0
 	index: 0
 	labels: 1

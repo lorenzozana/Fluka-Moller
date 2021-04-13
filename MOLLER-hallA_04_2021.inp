@@ -210,7 +210,6 @@ ASSIGNMA      VACUUM  col5cut7                            1.
 ASSIGNMA        CW95     coll1
 ASSIGNMA     CW95H2O  coll1h20
 ASSIGNMA      COPPER   coll1cu
-ASSIGNMA        CW95   col1fin
 ASSIGNMA        CW95  col2rin1
 ASSIGNMA        CW95  col2rin2
 ASSIGNMA        CW95  col2con1
@@ -1154,6 +1153,7 @@ RCC col1_0     0.0 0.0 517.5 0.0 0.0 10. 3.1703
 RCC SC_o       0.0 -100. 0.0 0.0 200. 0.0 100.
 RCC SC_i       0.0 -98.72 0.0 0.0 197.44 0.0 97.44
 RCC Sc_i2      0.0 0.0 80. 0.0 0.0 20. 20.
+$start_translat   36.25
 * Collimator 1
 TRC c1_i_1     0.0 0.0 431.25 0.0 0.0 10. 2.0 1.625
 TRC c1_i_2     0.0 0.0 441.25 0.0 0.0 1. 1.625 1.612
@@ -1171,6 +1171,11 @@ RCC c1_o_8     0.0 0.0 500.75 0.0 0.0 1.4 2.40
 RCC c1_o_9     0.0 0.0 502.15 0.0 0.0 1.6 2.20
 RCC c1_o_10    0.0 0.0 445.15 0.0 0.0 58.6 2.54
 RCC c1_o_11    0.0 0.0 442.25 0.0 0.0 61.5 2.70
+RCC c1_o_12    0.0 0.0 503.75 0.0 0.0 -5.0 3.5
+RCC c1_i_14    0.0 0.0 503.75 0.0 0.0 -5.0 10.10
+RCC c1_o_14    0.0 0.0 503.75 0.0 0.0 -5.0 15.0
+RCC c1_o_13    0.0 0.0 498.75 0.0 0.0 -10.0 2.70
+$end_translat
 * col1_0
 RCC col1_1     0.0 0.0 527.5 0.0 0.0 10. 2.8703
 * col1_0
@@ -2287,10 +2292,6 @@ coll1        5 +c1_o_1 -c1_i_1 -c1_i_2
                | +c1_o_9 -c1_i_9
 coll1h20     5 +c1_o_10 -c1_o_4 -c1_o_8 -c1_o_9
 coll1cu      5 +c1_o_11 -c1_o_10 -c1_o_3
-* Collimator1_fin
-col1fin      5 +col1fin0 -col1fin1 -(+finpla11 -finpla10) -(+finpla21 -finpla20) -(+finpla31 -finpla30) -(
-               +finpla41 -finpla40) -(+finpla51 -finpla50) -(+finpla61 -finpla60) -(+finpla71 -finpla70)
-               -fin_cly1 -fin_cly2 -fin_cly3 -fin_cly4 -fin_cly5 -fin_cly6 -fin_cly7 -(+fin_con1 -fin_con2)
 * Collimator2_outer_ring
 col2rin1     5 +col2_0 -cons_0
 * Collimator2_inner_ring
