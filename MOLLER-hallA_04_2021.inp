@@ -194,7 +194,6 @@ ASSIGNMA      VACUUM   airsol1                            1.
 ASSIGNMA      VACUUM      pipe
 ASSIGNMA     AL-6061  BL_DMPTN
 ASSIGNMA    LiquidHy    h2Targ
-ASSIGNMA      VACUUM   col2cut
 ASSIGNMA      VACUUM  col4cut0
 ASSIGNMA      VACUUM  col4cut1
 ASSIGNMA      VACUUM  col4cut2
@@ -210,9 +209,6 @@ ASSIGNMA      VACUUM  col5cut7                            1.
 ASSIGNMA        CW95     coll1
 ASSIGNMA     CW95H2O  coll1h20
 ASSIGNMA      COPPER   coll1cu
-ASSIGNMA        CW95  col2rin1
-ASSIGNMA        CW95  col2rin2
-ASSIGNMA        CW95  col2con1
 ASSIGNMA        CW95  col4rin1
 ASSIGNMA        CW95  col4rin2
 ASSIGNMA        CW95  col4con1
@@ -989,11 +985,12 @@ RCC air7       0.0 0.0 600. 0.0 0.0 376.657 35.
 RCC ShBore     0.0 0.0 100. 0.0 0.0 600. 45.
 RCC ShBore2    0.0 0.0 100. 0.0 0.0 710. 35.
 RCC ShBore1    0.0 0.0 0.0 0.0 0.0 -317.5 5.
-RPP CBox_o     -360. 409. -298.3 371.7 -317.5 317.5
+RPP CBox_o     -360. 409. -298.3 107.19 -317.5 317.5
 RPP CBox2_o    -175. 175. -210. 210. 317.5 801.5
 RPP CBox3_o    -175. 175. -122.5 125. 812. 941.5
 RPP CBox4_o    -133. 133. -200. 200. 941.5 967.
-RPP CBox_i     -220. 269. -298.3 231.7 -177.5 177.5
+RCC CBox4_i    0.0 0.0 941.5 0.0 0.0 25.5 26.5
+RPP CBox_i     -220. 269. -298.3 45. -177.5 177.5
 RPP LBox       -188.5 188.5 -113. 142. 119. 159.
 RCC LBox1      0.0 0.0 285.1 0.0 0.0 20.0 33.0
 RCC BCp_o      0.0 0.0 197.5 0.0 0.0 120. 45.
@@ -1150,10 +1147,10 @@ RPP hal_hole   -106.408 106.408 -193.46900000000025 106.40699999999978 2797.3
 RCC tubeTarg   0.0 0.0 -62.5 0.0 0.0 125. 4.
 * col1_0
 RCC col1_0     0.0 0.0 517.5 0.0 0.0 10. 3.1703
-RCC SC_o       0.0 -100. 0.0 0.0 200. 0.0 100.
-RCC SC_i       0.0 -98.72 0.0 0.0 197.44 0.0 97.44
+RCC SC_o       0.0 -40. 0.0 0.0 80. 0.0 100.
+RCC SC_i       0.0 -39.72 0.0 0.0 79.44 0.0 97.44
 RCC Sc_i2      0.0 0.0 80. 0.0 0.0 20. 20.
-$start_translat   36.25
+$start_translat 0 0 36.25
 * Collimator 1
 TRC c1_i_1     0.0 0.0 431.25 0.0 0.0 10. 2.0 1.625
 TRC c1_i_2     0.0 0.0 441.25 0.0 0.0 1. 1.625 1.612
@@ -1288,6 +1285,7 @@ RCC fin_cly7   3.5353742234795766 -4.433219055038471 517.5 0.0 0.0 10.
 TRC fin_con1   0.0 0.0 517.5 0.0 0.0 3. 5.6703 5.6703
 * fin_cons_cut2
 TRC fin_con2   0.0 0.0 517.5 0.0 0.0 3. 3.1703 4.9003
+$start_translat 0 0 26.7
 * coll4_0
 TRC col4_0     0.0 0.0 827.5 0.0 0.0 10. 30. 30.
 * coll4_1
@@ -1436,6 +1434,7 @@ PLA pcon_b76   4.70759639978788 4.8780749973841315 0.0 8.77095659680842
 * col4_botcut_pla77
 PLA pcon_b77   7.201810436639886 8.314681379024984 0.0 18.155804262123574
               -14.847736229192616 -5.5
+$end_translat
 * col5_vacuum_cut
 RCC col5_cut   0.0 0.0 976.66 0.0 0.0 709.997 42.
 TRC vp_down    0.0 0.0 1686.657 0.0 0.0 1363.343 42. 45.72
@@ -2013,6 +2012,8 @@ XYP p121_9     283.33699999999999
 XYP p121_0     290.95699999999999
 XYP g122       318.89699999999999
 $end_translat
+$start_translat 0 0 26.7
+$end_translat
 END
 * logicMother
 logicMot     5 +boxMothe -air6  -dirtou20 +air_c1
@@ -2105,7 +2106,7 @@ Dirth4       5 +dirtou1 -dirto1_3 -dir_c1
                | +dirtou4 -dirtou5 -dir4_r -dir4_c1 -dirto1_3
 * hall_air
 hall         5 (+hal_tin -hal_tsub -hallcut )
-               | hal_cin -hal_pipe  -CBox_o  -( +LBox -ShBore ) -CBox2_o -CBox3_o -col5_cut -air7
+               | hal_cin -hal_pipe  -CBox_o -CBox2_o -CBox3_o -col5_cut -air7
                -CBox4_o  -LBox1 -Spipe_o -sbsBunke -vp_down
 WALL1        5 +dmptun2 -dmp_tunl -pl1830 -ha_out
                | +pl1830 +tun2 -tun1 -ha_out
@@ -2185,7 +2186,7 @@ sbsbunke     5 +sbsBunke -IronShie -IronShi1 -IronShi2 -IronShi3 -IronShi4 -Stee
 hall_in      5 +CBox_i -(+SC_o -SC_i -Sc_i2) -hal_pipe -tubeTarg
                | +ShBore +CBox_o -(+LBox1 -LBox1_i) -(+BCp_o -BCp_i) -(+BCp2_o -BCp2_i)
                | +ShBore1 -hal_pipe -tubeTarg -(+SC_o -SC_i)
-               | +ShBore2 -(+LBox1 -LBox1_i) -col2_0 -air7 -(+BCp_o -BCp_i)
+               | +ShBore2 -(+LBox1 -LBox1_i) -air7 -(+BCp_o -BCp_i)
                -(+BCp2_o -BCp2_i) -c1_o_1 -c1_o_11 -c1_o_12 -c1_o_13 -( +c1_o_14 -c1_i_14)
                -( +c1_o_15 -c1_i_15)
                | +c1_i_1
@@ -2206,7 +2207,7 @@ SC           5 +SC_o -SC_i -Sc_i2 -hal_pipe
 ShHutC       5 +CBox_o -CBox_i -ShBore -ShBore1
 ShHutC1      5 +CBox2_o -ShBore2
 ShHutC2      5 +CBox3_o -air7
-ShLeadC3     5 +CBox4_o -air7
+ShLeadC3     5 +CBox4_o -CBox4_i
 SHLead1      5 +LBox1 -LBox1_i
 SOLE1        5 +Sol1 -Sol3 -Scone
                | +Sol3 -Sol2
@@ -2224,8 +2225,8 @@ SOLE7        5 +Sol19 -Sol21 -Scone
                | +Sol21 -Sol20
 SPIPE        5 +Spipe_o -Spipe_i -Sol1 -Sol4 -Sol7 -Sol10 -Sol13 -Sol16 -Sol19
                | +Scone +Spipe_o -Spipe_i
-airsol1      5 +air7 -Sol1 -Sol3 -Sol4 -Sol6 -Sol7 -Sol9 -Sol10 -Sol12 -Sol13 -Sol15 -Sol16 -Sol18
-               -Sol19 -Sol21 -col4_0 -Spipe_o
+airsol1      5 +air7 -Sol1 -Sol3 -Sol4 -Sol6 -Sol7 -Sol9 -Sol10 -Sol12 -Sol13 -Sol15 -Sol16 -Sol18 -Sol19 -Sol21
+               -col4_0 -Spipe_o -CBox4_o
                | +Sol2
                | +Sol5
                | +Sol8
@@ -2241,13 +2242,11 @@ airsol1      5 +air7 -Sol1 -Sol3 -Sol4 -Sol6 -Sol7 -Sol9 -Sol10 -Sol12 -Sol13 -S
                | +Sol13 +Scone -Spipe_o
                | +Sol16 +Scone -Spipe_o
                | +Sol19 +Scone -Spipe_o
+               | +CBox4_i
 * hall_pipe
 pipe         5 +hal_pipe
 * h2Targ
 h2Targ       5 +tubeTarg
-* Collimator2_cut
-col2cut      5 (+cons_0 -cons_1 +((+cons_11 -cons_10) | (+cons_21 -cons_20) | (+cons_31 -cons_30) | (+cons_41
-               -cons_40) | (+cons_51 -cons_50) | (+cons_61 -cons_60) | (+cons_71 -cons_70))) | col2_su0
 * Collimator4_cut_set_0
 col4cut0     5 +col4_1 -col4_2 +(+pcons_71 -pcons_70 -(+pcon_t73 -pcon_t72) -(+pcon_t74) -( +pcon_b76 -pcon_b75) -
                ( +pcon_b77)) | col4_3
@@ -2299,13 +2298,6 @@ coll1h20     5 +c1_o_10 -c1_o_4 -c1_o_8 -c1_o_9
 coll1cu      5 +c1_o_11 -c1_o_10 -c1_o_3
                | +c1_o_12 -c1_o_10 -c1_o_9 -c1_o_8
                | +c1_o_14 -c1_i_14
-* Collimator2_outer_ring
-col2rin1     5 +col2_0 -cons_0
-* Collimator2_inner_ring
-col2rin2     5 +cons_1 -col2_su0
-* Collimator2_middle_structure
-col2con1     5 +cons_0 -cons_1 -(+cons_11 -cons_10) -(+cons_21 -cons_20) - (+cons_31 -cons_30) - (+cons_41
-               -cons_40) -(+cons_51 -cons_50) -(+cons_61 -cons_60) -(+cons_71 -cons_70)
 * Collimator4_outer_ring
 col4rin1     5 +col4_0 -col4_1
 * Collimator4_inner_ring

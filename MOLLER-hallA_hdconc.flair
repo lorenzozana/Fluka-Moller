@@ -17,11 +17,7 @@ F77dline: False
 
 # Properties
 Properties: Input
-	RCC/c1_i_14/@select: 1
-	RCC/c1_o_11/@select: 1
-	RCC/c1_o_12/@select: 1
-	RCC/c1_o_13/@select: 1
-	RCC/c1_o_14/@select: 1
+	RPP/CBox_o/@select: 1
 End
 
 # Run information
@@ -1644,7 +1640,7 @@ Plot: Red
 	cbtics: 0
 	coord: X-Z
 	cpd: 0
-	extends: 891.611 668.708
+	extends: 891.611 1.07553
 	grid: 0
 	index: 0
 	labels: 1
@@ -1702,7 +1698,7 @@ Plot: Green
 	basisv: 0 0 1
 	boundaries: 1
 	coord: X-Z
-	extends: 619.172 464.379
+	extends: 619.172 0.74689
 	labels: 1
 	layer: Media
 	origin: 0 0 4.92023
@@ -1718,10 +1714,10 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 5.40211 2.57775
+	extends: 743.683 354.868
 	labels: 1
 	layer: Media
-	origin: 0.1 0.99266 534.97
+	origin: 0.1 -109.595 234.758
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -1740,7 +1736,7 @@ Plot: Magenta
 	cbtics: 0
 	coord: U-V
 	cpd: 0
-	extends: 1283.92 66678.2
+	extends: 1283.92 67106.2
 	grid: 0
 	index: 0
 	labels: 1
