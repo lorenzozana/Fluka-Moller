@@ -17,7 +17,9 @@ F77dline: False
 
 # Properties
 Properties: Input
-	RPP/CBox_o/@select: 1
+	!point/marker1/@select: 8
+	!point/marker2/@select: 8
+	!point/marker3/@select: 8
 End
 
 # Run information
@@ -1315,9 +1317,9 @@ Material: Cement
 End
 
 # Material
-Material: Marble
+Material: MAGNETIT
 	alpha: 0
-	color: #E09070
+	color: #E07050
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1385,16 +1387,6 @@ Material: DMPATM
 End
 
 # Material
-Material: Na2O
-	alpha: 0
-	color: #301070
-	fuzz: 0.0
-	ior: 1.0
-	shine: 10.0
-	specular: 0.0
-End
-
-# Material
 Material: MnO2
 	alpha: 0
 	color: #707030
@@ -1445,9 +1437,9 @@ Material: Mg_O
 End
 
 # Material
-Material: MAGNETIT
+Material: Marble
 	alpha: 0
-	color: #E07050
+	color: #E09070
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1478,6 +1470,16 @@ End
 Material: POTASSIU
 	alpha: 0
 	color: #70B0B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: Na2O
+	alpha: 0
+	color: #301070
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1545,12 +1547,14 @@ Geometry:
 		: True
 		._visible: True
 		3D.fov: 22.8
+		Image: True
 		Image._visible: True
-		Image.file: HallA.png
-		Image.marker: 4
-		Image.marker.0: 167.25 310.0 0.0 1037.74 -2251.76
-		Image.marker.1: 165.142857143 617.857142857 0.0 -298.3 -2251.76
-		Image.marker.2: 1155.125 617.75 0.0 -298.3 3051.76
+		Image.alpha: 14
+		Image.file: geant4_moller_side.png
+		Image.marker: 3
+		Image.marker.0: 262.941176471 338.0 0.0 0.0 62.5
+		Image.marker.1: 369.904761905 605.0 0.0 -298.3 177.5
+		Image.marker.2: 709.952380952 337.0 0.0 0.0 540.0
 		Image.marker.3: 1155.84615385 309.230769231 0.0 1037.74 3051.76
 		Options.shortcut: F3
 		Palette._visible: True
@@ -1630,15 +1634,15 @@ End
 Plot: Red
 	Format: .eps
 	Type:   Geometry
-	basisu: -1 0 0
-	basisv: 0 0 1
+	basisu: 0 -1 0
+	basisv: 0 0 -1
 	boundaries: 1
 	cbcolors: 0
 	cblog: False
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 0
-	coord: X-Z
+	coord: Y-Z
 	cpd: 0
 	extends: 891.611 1.07553
 	grid: 0
@@ -1694,10 +1698,10 @@ End
 Plot: Green
 	Format: .eps
 	Type:   Geometry
-	basisu: 1 0 0
-	basisv: 0 0 1
+	basisu: 0 -1 0
+	basisv: 0 0 -1
 	boundaries: 1
-	coord: X-Z
+	coord: Y-Z
 	extends: 619.172 0.74689
 	labels: 1
 	layer: Media
@@ -1714,10 +1718,10 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 743.683 354.868
+	extends: 1070.9 511.009
 	labels: 1
 	layer: Media
-	origin: 0.1 -109.595 234.758
+	origin: 0.1 76.4226 702.906
 	subtype: Material
 	title: GeoViewer Blue plot
 End

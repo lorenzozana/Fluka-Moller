@@ -5,6 +5,9 @@ DEFAULTS                                                              NEW-DEFA
 BEAM            -11.       0.0     0.136       0.5       0.5          ELECTRON
 PHYSICS           1.                                                  COALESCE
 PHYSICS           3.                                                  EVAPORAT
+!point           0.0       0.0      62.5                              marker1
+!point           0.0    -298.3     177.5                              marker2
+!point           0.0       0.0     540.0                              marker3
 PHOTONUC          1.                      BLCKHOLE  @LASTMAT
 PHOTONUC          1.                      LiquidHy  LiquidHy          ELECTNUC
 BEAMPOS          0.0       0.0     -62.5       0.0       0.0
@@ -2227,7 +2230,7 @@ hall_in      5 +CBox_i -(+SC_o -SC_i -Sc_i2) -hal_pipe -tubeTarg
                -(-c2c5_1 -c2c5_2 -c2c5_c)
                -(-c2c6_1 -c2c6_2 -c2c6_c)
                -(-c2c7_1 -c2c7_2 -c2c7_c)
-	       | +c1_i_14 -c1_o_12 -(-c2c1_1 -c2c1_2 -c2c1_c)
+               | +c1_i_14 -c1_o_12 -(-c2c1_1 -c2c1_2 -c2c1_c)
                -(-c2c2_1 -c2c2_2 -c2c2_c)
                -(-c2c3_1 -c2c3_2 -c2c3_c)
                -(-c2c4_1 -c2c4_2 -c2c4_c)
