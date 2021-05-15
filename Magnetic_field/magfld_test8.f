@@ -95,7 +95,7 @@ c
 *     gradient in tesla per cm
          GRADIENT = 0.08D+00  
          INDEX = 1
-         OPEN(UNIT=17, FILE ='V2U_c.txt')
+         OPEN(UNIT=17, FILE ='/home/lorenzozana/V2U_c.txt')
 *         LUNRD = NINT(WHASOU(1))
          DO I = 1, NR2
             DO  J = 1, NPHI
@@ -124,11 +124,11 @@ c
          END DO
          NENT2(3) = NR2
          DO  K = 1, NR2
-            ENT2(INDEX) = RB(K)
+            ENT2(INDEX) = RB2(K)
             INDEX = INDEX + 1
          END DO
          INDEX = 1
-         OPEN(UNIT=18, FILE ='V2D_c.txt')
+         OPEN(UNIT=18, FILE ='/home/lorenzozana/V2D_c.txt')
 *         LUNRD = NINT(WHASOU(1))
          DO I = 1, NR
             DO  J = 1, NPHI

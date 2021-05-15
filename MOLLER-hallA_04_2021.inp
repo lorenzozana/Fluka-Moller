@@ -188,8 +188,8 @@ ASSIGNMA      VACUUM  logicMot
 ASSIGNMA         AIR      hall
 ASSIGNMA         AIR   hall_in
 ASSIGNMA    ALUMINUM        SC
-ASSIGNMA    Concrete    ShHutC   ShHutC2
 ASSIGNMA    Concrete    ShHutC
+ASSIGNMA    Concrete   ShHutC1
 ASSIGNMA      HdCoBa   HDCplug
 ASSIGNMA        LEAD   SHLead1
 ASSIGNMA        LEAD  ShLeadC3
@@ -901,8 +901,8 @@ ASSIGNMA        AIR2  logicMo1   Ai6_250
 ASSIGNMA        AIR3  logicMo2   Ai6_500
 ASSIGNMA        AIR4  logicMo3   Ai6_750
 ASSIGNMA        AIR5  logicMo4  Ai6_1000
-ASSIGNMA      COPPER     SOLE1     SOLE7
-ASSIGNMA      COPPER     SPIPE
+ASSIGNMA      COPPER     SOLE1     SOLE7                  1.
+ASSIGNMA      COPPER     SPIPE                            1.
 ASSIGNMA        IRON  IronShie
 ASSIGNMA        IRON  IronShi1
 ASSIGNMA        IRON  IronShi2
@@ -967,13 +967,13 @@ AUXSCORE      USRBIN    PHOTON            SHTgEnPh  SHTgEnPh
 AUXSCORE      USRBIN  ELECTRON             SHTgEne   SHTgEne
 USRBIN           13.  SI1MEVNE      -54.      450.      500.      400.SHTg1MeV
 USRBIN           0.0     -300.     -400.       22.       40.       40. &
-ROT-DEFI                   0.0       90.       0.0       0.0       0.0Coil1
-ROT-DEFI                   0.0    38.571       0.0       0.0       0.0Coil2
-ROT-DEFI                   0.0   -12.857       0.0       0.0       0.0Coil3
-ROT-DEFI                   0.0   -64.286       0.0       0.0       0.0Coil4
-ROT-DEFI                   0.0  -115.714       0.0       0.0       0.0Coil5
-ROT-DEFI                   0.0  -167.143       0.0       0.0       0.0Coil6
-ROT-DEFI                   0.0   141.429       0.0       0.0       0.0Coil7
+ROT-DEFI                   0.0       90.       0.0       0.0     -50.0Coil1
+ROT-DEFI                   0.0    38.571       0.0       0.0     -50.0Coil2
+ROT-DEFI                   0.0   -12.857       0.0       0.0     -50.0Coil3
+ROT-DEFI                   0.0   -64.286       0.0       0.0     -50.0Coil4
+ROT-DEFI                   0.0  -115.714       0.0       0.0     -50.0Coil5
+ROT-DEFI                   0.0  -167.143       0.0       0.0     -50.0Coil6
+ROT-DEFI                   0.0   141.429       0.0       0.0     -50.0Coil7
 ROT-DEFI        200.                 30.      346.     -100.   -1371.3SBS_b
 GEOBEGIN                                                              COMBNAME
     0    0          
@@ -984,15 +984,15 @@ RCC air3       0.0 358. 400. 0.0 100000. 0.0 15000.
 RCC air4       0.0 358. 400. 0.0 100000. 0.0 20000.
 RCC air5       0.0 358. 400. 0.0 100000. 0.0 30000.
 RCC air6       0.0 358. 400. 0.0 100000. 0.0 50000.
-RCC air7       0.0 0.0 600. 0.0 0.0 376.657 35.
+RCC air7       0.0 0.0 540.0 0.0 0.0 297.0 35.0
 RCC ShBore     0.0 0.0 100. 0.0 0.0 600. 45.
 RCC ShBore2    0.0 0.0 100. 0.0 0.0 710. 35.
 RCC ShBore1    0.0 0.0 0.0 0.0 0.0 -317.5 5.
 RPP CBox_o     -360. 409. -298.3 107.19 -317.5 317.5
-RPP CBox2_o    -175. 175. -210. 210. 317.5 801.5
+RPP CBox2_o    -175. 175. -210. 210. 317.5 750.
 RPP CBox3_o    -175. 175. -122.5 125. 812. 941.5
-RPP CBox4_o    -133. 133. -200. 200. 941.5 967.
-RCC CBox4_i    0.0 0.0 941.5 0.0 0.0 25.5 26.5
+RPP CBox4_o    -133. 133. -123. 123. 837. 861.
+RCC CBox4_i    0.0 0.0 837. 0.0 0.0 24. 26.5
 RPP CBox_i     -220. 269. -298.3 45. -177.5 177.5
 RPP LBox       -188.5 188.5 -113. 142. 119. 159.
 RCC LBox1      0.0 0.0 285.1 0.0 0.0 20.0 33.0
@@ -1030,6 +1030,7 @@ XZP Sol33      13.58
 PLA c2c1_1     0.97492791 0.22252093 0.0 0.0 0.0 0.0
 PLA c2c1_2     -0.97492791 0.22252093 0.0 0.0 0.0 0.0
 XZP c2c1_c     0.0
+XZP c2c1_c1    -0.0
 $end_transform
 $start_transform Coil2
 RPP Sol4       -0.77 0.77 3.5 20. 600. 800.
@@ -1060,7 +1061,7 @@ RPP Sol13      -0.77 0.77 3.5 20. 600. 800.
 RPP Sol14      -1.54 1.54 8.12 15.38 604.62 795.38
 RPP Sol15      -1.54 1.54 6.58 16.92 603.08 796.92
 PLA c2c5_1     0.97492791 0.22252093 0.0 0.0 0.0 0.0
-PLA c2c5_2     -0.97492791 0.22252093 0.0 0.0 0.0 0.0
+PLA c2c5_2     -.97492791 0.22252093 0.0 7.1216185562E-7 -1.625462937E-7 0.0
 XZP c2c5_c     0.0
 $end_transform
 $start_transform Coil6
@@ -1079,8 +1080,8 @@ PLA c2c7_1     0.97492791 0.22252093 0.0 0.0 0.0 0.0
 PLA c2c7_2     -0.97492791 0.22252093 0.0 0.0 0.0 0.0
 XZP c2c7_c     0.0
 $end_transform
-RCC Spipe_i    0.0 0.0 604. 0.0 0.0 193.6 3.5
-RCC Spipe_o    0.0 0.0 604.5 0.0 0.0 193.1 4.2
+RCC Spipe_i    0.0 0.0 554. 0.0 0.0 193.6 3.5
+RCC Spipe_o    0.0 0.0 554.5 0.0 0.0 193.1 4.2
 XZP air_c1     5000.
 XZP air_c2     25000.
 XZP air_c3     50000.
@@ -1309,7 +1310,7 @@ RCC fin_cly7   3.5353742234795766 -4.433219055038471 517.5 0.0 0.0 10.
 TRC fin_con1   0.0 0.0 517.5 0.0 0.0 3. 5.6703 5.6703
 * fin_cons_cut2
 TRC fin_con2   0.0 0.0 517.5 0.0 0.0 3. 3.1703 4.9003
-$start_translat 0 0 26.7
+$start_translat 0 0 -57.5
 * coll4_0
 TRC col4_0     0.0 0.0 827.5 0.0 0.0 10. 30. 30.
 * coll4_1
@@ -1460,7 +1461,7 @@ PLA pcon_b77   7.201810436639886 8.314681379024984 0.0 18.155804262123574
               -14.847736229192616 -5.5
 $end_translat
 * col5_vacuum_cut
-RCC col5_cut   0.0 0.0 976.66 0.0 0.0 709.997 42.
+RCC col5_cut   0.0 0.0 861.0 0.0 0.0 825.657 75.0
 TRC vp_down    0.0 0.0 1686.657 0.0 0.0 1363.343 42. 45.72
 * col5_trd1_plane1
 YZP col5t1p1   -7.199999999999999
@@ -2130,7 +2131,7 @@ Dirth4       5 +dirtou1 -dirto1_3 -dir_c1
                | +dirtou4 -dirtou5 -dir4_r -dir4_c1 -dirto1_3
 * hall_air
 hall         5 (+hal_tin -hal_tsub -hallcut )
-               | hal_cin -hal_pipe  -CBox_o -CBox2_o -CBox3_o -col5_cut -air7
+               | hal_cin -hal_pipe  -CBox_o -CBox2_o -col5_cut -air7
                -CBox4_o  -LBox1 -Spipe_o -sbsBunke -vp_down
 WALL1        5 +dmptun2 -dmp_tunl -pl1830 -ha_out
                | +pl1830 +tun2 -tun1 -ha_out
@@ -2223,27 +2224,26 @@ hall_in      5 +CBox_i -(+SC_o -SC_i -Sc_i2) -hal_pipe -tubeTarg
                | +c1_i_9
                | +LBox1_i +LBox1
                | +SC_i -tubeTarg -hal_pipe
-               | +c1_i_15 -c1_o_13 -(-c2c1_1 -c2c1_2 -c2c1_c)
-               -(-c2c2_1 -c2c2_2 -c2c2_c)
-               -(-c2c3_1 -c2c3_2 -c2c3_c)
-               -(-c2c4_1 -c2c4_2 -c2c4_c)
-               -(-c2c5_1 -c2c5_2 -c2c5_c)
-               -(-c2c6_1 -c2c6_2 -c2c6_c)
-               -(-c2c7_1 -c2c7_2 -c2c7_c)
-               | +c1_i_14 -c1_o_12 -(-c2c1_1 -c2c1_2 -c2c1_c)
-               -(-c2c2_1 -c2c2_2 -c2c2_c)
-               -(-c2c3_1 -c2c3_2 -c2c3_c)
-               -(-c2c4_1 -c2c4_2 -c2c4_c)
-               -(-c2c5_1 -c2c5_2 -c2c5_c)
-               -(-c2c6_1 -c2c6_2 -c2c6_c)
-               -(-c2c7_1 -c2c7_2 -c2c7_c)
+               | +c1_i_15 -c1_o_13 +c2c4_1 +c2c5_2 -c2c4_c
+               | +c1_i_15 -c1_o_13 +c2c5_1 +c2c6_2 -c2c5_c
+               | +c1_i_15 -c1_o_13 +c2c6_1 +c2c7_2 -c2c6_c
+               | +c1_i_15 -c1_o_13 +c2c7_1 +c2c1_2 -c2c7_c
+               | +c1_i_15 -c1_o_13 +c2c1_1 +c2c2_2 -c2c1_c
+               | +c1_i_15 -c1_o_13 +c2c2_1 +c2c3_2 -c2c2_c
+               | +c1_i_15 -c1_o_13 +c2c3_1 +c2c4_2 -c2c3_c
+               | +c1_i_14 -c1_o_12 +c2c4_1 +c2c5_2 -c2c4_c
+               | +c1_i_14 -c1_o_12 +c2c5_1 +c2c6_2 -c2c5_c
+               | +c1_i_14 -c1_o_12 +c2c6_1 +c2c7_2 -c2c6_c
+               | +c1_i_14 -c1_o_12 +c2c7_1 +c2c1_2 -c2c7_c
+               | +c1_i_14 -c1_o_12 +c2c1_1 +c2c2_2 -c2c1_c
+               | +c1_i_14 -c1_o_12 +c2c2_1 +c2c3_2 -c2c2_c
+               | +c1_i_14 -c1_o_12 +c2c3_1 +c2c4_2 -c2c3_c
 HDCplug      5 +BCp_o -BCp_i
                | +BCp2_o -BCp2_i
 Vdown        5 +vp_down
 SC           5 +SC_o -SC_i -Sc_i2 -hal_pipe
 ShHutC       5 +CBox_o -CBox_i -ShBore -ShBore1
 ShHutC1      5 +CBox2_o -ShBore2
-ShHutC2      5 +CBox3_o -air7
 ShLeadC3     5 +CBox4_o -CBox4_i
 SHLead1      5 +LBox1 -LBox1_i
 SOLE1        5 +Sol1 -Sol3 -Scone

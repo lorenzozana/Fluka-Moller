@@ -9,7 +9,7 @@ Notes:
 {img:MOLLER-hallA_plot05.png}
 Tabs: 0.1 0.32 0.56 0.81 1.0
 Page: Flair
-Source: Magnetic_field/magfld_test7.f
+Source: Magnetic_field/magfld_test8.f
 DefMain: True
 LinkPrg: lfluka
 F77bound: True
@@ -20,6 +20,7 @@ Properties: Input
 	!point/marker1/@select: 8
 	!point/marker2/@select: 8
 	!point/marker3/@select: 8
+	REGION/WALL1/@select: 1
 End
 
 # Run information
@@ -1718,10 +1719,10 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 1070.9 511.009
+	extends: 516.445 246.435
 	labels: 1
 	layer: Media
-	origin: 0.1 76.4226 702.906
+	origin: 0.1 -197.714 884.394
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -1766,7 +1767,7 @@ Plot: MOLLER-hallA_plot05
 	basisv: 1 0 0
 	boundaries: 0
 	cbcolors: 0
-	cblog: 0
+	cblog: False
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 0
@@ -1779,13 +1780,13 @@ Plot: MOLLER-hallA_plot05
 	origin: 0 0 1350
 	subtype: Field Intensity
 	title: Plot #5
-	x2log: 0
+	x2log: False
 	x2tics: 0
-	xlog: 0
-	y2log: 0
+	xlog: False
+	y2log: False
 	y2tics: 0
-	ylog: 0
-	zlog: 0
+	ylog: False
+	zlog: False
 	ztics: 0
 End
 
@@ -1797,7 +1798,7 @@ Plot: MOLLER-hallA_plot06
 	basisv: 0 1 0
 	boundaries: 0
 	cbcolors: 0
-	cblog: 0
+	cblog: False
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 0
@@ -1810,15 +1811,15 @@ Plot: MOLLER-hallA_plot06
 	origin: 0 0 700
 	subtype: Field Intensity
 	title: B Field (plane at z=7.0m) (Tesla)
-	x2log: 0
+	x2log: False
 	x2tics: 0
 	xlabel: X(cm)
-	xlog: 0
-	y2log: 0
+	xlog: False
+	y2log: False
 	y2tics: 0
 	ylabel: Y(cm)
-	ylog: 0
-	zlog: 0
+	ylog: False
+	zlog: False
 	ztics: 0
 End
 
@@ -1830,7 +1831,7 @@ Plot: MOLLER-hallA_plot08
 	basisv: 1 0 0
 	boundaries: 0
 	cbcolors: 0
-	cblog: 0
+	cblog: False
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 0
@@ -1843,15 +1844,15 @@ Plot: MOLLER-hallA_plot08
 	origin: 0 0 1150
 	subtype: Field Intensity
 	title: B Field (plane at y=0.0) (Tesla)
-	x2log: 0
+	x2log: False
 	x2tics: 0
 	xlabel: Z(cm)
-	xlog: 0
-	y2log: 0
+	xlog: False
+	y2log: False
 	y2tics: 0
 	ylabel: X(cm)
-	ylog: 0
-	zlog: 0
+	ylog: False
+	zlog: False
 	ztics: 0
 End
 
@@ -1863,7 +1864,7 @@ Plot: MOLLER-hallA_plot09
 	basisv: 1 0 0
 	boundaries: 0
 	cbcolors: 0
-	cblog: 0
+	cblog: False
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 0
@@ -1876,15 +1877,15 @@ Plot: MOLLER-hallA_plot09
 	origin: 0 0 700
 	subtype: Field Intensity
 	title: B Field (plane at y=0.0) (Tesla)
-	x2log: 0
+	x2log: False
 	x2tics: 0
 	xlabel: Z(cm)
-	xlog: 0
-	y2log: 0
+	xlog: False
+	y2log: False
 	y2tics: 0
 	ylabel: X(cm)
-	ylog: 0
-	zlog: 0
+	ylog: False
+	zlog: False
 	ztics: 0
 End
 
@@ -1896,7 +1897,7 @@ Plot: MOLLER-hallA_plot07
 	basisv: 0 1 0
 	boundaries: 0
 	cbcolors: 0
-	cblog: 0
+	cblog: False
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 0
@@ -1909,15 +1910,15 @@ Plot: MOLLER-hallA_plot07
 	origin: 0 0 1300
 	subtype: Field Intensity
 	title: B Field (plane at z=13.0m) (Tesla)
-	x2log: 0
+	x2log: False
 	x2tics: 0
 	xlabel: X(cm)
-	xlog: 0
-	y2log: 0
+	xlog: False
+	y2log: False
 	y2tics: 0
 	ylabel: Y(cm)
-	ylog: 0
-	zlog: 0
+	ylog: False
+	zlog: False
 	ztics: 0
 End
 
