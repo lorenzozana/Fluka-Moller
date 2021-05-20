@@ -20,7 +20,7 @@ Properties: Input
 	!point/marker1/@select: 8
 	!point/marker2/@select: 8
 	!point/marker3/@select: 8
-	REGION/WALL1/@select: 1
+	REGION/col5cut6/@select: 1
 End
 
 # Run information
@@ -1318,9 +1318,9 @@ Material: Cement
 End
 
 # Material
-Material: MAGNETIT
+Material: Marble
 	alpha: 0
-	color: #E07050
+	color: #E09070
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1388,6 +1388,16 @@ Material: DMPATM
 End
 
 # Material
+Material: Na2O
+	alpha: 0
+	color: #301070
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
 Material: MnO2
 	alpha: 0
 	color: #707030
@@ -1438,9 +1448,9 @@ Material: Mg_O
 End
 
 # Material
-Material: Marble
+Material: MAGNETIT
 	alpha: 0
-	color: #E09070
+	color: #E07050
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1471,16 +1481,6 @@ End
 Material: POTASSIU
 	alpha: 0
 	color: #70B0B0
-	fuzz: 0.0
-	ior: 1.0
-	shine: 10.0
-	specular: 0.0
-End
-
-# Material
-Material: Na2O
-	alpha: 0
-	color: #301070
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -1539,9 +1539,9 @@ End
 
 # Geometry Information
 Geometry:
-	Frame.bsplit: 0.99
+	Frame.bsplit: 0.5
 	Frame.tsplit: 0.5
-	Frame.vsplit: 0.01
+	Frame.vsplit: 0.5
 
 	# Layer
 	Layer: Media
@@ -1635,22 +1635,22 @@ End
 Plot: Red
 	Format: .eps
 	Type:   Geometry
-	basisu: 0 -1 0
-	basisv: 0 0 -1
+	basisu: 1 0 0
+	basisv: 0 1 0
 	boundaries: 1
 	cbcolors: 0
 	cblog: False
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 0
-	coord: Y-Z
+	coord: X-Y
 	cpd: 0
-	extends: 891.611 1.07553
+	extends: 207.36 88.5471
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: -69.1599 -0.1 179.847
+	origin: -16.5212 -13.9043 1100
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: False
@@ -1703,7 +1703,7 @@ Plot: Green
 	basisv: 0 0 -1
 	boundaries: 1
 	coord: Y-Z
-	extends: 619.172 0.74689
+	extends: 619.172 284.565
 	labels: 1
 	layer: Media
 	origin: 0 0 4.92023
@@ -1719,10 +1719,10 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 516.445 246.435
+	extends: 430.371 205.363
 	labels: 1
 	layer: Media
-	origin: 0.1 -197.714 884.394
+	origin: 0.1 -47.8124 852.237
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -1773,11 +1773,42 @@ Plot: MOLLER-hallA_plot05
 	cbtics: 0
 	coord: Z-X
 	cpd: 0
-	extends: 350 50
+	extends: 450 75
 	grid: 0
 	index: 0
 	labels: 0
-	origin: 0 0 1350
+	origin: 0 0.0001 1250
+	subtype: Field Intensity
+	title: Plot #5
+	x2log: False
+	x2tics: 0
+	xlog: False
+	y2log: False
+	y2tics: 0
+	ylog: False
+	zlog: False
+	ztics: 0
+End
+
+# Geometry plot "Plot #5"
+Plot: MOLLER-hallA_plot10
+	Format: .eps
+	Type:   Geometry
+	basisu: 0 0 1
+	basisv: 1 0 0
+	boundaries: 0
+	cbcolors: 0
+	cblog: False
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
+	coord: Z-X
+	cpd: 0
+	extends: 450 7
+	grid: 0
+	index: 6
+	labels: 0
+	origin: 0 0.0001 1250
 	subtype: Field Intensity
 	title: Plot #5
 	x2log: False
@@ -1804,7 +1835,7 @@ Plot: MOLLER-hallA_plot06
 	cbtics: 0
 	coord: X-Y
 	cpd: 0
-	extends: 37 37
+	extends: 2.5 2.5
 	grid: 0
 	index: 2
 	labels: 0
@@ -1837,11 +1868,11 @@ Plot: MOLLER-hallA_plot08
 	cbtics: 0
 	coord: Z-X
 	cpd: 0
-	extends: 650 50
+	extends: 650 75
 	grid: 0
 	index: 1
 	labels: 0
-	origin: 0 0 1150
+	origin: 0 0.0001 1150
 	subtype: Field Intensity
 	title: B Field (plane at y=0.0) (Tesla)
 	x2log: False
@@ -1870,11 +1901,11 @@ Plot: MOLLER-hallA_plot09
 	cbtics: 0
 	coord: Z-X
 	cpd: 0
-	extends: 100 50
+	extends: 110 50
 	grid: 0
 	index: 4
 	labels: 0
-	origin: 0 0 700
+	origin: 0 0.0001 650
 	subtype: Field Intensity
 	title: B Field (plane at y=0.0) (Tesla)
 	x2log: False
@@ -1903,11 +1934,11 @@ Plot: MOLLER-hallA_plot07
 	cbtics: 0
 	coord: X-Y
 	cpd: 0
-	extends: 38 38
+	extends: 16 16
 	grid: 0
 	index: 3
 	labels: 0
-	origin: 0 0 1300
+	origin: 0 0 1120
 	subtype: Field Intensity
 	title: B Field (plane at z=13.0m) (Tesla)
 	x2log: False
