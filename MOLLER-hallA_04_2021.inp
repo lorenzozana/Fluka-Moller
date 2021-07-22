@@ -5,14 +5,11 @@ DEFAULTS                                                              NEW-DEFA
 BEAM            -11.       0.0     0.136       0.5       0.5          ELECTRON
 PHYSICS           1.                                                  COALESCE
 PHYSICS           3.                                                  EVAPORAT
-!point           0.0       0.0      62.5                              marker1
-!point           0.0    -298.3     177.5                              marker2
-!point           0.0       0.0     540.0                              marker3
 PHOTONUC          1.                      BLCKHOLE  @LASTMAT
 PHOTONUC          1.                      LiquidHy  LiquidHy          ELECTNUC
 BEAMPOS          0.0       0.0     -62.5       0.0       0.0
-START        500000.
-RANDOMIZ          1.       21.
+START           500.
+RANDOMIZ          1.       22.
 MATERIAL                            5.26                              HEMATITE
 COMPOUND          2.      IRON        3.    OXYGEN                    HEMATITE
 MATERIAL                            4.79                              ILMENITE
@@ -901,8 +898,8 @@ ASSIGNMA        AIR2  logicMo1   Ai6_250
 ASSIGNMA        AIR3  logicMo2   Ai6_500
 ASSIGNMA        AIR4  logicMo3   Ai6_750
 ASSIGNMA        AIR5  logicMo4  Ai6_1000
-ASSIGNMA      COPPER     SOLE1     SOLE7                  1.
-ASSIGNMA      COPPER     SPIPE                            1.
+ASSIGNMA      COPPER     SOLE1     SOLE7
+ASSIGNMA      COPPER     SPIPE
 ASSIGNMA        IRON  IronShie
 ASSIGNMA        IRON  IronShi1
 ASSIGNMA        IRON  IronShi2
@@ -988,12 +985,13 @@ RCC air7       0.0 0.0 540.0 0.0 0.0 297.0 35.0
 RCC ShBore     0.0 0.0 100. 0.0 0.0 600. 45.
 RCC ShBore2    0.0 0.0 100. 0.0 0.0 710. 35.
 RCC ShBore1    0.0 0.0 0.0 0.0 0.0 -317.5 5.
-RPP CBox_o     -360. 409. -298.3 107.19 -317.5 317.5
+RPP CBox_o     -360. 409. -298.3 247.19 -317.5 317.5
 RPP CBox2_o    -175. 175. -210. 210. 317.5 750.
 RPP CBox3_o    -175. 175. -122.5 125. 812. 941.5
 RPP CBox4_o    -133. 133. -123. 123. 837. 861.
 RCC CBox4_i    0.0 0.0 837. 0.0 0.0 24. 26.5
-RPP CBox_i     -220. 269. -298.3 45. -177.5 177.5
+RPP CBox_i     -220. 269. -298.3 107.19 -177.5 177.5
+RPP SCsh_b     -220. 269. -298.3 107.19 -317.5 -177.5
 RPP LBox       -188.5 188.5 -113. 142. 119. 159.
 RCC LBox1      0.0 0.0 285.1 0.0 0.0 20.0 33.0
 RCC BCp_o      0.0 0.0 197.5 0.0 0.0 120. 45.
@@ -1173,6 +1171,7 @@ RCC tubeTarg   0.0 0.0 -62.5 0.0 0.0 125. 4.
 * col1_0
 RCC col1_0     0.0 0.0 517.5 0.0 0.0 10. 3.1703
 RCC SC_o       0.0 -40. 0.0 0.0 80. 0.0 100.
+RCC SCsh_t     0.0 107.19 0.0 0.0 147.19 0.0 100.
 RCC SC_i       0.0 -39.72 0.0 0.0 79.44 0.0 97.44
 RCC Sc_i2      0.0 0.0 80. 0.0 0.0 20. 20.
 $start_translat 0 0 36.25

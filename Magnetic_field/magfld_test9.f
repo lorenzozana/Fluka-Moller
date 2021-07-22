@@ -203,7 +203,7 @@ c
                IF (B.GT.1D-12) THEN
                   BTX = BXV / B
                   BTY = BYV / B
-                  BTZ = BZV / B
+                  BTZ = SQRT(1.-BTX*BTX-BTY*BTY)
                ELSE
                   B = 0.0
                   BTX = 1.0
@@ -229,7 +229,7 @@ c
                IF (B.GT.1D-12) THEN
                   BTX = BXV / B
                   BTY = BYV / B
-                  BTZ = BZV / B
+                  BTZ = SQRT(1.-BTX*BTX-BTY*BTY)
                ELSE
                   B = 0.0
                   BTX = 1.0
