@@ -100,7 +100,7 @@ c
 *     gradient in tesla per cm
          GRADIENT = 0.08D+00  
          INDEX = 1
-         OPEN(UNIT=17, FILE ='/home/lorenzozana/V2U_c.txt')
+         OPEN(UNIT=17, FILE ='/home/zana/V2U_c.txt')
 *         LUNRD = NINT(WHASOU(1))
          DO I = 1, NR2
             DO  J = 1, NPHI
@@ -133,7 +133,7 @@ c
             INDEX = INDEX + 1
          END DO
          INDEX = 1
-         OPEN(UNIT=18, FILE ='/home/lorenzozana/V2D_c.txt')
+         OPEN(UNIT=18, FILE ='/home/zana/V2D_c.txt')
 *         LUNRD = NINT(WHASOU(1))
          DO I = 1, NR
             DO  J = 1, NPHI
@@ -203,7 +203,12 @@ c
                IF (B.GT.1D-12) THEN
                   BTX = BXV / B
                   BTY = BYV / B
-                  BTZ = SQRT(1.-BTX*BTX-BTY*BTY)
+                  BTZ = BTX**2+BTY**2
+                  IF (BTZ.LT.1.0) THEN
+                     BTZ = BZV/ABS(BZV)*SQRT(1.-BTZ)
+                  ELSE 
+                     BTZ = 0.0
+                  END IF
                ELSE
                   B = 0.0
                   BTX = 1.0
@@ -229,7 +234,12 @@ c
                IF (B.GT.1D-12) THEN
                   BTX = BXV / B
                   BTY = BYV / B
-                  BTZ = SQRT(1.-BTX*BTX-BTY*BTY)
+                  BTZ = BTX**2+BTY**2
+                  IF (BTZ.LT.1.0) THEN
+                     BTZ = BZV/ABS(BZV)*SQRT(1.-BTZ)
+                  ELSE 
+                     BTZ = 0.0
+                  END IF
                ELSE
                   B = 0.0
                   BTX = 1.0
