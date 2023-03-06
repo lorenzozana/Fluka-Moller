@@ -1,34 +1,49 @@
-#!/usr/local/flair/flair
+#!/u/scigroup/radcon/flair/flair
 # FLUKA Project file
 Version: 2
 Title: MOLLER_Test
-Input: MOLLER-hallA_04_2021.inp
+Input: MOLLER-hallA_09_2022.inp
 Exec: moller.exe
 Submit: *Default
 Notes:
 {img:MOLLER-hallA_plot05.png}
 Tabs: 0.1 0.32 0.56 0.81 1.0
 Page: Flair
-Source: Magnetic_field/magfld_test9.f
 DefMain: True
 LinkPrg: ldpmqmd
 F77bound: True
 F77dline: False
+Data: \I_\U.\e
+Rule: +,\I\d\d\d_ftn\.\U
+Type: b
+Unit: 52
 
 # Properties
 Properties: Input
-	REGION/airsol1/@select: 1
+	REGION/tgair/@select: 1
 End
 
 # Run information
 Run: <default>
 	Prev:     0
 	Last:     5
-	Status:   4
+	Status:   3
 	Pid:      0
-	StartRun: 1626398703
+	StartRun: 0
+	Family:  MOLLER-hallA_09_2022_aa MOLLER-hallA_09_2022_ab MOLLER-hallA_09_2022_ac MOLLER-hallA_09_2022_ad MOLLER-hallA_09_2022_ae MOLLER-hallA_09_2022_af MOLLER-hallA_09_2022_ag MOLLER-hallA_09_2022_ah MOLLER-hallA_09_2022_ai MOLLER-hallA_09_2022_aj MOLLER-hallA_09_2022_ak MOLLER-hallA_09_2022_al MOLLER-hallA_09_2022_am MOLLER-hallA_09_2022_an MOLLER-hallA_09_2022_ao MOLLER-hallA_09_2022_ap MOLLER-hallA_09_2022_aq MOLLER-hallA_09_2022_ar MOLLER-hallA_09_2022_as MOLLER-hallA_09_2022_at MOLLER-hallA_09_2022_au MOLLER-hallA_09_2022_av MOLLER-hallA_09_2022_aw MOLLER-hallA_09_2022_ax MOLLER-hallA_09_2022_ay MOLLER-hallA_09_2022_az MOLLER-hallA_09_2022_ba MOLLER-hallA_09_2022_bb MOLLER-hallA_09_2022_bc MOLLER-hallA_09_2022_bd MOLLER-hallA_09_2022_be MOLLER-hallA_09_2022_bf MOLLER-hallA_09_2022_bg MOLLER-hallA_09_2022_bh MOLLER-hallA_09_2022_bi MOLLER-hallA_09_2022_bj
+End
 
-	# USRxxx data file: MOLLER-hallA_04_2021_50.bnn
+# Run information
+Run: MOLLER-hallA_09_2022_aa
+	Rnd:      23
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774564
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_aa_50.bnn
 	Data: \I_\U.\e
 		Unit: 50
 		Type: b
@@ -36,7 +51,7 @@ Run: <default>
 		Rule: +,\I\d\d\d_ftn\.\U
 	End
 
-	# USRxxx data file: MOLLER-hallA_04_2021_51.bnn
+	# USRxxx data file: MOLLER-hallA_09_2022_aa_51.bnn
 	Data: \I_\U.\e
 		Unit: 51
 		Type: b
@@ -44,7 +59,1232 @@ Run: <default>
 		Rule: +,\I\d\d\d_ftn\.\U
 	End
 
-	# USRxxx data file: MOLLER-hallA_04_2021_52.bnn
+	# USRxxx data file: MOLLER-hallA_09_2022_aa_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_ab
+	Rnd:      24
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774564
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ab_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ab_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ab_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_ac
+	Rnd:      25
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774565
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ac_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ac_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ac_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_ad
+	Rnd:      26
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774565
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ad_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ad_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ad_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_ae
+	Rnd:      27
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774565
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ae_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ae_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ae_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_af
+	Rnd:      28
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774565
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_af_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_af_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_af_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_ag
+	Rnd:      29
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774565
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ag_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ag_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ag_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_ah
+	Rnd:      30
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774565
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ah_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ah_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ah_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_ai
+	Rnd:      31
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774565
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ai_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ai_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ai_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_aj
+	Rnd:      32
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774565
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_aj_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_aj_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_aj_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_ak
+	Rnd:      33
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774566
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ak_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ak_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ak_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_al
+	Rnd:      34
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774566
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_al_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_al_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_al_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_am
+	Rnd:      35
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774566
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_am_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_am_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_am_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_an
+	Rnd:      36
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774566
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_an_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_an_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_an_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_ao
+	Rnd:      37
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774566
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ao_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ao_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ao_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_ap
+	Rnd:      38
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774566
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ap_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ap_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ap_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_aq
+	Rnd:      39
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774566
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_aq_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_aq_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_aq_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_ar
+	Rnd:      40
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774566
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ar_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ar_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ar_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_as
+	Rnd:      41
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774567
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_as_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_as_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_as_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_at
+	Rnd:      42
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774567
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_at_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_at_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_at_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_au
+	Rnd:      43
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774567
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_au_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_au_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_au_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_av
+	Rnd:      44
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774567
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_av_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_av_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_av_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_aw
+	Rnd:      45
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774567
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_aw_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_aw_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_aw_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_ax
+	Rnd:      46
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774567
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ax_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ax_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ax_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_ay
+	Rnd:      47
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774568
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ay_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ay_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ay_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_az
+	Rnd:      48
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774568
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_az_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_az_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_az_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_ba
+	Rnd:      49
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774568
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ba_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ba_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_ba_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_bb
+	Rnd:      50
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774568
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_bb_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_bb_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_bb_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_bc
+	Rnd:      51
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774568
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_bc_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_bc_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_bc_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_bd
+	Rnd:      52
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774568
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_bd_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_bd_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_bd_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_be
+	Rnd:      53
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774569
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_be_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_be_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_be_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_bf
+	Rnd:      54
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774569
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_bf_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_bf_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_bf_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_bg
+	Rnd:      55
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774569
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_bg_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_bg_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_bg_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_bh
+	Rnd:      56
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774569
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_bh_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_bh_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_bh_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_bi
+	Rnd:      57
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774569
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_bi_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_bi_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_bi_52.bnn
+	Data: \I_\U.\e
+		Unit: 52
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: MOLLER-hallA_09_2022_bj
+	Rnd:      58
+	Prev:     0
+	Last:     5
+	Status:   3
+	Pid:      0
+	StartRun: 1663774570
+	Parent:    <default>
+
+	# USRxxx data file: MOLLER-hallA_09_2022_bj_50.bnn
+	Data: \I_\U.\e
+		Unit: 50
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_bj_51.bnn
+	Data: \I_\U.\e
+		Unit: 51
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: MOLLER-hallA_09_2022_bj_52.bnn
 	Data: \I_\U.\e
 		Unit: 52
 		Type: b
@@ -264,9 +1504,9 @@ Material: Cement
 End
 
 # Material
-Material: MAGNETIT
+Material: Marble
 	alpha: 0
-	color: #E07050
+	color: #E09070
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -334,6 +1574,16 @@ Material: DMPATM
 End
 
 # Material
+Material: Na2O
+	alpha: 0
+	color: #301070
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
 Material: MnO2
 	alpha: 0
 	color: #707030
@@ -384,9 +1634,9 @@ Material: Mg_O
 End
 
 # Material
-Material: Marble
+Material: MAGNETIT
 	alpha: 0
-	color: #E09070
+	color: #E07050
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -417,16 +1667,6 @@ End
 Material: POTASSIU
 	alpha: 0
 	color: #70B0B0
-	fuzz: 0.0
-	ior: 1.0
-	shine: 10.0
-	specular: 0.0
-End
-
-# Material
-Material: Na2O
-	alpha: 0
-	color: #301070
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -522,9 +1762,9 @@ Geometry:
 		._visible: True
 		3D: True
 		3D._visible: True
-		3D.edgedetect: True
+		3D.edgedetect: 1
 		3D.fov: 22.8
-		3D.shadows: False
+		3D.shadows: 0
 		Beam: True
 		Beam._visible: True
 		Image._visible: True
@@ -534,43 +1774,43 @@ Geometry:
 		Image.marker.1: 165.5 617.375 0.0 -298.3 -2251.76
 		Image.marker.2: 1155.75 617.75 0.0 -298.3 3051.76
 		Image.marker.3: 1155.44444444 309.444444444 0.0 1037.74 3051.76
-		Options.axes: False
+		Options.axes: 0
 		Options.shortcut: F4
-		Options.viewport: False
+		Options.viewport: 0
 		Palette._visible: True
 		Palette.alphamin: True
 		Palette.cpd: 4
 		Palette.max: 1e+19
 		Palette.min: 100000.0
 		Palette.n: 56
+		Palette2: True
 		Palette2._visible: True
-		Palette2.alphamin: True
+		Palette2.alphamin: 1
 		Palette2.cpd: 5
 		Palette2.max: 10000.0
 		Palette2.min: 0.01
 		Palette3._visible: True
-		Palette3.alphamin: True
+		Palette3.alphamin: 1
 		Palette3.max: 46415.9
 		Palette3.min: 0.01
 		Palette3.n: 20
-		Palette5: True
 		Palette5._visible: True
-		Palette5.alphamin: True
+		Palette5.alphamin: 1
 		Palette5.cpd: 10
 		Palette5.max: 1000.0
 		Palette5.min: 0.1
 		Palette5.n: 40
 		Show._visible: True
 		Show.label: None
-		Show.lattice: True
-		Show.voxel: True
+		Show.lattice: 1
+		Show.voxel: 1
 		Usrbin: True
 		Usrbin._visible: True
 		Usrbin.alpha: 2
-		Usrbin.det: 4
-		Usrbin.file: target_hdconc54_1.bnn
+		Usrbin.det: 2
+		Usrbin.file: MOLLER-hallA_09_2022_50.bnn
 		Usrbin.norm: 3.6E-4
-		Usrbin.palette: Palette5
+		Usrbin.palette: Palette2
 		deflights: 1
 		layer: 3D
 	End
@@ -580,31 +1820,31 @@ End
 Plot: Red
 	Format: .eps
 	Type:   Geometry
-	basisu: 0 -1 0
-	basisv: 0 0 -1
+	basisu: 0 0 1
+	basisv: 1 0 0
 	boundaries: 1
 	cbcolors: 0
-	cblog: False
+	cblog: 0
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 0
-	coord: Y-Z
+	coord: Z-X
 	cpd: 0
-	extends: 2662.33 1684.96
+	extends: 4600.51 2358.28
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 18.613 -183.519 1587.7
+	origin: -115.384 0 584.027
 	subtype: Material
 	title: GeoViewer Red plot
-	x2log: False
+	x2log: 0
 	x2tics: 0
-	xlog: False
-	y2log: False
+	xlog: 0
+	y2log: 0
 	y2tics: 0
-	ylog: False
-	zlog: False
+	ylog: 0
+	zlog: 0
 	ztics: 0
 End
 
@@ -644,14 +1884,14 @@ End
 Plot: Green
 	Format: .eps
 	Type:   Geometry
-	basisu: 0 -1 0
-	basisv: 0 0 -1
+	basisu: 0 0 1
+	basisv: 0 1 0
 	boundaries: 1
-	coord: Y-Z
-	extends: 619.172 391.868
+	coord: Z-Y
+	extends: 743.006 396.939
 	labels: 1
-	layer: Media
-	origin: 0 0 4.92023
+	layer: 3D
+	origin: 0 60.5674 530.448
 	subtype: Material
 	title: GeoViewer Green plot
 End
@@ -664,10 +1904,10 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 69.5073 43.875
+	extends: 463.028 253.192
 	labels: 1
 	layer: Media
-	origin: 0.1 -33.3799 752.851
+	origin: 0.1 45.509 -9.26195
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -686,7 +1926,7 @@ Plot: Magenta
 	cbtics: 0
 	coord: U-V
 	cpd: 0
-	extends: 1283.92 810.448
+	extends: 1283.92 77227.8
 	grid: 0
 	index: 0
 	labels: 1
@@ -2259,4 +3499,70 @@ Plot: MOLLER-hallA_plot29
 	zlog: False
 	zrebin: 1
 	ztics: 0
+End
+
+# USRBIN plot "USRBIN MOLLER-hallA 09 2022 50"
+Plot: MOLLER-hallA_09_2022_50_plot
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: MOLLER-hallA_09_2022_50.bnn
+	det: 2
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 10159486852501.332
+	lw.0: 0
+	max: 786540416.
+	min: 5.26852432E-07
+	norm: 3.6E-4
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: USRBIN MOLLER-hallA 09 2022 50
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "USRBIN MOLLER-hallA 09 2022 51"
+Plot: MOLLER-hallA_09_2022_51_plot
+	Format: .eps
+	Type:   USRBIN
+	cbcolors: 30
+	cblog: 1
+	cbtics: 1
+	datafile: MOLLER-hallA_09_2022_51.bnn
+	geo: -Auto-
+	title: USRBIN MOLLER-hallA 09 2022 51
+End
+
+# USRBIN plot "USRBIN MOLLER-hallA 09 2022 52"
+Plot: MOLLER-hallA_09_2022_52_plot
+	Format: .eps
+	Type:   USRBIN
+	cbcolors: 30
+	cblog: 1
+	cbtics: 1
+	datafile: MOLLER-hallA_09_2022_52.bnn
+	geo: -Auto-
+	title: USRBIN MOLLER-hallA 09 2022 52
 End

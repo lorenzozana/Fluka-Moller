@@ -48,9 +48,9 @@
 *
       INTEGER NR, NR2, NPHI, NZ, NPOINT,LENT
       INTEGER NPOINT2,NZ2,LENT2
-      REAL RMIN,RMAX,RMAX2,PhiMIN,PhiMAX,ZMIN,ZMAX
-      REAL ZMIN2,ZMAX2
-      REAL PHIOFF,TOTSEC
+      DOUBLE PRECISION RMIN,RMAX,RMAX2,PhiMIN,PhiMAX,ZMIN,ZMAX
+      DOUBLE PRECISION ZMIN2,ZMAX2
+      DOUBLE PRECISION PHIOFF,TOTSEC
       PARAMETER (NR=76)
       PARAMETER (NR2=51)
       PARAMETER (NPHI=10)
@@ -58,17 +58,17 @@
       PARAMETER (NZ2=7)
       PARAMETER (NPOINT=NR*NPHI*NZ)
       PARAMETER (LENT=NR+NPHI+NZ)
-      REAL BR(NPOINT)
-      REAL BPHI(NPOINT)
-      REAL BZ(NPOINT)
+      DOUBLE PRECISION BR(NPOINT)
+      DOUBLE PRECISION BPHI(NPOINT)
+      DOUBLE PRECISION BZ(NPOINT)
       PARAMETER (NPOINT2=NR2*NPHI*NZ2)
       PARAMETER (LENT2=NR2+NPHI+NZ2)
-      REAL BR2(NPOINT2)
-      REAL BPHI2(NPOINT2)
-      REAL BZ2(NPOINT2)
-      REAL RB(NR), RB2(NR2), PHIB(NPHI), ZB(NZ), ZB2(NZ2)
-      REAL DX, DY, DZ, DR, DPHI
-      REAL BRV, BPHIV, BZV
+      DOUBLE PRECISION BR2(NPOINT2)
+      DOUBLE PRECISION BPHI2(NPOINT2)
+      DOUBLE PRECISION BZ2(NPOINT2)
+      DOUBLE PRECISION RB(NR), RB2(NR2), PHIB(NPHI), ZB(NZ), ZB2(NZ2)
+      DOUBLE PRECISION DX, DY, DZ, DR, DPHI
+      DOUBLE PRECISION BRV, BPHIV, BZV
       INTEGER I, J, K, INDEX
       PARAMETER (RMIN = 0.0)
       PARAMETER (RMAX2 = 50.0)
@@ -84,13 +84,13 @@
       PARAMETER (TOTSEC = 7.)
       INTEGER NSEC
       INTEGER BINR,BINP,BINZ
-      REAL BXV,BYV
-      REAL BR111,BP111,BZ111
-      REAL    ARG(3),FX,FY,FZ
+      DOUBLE PRECISION BXV,BYV
+      DOUBLE PRECISION BR111,BP111,BZ111
+      DOUBLE PRECISION    ARG(3),FX,FY,FZ
       INTEGER NENT(3)
-      REAL ENT(LENT) 
+      DOUBLE PRECISION ENT(LENT) 
       INTEGER NENT2(3)
-      REAL ENT2(LENT2) 
+      DOUBLE PRECISION ENT2(LENT2) 
       common/magtable/init,NENT,ENT,BR,BPHI,BZ
       common/magtable2/init2,NENT2,ENT2,BR2,BPHI2,BZ2
 c
@@ -100,7 +100,7 @@ c
 *     gradient in tesla per cm
          GRADIENT = 0.08D+00  
          INDEX = 1
-         OPEN(UNIT=17, FILE ='/home/lorenzozana/V2U_c.txt')
+         OPEN(UNIT=17, FILE ='/home/zana/V2U_c.txt')
 *         LUNRD = NINT(WHASOU(1))
          DO I = 1, NR2
             DO  J = 1, NPHI
@@ -133,7 +133,7 @@ c
             INDEX = INDEX + 1
          END DO
          INDEX = 1
-         OPEN(UNIT=18, FILE ='/home/lorenzozana/V2D_c.txt')
+         OPEN(UNIT=18, FILE ='/home/zana/V2D_c.txt')
 *         LUNRD = NINT(WHASOU(1))
          DO I = 1, NR
             DO  J = 1, NPHI
@@ -178,37 +178,43 @@ c
       NSEC = INT(PHI / 360. *TOTSEC)
 * Modify Phi to be in the evaluated sector
       PHI = PHI - NSEC * 360. / TOTSEC
-      BTX = 0.0
-      BTY = 1.0
-      BTZ = 0.0
-      B   = 0.0
+      BTX = ZERZER
+      BTY = ONEONE
+      BTZ = ZERZER
+      B   = ZERZER
       IF (PHI.LT.(PhiMAX+PHIOFF).AND.PHI.GT.(PhiMIN+PHIOFF)) THEN
          IF ( R .LT. RMAX .AND. R .GT. RMIN ) THEN 
             IF ( Z .LT. ZMAX .AND. Z .GT. ZMIN )THEN
                ARG(1) = Z
                ARG(2) = PHI-PHIOFF
                ARG(3) = R
+*               WRITE(LUNOUT,*) 'Z', Z, ' PHI',ARG(2), ' R', R
                CALL MAGFINT3(ARG,FX,FY,FZ)
 *     Getting the value of Field and Angle (in radiants) at the reticolate rotated to the correct sector 
 *     Here is used 111 as corner in lowR,lowphi,lowZ
                BR111 = FX
                BP111 = FY
                BZ111 = FZ
+*               WRITE(LUNOUT,*) 'FX', FX, ' FY', FY, ' FZ', FZ
                P111 = (PHI+PHIOFF+NSEC*360/TOTSEC)/180*3.1416
 *     Here should happen the interpolation, before getting the XYZ coordinates, since the grid is a section of a tube
-               BXV = BR111*COS(P111) - BP111*SIN(P111) 
-               BYV = BR111*SIN(P111) + BP111*COS(P111)
+               BXV = BR111*DCOS(P111) - BP111*DSIN(P111) 
+               BYV = BR111*DSIN(P111) + BP111*DCOS(P111)
                BZV = BZ111
-               B=SQRT(BXV**2+BYV**2+BZV**2)
+               B=DSQRT(BXV**2+BYV**2+BZV**2)
                IF (B.GT.1D-12) THEN
                   BTX = BXV / B
                   BTY = BYV / B
-                  BTZ = BZV / B
+                  IF (BZV .NE.ZERZER.AND.(BTX**2+BTY**2.LT.ONEONE))THEN
+                     BTZ = DSIGN(ONEONE,BZV)*DSQRT(ONEONE-BTX**2-BTY**2)
+                  ELSE
+                     BTZ = ZERZER
+                  ENDIF
                ELSE
-                  B = 0.0
-                  BTX = 1.0
-                  BTZ= 0.0
-                  BTY = 0.0
+                  B = ZERZER
+                  BTX = ONEONE
+                  BTZ= ZERZER
+                  BTY = ZERZER
                END IF 
             ELSE IF ( Z.LT.ZMAX2.AND.Z.GT.ZMIN2.AND.R.LT.RMAX2 )THEN
                ARG(1) = Z
@@ -222,37 +228,41 @@ c
                BZ111 = FZ
                P111 = (PHI+PHIOFF+NSEC*360/TOTSEC)/180*3.1416
 *     Here should happen the interpolation, before getting the XYZ coordinates, since the grid is a section of a tube
-               BXV = BR111*COS(P111) - BP111*SIN(P111) 
-               BYV = BR111*SIN(P111) + BP111*COS(P111)
+               BXV = BR111*DCOS(P111) - BP111*DSIN(P111) 
+               BYV = BR111*DSIN(P111) + BP111*DCOS(P111)
                BZV = BZ111
-               B=SQRT(BXV**2+BYV**2+BZV**2)
+               B=DSQRT(BXV**2+BYV**2+BZV**2)
                IF (B.GT.1D-12) THEN
                   BTX = BXV / B
                   BTY = BYV / B
-                  BTZ = BZV / B
+                  IF (BZV .NE.ZERZER.AND.(BTX**2+BTY**2.LT.ONEONE))THEN
+                     BTZ = DSIGN(ONEONE,BZV)*DSQRT(ONEONE-BTX**2-BTY**2)
+                  ELSE
+                     BTZ = ZERZER
+                  ENDIF
                ELSE
-                  B = 0.0
-                  BTX = 1.0
-                  BTZ= 0.0
-                  BTY = 0.0
+                  B = ZERZER
+                  BTX = ONEONE
+                  BTZ= ZERZER
+                  BTY = ZERZER
                END IF
             ELSE
-               BTX = 0.0
-               BTY = 1.0
-               BTZ = 0.0
-               B   = 0.0 
+               BTX = ZERZER
+               BTY = ONEONE
+               BTZ = ZERZER
+               B   = ZERZER 
             END IF
          ELSE
-            BTX = 0.0
-            BTY = 1.0
-            BTZ = 0.0
-            B   = 0.0 
+            BTX = ZERZER
+            BTY = ONEONE
+            BTZ = ZERZER
+            B   = ZERZER 
          END IF
       ELSE
-         BTX = 0.0
-         BTY = 1.0
-         BTZ = 0.0
-         B   = 0.0 
+         BTX = ZERZER
+         BTY = ONEONE
+         BTZ = ZERZER
+         B   = ZERZER 
       END IF
       IF ( .NOT. LMGFON (NREG,IPRODC) ) THEN
          WRITE (LUNOUT,*)
@@ -276,12 +286,12 @@ C   Based on the INTERPOLATION ROUTINE 'FINT' by C. LETERTRE
 C   and MODIFIED BY B. SCHORR, 1.07.1982, from the CERNLIB
 C
       implicit none
-      REAL      FX,FY,FZ
+      DOUBLE PRECISION      FX,FY,FZ
       INTEGER   N,LMAX,ISTEP,KNOTS,NDIM,LOCA,LMIN,LOCB
       INTEGER   LOCC,ISHIFT,I,K
-      REAL      X,H,ETA
+      DOUBLE PRECISION      X,H,ETA
       INTEGER   INDEX(32)
-      REAL      WEIGHT(32)
+      DOUBLE PRECISION      WEIGHT(32)
 c
 c     -- common block description (makes sense to make it an include file) --
 c     -- or make sure it is exactly the same in the calling routine        --
@@ -294,10 +304,10 @@ c     -- or make sure it is exactly the same in the calling routine        --
       parameter (LENBT=NR*NPHI*NZ)  ! Length of the BX, BY, BZ component tables
       logical init
       integer NENT(NARG)
-      real ENT(LENT),BR(LENBT),BPHI(LENBT),BZ(LENBT)
+      DOUBLE PRECISION ENT(LENT),BR(LENBT),BPHI(LENBT),BZ(LENBT)
       common/magtable/init,NENT,ENT,BR,BPHI,BZ
 c
-      real    ARG(NARG)
+      DOUBLE PRECISION    ARG(NARG)
 c
       FX  =  0.
       FY  =  0.
@@ -325,7 +335,9 @@ c
          GOTO 30
  10      LOCB  =  LMAX + 1
  11      LOCC  =  (LOCA+LOCB) / 2
-         IF(X-ENT(LOCC))  12, 20, 13
+         IF(X-ENT(LOCC) .LT. 0.) GOTO 12
+         IF(X-ENT(LOCC) .EQ. 0.) GOTO 20
+         IF(X-ENT(LOCC) .GT. 0.) GOTO 13
  12      LOCB  =  LOCC
          GOTO 14
  13      LOCA  =  LOCC
@@ -366,12 +378,12 @@ C   Based on the INTERPOLATION ROUTINE 'FINT' by C. LETERTRE
 C   and MODIFIED BY B. SCHORR, 1.07.1982, from the CERNLIB
 C
       implicit none
-      REAL      FX,FY,FZ
+      DOUBLE PRECISION      FX,FY,FZ
       INTEGER   N,LMAX,ISTEP,KNOTS,NDIM,LOCA,LMIN,LOCB
       INTEGER   LOCC,ISHIFT,I,K
-      REAL      X,H,ETA
+      DOUBLE PRECISION      X,H,ETA
       INTEGER   INDEX(32)
-      REAL      WEIGHT(32)
+      DOUBLE PRECISION      WEIGHT(32)
 c
 c     -- common block description (makes sense to make it an include file) --
 c     -- or make sure it is exactly the same in the calling routine        --
@@ -384,10 +396,10 @@ c     -- or make sure it is exactly the same in the calling routine        --
       parameter (LENBT=NR*NPHI*NZ)  ! Length of the BX, BY, BZ component tables
       logical init2
       integer NENT2(NARG)
-      real ENT2(LENT),BR2(LENBT),BPHI2(LENBT),BZ2(LENBT)
+      DOUBLE PRECISION ENT2(LENT),BR2(LENBT),BPHI2(LENBT),BZ2(LENBT)
       common/magtable2/init2,NENT2,ENT2,BR2,BPHI2,BZ2
 c
-      real    ARG(NARG)
+      DOUBLE PRECISION    ARG(NARG)
 c
       FX  =  0.
       FY  =  0.
@@ -415,7 +427,9 @@ c
          GOTO 30
  10      LOCB  =  LMAX + 1
  11      LOCC  =  (LOCA+LOCB) / 2
-         IF(X-ENT2(LOCC))  12, 20, 13
+         IF(X-ENT2(LOCC) .LT. 0.) GOTO 12
+         IF(X-ENT2(LOCC) .EQ. 0.) GOTO 20
+         IF(X-ENT2(LOCC) .GT. 0.) GOTO 13
  12      LOCB  =  LOCC
          GOTO 14
  13      LOCA  =  LOCC

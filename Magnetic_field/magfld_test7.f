@@ -3,14 +3,14 @@
 *
 *===magfld=============================================================*
 *
-      SUBROUTINE MAGFLD ( X, Y, Z, BTX, BTY, BTZ, B, NREG, IDISC )
+      SUBROUTINE MAGFLD ( X, Y, Z, T, BTX, BTY, BTZ, B, NREG, IDISC )
 
       INCLUDE '(DBLPRC)'
       INCLUDE '(DIMPAR)'
       INCLUDE '(IOUNIT)'
 
 *
-*----------------------------------------------------------------------*
+*------------------------------------- ---------------------------------*
 *                                                                      *
 *     Copyright (C) 1988-2009      by Alberto Fasso` & Alfredo Ferrari *
 *     All Rights Reserved.                                             *
@@ -43,26 +43,26 @@
 *
       INTEGER NR, NPHI, NZ, NPOINT,LENT
       INTEGER NPOINT2,NZ2,LENT2
-      REAL RMIN,RMAX,PhiMIN,PhiMAX,ZMIN,ZMAX
-      REAL ZMIN2,ZMAX2
-      REAL PHIOFF,TOTSEC
+      DOUBLE PRECISION RMIN,RMAX,PhiMIN,PhiMAX,ZMIN,ZMAX
+      DOUBLE PRECISION ZMIN2,ZMAX2
+      DOUBLE PRECISION PHIOFF,TOTSEC
       PARAMETER (NR=37)
       PARAMETER (NPHI=11)
       PARAMETER (NZ=16)
       PARAMETER (NZ2=5)
       PARAMETER (NPOINT=NR*NPHI*NZ)
       PARAMETER (LENT=NR+NPHI+NZ)
-      REAL BR(NPOINT)
-      REAL BPHI(NPOINT)
-      REAL BZ(NPOINT)
+      DOUBLE PRECISION BR(NPOINT)
+      DOUBLE PRECISION BPHI(NPOINT)
+      DOUBLE PRECISION BZ(NPOINT)
       PARAMETER (NPOINT2=NR*NPHI*NZ2)
       PARAMETER (LENT2=NR+NPHI+NZ2)
-      REAL BR2(NPOINT2)
-      REAL BPHI2(NPOINT2)
-      REAL BZ2(NPOINT2)
-      REAL RB(NR), PHIB(NPHI), ZB(NZ), ZB2(NZ2)
-      REAL DX, DY, DZ, DR, DPHI
-      REAL BRV, BPHIV, BZV
+      DOUBLE PRECISION BR2(NPOINT2)
+      DOUBLE PRECISION BPHI2(NPOINT2)
+      DOUBLE PRECISION BZ2(NPOINT2)
+      DOUBLE PRECISION RB(NR), PHIB(NPHI), ZB(NZ), ZB2(NZ2)
+      DOUBLE PRECISION DX, DY, DZ, DR, DPHI
+      DOUBLE PRECISION BRV, BPHIV, BZV
       INTEGER I, J, K, INDEX
       PARAMETER (RMIN = 1.5)
       PARAMETER (RMAX = 37.5)
@@ -77,13 +77,13 @@
       PARAMETER (TOTSEC = 7.)
       INTEGER NSEC
       INTEGER BINR,BINP,BINZ
-      REAL BXV,BYV
-      REAL BR111,BP111,BZ111
-      REAL    ARG(3),FX,FY,FZ
+      DOUBLE PRECISION BXV,BYV
+      DOUBLE PRECISION BR111,BP111,BZ111
+      DOUBLE PRECISION    ARG(3),FX,FY,FZ
       INTEGER NENT(3)
-      REAL ENT(LENT) 
+      DOUBLE PRECISION ENT(LENT) 
       INTEGER NENT2(3)
-      REAL ENT2(LENT2) 
+      DOUBLE PRECISION ENT2(LENT2) 
       common/magtable/init,NENT,ENT,BR,BPHI,BZ
       common/magtable2/init2,NENT2,ENT2,BR2,BPHI2,BZ2
 c
@@ -177,12 +177,14 @@ c
                ARG(1) = Z
                ARG(2) = PHI-PHIOFF
                ARG(3) = R
+               WRITE(LUNOUT,*) 'Z', Z, ' PHI',ARG(2), ' R', R
                CALL MAGFINT3(ARG,FX,FY,FZ)
 *     Getting the value of Field and Angle (in radiants) at the reticolate rotated to the correct sector 
 *     Here is used 111 as corner in lowR,lowphi,lowZ
                BR111 = FX
                BP111 = FY
                BZ111 = FZ
+               WRITE(LUNOUT,*) 'FX', FX, ' FY', FY, ' FZ', FZ
                P111 = (PHI+PHIOFF+NSEC*360/TOTSEC)/180*3.1416
 *     Here should happen the interpolation, before getting the XYZ coordinates, since the grid is a section of a tube
                BXV = BR111*COS(P111) - BP111*SIN(P111) 
@@ -190,14 +192,17 @@ c
                BZV = BZ111
                B=SQRT(BXV**2+BYV**2+BZV**2)
                IF (B.GT.1D-12) THEN
+c$$$                  BTX = ONEONE
+c$$$                  BTZ= ZERZER
+c$$$                  BTY = ZERZER
                   BTX = BXV / B
                   BTY = BYV / B
-                  BTZ = BZV / B
+                  BTZ =DSIGN(ONEONE,BZV)*DSQRT(ONEONE-BTX**2-BTY**2)
                ELSE
-                  B = 0.0
-                  BTX = 1.0
-                  BTZ= 0.0
-                  BTY = 0.0
+                  B = ZERZER
+                  BTX = ONEONE
+                  BTZ= ZERZER
+                  BTY = ZERZER
                END IF 
             ELSE IF ( Z .LT. ZMAX2 .AND. Z .GT. ZMIN2 )THEN
                ARG(1) = Z
@@ -214,34 +219,37 @@ c
                BXV = BR111*COS(P111) - BP111*SIN(P111) 
                BYV = BR111*SIN(P111) + BP111*COS(P111)
                BZV = BZ111
-               B=SQRT(BXV**2+BYV**2+BZV**2)
+               B=DSQRT(BXV**2+BYV**2+BZV**2)
                IF (B.GT.1D-12) THEN
+c$$$                  BTX = ONEONE
+c$$$                  BTZ= ZERZER
+c$$$                  BTY = ZERZER
                   BTX = BXV / B
                   BTY = BYV / B
-                  BTZ = BZV / B
+                  BTZ =DSIGN(ONEONE,BZV)*DSQRT(ONEONE-BTX**2-BTY**2)
                ELSE
-                  B = 0.0
-                  BTX = 1.0
-                  BTZ= 0.0
-                  BTY = 0.0
+                  B = ZERZER
+                  BTX = ONEONE
+                  BTZ= ZERZER
+                  BTY = ZERZER
                END IF
             ELSE
-               BTX = 0.0
-               BTY = 1.0
-               BTZ = 0.0
-               B   = 0.0 
+               BTX = ZERZER
+               BTY = ONEONE
+               BTZ = ZERZER
+               B   = ZERZER 
             END IF
          ELSE
-            BTX = 0.0
-            BTY = 1.0
-            BTZ = 0.0
-            B   = 0.0 
+            BTX = ZERZER
+            BTY = ONEONE
+            BTZ = ZERZER
+            B   = ZERZER 
          END IF
       ELSE
-         BTX = 0.0
-         BTY = 1.0
-         BTZ = 0.0
-         B   = 0.0 
+         BTX = ZERZER
+         BTY = ONEONE
+         BTZ = ZERZER
+         B   = ZERZER 
       END IF  
       RETURN
 *===  End of subroutine magfld =========================================*
@@ -254,12 +262,12 @@ C   Based on the INTERPOLATION ROUTINE 'FINT' by C. LETERTRE
 C   and MODIFIED BY B. SCHORR, 1.07.1982, from the CERNLIB
 C
       implicit none
-      REAL      FX,FY,FZ
+      DOUBLE PRECISION      FX,FY,FZ
       INTEGER   N,LMAX,ISTEP,KNOTS,NDIM,LOCA,LMIN,LOCB
       INTEGER   LOCC,ISHIFT,I,K
-      REAL      X,H,ETA
+      DOUBLE PRECISION      X,H,ETA
       INTEGER   INDEX(32)
-      REAL      WEIGHT(32)
+      DOUBLE PRECISION      WEIGHT(32)
 c
 c     -- common block description (makes sense to make it an include file) --
 c     -- or make sure it is exactly the same in the calling routine        --
@@ -272,10 +280,10 @@ c     -- or make sure it is exactly the same in the calling routine        --
       parameter (LENBT=NR*NPHI*NZ)  ! Length of the BX, BY, BZ component tables
       logical init
       integer NENT(NARG)
-      real ENT(LENT),BR(LENBT),BPHI(LENBT),BZ(LENBT)
+      double precision ENT(LENT),BR(LENBT),BPHI(LENBT),BZ(LENBT)
       common/magtable/init,NENT,ENT,BR,BPHI,BZ
 c
-      real    ARG(NARG)
+      double precision    ARG(NARG)
 c
       FX  =  0.
       FY  =  0.
@@ -344,12 +352,12 @@ C   Based on the INTERPOLATION ROUTINE 'FINT' by C. LETERTRE
 C   and MODIFIED BY B. SCHORR, 1.07.1982, from the CERNLIB
 C
       implicit none
-      REAL      FX,FY,FZ
+      DOUBLE PRECISION      FX,FY,FZ
       INTEGER   N,LMAX,ISTEP,KNOTS,NDIM,LOCA,LMIN,LOCB
       INTEGER   LOCC,ISHIFT,I,K
-      REAL      X,H,ETA
+      DOUBLE PRECISION      X,H,ETA
       INTEGER   INDEX(32)
-      REAL      WEIGHT(32)
+      DOUBLE PRECISION      WEIGHT(32)
 c
 c     -- common block description (makes sense to make it an include file) --
 c     -- or make sure it is exactly the same in the calling routine        --
@@ -362,10 +370,10 @@ c     -- or make sure it is exactly the same in the calling routine        --
       parameter (LENBT=NR*NPHI*NZ)  ! Length of the BX, BY, BZ component tables
       logical init2
       integer NENT2(NARG)
-      real ENT2(LENT),BR2(LENBT),BPHI2(LENBT),BZ2(LENBT)
+      double precision ENT2(LENT),BR2(LENBT),BPHI2(LENBT),BZ2(LENBT)
       common/magtable2/init2,NENT2,ENT2,BR2,BPHI2,BZ2
 c
-      real    ARG(NARG)
+      double precision    ARG(NARG)
 c
       FX  =  0.
       FY  =  0.

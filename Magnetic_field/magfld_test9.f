@@ -203,12 +203,13 @@ c
                IF (B.GT.1D-12) THEN
                   BTX = BXV / B
                   BTY = BYV / B
-                  BTZ = BTX**2+BTY**2
-                  IF (BTZ.LT.1.0) THEN
-                     BTZ = BZV/ABS(BZV)*SQRT(1.-BTZ)
-                  ELSE 
-                     BTZ = 0.0
-                  END IF
+                  BTZ = BZV / B
+*                  BTZ = BTX**2+BTY**2
+*                  IF (BTZ.LT.1.0) THEN
+*                     BTZ = BZV/ABS(BZV)*SQRT(1.-BTZ)
+*                  ELSE 
+*                     BTZ = 0.0
+*                  END IF
                ELSE
                   B = 0.0
                   BTX = 1.0
@@ -234,12 +235,13 @@ c
                IF (B.GT.1D-12) THEN
                   BTX = BXV / B
                   BTY = BYV / B
-                  BTZ = BTX**2+BTY**2
-                  IF (BTZ.LT.1.0) THEN
-                     BTZ = BZV/ABS(BZV)*SQRT(1.-BTZ)
-                  ELSE 
-                     BTZ = 0.0
-                  END IF
+                  BTZ = BZV / B
+*                  BTZ = BTX**2+BTY**2
+*                  IF (BTZ.LT.1.) THEN
+*                     BTZ = BZV/ABS(BZV)*SQRT(1.-BTZ)
+*                  ELSE 
+*                     BTZ = 0.0
+*                  END IF
                ELSE
                   B = 0.0
                   BTX = 1.0
