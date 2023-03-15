@@ -10,7 +10,7 @@ PHYSICS           1.                                                  ISOMERS
 PHOTONUC          1.                      BLCKHOLE  @LASTMAT
 PHOTONUC          1.                      BLCKHOLE  @LASTMAT          ELECTNUC
 BEAMPOS          0.0       0.0     -62.5       0.0       0.0
-START      20000000.
+START     1000000000
 RANDOMIZ          1.       22.
 MATERIAL                            5.26                              HEMATITE
 COMPOUND          2.      IRON        3.    OXYGEN                    HEMATITE
@@ -985,12 +985,12 @@ IONTRANS    HEAVYION
 * 24h @65muA
 IRRPROFI      86400. 4.0625E14
 DCYTIMES         0.0
-USRBIN            3.  ACTIVITY      -25.      150.   -394.82      800.act_0
-USRBIN           0.0   -694.82     -200.       30.       60.      100. &
+USRBIN            3.  ACTIVITY      -25.      300.   -394.82     2000.act_0
+USRBIN           0.0   -694.82     -600.       30.       60.       26. &
 DCYSCORE          1.                         act_0                    USRBIN
 AUXSCORE      USRBIN  -300100.               act_0
-USRBIN            3.  ACTIVITY      -25.      150.   -394.82      800.act_1
-USRBIN           0.0   -694.82     -200.       30.       60.      100. &
+USRBIN            3.  ACTIVITY      -25.      300.   -394.82     2000.act_1
+USRBIN           0.0   -694.82     -600.       30.       60.       26. &
 DCYSCORE          1.                         act_1                    USRBIN
 AUXSCORE      USRBIN -2201100.               act_1
 USRBIN           13.    ENERGY      -21.      350.       0.0     1200.Edep
@@ -1054,7 +1054,7 @@ RPP IronShi4   -495. -429. -198. 132. -330. 330.
 RPP SteelShi   -488. 488. 132. 144. -141.5 346.5
 * sbsBunkerVacuumDet1_s [/sbsbunker/sbsBunkerVacuumDet1_l]
 RPP sbsBunk1   -412.25 412.25 -197.75 131.75 -329.75 329.75
-$end_transform 
+$end_transform
 $start_transform Coil1
 RPP Sol1       -0.77 0.77 3.5 20. 600. 800.
 RPP Sol2       -1.54 1.54 8.12 15.38 604.62 795.38
@@ -1135,7 +1135,7 @@ RCC dhy1_20    -9. 18.86295 1209.6987 18. 0.0 0.0 13.18215
 RCC dhy1_21    -9. 18.86295 1209.6987 18. 0.0 0.0 5.11215
 YZP dhy1_c1    2.22
 YZP dhy1_c2    -2.22
-$end_transform 
+$end_transform
 $start_transform Coil2
 RPP Sol4       -0.77 0.77 3.5 20. 600. 800.
 RPP Sol5       -1.54 1.54 8.12 15.38 604.62 795.38
@@ -1174,7 +1174,7 @@ YZP chy2_c1    1.2
 YZP chy2_c2    -1.2
 YZP dhy2_c1    2.22
 YZP dhy2_c2    -2.22
-$end_transform 
+$end_transform
 $start_transform Coil3
 RPP Sol7       -0.77 0.77 3.5 20. 600. 800.
 RPP Sol8       -1.54 1.54 8.12 15.38 604.62 795.38
@@ -1213,7 +1213,7 @@ YZP chy3_c1    1.2
 YZP chy3_c2    -1.2
 YZP dhy3_c1    2.22
 YZP dhy3_c2    -2.22
-$end_transform 
+$end_transform
 $start_transform Coil4
 RPP Sol10      -0.77 0.77 3.5 20. 600. 800.
 RPP Sol11      -1.54 1.54 8.12 15.38 604.62 795.38
@@ -1252,7 +1252,7 @@ YZP chy4_c1    1.2
 YZP chy4_c2    -1.2
 YZP dhy4_c1    2.22
 YZP dhy4_c2    -2.22
-$end_transform 
+$end_transform
 $start_transform Coil5
 RPP Sol13      -0.77 0.77 3.5 20. 600. 800.
 RPP Sol14      -1.54 1.54 8.12 15.38 604.62 795.38
@@ -1291,7 +1291,7 @@ YZP chy5_c1    1.2
 YZP chy5_c2    -1.2
 YZP dhy5_c1    2.22
 YZP dhy5_c2    -2.22
-$end_transform 
+$end_transform
 $start_transform Coil6
 RPP Sol16      -0.77 0.77 3.5 20. 600. 800.
 RPP Sol17      -1.54 1.54 8.12 15.38 604.62 795.38
@@ -1330,7 +1330,7 @@ YZP chy6_c1    1.2
 YZP chy6_c2    -1.2
 YZP dhy6_c1    2.22
 YZP dhy6_c2    -2.22
-$end_transform 
+$end_transform
 $start_transform Coil7
 RPP Sol19      -0.77 0.77 3.5 20. 600. 800.
 RPP Sol20      -1.54 1.54 8.12 15.38 604.62 795.38
@@ -1369,7 +1369,7 @@ YZP chy7_c1    1.2
 YZP chy7_c2    -1.2
 YZP dhy7_c1    2.22
 YZP dhy7_c2    -2.22
-$end_transform 
+$end_transform
 RCC Spipe_i    0.0 0.0 554. 0.0 0.0 193.6 3.5
 RCC Spipe_o    0.0 0.0 554.5 0.0 0.0 193.1 4.2
 XZP air_c1     5000.
@@ -1495,7 +1495,7 @@ RCC c1_o_14    0.0 0.0 503.75 0.0 0.0 -5. 15.
 RCC c1_o_13    0.0 0.0 498.75 0.0 0.0 -10. 3.5
 RCC c1_o_15    0.0 0.0 498.75 0.0 0.0 -10. 15.
 RCC c1_i_15    0.0 0.0 498.75 0.0 0.0 -10. 10.1
-$end_translat 
+$end_translat
 * col1_0
 RCC col1_1     0.0 0.0 527.5 0.0 0.0 10. 2.8703
 * col1_0
@@ -1755,7 +1755,7 @@ PLA pcon_b76   4.70759639978788 4.8780749973841315 0.0 8.77095659680842
 * col4_botcut_pla77
 PLA pcon_b77   7.201810436639886 8.314681379024984 0.0 18.155804262123574
               -14.847736229192616 -5.5
-$end_translat 
+$end_translat
 * col5_vacuum_cut
 RCC col5_cut   0.0 0.0 837. 0.0 0.0 849.657 75.
 * col5_vacuum_cut
@@ -1942,7 +1942,7 @@ PLA col5t7p8   7.009563153371961 2.839986865971413 0.0 -8.753247515483226
 * col5_trd7_plane9
 PLA col5t7p9   -4.328557005379408 -6.2018622405839405 0.0 -13.444236410291404
               12.0469128138372 1287.005
-$end_translat 
+$end_translat
 XZP hallcut    -900.
 RCC ha_out     0.0 -355. 400. 0.0 1600. 0.0 2651.76
 RCC ha_1       0.0 -447. 400. 0.0 1484.74 0.0 2669.09
@@ -2077,7 +2077,7 @@ ZCC viewrout   0.0 0.0 12.
 ZCC difout     0.0 0.0 25.
 PLA viewer1    1. 0.0 -1. 0.0 22. 570.
 PLA viewer2    1. 0.0 -1. 0.0 22. 570.035921
-$end_translat 
+$end_translat
 $start_translat 0 0 5128.54
 * Beam dump tunnel 7ftx7ft
 RPP dmp_tunl   -106.68000000000001 106.68000000000001 -106.68000000000001
@@ -2373,9 +2373,9 @@ XYP p121_8     275.71699999999998
 XYP p121_9     283.33699999999999
 XYP p121_0     290.95699999999999
 XYP g122       318.89699999999999
-$end_translat 
+$end_translat
 $start_translat 0 0 26.7
-$end_translat 
+$end_translat
 RPP CBox2_o1   -175. 175. 100. 240. 317.5 837.
 RPP CBox2_o2   -175. 175. 189.2048 240. 317.5 569.4172
 RCC ShBore3    0.0 0.0 317.5 0.0 0.0 222.5 54.

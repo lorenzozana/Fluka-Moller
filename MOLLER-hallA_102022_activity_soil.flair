@@ -9,7 +9,6 @@ Notes:
 {img:MOLLER-hallA_plot05.png}
 Tabs: 0.1 0.32 0.56 0.81 1.0
 Page: Flair
-Source: Magnetic_field/magfld_test8.f
 DefMain: True
 LinkPrg: ldpmqmd
 F77bound: True
@@ -30,47 +29,23 @@ Unit: 52
 Run: <default>
 	Prev:     0
 	Last:     1
-	Status:   3
+	Status:   0
 	Pid:      0
 	StartRun: 1669649956
 	Family:  MOLLER-hallA_02_2023_withfield_aa MOLLER-hallA_02_2023_withfield_ab MOLLER-hallA_02_2023_withfield_ac MOLLER-hallA_02_2023_withfield_ad MOLLER-hallA_02_2023_withfield_ae MOLLER-hallA_02_2023_withfield_af MOLLER-hallA_02_2023_withfield_ag MOLLER-hallA_02_2023_withfield_ah MOLLER-hallA_02_2023_withfield_ai MOLLER-hallA_02_2023_withfield_aj MOLLER-hallA_02_2023_withfield_ak MOLLER-hallA_02_2023_withfield_al MOLLER-hallA_02_2023_withfield_am MOLLER-hallA_02_2023_withfield_an MOLLER-hallA_02_2023_withfield_ao MOLLER-hallA_02_2023_withfield_ap MOLLER-hallA_02_2023_withfield_aq MOLLER-hallA_02_2023_withfield_ar MOLLER-hallA_02_2023_withfield_as MOLLER-hallA_02_2023_withfield_at MOLLER-hallA_02_2023_withfield_au MOLLER-hallA_02_2023_withfield_av MOLLER-hallA_02_2023_withfield_aw MOLLER-hallA_02_2023_withfield_ax MOLLER-hallA_02_2023_withfield_ay MOLLER-hallA_02_2023_withfield_az MOLLER-hallA_02_2023_withfield_ba MOLLER-hallA_02_2023_withfield_bb MOLLER-hallA_02_2023_withfield_bc MOLLER-hallA_02_2023_withfield_bd MOLLER-hallA_02_2023_withfield_be MOLLER-hallA_02_2023_withfield_bf MOLLER-hallA_02_2023_withfield_bg MOLLER-hallA_02_2023_withfield_bh MOLLER-hallA_02_2023_withfield_bi MOLLER-hallA_02_2023_withfield_bj
 
-	# USRxxx data file: MOLLER-hallA_02_2023_water_activity_50.bnn
+	# USRxxx data file: MOLLER-hallA_02_2023_water_activity_21.bnn
 	Data: \I_\U.\e
-		Unit: 50
+		Unit: 21
 		Type: b
 		Rule: +,\I\d\d\d_fort\.\U
 		Rule: +,\I\d\d\d_ftn\.\U
 	End
 
-	# USRxxx data file: MOLLER-hallA_02_2023_water_activity_51.bnn
+	# USRxxx data file: MOLLER-hallA_02_2023_water_activity_25.bnn
 	Data: \I_\U.\e
-		Unit: 51
+		Unit: 25
 		Type: b
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
-
-	# USRxxx data file: MOLLER-hallA_02_2023_water_activity_52.bnx
-	Data: \I_\U.\e
-		Unit: 52
-		Type: x
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
-
-	# USRxxx data file: MOLLER-hallA_02_2023_water_activity_53.bnn
-	Data: \I_\U.\e
-		Unit: 53
-		Type: b
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
-
-	# USRxxx data file: MOLLER-hallA_02_2023_water_activity_54.bnx
-	Data: \I_\U.\e
-		Unit: 54
-		Type: x
 		Rule: +,\I\d\d\d_fort\.\U
 		Rule: +,\I\d\d\d_ftn\.\U
 	End
@@ -81,9 +56,9 @@ Run: MOLLER-hallA_02_2023_withfield_aa
 	Rnd:      23
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      85484
+	StartRun: 1678744503
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_aa_50.bnn
@@ -132,9 +107,9 @@ Run: MOLLER-hallA_02_2023_withfield_ab
 	Rnd:      24
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      85514
+	StartRun: 1678744503
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_ab_50.bnn
@@ -183,9 +158,9 @@ Run: MOLLER-hallA_02_2023_withfield_ac
 	Rnd:      25
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      85563
+	StartRun: 1678744503
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_ac_50.bnn
@@ -234,9 +209,9 @@ Run: MOLLER-hallA_02_2023_withfield_ad
 	Rnd:      26
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      85601
+	StartRun: 1678744504
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_ad_50.bnn
@@ -285,9 +260,9 @@ Run: MOLLER-hallA_02_2023_withfield_ae
 	Rnd:      27
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      85641
+	StartRun: 1678744504
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_ae_50.bnn
@@ -336,9 +311,9 @@ Run: MOLLER-hallA_02_2023_withfield_af
 	Rnd:      28
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      85680
+	StartRun: 1678744504
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_af_50.bnn
@@ -387,9 +362,9 @@ Run: MOLLER-hallA_02_2023_withfield_ag
 	Rnd:      29
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      85719
+	StartRun: 1678744504
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_ag_50.bnn
@@ -438,9 +413,9 @@ Run: MOLLER-hallA_02_2023_withfield_ah
 	Rnd:      30
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      85758
+	StartRun: 1678744504
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_ah_50.bnn
@@ -489,9 +464,9 @@ Run: MOLLER-hallA_02_2023_withfield_ai
 	Rnd:      31
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      85803
+	StartRun: 1678744504
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_ai_50.bnn
@@ -540,9 +515,9 @@ Run: MOLLER-hallA_02_2023_withfield_aj
 	Rnd:      32
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      85841
+	StartRun: 1678744504
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_aj_50.bnn
@@ -591,9 +566,9 @@ Run: MOLLER-hallA_02_2023_withfield_ak
 	Rnd:      33
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      85877
+	StartRun: 1678744505
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_ak_50.bnn
@@ -642,9 +617,9 @@ Run: MOLLER-hallA_02_2023_withfield_al
 	Rnd:      34
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      85919
+	StartRun: 1678744505
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_al_50.bnn
@@ -693,9 +668,9 @@ Run: MOLLER-hallA_02_2023_withfield_am
 	Rnd:      35
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      85956
+	StartRun: 1678744505
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_am_50.bnn
@@ -744,9 +719,9 @@ Run: MOLLER-hallA_02_2023_withfield_an
 	Rnd:      36
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      85994
+	StartRun: 1678744505
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_an_50.bnn
@@ -795,9 +770,9 @@ Run: MOLLER-hallA_02_2023_withfield_ao
 	Rnd:      37
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      86034
+	StartRun: 1678744505
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_ao_50.bnn
@@ -846,9 +821,9 @@ Run: MOLLER-hallA_02_2023_withfield_ap
 	Rnd:      38
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      86076
+	StartRun: 1678744505
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_ap_50.bnn
@@ -897,9 +872,9 @@ Run: MOLLER-hallA_02_2023_withfield_aq
 	Rnd:      39
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      86116
+	StartRun: 1678744506
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_aq_50.bnn
@@ -948,9 +923,9 @@ Run: MOLLER-hallA_02_2023_withfield_ar
 	Rnd:      40
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      86155
+	StartRun: 1678744506
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_ar_50.bnn
@@ -999,9 +974,9 @@ Run: MOLLER-hallA_02_2023_withfield_as
 	Rnd:      41
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      86194
+	StartRun: 1678744506
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_as_50.bnn
@@ -1050,9 +1025,9 @@ Run: MOLLER-hallA_02_2023_withfield_at
 	Rnd:      42
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      86233
+	StartRun: 1678744506
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_at_50.bnn
@@ -1101,9 +1076,9 @@ Run: MOLLER-hallA_02_2023_withfield_au
 	Rnd:      43
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      86272
+	StartRun: 1678744506
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_au_50.bnn
@@ -1152,9 +1127,9 @@ Run: MOLLER-hallA_02_2023_withfield_av
 	Rnd:      44
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      86311
+	StartRun: 1678744506
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_av_50.bnn
@@ -1203,9 +1178,9 @@ Run: MOLLER-hallA_02_2023_withfield_aw
 	Rnd:      45
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      86350
+	StartRun: 1678744507
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_aw_50.bnn
@@ -1256,7 +1231,7 @@ Run: MOLLER-hallA_02_2023_withfield_ax
 	Last:     1
 	Status:   3
 	Pid:      0
-	StartRun: 1669649956
+	StartRun: 1678744507
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_ax_50.bnn
@@ -1305,9 +1280,9 @@ Run: MOLLER-hallA_02_2023_withfield_ay
 	Rnd:      47
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      86429
+	StartRun: 1678744507
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_ay_50.bnn
@@ -1356,9 +1331,9 @@ Run: MOLLER-hallA_02_2023_withfield_az
 	Rnd:      48
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      86468
+	StartRun: 1678744507
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_az_50.bnn
@@ -1407,9 +1382,9 @@ Run: MOLLER-hallA_02_2023_withfield_ba
 	Rnd:      49
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      86507
+	StartRun: 1678744508
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_ba_50.bnn
@@ -1458,9 +1433,9 @@ Run: MOLLER-hallA_02_2023_withfield_bb
 	Rnd:      50
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      86546
+	StartRun: 1678744508
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_bb_50.bnn
@@ -1509,9 +1484,9 @@ Run: MOLLER-hallA_02_2023_withfield_bc
 	Rnd:      51
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      86586
+	StartRun: 1678744508
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_bc_50.bnn
@@ -1560,9 +1535,9 @@ Run: MOLLER-hallA_02_2023_withfield_bd
 	Rnd:      52
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      86627
+	StartRun: 1678744508
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_bd_50.bnn
@@ -1611,9 +1586,9 @@ Run: MOLLER-hallA_02_2023_withfield_be
 	Rnd:      53
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      86666
+	StartRun: 1678744509
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_be_50.bnn
@@ -1662,9 +1637,9 @@ Run: MOLLER-hallA_02_2023_withfield_bf
 	Rnd:      54
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      86705
+	StartRun: 1678744509
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_bf_50.bnn
@@ -1713,9 +1688,9 @@ Run: MOLLER-hallA_02_2023_withfield_bg
 	Rnd:      55
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      86744
+	StartRun: 1678744509
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_bg_50.bnn
@@ -1764,9 +1739,9 @@ Run: MOLLER-hallA_02_2023_withfield_bh
 	Rnd:      56
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      86783
+	StartRun: 1678744509
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_bh_50.bnn
@@ -1815,9 +1790,9 @@ Run: MOLLER-hallA_02_2023_withfield_bi
 	Rnd:      57
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      86824
+	StartRun: 1678744509
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_bi_50.bnn
@@ -1866,9 +1841,9 @@ Run: MOLLER-hallA_02_2023_withfield_bj
 	Rnd:      58
 	Prev:     0
 	Last:     1
-	Status:   3
-	Pid:      0
-	StartRun: 1669649956
+	Status:   5
+	Pid:      86863
+	StartRun: 1678744510
 	Parent:    <default>
 
 	# USRxxx data file: MOLLER-hallA_02_2023_withfield_bj_50.bnn
@@ -2405,8 +2380,8 @@ End
 # Geometry Information
 Geometry:
 	Frame.bsplit: 0.5
-	Frame.tsplit: 0.99
-	Frame.vsplit: 0.99
+	Frame.tsplit: 0.5
+	Frame.vsplit: 0.5
 
 	# Layer
 	Layer: Media
@@ -2510,12 +2485,12 @@ Plot: Red
 	cbtics: 0
 	coord: Z-Y
 	cpd: 0
-	extends: 5520.61 3018.77
+	extends: 83.3333 44.5195
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 0 -1370.72 -1590.17
+	origin: 0 -40.5015 1.54491
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: 0
@@ -2568,10 +2543,10 @@ Plot: Green
 	basisv: 0.0433937 0.99904 -0.00606889
 	boundaries: 1
 	coord: U-V
-	extends: 743.005 44691.7
+	extends: 1283.91 685.91
 	labels: 1
 	layer: 3D
-	origin: -90.5583 124.303 1018.71
+	origin: -157.685 52.5965 1377.23
 	subtype: Material
 	title: GeoViewer Green plot
 End
@@ -2584,10 +2559,10 @@ Plot: Blue
 	basisv: 1 0 0
 	boundaries: 1
 	coord: Z-X
-	extends: 1677.52 1.51128
+	extends: 808.988 431.46
 	labels: 1
 	layer: Media
-	origin: 322.668 0 1745.72
+	origin: 148.962 0 1428.04
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -2606,12 +2581,12 @@ Plot: Magenta
 	cbtics: 0
 	coord: U-V
 	cpd: 0
-	extends: 743.009 0.669377
+	extends: 891.611 475.526
 	grid: 0
 	index: 0
 	labels: 1
 	layer: 3D
-	origin: -315.888 -211.803 574.7
+	origin: -19.9105 -589.294 552.582
 	subtype: Material
 	title: GeoViewer Magenta plot
 	x2log: 0
@@ -5060,5 +5035,128 @@ Plot: MOLLER-hallA_02_2023_withfield_54_plot
 	y2tics: 0
 	ylog: 1
 	zlog: 0
+	ztics: 0
+End
+
+# USRBIN plot "USRBIN MOLLER-hallA 02 2023 water activity 21"
+Plot: MOLLER-hallA_02_2023_water_activity_21_plot
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: MOLLER-hallA_02_2023_water_activity_21.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 1D Projection
+	index: 0
+	int: 5.4617505602143616E-002
+	lw.0: 0
+	max: 1.91502689E-08
+	min: 6.33992684E-19
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: USRBIN MOLLER-hallA 02 2023 water activity 21
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylog: True
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "USRBIN MOLLER-hallA 02 2023 water activity 25"
+Plot: MOLLER-hallA_02_2023_water_activity_25_plot
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: MOLLER-hallA_02_2023_water_activity_25.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 1D Projection
+	index: 0
+	int: 5483.9180451818693
+	lw.0: 0
+	max: 8.86465365E-04
+	min: 5.79389143E-06
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: USRBIN MOLLER-hallA 02 2023 water activity 25
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylog: True
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "USRBIN MOLLER-hallA 02 2023 water activity 25"
+Plot: MOLLER-hallA_02_2023_water_activity_25_plot01
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 30
+	cblog: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: MOLLER-hallA_02_2023_water_activity_25.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 5483.9180451817801
+	lw.0: 0
+	max: 4.63511283E-03
+	min: 5.79389103E-04
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: USRBIN MOLLER-hallA 02 2023 water activity 25
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylog: 1
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
 	ztics: 0
 End
